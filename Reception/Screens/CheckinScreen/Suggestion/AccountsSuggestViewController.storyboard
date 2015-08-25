@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vgl-nQ-aH1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Accounts Suggest View Controller-->
+        <scene sceneID="XOt-Dq-giP">
+            <objects>
+                <viewController id="Vgl-nQ-aH1" customClass="AccountsSuggestViewController" customModule="Reception" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZN-15-gc4"/>
+                        <viewControllerLayoutGuide type="bottom" id="wCu-qF-eWO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pDT-M5-rzR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vva-77-re9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuggestedAccountCell" rowHeight="55" id="LAL-6w-b9u" customClass="SuggestedAccountCell" customModule="Reception" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LAL-6w-b9u" id="SaG-2O-PDE">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelあ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuA-hx-dGR">
+                                                    <rect key="frame" x="28" y="8" width="544" height="39"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WuA-hx-dGR" firstAttribute="leading" secondItem="SaG-2O-PDE" secondAttribute="leadingMargin" constant="20" id="MS9-bf-A8M"/>
+                                                <constraint firstItem="WuA-hx-dGR" firstAttribute="top" secondItem="SaG-2O-PDE" secondAttribute="topMargin" id="eeA-rG-zLS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WuA-hx-dGR" secondAttribute="trailing" constant="20" id="fPT-jQ-tE2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WuA-hx-dGR" secondAttribute="bottom" id="jdE-tX-g2D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="WuA-hx-dGR" id="xMa-Ai-MQx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vgl-nQ-aH1" id="mUb-hX-NQ3"/>
+                                    <outlet property="delegate" destination="Vgl-nQ-aH1" id="xSa-Xo-vuy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vva-77-re9" firstAttribute="leading" secondItem="pDT-M5-rzR" secondAttribute="leading" id="0nG-SP-VhU"/>
+                            <constraint firstItem="wCu-qF-eWO" firstAttribute="top" secondItem="Vva-77-re9" secondAttribute="bottom" id="9gM-ls-iL5"/>
+                            <constraint firstItem="Vva-77-re9" firstAttribute="top" secondItem="pDT-M5-rzR" secondAttribute="top" id="CuM-ts-Tbt"/>
+                            <constraint firstAttribute="trailing" secondItem="Vva-77-re9" secondAttribute="trailing" id="EAU-yR-Pw3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Vva-77-re9" id="Kg2-Eq-YTV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkS-hT-Dh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="125"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Reception
+
+  Created by Muukii on 8/8/15.
+  Copyright © 2015 eureka. All rights reserved.
+*/
+
+"CheckinViewController.textField.placeholder.yourName" = "Name";
+"CheckinViewController.textField.placeholder.yourMailAddress" = "Mail address";
+"CheckinViewController.textField.placeholder.ContactName" = "Contact to";
+
+"CheckinViewController.label.error.yourMailAddress" = "Invalid mail address";
+"CheckinViewController.lable.error.contactName" = "Invalid contact to";
+"CheckinViewController.lable.error.yourName" = "Invalid name";

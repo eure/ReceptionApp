@@ -1,0 +1,26 @@
+//
+//  AppConfiguration.swift
+//  Reception
+//
+//  Created by Muukii on 8/8/15.
+//  Copyright © 2015 eureka. All rights reserved.
+//
+
+import Foundation
+
+struct AppConfiguration {
+    
+    static func allEmployees() -> [Employee] {
+        
+        return [
+/*
+            Employee(
+                nameJa: "木村 寛",
+                nameEn: "Hiroshi Kimura",
+                slackAccount: "muukii",
+                phoneNumber: "000-0000-0000"
+            ),
+*/
+        ]
+    }
+}

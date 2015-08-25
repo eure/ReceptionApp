@@ -1,0 +1,6 @@
+[submodule "Frameworks/JEToolkit"]
+	path = Frameworks/JEToolkit
+	url = https://github.com/JohnEstropia/JEToolkit.git
+[submodule "Frameworks/SimpleFurigana"]
+	path = Frameworks/SimpleFurigana
+	url = https://github.com/shinjukunian/SimpleFurigana.git
