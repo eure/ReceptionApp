@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PersonCountViewController: BaseTransactionViewController {
+class PersonCountViewController: BaseTransactionViewController, InputFieldTransition {
 
+    // MARK: Public
     var transaction: AppointTransaction?
 
     override func viewDidLoad() {
@@ -38,6 +39,9 @@ class PersonCountViewController: BaseTransactionViewController {
         }
     }
     
+    @IBOutlet dynamic weak var inputFieldView: UIView!
+    
+    // MARK: Private
     @IBOutlet private dynamic weak var countLabel: UILabel!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     @IBOutlet private dynamic weak var minusButton: UIButton!

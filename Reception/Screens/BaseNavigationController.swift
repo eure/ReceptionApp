@@ -18,8 +18,17 @@ class BaseNavigationController: UINavigationController {
 }
 
 extension BaseNavigationController: UINavigationControllerDelegate {
+    
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
+        switch (fromVC, toVC) {
+            
+        case ((_ as InputFieldTransition), (_ as InputFieldTransition)):
+            
+            return InputFieldTransitionController(operation: operation)
+        default:
+            break
+        }
         return nil
     }
 }

@@ -45,7 +45,7 @@
                                         <rect key="frame" x="90" y="5" width="402.5" height="90"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSe-eX-qXL">
@@ -133,6 +133,7 @@
                         <outlet property="backButton" destination="QDJ-72-To9" id="0e0-sB-bXd"/>
                         <outlet property="countLabel" destination="q5X-nG-aEI" id="e3U-OK-CCA"/>
                         <outlet property="iconImageView" destination="LaT-DT-wnL" id="oDM-TZ-O4z"/>
+                        <outlet property="inputFieldView" destination="nSC-8J-4Lq" id="tdr-vr-wQx"/>
                         <outlet property="logoImageView" destination="Ufz-8o-zje" id="n3G-zV-bi6"/>
                         <outlet property="minusButton" destination="6su-Aj-KQb" id="ys8-4G-9iw"/>
                         <outlet property="plusButton" destination="qSe-eX-qXL" id="JQp-Gu-oLP"/>

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class YourNameViewController: BaseTransactionViewController {
+class YourNameViewController: BaseTransactionViewController, InputFieldTransition {
 
+    // MARK: Public
     var transaction: AppointTransaction?
     
     override func viewDidLoad() {
@@ -47,6 +48,9 @@ class YourNameViewController: BaseTransactionViewController {
         self.textField.becomeFirstResponder()
     }
     
+    @IBOutlet dynamic weak var inputFieldView: UIView!
+    
+    // MARK: Private
     @IBOutlet private dynamic weak var textField: UITextField!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     @IBOutlet private dynamic weak var nextButton: NextButton!
@@ -71,5 +75,4 @@ class YourNameViewController: BaseTransactionViewController {
         
         self.navigationController?.pushViewController(controller, animated: true)
     }
-
 }

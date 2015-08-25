@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CompanyNameViewController: BaseTransactionViewController {
+class CompanyNameViewController: BaseTransactionViewController, InputFieldTransition {
 
+    // MARK: Public
     var transaction: AppointTransaction?
     
     override func viewDidLoad() {
@@ -33,10 +34,14 @@ class CompanyNameViewController: BaseTransactionViewController {
         self.textField.becomeFirstResponder()
     }
     
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var nextButton: NextButton!
-    @IBAction func handleNextButton(sender: AnyObject) {
+    @IBOutlet dynamic weak var inputFieldView: UIView!
+    
+    // MARK: Private
+    @IBOutlet private dynamic weak var iconImageView: UIImageView!
+    @IBOutlet private dynamic weak var textField: UITextField!
+    @IBOutlet private dynamic weak var nextButton: NextButton!
+    
+    @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         
         let controller = MailAddressViewController.viewControllerFromStoryboard()
         
@@ -51,3 +56,4 @@ class CompanyNameViewController: BaseTransactionViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
+

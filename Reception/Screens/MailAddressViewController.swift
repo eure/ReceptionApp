@@ -8,8 +8,9 @@
 
 import UIKit
 
-class MailAddressViewController: BaseTransactionViewController {
+class MailAddressViewController: BaseTransactionViewController, InputFieldTransition {
 
+    // MARK: Public
     var transaction: AppointTransaction?
 
     override func viewDidLoad() {
@@ -61,6 +62,9 @@ class MailAddressViewController: BaseTransactionViewController {
         self.textField.becomeFirstResponder()
     }
 
+    @IBOutlet dynamic weak var inputFieldView: UIView!
+    
+    // MARK: Private
     @IBOutlet private dynamic weak var nextButton: NextButton!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     @IBOutlet private dynamic weak var textField: UITextField!
@@ -98,3 +102,4 @@ class MailAddressViewController: BaseTransactionViewController {
         }
     }    
 }
+

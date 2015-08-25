@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="backButton" destination="6Yn-oy-8Kd" id="8DN-XB-K2K"/>
                         <outlet property="iconImageView" destination="g2E-J7-Faa" id="loD-sx-FMV"/>
+                        <outlet property="inputFieldView" destination="pth-QA-xcf" id="veR-y9-SBv"/>
                         <outlet property="logoImageView" destination="wPg-Qh-HEb" id="wpb-id-mNq"/>
                         <outlet property="nextButton" destination="ezi-lv-aZz" id="ggh-LP-Oyr"/>
                         <outlet property="textField" destination="vjs-P0-D4y" id="KwJ-YU-s6g"/>

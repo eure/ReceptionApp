@@ -25,6 +25,7 @@
 		4B3EDC251B75F57900873B8C /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3EDC241B75F57900873B8C /* UIColor+Util.swift */; };
 		4B497C421B800EEA002F1262 /* Pods_Reception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D783990AC8D57A4135811A /* Pods_Reception.framework */; };
 		4B497C431B800EEA002F1262 /* Pods_Reception.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93D783990AC8D57A4135811A /* Pods_Reception.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B79AFA51B8D2E4B002EBF8E /* InputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B98702E1B89681300F72342 /* ContactToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98702D1B89681300F72342 /* ContactToViewController.swift */; };
 		4B9870301B89683100F72342 /* CompanyNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98702F1B89683100F72342 /* CompanyNameViewController.swift */; };
 		4B9870321B89684500F72342 /* YourNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9870311B89684500F72342 /* YourNameViewController.swift */; };
@@ -196,6 +197,7 @@
 		4B3EDC1F1B75ECFD00873B8C /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		4B3EDC211B75EDAC00873B8C /* AppConfiguration.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppConfiguration.swift.sample; sourceTree = "<group>"; };
 		4B3EDC241B75F57900873B8C /* UIColor+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Util.swift"; sourceTree = "<group>"; };
+		4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldTransitionController.swift; sourceTree = "<group>"; };
 		4B98702D1B89681300F72342 /* ContactToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToViewController.swift; sourceTree = "<group>"; };
 		4B98702F1B89683100F72342 /* CompanyNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyNameViewController.swift; sourceTree = "<group>"; };
 		4B9870311B89684500F72342 /* YourNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourNameViewController.swift; sourceTree = "<group>"; };
@@ -443,10 +445,10 @@
 				4B98702D1B89681300F72342 /* ContactToViewController.swift */,
 				4B0169E51B8B370600208CA9 /* ContactToSuggestCell.swift */,
 				4B98703F1B896E4100F72342 /* ContactToViewController.storyboard */,
-				4B98702F1B89683100F72342 /* CompanyNameViewController.swift */,
-				4B9870411B896E4A00F72342 /* CompanyNameViewController.storyboard */,
 				4B9870311B89684500F72342 /* YourNameViewController.swift */,
 				4B9870431B896E5100F72342 /* YourNameViewController.storyboard */,
+				4B98702F1B89683100F72342 /* CompanyNameViewController.swift */,
+				4B9870411B896E4A00F72342 /* CompanyNameViewController.storyboard */,
 				4B9870331B89685300F72342 /* MailAddressViewController.swift */,
 				4B9870451B896E5900F72342 /* MailAddressViewController.storyboard */,
 				4B9870351B89686300F72342 /* PersonCountViewController.swift */,
@@ -808,6 +810,7 @@
 			children = (
 				4B9D42E61B765D340047C99D /* CheckinToCompletionTransitionController.swift */,
 				4B9D42E81B765D500047C99D /* CompletionToStartingTransitionController.swift */,
+				4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -1145,6 +1148,7 @@
 				4B142B5A1B798441009FD9EA /* HorizontalLineView.swift in Sources */,
 				4B98703A1B8968B300F72342 /* BaseTransactionViewController.swift in Sources */,
 				4B9930981B7515470073473F /* JEKeychain.m in Sources */,
+				4B79AFA51B8D2E4B002EBF8E /* InputFieldTransitionController.swift in Sources */,
 				4B99308B1B7515470073473F /* NSString+JEDebugging.m in Sources */,
 				4B9870301B89683100F72342 /* CompanyNameViewController.swift in Sources */,
 				4B992FA01B75146B0073473F /* AppDelegate.swift in Sources */,

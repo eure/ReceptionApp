@@ -77,6 +77,7 @@
                                     <constraint firstAttribute="width" constant="128" id="zmX-ee-d7C"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="handleHomeButton:" destination="PdI-fo-k4d" eventType="touchUpInside" id="K3F-BM-yGg"/>
                                     <outlet property="iconImageView" destination="mgg-ie-UQv" id="4bd-kG-GQx"/>
                                 </connections>
                             </view>
