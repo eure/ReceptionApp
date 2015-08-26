@@ -1,16 +1,16 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "93CED13232A979E1A25566FBD51E4F09E7A62C0F",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "93CED13232A979E1A25566FBD51E4F09E7A62C0F" : 0,
+    "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7" : 0,
     "6533DCA9C1C673037DD2F49A7574B681383114AB" : 0,
     "B16A5A80C3B6317485543848ADC32B5E2158C457" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0FD9D559-79C6-4CF0-AE0B-7ED9C30E909A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "93CED13232A979E1A25566FBD51E4F09E7A62C0F" : "Reception\/",
+    "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7" : "Reception\/",
     "6533DCA9C1C673037DD2F49A7574B681383114AB" : "Reception\/Frameworks\/JEToolkit\/",
     "B16A5A80C3B6317485543848ADC32B5E2158C457" : "Reception\/Frameworks\/SimpleFurigana\/"
   },
@@ -24,14 +24,14 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6533DCA9C1C673037DD2F49A7574B681383114AB"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:muukii0803\/reception.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93CED13232A979E1A25566FBD51E4F09E7A62C0F"
-    },
-    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shinjukunian\/SimpleFurigana.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B16A5A80C3B6317485543848ADC32B5E2158C457"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:muukii0803\/reception.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7"
     }
   ]
 }

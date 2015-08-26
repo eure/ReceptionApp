@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         #if DEBUG
-            JEDebugging.setConsoleLoggerSettings(JEDebugging.copyConsoleLoggerSettings())
-            JEDebugging.setHUDLoggerSettings(JEDebugging.copyHUDLoggerSettings())
-            JEDebugging.setApplicationLifeCycleLoggingEnabled(true)
-            JEDebugging.setExceptionLoggingEnabled(true)
-            JEDebugging.start()
+//            JEDebugging.setConsoleLoggerSettings(JEDebugging.copyConsoleLoggerSettings())
+//            JEDebugging.setHUDLoggerSettings(JEDebugging.copyHUDLoggerSettings())
+//            JEDebugging.setApplicationLifeCycleLoggingEnabled(true)
+//            JEDebugging.setExceptionLoggingEnabled(true)
+//            JEDebugging.start()
         #endif
         
         Parse.setApplicationId(

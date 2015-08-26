@@ -17,10 +17,10 @@ class ContactToViewController: BaseTransactionViewController {
         self.tableView.rowHeight = 116
         self.tableView.tableFooterView = UIView()
         
-        self.textField.attributedPlaceholder = NSAttributedString.eureExoDemiBoldAttributedString(
+        self.textField.attributedPlaceholder = NSAttributedString.eureAttributedString(
             "CONTACT TO...",
             color: UIColor.eureLightGrayTextColor,
-            size: 60
+            size: 55
         )
         
         self.textField.tintColor = UIColor.eureColor

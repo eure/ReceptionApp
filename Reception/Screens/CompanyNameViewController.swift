@@ -16,16 +16,33 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.textField.attributedPlaceholder = NSAttributedString.eureExoDemiBoldAttributedString(
+        self.textField.attributedPlaceholder = NSAttributedString.eureAttributedString(
             "COMPANY NAME",
             color: UIColor.eureLightGrayTextColor,
-            size: 60
+            size: 55
         )
         self.textField.tintColor = UIColor.eureColor
+        self.textField.text = self.transaction?.customer?.companyName
         
         self.iconImageView.tintColor = UIColor.eureColor
         
         // Do any additional setup after loading the view.
+        
+        self.textField
+            .rac_signalForControlEvents(UIControlEvents.EditingChanged)
+            .toSignalProducer()
+            .map { ($0 as! UITextField).text ?? "" }
+            .startWithSignal { (signal, disposable) -> () in
+                
+                signal.observe { [weak self] event in
+                    
+                    guard let string = event.value else {
+                        return
+                    }
+                    
+                    self?.transaction?.customer?.companyName = string
+                }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,15 +61,7 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         
         let controller = PersonCountViewController.viewControllerFromStoryboard()
-        
-        guard let value = self.textField.text else {
-            
-            return
-        }
-        
-        self.transaction?.customer?.companyName = value
         controller.transaction = self.transaction
-        
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

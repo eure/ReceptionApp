@@ -46,7 +46,7 @@
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjs-P0-D4y" customClass="InputTextField" customModule="Reception" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="5" width="553" height="90"/>
+                                        <rect key="frame" x="100" y="5" width="543" height="90"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -59,7 +59,7 @@
                                     <constraint firstAttribute="bottom" secondItem="vjs-P0-D4y" secondAttribute="bottom" constant="5" id="ag2-Vk-rNV"/>
                                     <constraint firstAttribute="height" constant="100" id="eax-FJ-J1b"/>
                                     <constraint firstItem="vjs-P0-D4y" firstAttribute="top" secondItem="pth-QA-xcf" secondAttribute="top" constant="5" id="gQb-Kl-Q2G"/>
-                                    <constraint firstItem="vjs-P0-D4y" firstAttribute="leading" secondItem="g2E-J7-Faa" secondAttribute="trailing" constant="20" id="hcq-4o-Wbi"/>
+                                    <constraint firstItem="vjs-P0-D4y" firstAttribute="leading" secondItem="g2E-J7-Faa" secondAttribute="trailing" constant="30" id="hcq-4o-Wbi"/>
                                     <constraint firstItem="g2E-J7-Faa" firstAttribute="leading" secondItem="pth-QA-xcf" secondAttribute="leading" constant="20" id="qsC-p6-lVk"/>
                                     <constraint firstItem="g2E-J7-Faa" firstAttribute="centerY" secondItem="pth-QA-xcf" secondAttribute="centerY" id="xUi-m3-vdm"/>
                                 </constraints>

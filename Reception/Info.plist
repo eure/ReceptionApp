@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>KozGoPro-Medium</string>
 		<string>Exo-Black-Italic.otf</string>
 		<string>Exo-Black.otf</string>
 		<string>Exo-Bold-Italic.otf</string>

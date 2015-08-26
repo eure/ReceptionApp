@@ -17,13 +17,16 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.textField.attributedPlaceholder = NSAttributedString.eureExoDemiBoldAttributedString(
+        self.textField.attributedPlaceholder = NSAttributedString.eureAttributedString(
             "YOUR NAME",
             color: UIColor.eureLightGrayTextColor,
-            size: 60
+            size: 55
         )
         self.textField.textColor = UIColor.eureBlackTextColor
         self.textField.tintColor = UIColor.eureColor
+        self.textField.text = self.transaction?.customer?.name
+        
+        JEDump(self.transaction)
         
         self.iconImageView.tintColor = UIColor.eureColor
         
@@ -70,7 +73,8 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
             return
         }
         
-        let customer = Customer(name: name)
+        var customer = self.transaction?.customer ?? Customer()
+        customer.name = name
         self.transaction?.customer = customer
         controller.transaction = self.transaction
         

@@ -17,7 +17,7 @@ class InputTextField: UITextField {
         
         self.defaultTextAttributes = [
             NSKernAttributeName : NSNumber(integer: 8),
-            NSFontAttributeName :  UIFont.exoDemiBold(size: 60),
+            NSFontAttributeName :  UIFont.eureFont(size: 55),
             NSForegroundColorAttributeName : UIColor.blackColor(),
         ]
     }

@@ -3,12 +3,18 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Exo-DemiBold.otf">
             <string>Exo-DemiBold</string>
             <string>Exo-DemiBold</string>
             <string>Exo-DemiBold</string>
+        </mutableArray>
+        <mutableArray key="KozGoPro-Medium.otf">
+            <string>KozGoPro-Medium</string>
+            <string>KozGoPro-Medium</string>
+            <string>KozGoPro-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -24,131 +30,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1Y-dr-Pgv">
-                                <rect key="frame" x="0.0" y="238" width="768" height="544"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-5V-aKW" customClass="TopButton" customModule="Reception" customModuleProvider="target">
-                                        <rect key="frame" x="391" y="0.0" width="294" height="544"/>
-                                        <subviews>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3r-nR-5v3">
-                                                <rect key="frame" x="27" y="141" width="240" height="262"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
-                                                        <rect key="frame" x="0.0" y="226" width="240" height="36"/>
-                                                        <animations/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="36" id="wWh-dH-Kj8"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_big_other" translatesAutoresizingMaskIntoConstraints="NO" id="egE-v2-xLp">
-                                                        <rect key="frame" x="49" y="34" width="142" height="142"/>
-                                                        <animations/>
-                                                    </imageView>
-                                                </subviews>
-                                                <animations/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="tFm-iq-1gL" firstAttribute="top" secondItem="egE-v2-xLp" secondAttribute="bottom" constant="50" id="1gX-EY-JsK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="egE-v2-xLp" secondAttribute="trailing" constant="49" id="4RL-UP-c9N"/>
-                                                    <constraint firstAttribute="trailing" secondItem="tFm-iq-1gL" secondAttribute="trailing" id="HAo-CZ-5ZA"/>
-                                                    <constraint firstItem="tFm-iq-1gL" firstAttribute="leading" secondItem="w3r-nR-5v3" secondAttribute="leading" id="L0h-iH-4iB"/>
-                                                    <constraint firstAttribute="bottom" secondItem="tFm-iq-1gL" secondAttribute="bottom" id="hBI-Qm-bpQ"/>
-                                                    <constraint firstItem="egE-v2-xLp" firstAttribute="top" secondItem="w3r-nR-5v3" secondAttribute="top" constant="34" id="myW-rU-PGw"/>
-                                                    <constraint firstItem="egE-v2-xLp" firstAttribute="leading" secondItem="w3r-nR-5v3" secondAttribute="leading" constant="49" id="p7A-Bd-Qs4"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="w3r-nR-5v3" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="pbj-Xg-xgQ"/>
-                                            <constraint firstItem="w3r-nR-5v3" firstAttribute="centerY" secondItem="TVz-5V-aKW" secondAttribute="centerY" id="qZN-R6-6QK"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="handleGeneralButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="3hx-W9-XPY"/>
-                                            <outlet property="imageView" destination="RbM-qm-gMl" id="hL5-Bt-XIa"/>
-                                            <outlet property="titleLabel" destination="tFm-iq-1gL" id="jyu-xI-Qdu"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7k-QB-7JQ" customClass="TopButton" customModule="Reception" customModuleProvider="target">
-                                        <rect key="frame" x="77" y="0.0" width="294" height="544"/>
-                                        <subviews>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDf-mq-H36">
-                                                <rect key="frame" x="27" y="141" width="240" height="262"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPOINTMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyh-Mu-F3f">
-                                                        <rect key="frame" x="0.0" y="226" width="240" height="36"/>
-                                                        <animations/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="36" id="Jld-AJ-kQn"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_big_appointment" translatesAutoresizingMaskIntoConstraints="NO" id="RbM-qm-gMl">
-                                                        <rect key="frame" x="49" y="34" width="142" height="142"/>
-                                                        <animations/>
-                                                    </imageView>
-                                                </subviews>
-                                                <animations/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="RbM-qm-gMl" firstAttribute="top" secondItem="fDf-mq-H36" secondAttribute="top" constant="34" id="6e3-JW-fYy"/>
-                                                    <constraint firstAttribute="trailing" secondItem="nyh-Mu-F3f" secondAttribute="trailing" id="7dV-Jj-xpi"/>
-                                                    <constraint firstItem="RbM-qm-gMl" firstAttribute="leading" secondItem="fDf-mq-H36" secondAttribute="leading" constant="49" id="9D8-Zl-vMt"/>
-                                                    <constraint firstItem="nyh-Mu-F3f" firstAttribute="top" secondItem="RbM-qm-gMl" secondAttribute="bottom" constant="50" id="9ch-d5-PIP"/>
-                                                    <constraint firstAttribute="trailing" secondItem="RbM-qm-gMl" secondAttribute="trailing" constant="49" id="HcY-AS-oKL"/>
-                                                    <constraint firstItem="nyh-Mu-F3f" firstAttribute="leading" secondItem="fDf-mq-H36" secondAttribute="leading" id="Shv-ra-92V"/>
-                                                    <constraint firstAttribute="bottom" secondItem="nyh-Mu-F3f" secondAttribute="bottom" id="XvZ-eg-Vpd"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="fDf-mq-H36" firstAttribute="centerY" secondItem="C7k-QB-7JQ" secondAttribute="centerY" id="bVr-Gt-AEZ"/>
-                                            <constraint firstItem="fDf-mq-H36" firstAttribute="centerX" secondItem="C7k-QB-7JQ" secondAttribute="centerX" id="eUn-T5-EdE"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="handleApointButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="Ysu-8w-AUz"/>
-                                            <outlet property="iconImageView" destination="RbM-qm-gMl" id="6xT-My-tq4"/>
-                                            <outlet property="imageView" destination="egE-v2-xLp" id="WHE-f3-17q"/>
-                                            <outlet property="titleLabel" destination="nyh-Mu-F3f" id="eBF-bC-eMY"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="C7k-QB-7JQ" firstAttribute="top" secondItem="z1Y-dr-Pgv" secondAttribute="top" id="2r9-o8-fPy"/>
-                                    <constraint firstItem="C7k-QB-7JQ" firstAttribute="leading" secondItem="z1Y-dr-Pgv" secondAttribute="leading" constant="77" id="2rs-qm-cX6"/>
-                                    <constraint firstItem="TVz-5V-aKW" firstAttribute="width" secondItem="C7k-QB-7JQ" secondAttribute="width" id="5Ue-z5-azP"/>
-                                    <constraint firstAttribute="bottom" secondItem="C7k-QB-7JQ" secondAttribute="bottom" id="DOj-hK-sbR"/>
-                                    <constraint firstAttribute="trailing" secondItem="TVz-5V-aKW" secondAttribute="trailing" constant="83" id="KhL-nY-1UP"/>
-                                    <constraint firstAttribute="bottom" secondItem="TVz-5V-aKW" secondAttribute="bottom" id="dE4-aQ-2Yt"/>
-                                    <constraint firstItem="TVz-5V-aKW" firstAttribute="top" secondItem="z1Y-dr-Pgv" secondAttribute="top" id="v6T-89-7e7"/>
-                                    <constraint firstItem="TVz-5V-aKW" firstAttribute="leading" secondItem="C7k-QB-7JQ" secondAttribute="trailing" constant="20" id="yz3-Nz-f23"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eureka_logo" translatesAutoresizingMaskIntoConstraints="NO" id="QQE-Z3-hyo">
                                 <rect key="frame" x="310" y="60" width="147" height="30"/>
                                 <animations/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="               " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-Rr-W2I">
-                                <rect key="frame" x="345" y="174" width="77.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WELCOME!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvw-tB-Ha6">
+                                <rect key="frame" x="314.5" y="929" width="138.5" height="30.5"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvw-tB-Ha6">
-                                <rect key="frame" x="321" y="926" width="127.5" height="33.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7k-QB-7JQ" customClass="TopButton" customModule="Reception" customModuleProvider="target">
+                                <rect key="frame" x="40" y="247" width="688" height="280"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_big_appointment" translatesAutoresizingMaskIntoConstraints="NO" id="RbM-qm-gMl">
+                                        <rect key="frame" x="273" y="30" width="142" height="142"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RbM-qm-gMl" secondAttribute="height" multiplier="1:1" id="TOI-p9-Jd9"/>
+                                            <constraint firstAttribute="width" constant="142" id="rrb-rF-056"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPOINTMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyh-Mu-F3f">
+                                        <rect key="frame" x="250" y="187" width="187" height="36"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="LbX-4B-zf6">
+                                        <rect key="frame" x="595" y="123" width="33" height="33"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご予約のある方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUA-UW-ep0">
+                                        <rect key="frame" x="261" y="233" width="165" height="15"/>
+                                        <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="26"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RbM-qm-gMl" firstAttribute="centerX" secondItem="C7k-QB-7JQ" secondAttribute="centerX" id="7Kg-gE-ykM"/>
+                                    <constraint firstAttribute="height" constant="280" id="7bZ-pJ-CzI"/>
+                                    <constraint firstItem="nyh-Mu-F3f" firstAttribute="centerX" secondItem="C7k-QB-7JQ" secondAttribute="centerX" id="BZT-6y-YMe"/>
+                                    <constraint firstItem="LbX-4B-zf6" firstAttribute="centerY" secondItem="C7k-QB-7JQ" secondAttribute="centerY" id="BlZ-O7-NiQ"/>
+                                    <constraint firstItem="RbM-qm-gMl" firstAttribute="top" secondItem="C7k-QB-7JQ" secondAttribute="top" constant="30" id="YxM-WL-wPQ"/>
+                                    <constraint firstItem="VUA-UW-ep0" firstAttribute="top" secondItem="nyh-Mu-F3f" secondAttribute="bottom" constant="10" id="c5g-Mz-Tyt"/>
+                                    <constraint firstAttribute="trailing" secondItem="LbX-4B-zf6" secondAttribute="trailing" constant="60" id="plx-Gi-Ogh"/>
+                                    <constraint firstItem="nyh-Mu-F3f" firstAttribute="top" secondItem="RbM-qm-gMl" secondAttribute="bottom" constant="15" id="udk-4A-34k"/>
+                                    <constraint firstItem="VUA-UW-ep0" firstAttribute="centerX" secondItem="C7k-QB-7JQ" secondAttribute="centerX" id="yXW-eg-kcv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="handleApointButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="Ysu-8w-AUz"/>
+                                    <outlet property="iconImageView" destination="RbM-qm-gMl" id="6xT-My-tq4"/>
+                                    <outlet property="imageView" destination="egE-v2-xLp" id="WHE-f3-17q"/>
+                                    <outlet property="subtitleLabel" destination="VUA-UW-ep0" id="z5T-Rg-daP"/>
+                                    <outlet property="titleLabel" destination="nyh-Mu-F3f" id="eBF-bC-eMY"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-5V-aKW" customClass="TopButton" customModule="Reception" customModuleProvider="target">
+                                <rect key="frame" x="40" y="557" width="688" height="280"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
+                                        <rect key="frame" x="301" y="187" width="85.5" height="36"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_big_other" translatesAutoresizingMaskIntoConstraints="NO" id="egE-v2-xLp">
+                                        <rect key="frame" x="273" y="30" width="142" height="142"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="egE-v2-xLp" secondAttribute="height" multiplier="1:1" id="EiV-Nn-L9A"/>
+                                            <constraint firstAttribute="height" constant="142" id="Yli-LJ-eh1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-CN-kAt">
+                                        <rect key="frame" x="595" y="123" width="33" height="33"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他ご用件の方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Dd-4OQ">
+                                        <rect key="frame" x="254" y="233" width="180" height="15"/>
+                                        <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jyo-CN-kAt" secondAttribute="trailing" constant="60" id="4mo-jY-uFf"/>
+                                    <constraint firstItem="GLc-Dd-4OQ" firstAttribute="top" secondItem="tFm-iq-1gL" secondAttribute="bottom" constant="10" id="7cQ-QD-ROk"/>
+                                    <constraint firstItem="jyo-CN-kAt" firstAttribute="centerY" secondItem="TVz-5V-aKW" secondAttribute="centerY" id="FbP-il-Usy"/>
+                                    <constraint firstItem="egE-v2-xLp" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="XEV-6J-5RQ"/>
+                                    <constraint firstAttribute="height" constant="280" id="aoz-3F-5u7"/>
+                                    <constraint firstItem="GLc-Dd-4OQ" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="da5-2e-8nz"/>
+                                    <constraint firstItem="egE-v2-xLp" firstAttribute="top" secondItem="TVz-5V-aKW" secondAttribute="top" constant="30" id="lLb-UK-dbh"/>
+                                    <constraint firstItem="tFm-iq-1gL" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="ln8-da-cDY"/>
+                                    <constraint firstItem="tFm-iq-1gL" firstAttribute="top" secondItem="egE-v2-xLp" secondAttribute="bottom" constant="15" id="r3B-bE-nGX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="handleotherButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="3hx-W9-XPY"/>
+                                    <outlet property="imageView" destination="RbM-qm-gMl" id="hL5-Bt-XIa"/>
+                                    <outlet property="subtitleLabel" destination="GLc-Dd-4OQ" id="IF6-OM-Pru"/>
+                                    <outlet property="titleLabel" destination="tFm-iq-1gL" id="jyu-xI-Qdu"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ようこそeurekaへ  ご用件をお選びください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-Rr-W2I">
+                                <rect key="frame" x="285" y="150" width="198" height="54"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -156,15 +149,17 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cBh-Rr-W2I" firstAttribute="top" secondItem="QQE-Z3-hyo" secondAttribute="bottom" constant="84" id="0GH-iO-8Nv"/>
-                            <constraint firstItem="Jvw-tB-Ha6" firstAttribute="top" secondItem="z1Y-dr-Pgv" secondAttribute="bottom" constant="144" id="AAy-ci-Kyf"/>
+                            <constraint firstItem="cBh-Rr-W2I" firstAttribute="top" secondItem="QQE-Z3-hyo" secondAttribute="bottom" constant="60" id="0GH-iO-8Nv"/>
+                            <constraint firstItem="TVz-5V-aKW" firstAttribute="top" secondItem="C7k-QB-7JQ" secondAttribute="bottom" constant="30" id="1k0-0P-ARK"/>
+                            <constraint firstAttribute="trailing" secondItem="TVz-5V-aKW" secondAttribute="trailing" constant="40" id="47t-eC-cBh"/>
                             <constraint firstItem="gKg-3C-LaT" firstAttribute="top" secondItem="Jvw-tB-Ha6" secondAttribute="bottom" constant="64" id="Dwj-Jf-5TV"/>
                             <constraint firstItem="QQE-Z3-hyo" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="G1K-bK-2F8"/>
+                            <constraint firstAttribute="trailing" secondItem="C7k-QB-7JQ" secondAttribute="trailing" constant="40" id="I8B-qc-i79"/>
                             <constraint firstItem="cBh-Rr-W2I" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="QEN-nO-I9x"/>
-                            <constraint firstItem="z1Y-dr-Pgv" firstAttribute="top" secondItem="cBh-Rr-W2I" secondAttribute="bottom" constant="40" id="Tzt-7I-x4T"/>
-                            <constraint firstItem="z1Y-dr-Pgv" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" id="WTO-5a-okm"/>
+                            <constraint firstItem="C7k-QB-7JQ" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="ejb-dJ-nR5"/>
                             <constraint firstItem="Jvw-tB-Ha6" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="gva-60-v7K"/>
-                            <constraint firstAttribute="trailing" secondItem="z1Y-dr-Pgv" secondAttribute="trailing" id="muO-jH-fOs"/>
+                            <constraint firstItem="C7k-QB-7JQ" firstAttribute="top" secondItem="cBh-Rr-W2I" secondAttribute="bottom" constant="43" id="h9U-bd-Rfc"/>
+                            <constraint firstItem="TVz-5V-aKW" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="i4b-vC-eRq"/>
                             <constraint firstItem="QQE-Z3-hyo" firstAttribute="top" secondItem="wxg-N2-rZv" secondAttribute="bottom" constant="60" id="tDp-DY-ARN"/>
                         </constraints>
                     </view>
@@ -173,9 +168,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="appointButton" destination="C7k-QB-7JQ" id="hQ4-kE-ptm"/>
-                        <outlet property="buttonView" destination="z1Y-dr-Pgv" id="vTf-Nb-wE5"/>
-                        <outlet property="generalButton" destination="TVz-5V-aKW" id="cZS-UD-xK0"/>
                         <outlet property="logoImageView" destination="QQE-Z3-hyo" id="Gc1-0O-MRp"/>
+                        <outlet property="otherButton" destination="TVz-5V-aKW" id="cZS-UD-xK0"/>
                         <outlet property="welcomeBottomLabel" destination="Jvw-tB-Ha6" id="kH3-mo-kWS"/>
                         <outlet property="welcomeLabel" destination="cBh-Rr-W2I" id="AfM-L4-tfA"/>
                     </connections>
@@ -206,7 +200,8 @@
     </scenes>
     <resources>
         <image name="eureka_logo" width="147" height="30"/>
-        <image name="icon_big_appointment" width="142" height="142"/>
-        <image name="icon_big_other" width="142" height="142"/>
+        <image name="icon_big_appointment" width="126" height="126"/>
+        <image name="icon_big_other" width="126" height="126"/>
+        <image name="icon_next" width="33" height="33"/>
     </resources>
 </document>

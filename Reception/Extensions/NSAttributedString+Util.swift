@@ -10,13 +10,13 @@ import Foundation
 
 extension NSAttributedString {
     
-    class func eureExoDemiBoldAttributedString(string: String, color: UIColor, size: CGFloat) -> NSAttributedString {
+    class func eureAttributedString(string: String, color: UIColor, size: CGFloat) -> NSAttributedString {
        
         return NSAttributedString(
             string: string,
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 8),
-                NSFontAttributeName : UIFont.exoDemiBold(size: size),
+                NSFontAttributeName : UIFont.eureFont(size: size),
                 NSForegroundColorAttributeName : color,
             ]
         )

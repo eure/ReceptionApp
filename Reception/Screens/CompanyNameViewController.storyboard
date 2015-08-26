@@ -46,7 +46,7 @@
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-KM-nnP" customClass="InputTextField" customModule="Reception" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="5" width="553" height="90"/>
+                                        <rect key="frame" x="100" y="5" width="543" height="90"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -60,7 +60,7 @@
                                     <constraint firstAttribute="bottom" secondItem="yYB-KM-nnP" secondAttribute="bottom" constant="5" id="aij-ja-6Lp"/>
                                     <constraint firstAttribute="trailing" secondItem="yYB-KM-nnP" secondAttribute="trailing" constant="5" id="lUj-Wd-JgK"/>
                                     <constraint firstItem="mJv-yr-dbz" firstAttribute="centerY" secondItem="2Mw-d8-E0V" secondAttribute="centerY" id="nR0-7z-TH3"/>
-                                    <constraint firstItem="yYB-KM-nnP" firstAttribute="leading" secondItem="mJv-yr-dbz" secondAttribute="trailing" constant="20" id="rI5-i6-yzg"/>
+                                    <constraint firstItem="yYB-KM-nnP" firstAttribute="leading" secondItem="mJv-yr-dbz" secondAttribute="trailing" constant="30" id="rI5-i6-yzg"/>
                                     <constraint firstItem="mJv-yr-dbz" firstAttribute="leading" secondItem="2Mw-d8-E0V" secondAttribute="leading" constant="20" id="saw-vK-vys"/>
                                 </constraints>
                             </view>

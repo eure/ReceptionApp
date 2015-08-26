@@ -14,44 +14,39 @@ class TopViewController: BaseViewController {
         super.viewDidLoad()
 
         self.logoImageView.tintColor = UIColor.eureColor
-        self.welcomeLabel.text = "ようこそeurekaへ。 ご用件をお選びください"
         self.welcomeLabel.textColor = UIColor.eureColor
         
         self.appointButton.tintColor = UIColor.eureColor
-        self.generalButton.tintColor = UIColor.eureColor
-        
-        self.appointButton.title = "APPOINTMENT"
-        self.generalButton.title = "OTHER"
+        self.otherButton.tintColor = UIColor.eureColor
         
         self.welcomeBottomLabel.attributedText = NSAttributedString(string: "WELCOME!", attributes: [
             NSKernAttributeName : NSNumber(integer: 8),
-            NSFontAttributeName : UIFont.exoDemiBold(size: 23),
+            NSFontAttributeName : UIFont.eureFont(size: 23),
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )
         
         self.appointButton.titleLabel?.attributedText = NSAttributedString(string: "APPOINTMENT", attributes: [
             NSKernAttributeName : NSNumber(integer: 8),
-            NSFontAttributeName : UIFont(name: "Exo-DemiBold", size: 23)!,
+            NSFontAttributeName : UIFont.eureFont(size: 23),
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )
         
-        self.generalButton.titleLabel?.attributedText = NSAttributedString(string: "OTHER", attributes: [
+        self.otherButton.titleLabel?.attributedText = NSAttributedString(string: "OTHER", attributes: [
             NSKernAttributeName : NSNumber(integer: 8),
-            NSFontAttributeName : UIFont(name: "Exo-DemiBold", size: 23)!,
+            NSFontAttributeName : UIFont.eureFont(size: 23),
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )
     }
     
-    @IBOutlet dynamic weak var buttonView: UIView!
     @IBOutlet dynamic weak var welcomeLabel: UILabel!
     @IBOutlet dynamic weak var welcomeBottomLabel: UILabel!
+    @IBOutlet dynamic weak var otherButton: TopButton!
+    @IBOutlet dynamic weak var appointButton: TopButton!
     
     // MARK: Private
-    @IBOutlet private dynamic weak var generalButton: TopButton!
-    @IBOutlet private dynamic weak var appointButton: TopButton!    
     @IBOutlet private dynamic weak var logoImageView: UIImageView!
     
     @IBAction func handleApointButton(sender: AnyObject) {
@@ -60,7 +55,7 @@ class TopViewController: BaseViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @IBAction func handleGeneralButton(sender: AnyObject) {
+    @IBAction func handleotherButton(sender: AnyObject) {
         
     }
 }

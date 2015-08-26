@@ -46,7 +46,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5X-nG-aEI">
-                                        <rect key="frame" x="90" y="5" width="402.5" height="90"/>
+                                        <rect key="frame" x="100" y="5" width="392.5" height="90"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,7 +80,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="q5X-nG-aEI" firstAttribute="leading" secondItem="LaT-DT-wnL" secondAttribute="trailing" constant="20" id="1e8-0V-qFD"/>
+                                    <constraint firstItem="q5X-nG-aEI" firstAttribute="leading" secondItem="LaT-DT-wnL" secondAttribute="trailing" constant="30" id="1e8-0V-qFD"/>
                                     <constraint firstItem="LaT-DT-wnL" firstAttribute="leading" secondItem="nSC-8J-4Lq" secondAttribute="leading" constant="20" id="31O-HU-483"/>
                                     <constraint firstAttribute="height" constant="100" id="I2C-ur-TWo"/>
                                     <constraint firstItem="LaT-DT-wnL" firstAttribute="centerY" secondItem="nSC-8J-4Lq" secondAttribute="centerY" id="KNb-Uw-kbv"/>

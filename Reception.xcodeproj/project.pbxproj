@@ -14,6 +14,7 @@
 		4B1B92B71B75B1B600C28005 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B92B91B75B1B600C28005 /* Localizable.strings */; };
 		4B2391DB1B82EDBA001D636D /* SlackDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2391DA1B82EDBA001D636D /* SlackDispatcher.swift */; };
 		4B2391DD1B82F874001D636D /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2391DC1B82F874001D636D /* Customer.swift */; };
+		4B2AE0DA1B8DA62400111C51 /* KozGoPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */; settings = {ASSET_TAGS = (); }; };
 		4B2F75181B8D52D90087DEBE /* InputFieldToConfirmTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75171B8D52D90087DEBE /* InputFieldToConfirmTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B2F751A1B8D66B00087DEBE /* TopToContactTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B2F751C1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -181,6 +182,7 @@
 		4B1B92BC1B75B1D400C28005 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4B2391DA1B82EDBA001D636D /* SlackDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackDispatcher.swift; sourceTree = "<group>"; };
 		4B2391DC1B82F874001D636D /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KozGoPro-Medium.otf"; sourceTree = "<group>"; };
 		4B2F75171B8D52D90087DEBE /* InputFieldToConfirmTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldToConfirmTransitionController.swift; sourceTree = "<group>"; };
 		4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToContactTransitionController.swift; sourceTree = "<group>"; };
 		4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToInputFieldTransitionController.swift; sourceTree = "<group>"; };
@@ -783,6 +785,7 @@
 		4BB07A451B8C9A43000065F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */,
 				4BB07A461B8C9A6C000065F3 /* Exo-Black-Italic.otf */,
 				4BB07A471B8C9A6C000065F3 /* Exo-Black.otf */,
 				4BB07A481B8C9A6C000065F3 /* Exo-Bold-Italic.otf */,
@@ -943,6 +946,7 @@
 				4BB07A691B8C9A6C000065F3 /* Exo-Thin.otf in Resources */,
 				4BB07A421B8C7CD1000065F3 /* CompletionViewController.storyboard in Resources */,
 				4BB07A671B8C9A6C000065F3 /* Exo-Regular.otf in Resources */,
+				4B2AE0DA1B8DA62400111C51 /* KozGoPro-Medium.otf in Resources */,
 				4B9870441B896E5100F72342 /* YourNameViewController.storyboard in Resources */,
 				4BB07A631B8C9A6C000065F3 /* Exo-Light.otf in Resources */,
 				4BB07A601B8C9A6C000065F3 /* Exo-ExtraLight-Italic.otf in Resources */,

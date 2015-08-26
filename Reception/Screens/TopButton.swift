@@ -47,7 +47,9 @@ class TopButton: UIControl {
             
             super.tintColor = newValue
             self.titleLabel?.textColor = newValue
+            self.subtitleLabel?.textColor = newValue
             self.imageView?.tintColor = newValue
+            
         }
     }
     
@@ -74,6 +76,7 @@ class TopButton: UIControl {
     }
     
     @IBOutlet dynamic var titleLabel: UILabel?
+    @IBOutlet dynamic var subtitleLabel: UILabel?
     @IBOutlet private dynamic var imageView: UIImageView?
     
     private let shape = CAShapeLayer()

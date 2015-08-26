@@ -21,17 +21,18 @@ class ConfirmViewController: BaseTransactionViewController {
         
         self.icons.forEach { $0.tintColor = UIColor.eureLightGrayTextColor }
         
-        self.contactToLabel.text = transaction?.account.nameJa
+        self.contactToLabel.attributedText = NSAttributedString.eureAttributedString(transaction?.account.nameJa ?? "", color: UIColor.blackColor(), size: 32)
         
         if let customer = transaction?.customer {
             let size: CGFloat = 32
-            self.nameLabel.attributedText = NSAttributedString.eureExoDemiBoldAttributedString(customer.name ?? "", color: UIColor.blackColor(), size: size)
+            self.nameLabel.attributedText = NSAttributedString.eureAttributedString(customer.name ?? "", color: UIColor.blackColor(), size: size)
             
-            self.companyLabel.attributedText = NSAttributedString.eureExoDemiBoldAttributedString(customer.companyName, color: UIColor.blackColor(), size: size)
+            self.companyLabel.attributedText = NSAttributedString.eureAttributedString(customer.companyName, color: UIColor.blackColor(), size: size)
                         
-            self.countLabel.attributedText = NSAttributedString.eureExoDemiBoldAttributedString("\(customer.numberOfPersons)人", color: UIColor.blackColor(), size: size)
+            self.countLabel.attributedText = NSAttributedString.eureAttributedString("\(customer.numberOfPersons)人", color: UIColor.blackColor(), size: size)
         }
         
+        self.messageLabel.font = UIFont.eureFont(size: 18)
         self.messageLabel.text = "以下、内容をご確認ください"
         self.messageLabel.textColor = UIColor.eureColor
         

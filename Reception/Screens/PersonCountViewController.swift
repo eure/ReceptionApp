@@ -21,23 +21,32 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
         self.plusButton.tintColor = UIColor.eureColor
         self.iconImageView.tintColor = UIColor.eureColor
         
-        self.count = 1
+        self.count = self.transaction?.customer?.numberOfPersons ?? 1
     }
     
-    private var count: Int = 1 {
-        didSet {
+    private var count: Int {
+        get {
+            return _count
+        }
+        set {
             
-            guard count >= 1 else {
+            guard newValue >= 1 else {
                 return
             }
             
-            self.countLabel.attributedText = NSAttributedString.eureExoDemiBoldAttributedString(
+            self._count = newValue
+            
+            self.transaction?.customer?.numberOfPersons = newValue
+            
+            self.countLabel.attributedText = NSAttributedString.eureAttributedString(
                 "\(self.count)人",
                 color: UIColor.blackColor(),
-                size: 60
+                size: 55
             )
         }
     }
+    
+    private var _count: Int = 1
     
     @IBOutlet dynamic weak var inputFieldView: UIView!    
     @IBOutlet weak var nextButton: NextButton!
@@ -57,8 +66,6 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
     }
     
     @IBAction func handleNextButton(sender: AnyObject) {
-        
-        self.transaction?.customer?.numberOfPersons = self.count
         
         let controller = ConfirmViewController.viewControllerFromStoryboard()
         controller.transaction = self.transaction

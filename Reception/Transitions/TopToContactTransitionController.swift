@@ -42,13 +42,15 @@ class TopToContactTransitionController: NSObject, UIViewControllerAnimatedTransi
             let transform = CATransform3DMakeTranslation(-offset, 0, 0)
             UIView.animateAndChainWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
                 
-                fromVC.buttonView.layer.transform = transform
+                fromVC.appointButton.layer.transform = transform
+                fromVC.otherButton.layer.transform = transform
                 fromVC.welcomeLabel.layer.transform = transform
                 fromVC.welcomeBottomLabel.layer.transform = transform
                 
                 }, completion: { (finish) -> Void in
                     
-                    fromVC.buttonView.layer.transform = CATransform3DIdentity
+                    fromVC.appointButton.layer.transform = CATransform3DIdentity
+                    fromVC.otherButton.layer.transform = CATransform3DIdentity
                     fromVC.welcomeLabel.layer.transform = CATransform3DIdentity
                     fromVC.welcomeBottomLabel.layer.transform = CATransform3DIdentity
                     
@@ -72,7 +74,8 @@ class TopToContactTransitionController: NSObject, UIViewControllerAnimatedTransi
             containerView.insertSubview(toVC.view, atIndex: 0)
             
             let transform = CATransform3DMakeTranslation(-offset, 0, 0)
-            toVC.buttonView.layer.transform = transform
+            toVC.appointButton.layer.transform = transform
+            toVC.otherButton.layer.transform = transform
             toVC.welcomeLabel.layer.transform = transform
             toVC.welcomeBottomLabel.layer.transform = transform
             
@@ -88,7 +91,8 @@ class TopToContactTransitionController: NSObject, UIViewControllerAnimatedTransi
                     
             }).animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
                 
-                toVC.buttonView.layer.transform = CATransform3DIdentity
+                toVC.appointButton.layer.transform = CATransform3DIdentity
+                toVC.otherButton.layer.transform = CATransform3DIdentity
                 toVC.welcomeLabel.layer.transform = CATransform3DIdentity
                 toVC.welcomeBottomLabel.layer.transform = CATransform3DIdentity
                 }, completion: { (finish) -> Void in
