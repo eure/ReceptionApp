@@ -28,9 +28,7 @@ class ConfirmViewController: BaseTransactionViewController {
             self.nameLabel.attributedText = NSAttributedString.eureExoDemiBoldAttributedString(customer.name ?? "", color: UIColor.blackColor(), size: size)
             
             self.companyLabel.attributedText = NSAttributedString.eureExoDemiBoldAttributedString(customer.companyName, color: UIColor.blackColor(), size: size)
-            
-            self.mailAddressLabel.attributedText = NSAttributedString.eureExoDemiBoldAttributedString(customer.mailAddress, color: UIColor.blackColor(), size: size)
-            
+                        
             self.countLabel.attributedText = NSAttributedString.eureExoDemiBoldAttributedString("\(customer.numberOfPersons)人", color: UIColor.blackColor(), size: size)
         }
         
@@ -48,7 +46,6 @@ class ConfirmViewController: BaseTransactionViewController {
     @IBOutlet dynamic weak var contactToView: UIView!
     @IBOutlet dynamic weak var nameView: UIView!
     @IBOutlet dynamic weak var companyNameView: UIView!
-    @IBOutlet dynamic weak var mailAddressView: UIView!
     @IBOutlet dynamic weak var countview: UIView!
     @IBOutlet dynamic weak var messageLabel: UILabel!
 
@@ -56,7 +53,6 @@ class ConfirmViewController: BaseTransactionViewController {
     @IBOutlet private dynamic weak var contactToIconImageView: UIImageView!
     @IBOutlet private dynamic weak var nameIconImageView: UIImageView!
     @IBOutlet private dynamic weak var companyNameIconImageView: UIImageView!
-    @IBOutlet private dynamic weak var mailAddressIconImageView: UIImageView!
     @IBOutlet private dynamic weak var countIconImageView: UIImageView!
     
     @IBOutlet private dynamic weak var contactToLabel: UILabel!
@@ -64,7 +60,6 @@ class ConfirmViewController: BaseTransactionViewController {
     @IBOutlet private dynamic weak var companyLabel: UILabel!
     @IBOutlet private dynamic weak var countLabel: UILabel!
     
-    @IBOutlet private dynamic weak var mailAddressLabel: UILabel!
     @IBOutlet private dynamic var icons: [UIImageView]!
     @IBOutlet private dynamic var labels: [UILabel]!
     

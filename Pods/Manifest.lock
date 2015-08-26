@@ -1,15 +1,17 @@
 PODS:
-  - Alamofire (2.0.0-beta.2)
+  - Alamofire (2.0.0-beta.3)
   - Bolts/Tasks (1.2.0)
   - EasyAnimation (0.7.0)
   - Parse (1.8.1):
     - Bolts/Tasks (>= 1.2.0)
+  - Spring (1.0.3)
   - SwiftyJSON (2.2.1)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift-2.0`)
   - EasyAnimation (from `https://github.com/icanzilb/EasyAnimation.git`, branch `swift2`)
   - Parse
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`, branch `xcode7`)
 
 EXTERNAL SOURCES:
@@ -19,26 +21,33 @@ EXTERNAL SOURCES:
   EasyAnimation:
     :branch: swift2
     :git: https://github.com/icanzilb/EasyAnimation.git
+  Spring:
+    :branch: swift2
+    :git: https://github.com/MengTo/Spring.git
   SwiftyJSON:
     :branch: xcode7
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 2f94c11bb039bd7e3e43b925e20c8e536c9be757
+    :commit: 0fd77fec2a33e237ab99069c36410eb7101126c6
     :git: https://github.com/Alamofire/Alamofire.git
   EasyAnimation:
     :commit: e27a4fa156647f0bf4ddbc73244d8a52105a4887
     :git: https://github.com/icanzilb/EasyAnimation.git
+  Spring:
+    :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
+    :git: https://github.com/MengTo/Spring.git
   SwiftyJSON:
     :commit: f269523ac572979245baa99c8475eab73caf1e9b
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  Alamofire: 4dab60b015e8b4c9e09b0c9ff514fb15b96c0bd5
+  Alamofire: 39dddb7d3725d1771b1d2f7099c8bd45bd83ffbb
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
   EasyAnimation: f58cd2cb74807f67280a2aff7a6e5bf8da423c19
   Parse: 2155953b1565494095d5fa5c83b3c77f2c677c09
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
 COCOAPODS: 0.38.2

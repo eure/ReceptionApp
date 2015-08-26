@@ -40,7 +40,6 @@ class InputFieldToConfirmTransitionController: NSObject, UIViewControllerAnimate
             let contactToView = toVC.contactToView
             let nameView = toVC.nameView
             let companyNameView = toVC.companyNameView
-            let mailAddressView = toVC.mailAddressView
             let countview = toVC.countview
             let submitButton = toVC.submitButton
             let messageLabel = toVC.messageLabel
@@ -50,7 +49,6 @@ class InputFieldToConfirmTransitionController: NSObject, UIViewControllerAnimate
             contactToView.layer.transform = initTransform
             nameView.layer.transform = initTransform
             companyNameView.layer.transform = initTransform
-            mailAddressView.layer.transform = initTransform
             countview.layer.transform = initTransform
             submitButton.alpha = 0
             messageLabel.alpha = 0
@@ -94,13 +92,6 @@ class InputFieldToConfirmTransitionController: NSObject, UIViewControllerAnimate
                     
                     UIView.animateWithDuration(0.3, delay: 0.15, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                         
-                        mailAddressView.layer.transform = CATransform3DIdentity
-                        }, completion: { (finish) -> Void in
-                            
-                    })
-                    
-                    UIView.animateWithDuration(0.3, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
-                        
                         countview.layer.transform = CATransform3DIdentity
                         submitButton.alpha = 1
                         }, completion: { (finish) -> Void in
@@ -120,7 +111,6 @@ class InputFieldToConfirmTransitionController: NSObject, UIViewControllerAnimate
             let contactToView = fromVC.contactToView
             let nameView = fromVC.nameView
             let companyNameView = fromVC.companyNameView
-            let mailAddressView = fromVC.mailAddressView
             let countview = fromVC.countview
             let submitButton = fromVC.submitButton
             let messageLabel = fromVC.messageLabel
@@ -157,13 +147,6 @@ class InputFieldToConfirmTransitionController: NSObject, UIViewControllerAnimate
             })
             
             UIView.animateWithDuration(0.3, delay: 0.15, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
-                
-                mailAddressView.layer.transform = transform
-                }, completion: { (finish) -> Void in
-                    
-            })
-            
-            UIView.animateWithDuration(0.3, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                 
                 countview.layer.transform = transform
                 

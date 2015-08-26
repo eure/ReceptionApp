@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MN4-0X-1Ae">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MN4-0X-1Ae">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
@@ -118,8 +118,8 @@
                                     <constraint firstItem="WbC-Cp-7j3" firstAttribute="top" secondItem="TiA-m0-U1C" secondAttribute="top" id="iDa-3I-jas"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-uU-3Nb">
-                                <rect key="frame" x="100" y="601" width="568" height="67"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-uU-3Nb">
+                                <rect key="frame" x="100" y="509" width="568" height="66"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_member" translatesAutoresizingMaskIntoConstraints="NO" id="K3K-ig-9W4">
                                         <rect key="frame" x="0.0" y="7" width="50" height="50"/>
@@ -180,40 +180,13 @@
                                     <constraint firstItem="2I5-AL-zS5" firstAttribute="leading" secondItem="Stv-TP-YT2" secondAttribute="leading" id="pOz-3C-Ewi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mOq-CK-E07">
-                                <rect key="frame" x="100" y="509" width="568" height="67"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_mail" translatesAutoresizingMaskIntoConstraints="NO" id="e4V-Jm-LKU">
-                                        <rect key="frame" x="0.0" y="7" width="50" height="50"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="e4V-Jm-LKU" secondAttribute="height" multiplier="1:1" id="jrO-mq-0mV"/>
-                                            <constraint firstAttribute="width" constant="50" id="lxp-gg-W29"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-U7-171">
-                                        <rect key="frame" x="70" y="0.0" width="498" height="66"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="0Om-S2-GIL"/>
-                                    <constraint firstItem="gfz-U7-171" firstAttribute="top" secondItem="mOq-CK-E07" secondAttribute="top" id="5bJ-n5-LRi"/>
-                                    <constraint firstAttribute="trailing" secondItem="gfz-U7-171" secondAttribute="trailing" id="6Xe-Wv-RqD"/>
-                                    <constraint firstItem="e4V-Jm-LKU" firstAttribute="centerY" secondItem="mOq-CK-E07" secondAttribute="centerY" id="7ge-6g-xDi"/>
-                                    <constraint firstItem="e4V-Jm-LKU" firstAttribute="leading" secondItem="mOq-CK-E07" secondAttribute="leading" id="9c5-SQ-Y2t"/>
-                                    <constraint firstItem="gfz-U7-171" firstAttribute="leading" secondItem="e4V-Jm-LKU" secondAttribute="trailing" constant="20" id="MIf-Hm-6dG"/>
-                                    <constraint firstAttribute="bottom" secondItem="gfz-U7-171" secondAttribute="bottom" id="VqN-UO-Ior"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-Kw-SUR">
-                                <rect key="frame" x="36" y="58.5" width="33" height="33"/>
+                                <rect key="frame" x="36" y="49.5" width="50" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HSS-Q9-j1O"/>
+                                    <constraint firstAttribute="width" constant="50" id="eLJ-E3-mHb"/>
+                                </constraints>
                                 <state key="normal" image="icon_back"/>
                                 <connections>
                                     <action selector="handleBackButton:" destination="MN4-0X-1Ae" eventType="touchUpInside" id="ZP3-RA-5h7"/>
@@ -223,7 +196,6 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mOq-CK-E07" firstAttribute="top" secondItem="TiA-m0-U1C" secondAttribute="bottom" constant="25" id="0Lv-b9-JKI"/>
                             <constraint firstItem="Stv-TP-YT2" firstAttribute="leading" secondItem="zAC-Uf-uli" secondAttribute="leadingMargin" constant="80" id="1Jo-rd-P1f"/>
                             <constraint firstItem="Yb0-GP-Upp" firstAttribute="leading" secondItem="zAC-Uf-uli" secondAttribute="leadingMargin" constant="80" id="44s-Wu-gXm"/>
                             <constraint firstItem="UzU-Kw-SUR" firstAttribute="centerY" secondItem="NX2-O8-bch" secondAttribute="centerY" id="4Kz-Pn-mnE"/>
@@ -232,15 +204,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="TiA-m0-U1C" secondAttribute="trailing" constant="80" id="8qJ-ds-Shu"/>
                             <constraint firstItem="NX2-O8-bch" firstAttribute="top" secondItem="fCc-n2-RWT" secondAttribute="bottom" constant="60" id="Iuk-mA-wCo"/>
                             <constraint firstItem="Yb0-GP-Upp" firstAttribute="top" secondItem="NX2-O8-bch" secondAttribute="bottom" constant="146" id="Joc-cm-dul"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mOq-CK-E07" secondAttribute="trailing" constant="80" id="Kyw-GX-EG7"/>
                             <constraint firstItem="TiA-m0-U1C" firstAttribute="top" secondItem="Stv-TP-YT2" secondAttribute="bottom" constant="25" id="MQj-zY-qlZ"/>
+                            <constraint firstItem="Lz8-uU-3Nb" firstAttribute="top" secondItem="TiA-m0-U1C" secondAttribute="bottom" constant="25" id="NH1-Tn-CVJ"/>
                             <constraint firstItem="UzU-Kw-SUR" firstAttribute="leading" secondItem="zAC-Uf-uli" secondAttribute="leading" constant="36" id="NNg-kh-pxN"/>
                             <constraint firstItem="VGG-KQ-nbg" firstAttribute="centerX" secondItem="zAC-Uf-uli" secondAttribute="centerX" id="Yxg-N0-rRF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Stv-TP-YT2" secondAttribute="trailing" constant="80" id="aAT-Me-Nyf"/>
                             <constraint firstItem="Yb0-GP-Upp" firstAttribute="centerX" secondItem="zAC-Uf-uli" secondAttribute="centerX" id="bje-E3-dkg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yb0-GP-Upp" secondAttribute="trailing" constant="80" id="bjs-P5-I69"/>
-                            <constraint firstItem="Lz8-uU-3Nb" firstAttribute="top" secondItem="mOq-CK-E07" secondAttribute="bottom" constant="25" id="brr-P1-4O9"/>
-                            <constraint firstItem="mOq-CK-E07" firstAttribute="leading" secondItem="zAC-Uf-uli" secondAttribute="leadingMargin" constant="80" id="ibT-46-2cM"/>
                             <constraint firstItem="NX2-O8-bch" firstAttribute="centerX" secondItem="zAC-Uf-uli" secondAttribute="centerX" id="mjh-bc-k2l"/>
                             <constraint firstItem="TiA-m0-U1C" firstAttribute="leading" secondItem="zAC-Uf-uli" secondAttribute="leadingMargin" constant="80" id="o4j-jS-0xx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lz8-uU-3Nb" secondAttribute="trailing" constant="80" id="q9p-gK-Yfb"/>
@@ -261,9 +231,6 @@
                         <outlet property="countLabel" destination="Q0Q-pe-MnD" id="fOa-5m-Qmt"/>
                         <outlet property="countview" destination="Lz8-uU-3Nb" id="k4l-K5-TcW"/>
                         <outlet property="logoImageView" destination="NX2-O8-bch" id="kAd-zk-Yqc"/>
-                        <outlet property="mailAddressIconImageView" destination="e4V-Jm-LKU" id="yg1-Y9-VBh"/>
-                        <outlet property="mailAddressLabel" destination="gfz-U7-171" id="OWm-We-Gaa"/>
-                        <outlet property="mailAddressView" destination="mOq-CK-E07" id="wCs-OO-NbH"/>
                         <outlet property="messageLabel" destination="tLX-2y-FvT" id="ZwI-BG-Ncg"/>
                         <outlet property="nameIconImageView" destination="2I5-AL-zS5" id="TWw-Ga-z5e"/>
                         <outlet property="nameLabel" destination="m8E-ek-MpK" id="oc3-go-E3s"/>
@@ -275,8 +242,6 @@
                         <outletCollection property="labels" destination="m8E-ek-MpK" collectionClass="NSMutableArray" id="fFx-cI-l4x"/>
                         <outletCollection property="icons" destination="4ZQ-HO-a8D" collectionClass="NSMutableArray" id="0Wo-QD-VzH"/>
                         <outletCollection property="labels" destination="WbC-Cp-7j3" collectionClass="NSMutableArray" id="THb-5i-vmh"/>
-                        <outletCollection property="icons" destination="e4V-Jm-LKU" collectionClass="NSMutableArray" id="NlP-5x-Hjb"/>
-                        <outletCollection property="labels" destination="gfz-U7-171" collectionClass="NSMutableArray" id="3VI-Dq-T5i"/>
                         <outletCollection property="icons" destination="K3K-ig-9W4" collectionClass="NSMutableArray" id="vhL-ly-ns5"/>
                         <outletCollection property="labels" destination="Q0Q-pe-MnD" collectionClass="NSMutableArray" id="z8o-jX-nrV"/>
                     </connections>
@@ -291,7 +256,6 @@
         <image name="icon_back" width="33" height="33"/>
         <image name="icon_company" width="50" height="50"/>
         <image name="icon_contact" width="50" height="50"/>
-        <image name="icon_mail" width="50" height="50"/>
         <image name="icon_member" width="50" height="50"/>
         <image name="icon_name" width="50" height="50"/>
         <image name="icon_send" width="78" height="39"/>

@@ -56,6 +56,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Reception/Bolts.framework'
   install_framework 'Pods-Reception/EasyAnimation.framework'
   install_framework 'Pods-Reception/Parse.framework'
+  install_framework 'Pods-Reception/Spring.framework'
   install_framework 'Pods-Reception/SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -63,5 +64,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Reception/Bolts.framework'
   install_framework 'Pods-Reception/EasyAnimation.framework'
   install_framework 'Pods-Reception/Parse.framework'
+  install_framework 'Pods-Reception/Spring.framework'
   install_framework 'Pods-Reception/SwiftyJSON.framework'
 fi

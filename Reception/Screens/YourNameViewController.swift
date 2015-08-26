@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class YourNameViewController: BaseTransactionViewController, InputFieldTransition {
 

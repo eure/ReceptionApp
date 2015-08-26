@@ -39,6 +39,8 @@ class ContactToInputFieldTransitionController: NSObject, UIViewControllerAnimate
            
             let transform = CATransform3DMakeTranslation(-offset, 0, 0)
             inputFieldView.layer.transform = CATransform3DMakeTranslation(offset, 0, 0)
+            
+            let nextButtonCurrentAlpha = nextButton.alpha
             nextButton.alpha = 0
             
             UIView.animateAndChainWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
@@ -52,7 +54,7 @@ class ContactToInputFieldTransitionController: NSObject, UIViewControllerAnimate
             }).animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
                 
                 inputFieldView.layer.transform = CATransform3DIdentity
-                nextButton.alpha = 1
+                nextButton.alpha = nextButtonCurrentAlpha
                 }, completion: { (finish) -> Void in
                     transitionContext.completeTransition(true)
             })

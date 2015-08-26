@@ -43,7 +43,7 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         
-        let controller = MailAddressViewController.viewControllerFromStoryboard()
+        let controller = PersonCountViewController.viewControllerFromStoryboard()
         
         guard let value = self.textField.text else {
             

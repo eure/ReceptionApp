@@ -27,7 +27,6 @@ class AppointTransaction: Transaction {
         let object = PFObject(className: "Transaction")
         object["name"] = customer.name
         object["company_name"] = customer.companyName
-        object["mail_address"] = customer.mailAddress
         object["persons_count"] = customer.numberOfPersons
         object["contact_to"] = account.nameEn
         

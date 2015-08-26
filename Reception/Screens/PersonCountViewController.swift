@@ -24,10 +24,10 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
         self.count = 1
     }
     
-    private var count: Int = 0 {
+    private var count: Int = 1 {
         didSet {
             
-            guard count >= 0 else {
+            guard count >= 1 else {
                 return
             }
             

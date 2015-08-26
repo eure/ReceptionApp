@@ -26,8 +26,6 @@ struct SlackDispatcher {
             + ">\(customer.name)\n"
             + ">*会社名*\n"
             + ">\(customer.companyName)\n"
-            + ">*メールアドレス*\n"
-            + ">\(customer.mailAddress)\n"
             + ">*人数*\n"
             + ">\(customer.numberOfPersons)\n"
             + "*---*"
