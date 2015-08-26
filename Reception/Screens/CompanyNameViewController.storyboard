@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="top" id="tej-Mx-aL9"/>
                         <viewControllerLayoutGuide type="bottom" id="4SE-jM-rNf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XEf-fD-1Wg" customClass="InputTextField" customModule="Reception" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="XEf-fD-1Wg">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -22,8 +22,8 @@
                                 <rect key="frame" x="310" y="60" width="147" height="30"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atd-dz-bsd">
-                                <rect key="frame" x="36" y="49.5" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atd-dz-bsd">
+                                <rect key="frame" x="36" y="49" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nDB-cX-euc"/>

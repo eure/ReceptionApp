@@ -85,7 +85,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="585" placeholderIntrinsicHeight="74" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="dsS-Dl-a5I">
-                                                    <rect key="frame" x="90" y="5" width="553" height="69"/>
+                                                    <rect key="frame" x="90" y="10" width="553" height="64"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="65"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -113,7 +113,7 @@
                                                 <constraint firstItem="hDW-lL-Vs3" firstAttribute="top" secondItem="dsS-Dl-a5I" secondAttribute="bottom" constant="5" id="ITC-2t-jLR"/>
                                                 <constraint firstItem="dsS-Dl-a5I" firstAttribute="leading" secondItem="8Ch-V5-xXS" secondAttribute="trailing" constant="20" id="cav-iN-rjb"/>
                                                 <constraint firstAttribute="trailing" secondItem="hDW-lL-Vs3" secondAttribute="trailing" constant="5" id="m8Z-NB-wkL"/>
-                                                <constraint firstItem="dsS-Dl-a5I" firstAttribute="top" secondItem="2a5-l3-mHJ" secondAttribute="top" constant="5" id="mdg-dN-fTW"/>
+                                                <constraint firstItem="dsS-Dl-a5I" firstAttribute="top" secondItem="2a5-l3-mHJ" secondAttribute="top" constant="10" id="mdg-dN-fTW"/>
                                                 <constraint firstItem="8Ch-V5-xXS" firstAttribute="leading" secondItem="2a5-l3-mHJ" secondAttribute="leading" constant="20" id="x7T-l5-s7e"/>
                                                 <constraint firstItem="8Ch-V5-xXS" firstAttribute="centerY" secondItem="2a5-l3-mHJ" secondAttribute="centerY" id="zbu-bq-EHQ"/>
                                             </constraints>
