@@ -51,6 +51,28 @@ class TopButton: UIControl {
         }
     }
     
+    override var highlighted: Bool {
+        get {
+            
+            return super.highlighted
+        }
+        set {
+            
+            super.highlighted = newValue
+            
+            UIView.animateWithDuration(
+                0.1,
+                delay: 0,
+                options: .BeginFromCurrentState,
+                animations: { () -> Void in
+                    
+                    self.alpha = newValue ? 0.6 : 1                
+                }) { (finish) -> Void in
+                    
+            }
+        }
+    }
+    
     @IBOutlet dynamic var titleLabel: UILabel?
     @IBOutlet private dynamic var imageView: UIImageView?
     

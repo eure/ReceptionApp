@@ -45,11 +45,14 @@ class TopViewController: BaseViewController {
         )
     }
     
+    @IBOutlet dynamic weak var buttonView: UIView!
+    @IBOutlet dynamic weak var welcomeLabel: UILabel!
+    @IBOutlet dynamic weak var welcomeBottomLabel: UILabel!
+    
+    // MARK: Private
     @IBOutlet private dynamic weak var generalButton: TopButton!
     @IBOutlet private dynamic weak var appointButton: TopButton!    
     @IBOutlet private dynamic weak var logoImageView: UIImageView!
-    @IBOutlet private dynamic weak var welcomeLabel: UILabel!
-    @IBOutlet private dynamic weak var welcomeBottomLabel: UILabel!
     
     @IBAction func handleApointButton(sender: AnyObject) {
         

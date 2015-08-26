@@ -39,7 +39,8 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
         }
     }
     
-    @IBOutlet dynamic weak var inputFieldView: UIView!
+    @IBOutlet dynamic weak var inputFieldView: UIView!    
+    @IBOutlet weak var nextButton: NextButton!
     
     // MARK: Private
     @IBOutlet private dynamic weak var countLabel: UILabel!

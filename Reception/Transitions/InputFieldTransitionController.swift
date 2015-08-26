@@ -12,6 +12,7 @@ import EasyAnimation
 
 protocol InputFieldTransition {
     var inputFieldView: UIView! { get }
+    var nextButton: NextButton! { get }
 }
 
 class InputFieldTransitionController: NSObject, UIViewControllerAnimatedTransitioning {

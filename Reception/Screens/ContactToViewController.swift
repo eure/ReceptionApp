@@ -100,11 +100,13 @@ class ContactToViewController: BaseTransactionViewController {
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
+    @IBOutlet dynamic weak var inputFieldView: UIView!
+    @IBOutlet dynamic weak var tableView: UITableView!
     
+    // MARK: Private
     @IBOutlet private dynamic weak var textFieldTop: NSLayoutConstraint!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     @IBOutlet private dynamic weak var textField: UITextField!
-    @IBOutlet private dynamic weak var tableView: UITableView!
   
     private var results: [Account] = [] {
         didSet {

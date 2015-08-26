@@ -136,6 +136,7 @@
                         <outlet property="inputFieldView" destination="nSC-8J-4Lq" id="tdr-vr-wQx"/>
                         <outlet property="logoImageView" destination="Ufz-8o-zje" id="n3G-zV-bi6"/>
                         <outlet property="minusButton" destination="6su-Aj-KQb" id="ys8-4G-9iw"/>
+                        <outlet property="nextButton" destination="Dq3-KH-gUj" id="fdW-PH-VdU"/>
                         <outlet property="plusButton" destination="qSe-eX-qXL" id="JQp-Gu-oLP"/>
                     </connections>
                 </viewController>

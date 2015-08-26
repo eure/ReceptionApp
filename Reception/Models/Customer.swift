@@ -10,7 +10,7 @@ import Foundation
 
 struct Customer {
     
-    var name: String?
+    var name: String
     var numberOfPersons: Int = 1
     var companyName: String = ""
     var mailAddress: String = ""

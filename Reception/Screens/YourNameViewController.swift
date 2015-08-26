@@ -49,11 +49,11 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
     }
     
     @IBOutlet dynamic weak var inputFieldView: UIView!
+    @IBOutlet dynamic weak var nextButton: NextButton!
     
     // MARK: Private
     @IBOutlet private dynamic weak var textField: UITextField!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
-    @IBOutlet private dynamic weak var nextButton: NextButton!
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         

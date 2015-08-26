@@ -10,6 +10,8 @@ import UIKit
 
 class ConfirmViewController: BaseTransactionViewController {
 
+    // MARK: Public
+    
     var transaction: AppointTransaction?
     
     override func viewDidLoad() {
@@ -40,25 +42,33 @@ class ConfirmViewController: BaseTransactionViewController {
             
         }
     }
+    
+    // Use animation.
+    @IBOutlet dynamic weak var submitButton: SubmitButton!
+    @IBOutlet dynamic weak var contactToView: UIView!
+    @IBOutlet dynamic weak var nameView: UIView!
+    @IBOutlet dynamic weak var companyNameView: UIView!
+    @IBOutlet dynamic weak var mailAddressView: UIView!
+    @IBOutlet dynamic weak var countview: UIView!
+    @IBOutlet dynamic weak var messageLabel: UILabel!
 
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var contactToIconImageView: UIImageView!
-    @IBOutlet weak var nameIconImageView: UIImageView!
-    @IBOutlet weak var companyNameIconImageView: UIImageView!
-    @IBOutlet weak var mailAddressIconImageView: UIImageView!
-    @IBOutlet weak var countIconImageView: UIImageView!
+    // MARK: Private
+    @IBOutlet private dynamic weak var contactToIconImageView: UIImageView!
+    @IBOutlet private dynamic weak var nameIconImageView: UIImageView!
+    @IBOutlet private dynamic weak var companyNameIconImageView: UIImageView!
+    @IBOutlet private dynamic weak var mailAddressIconImageView: UIImageView!
+    @IBOutlet private dynamic weak var countIconImageView: UIImageView!
     
-    @IBOutlet weak var contactToLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var companyLabel: UILabel!
-    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet private dynamic weak var contactToLabel: UILabel!
+    @IBOutlet private dynamic weak var nameLabel: UILabel!
+    @IBOutlet private dynamic weak var companyLabel: UILabel!
+    @IBOutlet private dynamic weak var countLabel: UILabel!
     
-    @IBOutlet weak var mailAddressLabel: UILabel!
-    @IBOutlet var icons: [UIImageView]!
-    @IBOutlet var labels: [UILabel]!
+    @IBOutlet private dynamic weak var mailAddressLabel: UILabel!
+    @IBOutlet private dynamic var icons: [UIImageView]!
+    @IBOutlet private dynamic var labels: [UILabel]!
     
-    @IBOutlet weak var submitButton: SubmitButton!
-    @IBAction func handleSubmitButton(sender: AnyObject) {
+    @IBAction private dynamic func handleSubmitButton(sender: AnyObject) {
         
         let controller = CompletionViewController.viewControllerFromStoryboard()
         
