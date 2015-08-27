@@ -1,5 +1,5 @@
 //
-//  InputFieldToConfirmTransitionController.swift
+//  InputFieldToConfirmAppointmentTransitionController.swift
 //  Reception
 //
 //  Created by Muukii on 8/26/15.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class InputFieldToConfirmTransitionController: NSObject, UIViewControllerAnimatedTransitioning {
+class InputFieldToConfirmAppointmentTransitionController: NSObject, UIViewControllerAnimatedTransitioning {
     
     var operation: UINavigationControllerOperation = .None
     

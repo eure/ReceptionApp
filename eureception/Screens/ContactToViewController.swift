@@ -18,6 +18,10 @@ class ContactToViewController: BaseTransactionViewController {
         self.tableView.rowHeight = 116
         self.tableView.tableFooterView = UIView()
         
+        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.font = UIFont.eureBoldFont(size: 18)
+        self.messageLabel.text = "訪問先をご記入ください"
+        
         self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "CONTACT TO...",
             color: UIColor.eureLightGrayTextColor,
@@ -108,6 +112,7 @@ class ContactToViewController: BaseTransactionViewController {
     @IBOutlet private dynamic weak var textFieldTop: NSLayoutConstraint!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     @IBOutlet private dynamic weak var textField: UITextField!
+    @IBOutlet private dynamic weak var messageLabel: UILabel!
   
     private var results: [User] = [] {
         didSet {

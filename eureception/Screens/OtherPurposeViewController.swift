@@ -29,17 +29,21 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
             UIColor.whiteColor().CGColor,
             UIColor.clearColor().CGColor,
         ]
+        
         self.textViewMask.locations = [
             0,
             0.02,
             0.98,
             1
         ]
+        
         self.textViewMask.startPoint = CGPoint(x: 0.5, y: 0)
         self.textViewMask.endPoint = CGPoint(x: 0.5, y: 1)
         self.textViewContainerView.layer.mask = textViewMask
         
         self.textView.textContainerInset = UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
+        
+        self.nextButton.enabled = false
         
         self.textView.rac_textSignal()
             .toSignalProducer()
@@ -49,6 +53,7 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
                 signal.observe { [weak self] event in
                     
                     self?.textViewPlaceHolder.hidden = event.value > 0
+                    self?.nextButton.enabled = event.value > 0
                 }
         }
         

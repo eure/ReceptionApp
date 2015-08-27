@@ -54,10 +54,10 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXG-bN-48N">
-                                <rect key="frame" x="80" y="170" width="647" height="330"/>
+                                <rect key="frame" x="80" y="182" width="647" height="318"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご用件をご記入ください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmA-Ba-VN0">
-                                        <rect key="frame" x="10" y="8" width="187" height="21"/>
+                                        <rect key="frame" x="10" y="8" width="187" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -70,15 +70,15 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hL-4s-NRs">
-                                        <rect key="frame" x="70" y="34" width="577" height="296"/>
+                                        <rect key="frame" x="70" y="34" width="577" height="283.5"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aof-66-CkR">
-                                                <rect key="frame" x="0.0" y="0.0" width="577" height="296"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="577" height="283.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reason for visit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVs-2c-OAm">
-                                                <rect key="frame" x="8" y="28" width="113" height="21"/>
+                                                <rect key="frame" x="8" y="28" width="112.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                             <constraint firstItem="z6h-9L-TJs" firstAttribute="centerX" secondItem="bnX-bu-HFf" secondAttribute="centerX" id="Ysn-p8-QCn"/>
                             <constraint firstItem="2Ar-JH-pSx" firstAttribute="top" secondItem="fn0-IS-dX4" secondAttribute="bottom" constant="360" id="afB-kh-Zvr"/>
                             <constraint firstItem="z6h-9L-TJs" firstAttribute="top" secondItem="HXc-Z7-bR7" secondAttribute="bottom" constant="60" id="not-d4-Oyb"/>
-                            <constraint firstItem="kXG-bN-48N" firstAttribute="top" secondItem="z6h-9L-TJs" secondAttribute="bottom" constant="80" id="ofS-NP-DEA"/>
+                            <constraint firstItem="kXG-bN-48N" firstAttribute="top" secondItem="z6h-9L-TJs" secondAttribute="bottom" constant="92" id="ofS-NP-DEA"/>
                             <constraint firstItem="fn0-IS-dX4" firstAttribute="centerX" secondItem="bnX-bu-HFf" secondAttribute="centerX" id="vrL-JA-q1W"/>
                             <constraint firstItem="fn0-IS-dX4" firstAttribute="top" secondItem="kXG-bN-48N" secondAttribute="bottom" constant="36" id="w8B-VE-Tfu"/>
                         </constraints>

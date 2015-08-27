@@ -21,7 +21,7 @@ class TopViewController: BaseViewController {
         
         self.welcomeLabel.attributedText = NSAttributedString(string: "ようこそeurekaへ ご用件をお選びください", attributes: [
             NSKernAttributeName : NSNumber(integer: 2),
-            NSFontAttributeName : UIFont.eureBoldFont(size: 15),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 18),
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )

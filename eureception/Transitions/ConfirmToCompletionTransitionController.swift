@@ -18,7 +18,7 @@ class ConfirmToCompletionTransitionController: NSObject, UIViewControllerAnimate
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! ConfirmAppointmentViewController
+        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! ConfirmOtherViewController
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)  as! CompletionViewController
         let containerView = transitionContext.containerView()!
         

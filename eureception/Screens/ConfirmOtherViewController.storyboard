@@ -44,7 +44,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="568" placeholderIntrinsicHeight="429" translatesAutoresizingMaskIntoConstraints="NO" id="mel-OV-XVw">
-                                <rect key="frame" x="100" y="270" width="568" height="429"/>
+                                <rect key="frame" x="100" y="245" width="568" height="429"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_memo_mini" translatesAutoresizingMaskIntoConstraints="NO" id="TxF-He-5ir">
                                         <rect key="frame" x="0.0" y="8" width="50" height="50"/>
@@ -53,7 +53,7 @@
                                             <constraint firstAttribute="width" constant="50" id="gbj-uQ-9OQ"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D51-aM-l9x">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D51-aM-l9x">
                                         <rect key="frame" x="80" y="0.0" width="488" height="429"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -83,7 +83,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以下、内容をご確認ください" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYJ-Le-Xql">
-                                <rect key="frame" x="104" y="215" width="260" height="24"/>
+                                <rect key="frame" x="104" y="190" width="260" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -95,12 +95,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eA1-xI-0ev" firstAttribute="centerY" secondItem="Rkr-QK-W19" secondAttribute="centerY" id="96G-j9-qqh"/>
+                            <constraint firstItem="vYJ-Le-Xql" firstAttribute="top" secondItem="Rkr-QK-W19" secondAttribute="bottom" constant="100" id="BDs-0o-DJJ"/>
                             <constraint firstItem="mel-OV-XVw" firstAttribute="top" secondItem="vYJ-Le-Xql" secondAttribute="bottom" constant="31" id="DfA-IQ-6f3"/>
                             <constraint firstItem="Rkr-QK-W19" firstAttribute="top" secondItem="592-KN-JG8" secondAttribute="bottom" constant="60" id="FRA-yG-6XJ"/>
                             <constraint firstItem="mel-OV-XVw" firstAttribute="centerX" secondItem="tAy-oi-DoB" secondAttribute="centerX" id="Knt-KZ-Kw4"/>
                             <constraint firstItem="Y9b-bC-LhF" firstAttribute="centerX" secondItem="tAy-oi-DoB" secondAttribute="centerX" id="Lfl-s1-5AD"/>
                             <constraint firstItem="2bd-cs-8A0" firstAttribute="top" secondItem="Y9b-bC-LhF" secondAttribute="bottom" constant="145" id="NsA-2a-QpE"/>
-                            <constraint firstItem="mel-OV-XVw" firstAttribute="top" secondItem="Rkr-QK-W19" secondAttribute="bottom" constant="180" id="PVe-DJ-90v"/>
                             <constraint firstItem="vYJ-Le-Xql" firstAttribute="leading" secondItem="mel-OV-XVw" secondAttribute="leading" constant="4" id="Upi-du-cyR"/>
                             <constraint firstItem="eA1-xI-0ev" firstAttribute="leading" secondItem="tAy-oi-DoB" secondAttribute="leading" constant="36" id="Veq-GM-Obn"/>
                             <constraint firstItem="Rkr-QK-W19" firstAttribute="centerX" secondItem="tAy-oi-DoB" secondAttribute="centerX" id="mvE-Rk-ieL"/>
@@ -115,6 +115,7 @@
                         <outlet property="iconImageView" destination="TxF-He-5ir" id="Ntp-z5-yDV"/>
                         <outlet property="logoImageView" destination="Rkr-QK-W19" id="DVu-Xw-PGm"/>
                         <outlet property="messageLabel" destination="vYJ-Le-Xql" id="0ks-Bm-vCl"/>
+                        <outlet property="purposeView" destination="mel-OV-XVw" id="c95-jh-D6c"/>
                         <outlet property="submitButton" destination="Y9b-bC-LhF" id="5Oc-9h-XsE"/>
                         <outlet property="textView" destination="D51-aM-l9x" id="pLl-QB-s1u"/>
                     </connections>
