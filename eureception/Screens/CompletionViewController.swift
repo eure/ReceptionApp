@@ -18,10 +18,10 @@ class CompletionViewController: BaseViewController {
 
         self.iconImageView.tintColor = UIColor.whiteColor()
         
-        self.titleLabel.font = UIFont.eureFont(size: 32)
+        self.titleLabel.font = UIFont.eureBoldFont(size: 32)
         self.titleLabel.text = "受け付けました"
         
-        self.subtitleLabel.font = UIFont.eureFont(size: 22)
+        self.subtitleLabel.font = UIFont.eureBoldFont(size: 22)
         self.subtitleLabel.text = "ただいま係りの者が参りますので、\nもう少々お待ちくださいませ"
         
         self.titleLabel.textColor = UIColor.whiteColor()

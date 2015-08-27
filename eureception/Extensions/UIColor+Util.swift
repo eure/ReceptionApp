@@ -17,7 +17,7 @@ extension UIColor {
         static let eurekaBackgroundColor = UIColor(white: 0.18, alpha: 1)
         static let eurekaLightBackgroundColor = UIColor(red: 0.325, green: 0.341, blue: 0.353, alpha: 1)
         static let errorTextColor = UIColor(red: 0.98, green: 0.278,blue: 0.349,alpha: 1)
-        static let eureBlackTextColor = UIColor(white: 0, alpha: 0.9)
+        static let eureBlackTextColor = UIColor(hexString: "323232")!
         static let eureLightGrayTextColor = UIColor(hexString: "#E6E6E6")!
         static let eureLightGrayColor = UIColor(hexString: "f5f5f5")!
     }

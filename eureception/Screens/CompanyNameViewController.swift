@@ -16,7 +16,7 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.textField.attributedPlaceholder = NSAttributedString.eureAttributedString(
+        self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "COMPANY NAME",
             color: UIColor.eureLightGrayTextColor,
             size: 55

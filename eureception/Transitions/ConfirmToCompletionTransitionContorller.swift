@@ -27,7 +27,7 @@ class ConfirmToCompletionTransitionController: NSObject, UIViewControllerAnimate
         let baseLayer = fromVC.submitButton.layer
         let maskLayer = CALayer()
         maskLayer.frame = baseLayer.frame
-        maskLayer.backgroundColor = UIColor.blackColor().CGColor
+        maskLayer.backgroundColor = UIColor.eureBlackTextColor.CGColor
         maskLayer.cornerRadius = maskLayer.frame.width / 2
         maskLayer.masksToBounds = true
         

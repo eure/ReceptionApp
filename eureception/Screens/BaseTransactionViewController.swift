@@ -16,7 +16,7 @@ class BaseTransactionViewController: BaseViewController {
         self.logoImageView.tintColor = UIColor.eureColor
         self.backButton.tintColor = UIColor.eureColor
     }
-
+    
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var backButton: UIButton!
     @IBAction func handleBackButton(sender: AnyObject) {

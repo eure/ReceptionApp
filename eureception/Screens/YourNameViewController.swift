@@ -17,7 +17,7 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.textField.attributedPlaceholder = NSAttributedString.eureAttributedString(
+        self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "YOUR NAME",
             color: UIColor.eureLightGrayTextColor,
             size: 55

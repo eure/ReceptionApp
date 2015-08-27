@@ -15,7 +15,7 @@ class ContactToSuggestCell: UITableViewCell {
         // Initialization code
         self.iconImageView.tintColor = UIColor.eureLightGrayTextColor
         
-        self.nameJaLabel.font = UIFont.eureFont(size: 55)
+        self.nameJaLabel.font = UIFont.eureBoldFont(size: 55)
         self.nameJaLabel.textColor = UIColor.eureColor
         self.nameEnLabel.textColor = UIColor.eureColor
                         
@@ -28,7 +28,7 @@ class ContactToSuggestCell: UITableViewCell {
     var user: User? {
         didSet {
             self.nameJaLabel.text = self.user?.nameJa
-            self.nameEnLabel.attributedText = NSAttributedString.eureAttributedString(self.user?.nameEn ?? "", color: UIColor.eureColor, size: 16 )
+            self.nameEnLabel.attributedText = NSAttributedString.eureBoldAttributedString(self.user?.nameEn ?? "", color: UIColor.eureColor, size: 16 )
         }
     }
     

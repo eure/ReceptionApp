@@ -21,7 +21,7 @@
         <!--Top View Controller-->
         <scene sceneID="SAk-PX-xvX">
             <objects>
-                <viewController id="Ha9-Ds-Otx" customClass="TopViewController" customModule="Reception" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ha9-Ds-Otx" customClass="TopViewController" customModule="eureception" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wxg-N2-rZv"/>
                         <viewControllerLayoutGuide type="bottom" id="gKg-3C-LaT"/>
@@ -34,15 +34,8 @@
                                 <rect key="frame" x="310" y="60" width="147" height="30"/>
                                 <animations/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WELCOME!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvw-tB-Ha6">
-                                <rect key="frame" x="314.5" y="929" width="138.5" height="30.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7k-QB-7JQ" customClass="TopButton" customModule="Reception" customModuleProvider="target">
-                                <rect key="frame" x="40" y="247" width="688" height="280"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7k-QB-7JQ" customClass="TopButton" customModule="eureception" customModuleProvider="target">
+                                <rect key="frame" x="40" y="228" width="688" height="280"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_big_appointment" translatesAutoresizingMaskIntoConstraints="NO" id="RbM-qm-gMl">
                                         <rect key="frame" x="273" y="30" width="142" height="142"/>
@@ -90,11 +83,11 @@
                                     <outlet property="titleLabel" destination="nyh-Mu-F3f" id="eBF-bC-eMY"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-5V-aKW" customClass="TopButton" customModule="Reception" customModuleProvider="target">
-                                <rect key="frame" x="40" y="557" width="688" height="280"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-5V-aKW" customClass="TopButton" customModule="eureception" customModuleProvider="target">
+                                <rect key="frame" x="40" y="538" width="688" height="280"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
-                                        <rect key="frame" x="301" y="187" width="85.5" height="36"/>
+                                        <rect key="frame" x="301" y="187" width="86" height="36"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -138,10 +131,17 @@
                                     <outlet property="titleLabel" destination="tFm-iq-1gL" id="jyu-xI-Qdu"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ようこそeurekaへ  ご用件をお選びください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-Rr-W2I">
-                                <rect key="frame" x="285" y="150" width="198" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ようこそeurekaへ ご用件をお選びください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-Rr-W2I">
+                                <rect key="frame" x="210" y="168" width="348" height="18"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvw-tB-Ha6">
+                                <rect key="frame" x="320" y="900" width="128" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -149,16 +149,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cBh-Rr-W2I" firstAttribute="top" secondItem="QQE-Z3-hyo" secondAttribute="bottom" constant="60" id="0GH-iO-8Nv"/>
+                            <constraint firstItem="cBh-Rr-W2I" firstAttribute="top" secondItem="QQE-Z3-hyo" secondAttribute="bottom" constant="78" id="0GH-iO-8Nv"/>
                             <constraint firstItem="TVz-5V-aKW" firstAttribute="top" secondItem="C7k-QB-7JQ" secondAttribute="bottom" constant="30" id="1k0-0P-ARK"/>
                             <constraint firstAttribute="trailing" secondItem="TVz-5V-aKW" secondAttribute="trailing" constant="40" id="47t-eC-cBh"/>
-                            <constraint firstItem="gKg-3C-LaT" firstAttribute="top" secondItem="Jvw-tB-Ha6" secondAttribute="bottom" constant="64" id="Dwj-Jf-5TV"/>
+                            <constraint firstItem="gKg-3C-LaT" firstAttribute="top" secondItem="Jvw-tB-Ha6" secondAttribute="bottom" constant="90.5" id="Dwj-Jf-5TV"/>
                             <constraint firstItem="QQE-Z3-hyo" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="G1K-bK-2F8"/>
                             <constraint firstAttribute="trailing" secondItem="C7k-QB-7JQ" secondAttribute="trailing" constant="40" id="I8B-qc-i79"/>
                             <constraint firstItem="cBh-Rr-W2I" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="QEN-nO-I9x"/>
                             <constraint firstItem="C7k-QB-7JQ" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="ejb-dJ-nR5"/>
                             <constraint firstItem="Jvw-tB-Ha6" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="gva-60-v7K"/>
-                            <constraint firstItem="C7k-QB-7JQ" firstAttribute="top" secondItem="cBh-Rr-W2I" secondAttribute="bottom" constant="43" id="h9U-bd-Rfc"/>
+                            <constraint firstItem="C7k-QB-7JQ" firstAttribute="top" secondItem="cBh-Rr-W2I" secondAttribute="bottom" constant="42" id="h9U-bd-Rfc"/>
                             <constraint firstItem="TVz-5V-aKW" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="i4b-vC-eRq"/>
                             <constraint firstItem="QQE-Z3-hyo" firstAttribute="top" secondItem="wxg-N2-rZv" secondAttribute="bottom" constant="60" id="tDp-DY-ARN"/>
                         </constraints>
@@ -181,7 +181,7 @@
         <!--Base Navigation Controller-->
         <scene sceneID="AHu-qW-e36">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Jf7-RZ-406" customClass="BaseNavigationController" customModule="Reception" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Jf7-RZ-406" customClass="BaseNavigationController" customModule="eureception" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XVg-5i-jVZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -200,8 +200,8 @@
     </scenes>
     <resources>
         <image name="eureka_logo" width="147" height="30"/>
-        <image name="icon_big_appointment" width="126" height="126"/>
-        <image name="icon_big_other" width="126" height="126"/>
+        <image name="icon_big_appointment" width="86" height="86"/>
+        <image name="icon_big_other" width="86" height="86"/>
         <image name="icon_next" width="33" height="33"/>
     </resources>
 </document>

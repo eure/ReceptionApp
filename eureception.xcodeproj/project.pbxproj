@@ -28,6 +28,7 @@
 		4B3EDC251B75F57900873B8C /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3EDC241B75F57900873B8C /* UIColor+Util.swift */; };
 		4B497C421B800EEA002F1262 /* Pods_Reception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D783990AC8D57A4135811A /* Pods_Reception.framework */; };
 		4B497C431B800EEA002F1262 /* Pods_Reception.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93D783990AC8D57A4135811A /* Pods_Reception.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B5231B21B8F03AD006DE64A /* KozGoPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B5231B11B8F03AD006DE64A /* KozGoPro-Regular.otf */; settings = {ASSET_TAGS = (); }; };
 		4B79AFA51B8D2E4B002EBF8E /* InputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B79AFA71B8D37F7002EBF8E /* ConfirmToCompletionTransitionContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA61B8D37F7002EBF8E /* ConfirmToCompletionTransitionContorller.swift */; settings = {ASSET_TAGS = (); }; };
 		4B98702E1B89681300F72342 /* ContactToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98702D1B89681300F72342 /* ContactToViewController.swift */; };
@@ -202,6 +203,7 @@
 		4B3EDC1F1B75ECFD00873B8C /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		4B3EDC211B75EDAC00873B8C /* AppConfiguration.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppConfiguration.swift.sample; sourceTree = "<group>"; };
 		4B3EDC241B75F57900873B8C /* UIColor+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Util.swift"; sourceTree = "<group>"; };
+		4B5231B11B8F03AD006DE64A /* KozGoPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KozGoPro-Regular.otf"; sourceTree = "<group>"; };
 		4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldTransitionController.swift; sourceTree = "<group>"; };
 		4B79AFA61B8D37F7002EBF8E /* ConfirmToCompletionTransitionContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmToCompletionTransitionContorller.swift; sourceTree = "<group>"; };
 		4B98702D1B89681300F72342 /* ContactToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToViewController.swift; sourceTree = "<group>"; };
@@ -438,11 +440,11 @@
 			children = (
 				4B9870391B8968B300F72342 /* BaseTransactionViewController.swift */,
 				4B9D42E41B765C5B0047C99D /* BaseNavigationController.swift */,
-				4B98703B1B896E2600F72342 /* TopViewController.swift */,
 				4B9870491B89729200F72342 /* TopButton.swift */,
 				4BB07A701B8CB70A000065F3 /* SubmitButton.swift */,
 				4BB07A721B8CBA36000065F3 /* HomeButton.swift */,
 				4BB07A6C1B8CB197000065F3 /* InputTextField.swift */,
+				4B98703B1B896E2600F72342 /* TopViewController.swift */,
 				4B98703D1B896E3600F72342 /* TopViewController.storyboard */,
 				4B98702D1B89681300F72342 /* ContactToViewController.swift */,
 				4B0169E51B8B370600208CA9 /* ContactToSuggestCell.swift */,
@@ -811,6 +813,7 @@
 			isa = PBXGroup;
 			children = (
 				4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */,
+				4B5231B11B8F03AD006DE64A /* KozGoPro-Regular.otf */,
 				4BB07A461B8C9A6C000065F3 /* Exo-Black-Italic.otf */,
 				4BB07A471B8C9A6C000065F3 /* Exo-Black.otf */,
 				4BB07A481B8C9A6C000065F3 /* Exo-Bold-Italic.otf */,
@@ -958,6 +961,7 @@
 				4B1B92B71B75B1B600C28005 /* Localizable.strings in Resources */,
 				4BB07A5C1B8C9A6C000065F3 /* Exo-DemiBold-Italic.otf in Resources */,
 				4BB07A5D1B8C9A6C000065F3 /* Exo-DemiBold.otf in Resources */,
+				4B5231B21B8F03AD006DE64A /* KozGoPro-Regular.otf in Resources */,
 				4BB07A681B8C9A6C000065F3 /* Exo-Thin-Italic.otf in Resources */,
 				4B992FA71B75146B0073473F /* Assets.xcassets in Resources */,
 				4BB07A5F1B8C9A6C000065F3 /* Exo-ExtraBold.otf in Resources */,

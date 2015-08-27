@@ -10,7 +10,7 @@
         <!--Confirm View Controller-->
         <scene sceneID="ere-QB-iU7">
             <objects>
-                <viewController id="MN4-0X-1Ae" customClass="ConfirmViewController" customModule="Reception" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MN4-0X-1Ae" customClass="ConfirmViewController" customModule="eureception" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fCc-n2-RWT"/>
                         <viewControllerLayoutGuide type="bottom" id="7Lf-4y-zvD"/>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="310" y="60" width="147" height="30"/>
                                 <animations/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-KQ-nbg" customClass="SubmitButton" customModule="Reception" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-KQ-nbg" customClass="SubmitButton" customModule="eureception" customModuleProvider="target">
                                 <rect key="frame" x="309" y="729" width="150" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_send" translatesAutoresizingMaskIntoConstraints="NO" id="zuU-oG-CgX">
@@ -171,7 +171,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-Kw-SUR">
-                                <rect key="frame" x="36" y="49.5" width="50" height="50"/>
+                                <rect key="frame" x="36" y="50" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HSS-Q9-j1O"/>

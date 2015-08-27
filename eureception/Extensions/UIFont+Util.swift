@@ -15,7 +15,7 @@ extension UIFont {
         return UIFont(name: "Exo-DemiBold", size: size)!
     }
     
-    class func eureFont(size size: CGFloat) -> UIFont {
+    class func eureBoldFont(size size: CGFloat) -> UIFont {
         
         let descriptor = UIFontDescriptor(fontAttributes: [
             UIFontDescriptorNameAttribute: "Exo-DemiBold",
@@ -28,4 +28,18 @@ extension UIFont {
         
         return UIFont(descriptor: descriptor, size: size)
     }
+    
+    class func eureFont(size size: CGFloat) -> UIFont {
+        
+        let descriptor = UIFontDescriptor(fontAttributes: [
+            UIFontDescriptorNameAttribute: "Exo-DemiBold",
+            UIFontDescriptorCascadeListAttribute : [
+                UIFontDescriptor(fontAttributes: [UIFontDescriptorNameAttribute: "KozGoPro-Regular"]),
+                UIFont.systemFontOfSize(size).fontDescriptor()
+            ]
+            ]
+        )
+        
+        return UIFont(descriptor: descriptor, size: size)
+    }        
 }

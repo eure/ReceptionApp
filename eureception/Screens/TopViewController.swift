@@ -19,23 +19,42 @@ class TopViewController: BaseViewController {
         self.appointButton.tintColor = UIColor.eureColor
         self.otherButton.tintColor = UIColor.eureColor
         
+        self.welcomeLabel.attributedText = NSAttributedString(string: "ようこそeurekaへ ご用件をお選びください", attributes: [
+            NSKernAttributeName : NSNumber(integer: 2),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 15),
+            NSForegroundColorAttributeName : UIColor.eureColor,
+            ]
+        )
+        
         self.welcomeBottomLabel.attributedText = NSAttributedString(string: "WELCOME!", attributes: [
-            NSKernAttributeName : NSNumber(integer: 8),
-            NSFontAttributeName : UIFont.eureFont(size: 23),
+            NSKernAttributeName : NSNumber(integer: 6),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 23),
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )
         
         self.appointButton.titleLabel?.attributedText = NSAttributedString(string: "APPOINTMENT", attributes: [
-            NSKernAttributeName : NSNumber(integer: 8),
-            NSFontAttributeName : UIFont.eureFont(size: 23),
+            NSKernAttributeName : NSNumber(integer: 6),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 23),
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )
         
+        self.appointButton.subtitleLabel?.attributedText = NSAttributedString(string: "ご予約のある方はこちら", attributes: [
+            NSKernAttributeName : NSNumber(integer: 2),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 15),
+            NSForegroundColorAttributeName : UIColor.eureColor,
+            ]
+        )
         self.otherButton.titleLabel?.attributedText = NSAttributedString(string: "OTHER", attributes: [
-            NSKernAttributeName : NSNumber(integer: 8),
-            NSFontAttributeName : UIFont.eureFont(size: 23),
+            NSKernAttributeName : NSNumber(integer: 6),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 23),
+            NSForegroundColorAttributeName : UIColor.eureColor,
+            ]
+        )
+        self.otherButton.subtitleLabel?.attributedText = NSAttributedString(string: "その他ご用件の方はこちら", attributes: [
+            NSKernAttributeName : NSNumber(integer: 2),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 15),
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )
@@ -57,5 +76,7 @@ class TopViewController: BaseViewController {
     
     @IBAction func handleotherButton(sender: AnyObject) {
         
+        let controller = OtherPurposeViewController.viewControllerFromStoryboard()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

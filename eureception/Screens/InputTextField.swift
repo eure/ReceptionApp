@@ -16,9 +16,9 @@ class InputTextField: UITextField {
         super.awakeFromNib()
         
         self.defaultTextAttributes = [
-            NSKernAttributeName : NSNumber(integer: 8),
-            NSFontAttributeName :  UIFont.eureFont(size: 55),
-            NSForegroundColorAttributeName : UIColor.blackColor(),
+            NSKernAttributeName : NSNumber(integer: 6),
+            NSFontAttributeName :  UIFont.eureBoldFont(size: 55),
+            NSForegroundColorAttributeName : UIColor.eureBlackTextColor,
         ]
     }
 }
