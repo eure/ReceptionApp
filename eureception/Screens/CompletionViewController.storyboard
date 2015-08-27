@@ -9,7 +9,7 @@
         <!--Completion View Controller-->
         <scene sceneID="QEY-pc-m6x">
             <objects>
-                <viewController id="PdI-fo-k4d" customClass="CompletionViewController" customModule="Reception" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PdI-fo-k4d" customClass="CompletionViewController" customModule="eureception" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mGY-cy-gtd"/>
                         <viewControllerLayoutGuide type="bottom" id="nJC-1B-adJ"/>
@@ -58,7 +58,7 @@
                                     <constraint firstItem="8qh-y6-Yaf" firstAttribute="leading" secondItem="6Zv-Gb-Vrl" secondAttribute="leading" constant="60" id="xyZ-eK-86z"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mx3-aZ-xab" customClass="HomeButton" customModule="Reception" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mx3-aZ-xab" customClass="HomeButton" customModule="eureception" customModuleProvider="target">
                                 <rect key="frame" x="320" y="768" width="128" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_top" translatesAutoresizingMaskIntoConstraints="NO" id="mgg-ie-UQv">

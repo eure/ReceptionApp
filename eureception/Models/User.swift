@@ -9,8 +9,10 @@
 import UIKit
 import CoreStore
 
+@objc(User)
 class User: NSManagedObject {
     
+    @NSManaged var id: Int64
     @NSManaged var imageURL: String!
     @NSManaged var nameEn: String!
     @NSManaged var nameJa: String!

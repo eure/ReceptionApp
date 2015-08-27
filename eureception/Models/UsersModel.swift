@@ -17,7 +17,7 @@ class UsersModel: BaseModel {
         
         Manager.sharedInstance.request(
             Alamofire.Method.POST,
-            "https://slack.com/api/chat.postMessage",
+            "https://reception.eure.jp/api/v1/users",
             parameters: [ : ],
             encoding: ParameterEncoding.URL,
             headers: nil

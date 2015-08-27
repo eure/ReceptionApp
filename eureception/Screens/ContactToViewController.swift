@@ -116,7 +116,7 @@ class ContactToViewController: BaseTransactionViewController {
         }
     }
     
-    private let usersListMonitor = CoreStore.monitorList(From(User))
+    private let usersListMonitor = CoreStore.monitorList(From(User), OrderBy(.Ascending("id")))
 }
 
 extension ContactToViewController: UITableViewDelegate, UITableViewDataSource {

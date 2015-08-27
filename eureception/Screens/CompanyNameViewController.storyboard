@@ -9,7 +9,7 @@
         <!--Company Name View Controller-->
         <scene sceneID="Kic-We-a2X">
             <objects>
-                <viewController id="4Uw-hd-JJn" customClass="CompanyNameViewController" customModule="Reception" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Uw-hd-JJn" customClass="CompanyNameViewController" customModule="eureception" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tej-Mx-aL9"/>
                         <viewControllerLayoutGuide type="bottom" id="4SE-jM-rNf"/>
@@ -45,7 +45,7 @@
                                             <constraint firstAttribute="width" secondItem="mJv-yr-dbz" secondAttribute="height" multiplier="1:1" id="us4-oS-7kk"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-KM-nnP" customClass="InputTextField" customModule="Reception" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-KM-nnP" customClass="InputTextField" customModule="eureception" customModuleProvider="target">
                                         <rect key="frame" x="100" y="5" width="543" height="90"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -64,7 +64,7 @@
                                     <constraint firstItem="mJv-yr-dbz" firstAttribute="leading" secondItem="2Mw-d8-E0V" secondAttribute="leading" constant="20" id="saw-vK-vys"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJY-Tp-5nL" customClass="NextButton" customModule="Reception" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJY-Tp-5nL" customClass="NextButton" customModule="eureception" customModuleProvider="target">
                                 <rect key="frame" x="320" y="536" width="128" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="0fw-eR-0hj">
