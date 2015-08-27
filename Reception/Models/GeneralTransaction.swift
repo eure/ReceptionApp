@@ -8,4 +8,9 @@
 
 struct GeneralTransaction: Transaction {
     
+    let purpose: String
+    
+    init(purpose: String) {
+        self.purpose = purpose
+    }
 }

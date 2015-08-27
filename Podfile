@@ -6,6 +6,7 @@ target 'Reception' do
 pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'swift-2.0'
 pod 'Parse'
 pod 'EasyAnimation', :git=>'https://github.com/icanzilb/EasyAnimation.git', :branch=>'swift2'
+pod 'CoreStore', :git=>'https://github.com/JohnEstropia/CoreStore.git', :branch=>'develop'
 
 pod 'SwiftyJSON', :git=>'https://github.com/SwiftyJSON/SwiftyJSON.git', :branch=>'xcode7'
 

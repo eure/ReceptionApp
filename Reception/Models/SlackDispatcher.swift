@@ -79,7 +79,7 @@ struct SlackDispatcher {
     static func call(transaction: GeneralTransaction) {
         
         let message: String = { return ""
-            + "*来客のお知らせ*" + "\n"
+            + "エウレカ受付" + "\n"
             }()
         
         Manager.sharedInstance.request(
