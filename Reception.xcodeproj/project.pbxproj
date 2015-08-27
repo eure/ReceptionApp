@@ -16,6 +16,10 @@
 		4B2391DD1B82F874001D636D /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2391DC1B82F874001D636D /* Customer.swift */; };
 		4B2AE0DA1B8DA62400111C51 /* KozGoPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */; settings = {ASSET_TAGS = (); }; };
 		4B2CA5FE1B8EB74800BCD9A4 /* Reception.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA5FC1B8EB74800BCD9A4 /* Reception.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		4B2CA6001B8EB9E300BCD9A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA5FF1B8EB9E300BCD9A4 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		4B2CA6021B8EBA7000BCD9A4 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6011B8EBA7000BCD9A4 /* UsersModel.swift */; settings = {ASSET_TAGS = (); }; };
+		4B2CA6041B8EBA7800BCD9A4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6031B8EBA7800BCD9A4 /* BaseModel.swift */; settings = {ASSET_TAGS = (); }; };
+		4B2CA6061B8EBAB900BCD9A4 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6051B8EBAB900BCD9A4 /* Container.swift */; settings = {ASSET_TAGS = (); }; };
 		4B2F75181B8D52D90087DEBE /* InputFieldToConfirmTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75171B8D52D90087DEBE /* InputFieldToConfirmTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B2F751A1B8D66B00087DEBE /* TopToContactTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B2F751C1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -185,6 +189,10 @@
 		4B2391DC1B82F874001D636D /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KozGoPro-Medium.otf"; sourceTree = "<group>"; };
 		4B2CA5FD1B8EB74800BCD9A4 /* Reception.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reception.xcdatamodel; sourceTree = "<group>"; };
+		4B2CA5FF1B8EB9E300BCD9A4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4B2CA6011B8EBA7000BCD9A4 /* UsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		4B2CA6031B8EBA7800BCD9A4 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		4B2CA6051B8EBAB900BCD9A4 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		4B2F75171B8D52D90087DEBE /* InputFieldToConfirmTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldToConfirmTransitionController.swift; sourceTree = "<group>"; };
 		4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToContactTransitionController.swift; sourceTree = "<group>"; };
 		4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToInputFieldTransitionController.swift; sourceTree = "<group>"; };
@@ -457,6 +465,10 @@
 				4B3EDC1D1B75EB7D00873B8C /* Account.swift */,
 				4B2391DC1B82F874001D636D /* Customer.swift */,
 				4B2391DA1B82EDBA001D636D /* SlackDispatcher.swift */,
+				4B2CA6051B8EBAB900BCD9A4 /* Container.swift */,
+				4B2CA6031B8EBA7800BCD9A4 /* BaseModel.swift */,
+				4B2CA6011B8EBA7000BCD9A4 /* UsersModel.swift */,
+				4B2CA5FF1B8EB9E300BCD9A4 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1075,6 +1087,7 @@
 				4B9930871B7515470073473F /* NSObject+JEDebugging.m in Sources */,
 				4B9930831B7515470073473F /* NSHashTable+JEDebugging.m in Sources */,
 				4B99309C1B7515470073473F /* NSCache+JEToolkit.m in Sources */,
+				4B2CA6021B8EBA7000BCD9A4 /* UsersModel.swift in Sources */,
 				4B9930821B7515470073473F /* NSException+JEDebugging.m in Sources */,
 				4B99308F1B7515470073473F /* UIViewController+JEDebugging.m in Sources */,
 				4B9930841B7515470073473F /* NSMapTable+JEDebugging.m in Sources */,
@@ -1082,6 +1095,7 @@
 				4B9930B81B7515470073473F /* JEDispatch.m in Sources */,
 				4B9930811B7515470073473F /* NSError+JEDebugging.m in Sources */,
 				4B3EDC201B75ECFD00873B8C /* AppConfiguration.swift in Sources */,
+				4B2CA6041B8EBA7800BCD9A4 /* BaseModel.swift in Sources */,
 				4B9930B41B7515470073473F /* UITextView+JEToolkit.m in Sources */,
 				4B79AFA71B8D37F7002EBF8E /* ConfirmToCompletionTransitionContorller.swift in Sources */,
 				4B2391DD1B82F874001D636D /* Customer.swift in Sources */,
@@ -1121,6 +1135,7 @@
 				4B9930A01B7515470073473F /* NSDateFormatter+JEToolkit.m in Sources */,
 				4B98703C1B896E2600F72342 /* TopViewController.swift in Sources */,
 				4B9930881B7515470073473F /* NSOrderedSet+JEDebugging.m in Sources */,
+				4B2CA6061B8EBAB900BCD9A4 /* Container.swift in Sources */,
 				4B99309E1B7515470073473F /* NSDate+JEToolkit.m in Sources */,
 				4B9930B21B7515470073473F /* UITableView+JEToolkit.m in Sources */,
 				4BB07A6F1B8CB354000065F3 /* NSAttributedString+Util.swift in Sources */,
@@ -1139,6 +1154,7 @@
 				4B2F751A1B8D66B00087DEBE /* TopToContactTransitionController.swift in Sources */,
 				4B99309D1B7515470073473F /* NSCalendar+JEToolkit.m in Sources */,
 				4B9930AA1B7515470073473F /* UICollectionView+JEToolkit.m in Sources */,
+				4B2CA6001B8EB9E300BCD9A4 /* User.swift in Sources */,
 				4B98704A1B89729200F72342 /* TopButton.swift in Sources */,
 				4B992FCF1B75148F0073473F /* BaseViewController.swift in Sources */,
 				4B2F751C1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift in Sources */,
