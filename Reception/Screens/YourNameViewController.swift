@@ -24,7 +24,7 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
         )
         self.textField.textColor = UIColor.eureBlackTextColor
         self.textField.tintColor = UIColor.eureColor
-        self.textField.text = self.transaction?.customer?.name
+        self.textField.text = self.transaction?.visitor?.name
         
         JEDump(self.transaction)
         
@@ -73,9 +73,9 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
             return
         }
         
-        var customer = self.transaction?.customer ?? Customer()
-        customer.name = name
-        self.transaction?.customer = customer
+        var visitor = self.transaction?.visitor ?? Visitor()
+        visitor.name = name
+        self.transaction?.visitor = visitor
         controller.transaction = self.transaction
         
         self.navigationController?.pushViewController(controller, animated: true)

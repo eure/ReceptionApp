@@ -1,5 +1,5 @@
 //
-//  Customer.swift
+//  Visitor.swift
 //  Reception
 //
 //  Created by Hiroshi Kimura on 8/18/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Customer {
+struct Visitor {
     
     var name: String = ""
     var numberOfPersons: Int = 1

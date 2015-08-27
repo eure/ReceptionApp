@@ -25,10 +25,10 @@ class ContactToSuggestCell: UITableViewCell {
         self.layer.cornerRadius = 20
     }
 
-    var account: Account? {
+    var user: User? {
         didSet {
-            self.nameJaLabel.text = self.account?.nameJa
-            self.nameEnLabel.attributedText = NSAttributedString.eureAttributedString(self.account?.nameEn ?? "", color: UIColor.eureColor, size: 16 )
+            self.nameJaLabel.text = self.user?.nameJa
+            self.nameEnLabel.attributedText = NSAttributedString.eureAttributedString(self.user?.nameEn ?? "", color: UIColor.eureColor, size: 16 )
         }
     }
     

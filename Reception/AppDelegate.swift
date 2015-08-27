@@ -29,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             AppConfiguration.ParseKey.ApplicationKey,
             clientKey: AppConfiguration.ParseKey.ClientKey
         )
+        
+        Container.UsersModel.getUsers { (result) -> Void in
+            
+        }
         return true
     }
 

@@ -10,35 +10,11 @@ import Parse
 
 class AppointTransaction: Transaction {
     
-    var customer: Customer?
-    var account: Account
+    var visitor: Visitor?
+    var user: User
     
-    init(account: Account) {
+    init(user: User) {
         
-        self.account = account
-    }
-    
-    func toPFObject() -> PFObject? {
-        
-        guard let customer = self.customer else {
-            return nil
-        }
-        
-        let object = PFObject(className: "Transaction")
-        object["name"] = customer.name
-        object["company_name"] = customer.companyName
-        object["persons_count"] = customer.numberOfPersons
-        object["contact_to"] = account.nameEn
-        
-        return object
-    }
-    
-    func saveToParse() {
-        
-        if let object = self.toPFObject() {
-            object.saveInBackgroundWithBlock { (success, error) -> Void in
-                
-            }
-        }
+        self.user = user
     }
 }

@@ -21,7 +21,7 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
         self.plusButton.tintColor = UIColor.eureColor
         self.iconImageView.tintColor = UIColor.eureColor
         
-        self.count = self.transaction?.customer?.numberOfPersons ?? 1
+        self.count = self.transaction?.visitor?.numberOfPersons ?? 1
     }
     
     private var count: Int {
@@ -36,7 +36,7 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
             
             self._count = newValue
             
-            self.transaction?.customer?.numberOfPersons = newValue
+            self.transaction?.visitor?.numberOfPersons = newValue
             
             self.countLabel.attributedText = NSAttributedString.eureAttributedString(
                 "\(self.count)人",

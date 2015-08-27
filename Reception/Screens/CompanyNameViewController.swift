@@ -22,7 +22,7 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
             size: 55
         )
         self.textField.tintColor = UIColor.eureColor
-        self.textField.text = self.transaction?.customer?.companyName
+        self.textField.text = self.transaction?.visitor?.companyName
         
         self.iconImageView.tintColor = UIColor.eureColor
         
@@ -40,7 +40,7 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
                         return
                     }
                     
-                    self?.transaction?.customer?.companyName = string
+                    self?.transaction?.visitor?.companyName = string
                 }
         }
     }

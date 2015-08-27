@@ -13,21 +13,21 @@ struct SlackDispatcher {
     
     static func call(transaction: AppointTransaction) {
         
-        let account = transaction.account
-        guard let customer = transaction.customer else {
+        let user = transaction.user
+        guard let visitor = transaction.visitor else {
             return
         }
         
         let message: String = { return ""
-            + "@\(account.slackAccountName)\n"
+            + "@\(user.slackName)\n"
             + "*エウレカ受付*" + "\n"
             + "\n"
             + ">*名前*\n"
-            + ">\(customer.name)\n"
+            + ">\(visitor.name)\n"
             + ">*会社名*\n"
-            + ">\(customer.companyName)\n"
+            + ">\(visitor.companyName)\n"
             + ">*人数*\n"
-            + ">\(customer.numberOfPersons)\n"
+            + ">\(visitor.numberOfPersons)\n"
             + "*---*"
             + "made in @muukii"
         }()
@@ -37,7 +37,7 @@ struct SlackDispatcher {
             "https://slack.com/api/chat.postMessage",
             parameters: [
                 "token": AppConfiguration.SlackToken,
-                "channel": account.slackAccountId,
+                "channel": user.slackID,
                 "text": message,
                 "parse": "full",
                 "username": "eureka reception",

@@ -10,6 +10,7 @@ import Foundation
 
 struct AppConfiguration {
     
+    /*
     static let allEmployees: [Account] = {
         
         return [
@@ -64,6 +65,7 @@ struct AppConfiguration {
             ),
         ]
     }()
+    */
     
     static let SlackToken = "xoxp-2361292637-2596467047-3237542349-75bb04"
     

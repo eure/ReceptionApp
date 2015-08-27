@@ -16,4 +16,28 @@ class User: NSManagedObject {
     @NSManaged var nameJa: String!
     @NSManaged var slackID: String!
     @NSManaged var slackName: String!
+    
+    var nameKatana: String {
+        
+        return (self.nameEn as NSString).stringByTransliteratingRomajiToKatakana()
+    }
+    
+    var nameHiragana: String {
+        
+        return (self.nameEn as NSString).stringByTransliteratingRomajiToHiragana()
+    }
+    
+    func compare(candidate: String) -> Bool {
+        
+        if nameEn.lowercaseString.rangeOfString(candidate.lowercaseString) != nil ||
+            nameJa.rangeOfString(candidate) != nil ||
+            nameKatana.rangeOfString(candidate) != nil ||
+            nameHiragana.rangeOfString(candidate) != nil {
+                
+                return true
+        } else {
+            return false
+        }
+        
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreStore
 
 class ContactToViewController: BaseTransactionViewController {
 
@@ -38,7 +39,7 @@ class ContactToViewController: BaseTransactionViewController {
                         return
                     }
                     
-                    self?.results = AppConfiguration.allEmployees.filter { $0.compare(value) == true }
+                    self?.results = self?.usersListMonitor.objectsInAllSections().filter { $0.compare(value) == true } ?? []
                 }
         }
         
@@ -108,12 +109,14 @@ class ContactToViewController: BaseTransactionViewController {
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     @IBOutlet private dynamic weak var textField: UITextField!
   
-    private var results: [Account] = [] {
+    private var results: [User] = [] {
         didSet {
             
             self.tableView?.reloadData()
         }
     }
+    
+    private let usersListMonitor = CoreStore.monitorList(From(User))
 }
 
 extension ContactToViewController: UITableViewDelegate, UITableViewDataSource {
@@ -131,17 +134,17 @@ extension ContactToViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithClass(ContactToSuggestCell.self, forIndexPath: indexPath)
-        cell.account = self.results[indexPath.row]
+        cell.user = self.results[indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let account = self.results[indexPath.row]
+        let user = self.results[indexPath.row]
         
         let controller = YourNameViewController.viewControllerFromStoryboard()
 
-        let transaction = AppointTransaction(account: account)
+        let transaction = AppointTransaction(user: user)
         controller.transaction = transaction
         
         self.navigationController?.pushViewController(controller, animated: true)

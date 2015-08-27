@@ -7,7 +7,31 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
+import CoreStore
 
 class UsersModel: BaseModel {
     
+    func getUsers(result: ((result: ModelResult<[User]>) -> Void)) {
+        
+        Manager.sharedInstance.request(
+            Alamofire.Method.POST,
+            "https://slack.com/api/chat.postMessage",
+            parameters: [ : ],
+            encoding: ParameterEncoding.URL,
+            headers: nil
+            )
+        .response(queue: nil, responseSerializer: ReceptionResponseSerializer()) { (request, response, _result) -> Void in
+            
+            switch _result {
+            case .Success(let json):
+                break
+            case .Failure(let data, let errorType):
+                
+                result(result: .Failure()
+                break
+            }
+        }
+    }
 }

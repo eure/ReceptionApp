@@ -21,15 +21,15 @@ class ConfirmViewController: BaseTransactionViewController {
         
         self.icons.forEach { $0.tintColor = UIColor.eureLightGrayTextColor }
         
-        self.contactToLabel.attributedText = NSAttributedString.eureAttributedString(transaction?.account.nameJa ?? "", color: UIColor.blackColor(), size: 32)
+        self.contactToLabel.attributedText = NSAttributedString.eureAttributedString(transaction?.user.nameJa ?? "", color: UIColor.blackColor(), size: 32)
         
-        if let customer = transaction?.customer {
+        if let visitor = transaction?.visitor {
             let size: CGFloat = 32
-            self.nameLabel.attributedText = NSAttributedString.eureAttributedString(customer.name ?? "", color: UIColor.blackColor(), size: size)
+            self.nameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.name ?? "", color: UIColor.blackColor(), size: size)
             
-            self.companyLabel.attributedText = NSAttributedString.eureAttributedString(customer.companyName, color: UIColor.blackColor(), size: size)
+            self.companyLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.blackColor(), size: size)
                         
-            self.countLabel.attributedText = NSAttributedString.eureAttributedString("\(customer.numberOfPersons)人", color: UIColor.blackColor(), size: size)
+            self.countLabel.attributedText = NSAttributedString.eureAttributedString("\(visitor.numberOfPersons)人", color: UIColor.blackColor(), size: size)
         }
         
         self.messageLabel.font = UIFont.eureFont(size: 18)
@@ -67,8 +67,6 @@ class ConfirmViewController: BaseTransactionViewController {
     @IBAction private dynamic func handleSubmitButton(sender: AnyObject) {
         
         let controller = CompletionViewController.viewControllerFromStoryboard()
-        
-        self.transaction?.saveToParse()
         
         guard let transaction = self.transaction else {
             return
