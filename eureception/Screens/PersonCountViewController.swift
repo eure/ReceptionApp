@@ -67,7 +67,7 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
     
     @IBAction func handleNextButton(sender: AnyObject) {
         
-        let controller = ConfirmViewController.viewControllerFromStoryboard()
+        let controller = ConfirmAppointmentViewController.viewControllerFromStoryboard()
         controller.transaction = self.transaction
         
         self.navigationController?.pushViewController(controller, animated: true)

@@ -33,15 +33,19 @@ extension BaseNavigationController: UINavigationControllerDelegate {
             
             return InputFieldTransitionController(operation: operation)
             
-        case ((_ as ConfirmViewController), (_ as CompletionViewController)):
+        case ((_ as ConfirmAppointmentViewController), (_ as CompletionViewController)):
             
-            return ConfirmToCompletionTransitionController()
+            return ConfirmAppointmentToCompletionTransitionController()
+            
+        case ((_ as ConfirmOtherViewController), (_ as CompletionViewController)):
+            
+            return ConfirmOtherToCompletionTransitionController()
             
         case ((_ as CompletionViewController), (_ as TopViewController)):
             
             return CompletionToTopTransitionController()
             
-        case ((_ as InputFieldTransition), (_ as ConfirmViewController)), ((_ as ConfirmViewController), (_ as InputFieldTransition)):
+        case ((_ as InputFieldTransition), (_ as ConfirmAppointmentViewController)), ((_ as ConfirmAppointmentViewController), (_ as InputFieldTransition)):
             
             return InputFieldToConfirmTransitionController(operation: operation)
         default:

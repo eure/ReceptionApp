@@ -19,24 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-Gb-Vrl">
-                                <rect key="frame" x="148" y="334" width="472" height="295.5"/>
+                                <rect key="frame" x="148" y="334" width="472" height="296"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="受け付けました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKk-V3-YS5">
-                                        <rect key="frame" x="124" y="185" width="224" height="38.5"/>
+                                        <rect key="frame" x="124" y="185" width="224" height="39"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ただいま係りの者が参りますので、 もう少々お待ちくださいませ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qh-y6-Yaf">
-                                        <rect key="frame" x="60" y="242.5" width="352" height="53"/>
+                                        <rect key="frame" x="60" y="243" width="352" height="53"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_check" translatesAutoresizingMaskIntoConstraints="NO" id="5gd-56-2Pu">
-                                        <rect key="frame" x="157.5" y="0.0" width="157" height="115"/>
+                                        <rect key="frame" x="158" y="0.0" width="157" height="115"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="157" id="A2a-kS-gOa"/>

@@ -8,28 +8,29 @@
 
 import UIKit
 
-class ConfirmOtherViewController: BaseTransactionViewController {
+class ConfirmOtherViewController: BaseConfirmViewController {
 
+    var transaction: OtherTransaction?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.iconImageView.tintColor = UIColor.eureColor
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.purpose ?? "", color: UIColor.eureBlackTextColor, size: 36)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var textView: UITextView!
+    
+    override dynamic func handleSubmitButton(sender: AnyObject) {
+        
+        let controller = CompletionViewController.viewControllerFromStoryboard()
+        
+        guard let transaction = self.transaction else {
+            return
+        }
+        SlackDispatcher.call(transaction)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
-    */
-
 }

@@ -76,5 +76,13 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         
+        let controller = ConfirmOtherViewController.viewControllerFromStoryboard()
+        guard let purpose = self.textView.text else {
+            return
+        }
+        let transaction = OtherTransaction.init(purpose: purpose)
+        controller.transaction = transaction
+        
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

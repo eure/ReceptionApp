@@ -8,28 +8,27 @@
 
 import UIKit
 
-class ConfirmViewController: BaseTransactionViewController {
+class ConfirmAppointmentViewController: BaseConfirmViewController {
 
     // MARK: Public
     
     var transaction: AppointTransaction?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         self.icons.forEach { $0.tintColor = UIColor.eureLightGrayTextColor }
         
-        self.contactToLabel.attributedText = NSAttributedString.eureBoldAttributedString(transaction?.user.nameJa ?? "", color: UIColor.eureBlackTextColor, size: 32)
+        self.contactToLabel.attributedText = NSAttributedString.eureAttributedString(self.transaction?.user.nameJa ?? "", color: UIColor.eureBlackTextColor, size: 32)
         
-        if let visitor = transaction?.visitor {
+        if let visitor = self.transaction?.visitor {
             let size: CGFloat = 32
-            self.nameLabel.attributedText = NSAttributedString.eureBoldAttributedString(visitor.name ?? "", color: UIColor.eureBlackTextColor, size: size)
+            self.nameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.name ?? "", color: UIColor.eureBlackTextColor, size: size)
             
-            self.companyLabel.attributedText = NSAttributedString.eureBoldAttributedString(visitor.companyName, color: UIColor.eureBlackTextColor, size: size)
+            self.companyLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.eureBlackTextColor, size: size)
                         
-            self.countLabel.attributedText = NSAttributedString.eureBoldAttributedString("\(visitor.numberOfPersons)人", color: UIColor.eureBlackTextColor, size: size)
+            self.countLabel.attributedText = NSAttributedString.eureAttributedString("\(visitor.numberOfPersons)人", color: UIColor.eureBlackTextColor, size: size)
         }
         
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
@@ -38,17 +37,25 @@ class ConfirmViewController: BaseTransactionViewController {
         
         self.labels.forEach { label in
             
-            
         }
     }
     
+    override dynamic func handleSubmitButton(sender: AnyObject) {
+        
+        let controller = CompletionViewController.viewControllerFromStoryboard()
+        
+        guard let transaction = self.transaction else {
+            return
+        }
+        SlackDispatcher.call(transaction)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     // Use animation.
-    @IBOutlet dynamic weak var submitButton: SubmitButton!
     @IBOutlet dynamic weak var contactToView: UIView!
     @IBOutlet dynamic weak var nameView: UIView!
     @IBOutlet dynamic weak var companyNameView: UIView!
     @IBOutlet dynamic weak var countview: UIView!
-    @IBOutlet dynamic weak var messageLabel: UILabel!
 
     // MARK: Private
     @IBOutlet private dynamic weak var contactToIconImageView: UIImageView!
@@ -64,14 +71,4 @@ class ConfirmViewController: BaseTransactionViewController {
     @IBOutlet private dynamic var icons: [UIImageView]!
     @IBOutlet private dynamic var labels: [UILabel]!
     
-    @IBAction private dynamic func handleSubmitButton(sender: AnyObject) {
-        
-        let controller = CompletionViewController.viewControllerFromStoryboard()
-        
-        guard let transaction = self.transaction else {
-            return
-        }
-        SlackDispatcher.call(transaction)
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
 }

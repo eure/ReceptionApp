@@ -76,7 +76,7 @@ struct SlackDispatcher {
     }
     
     
-    static func call(transaction: GeneralTransaction) {
+    static func call(transaction: OtherTransaction) {
         
         let message: String = { return ""
             + "エウレカ受付" + "\n"

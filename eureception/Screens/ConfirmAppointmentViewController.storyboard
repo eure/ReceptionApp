@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Confirm View Controller-->
+        <!--Confirm Appointment View Controller-->
         <scene sceneID="ere-QB-iU7">
             <objects>
-                <viewController id="MN4-0X-1Ae" customClass="ConfirmViewController" customModule="eureception" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MN4-0X-1Ae" customClass="ConfirmAppointmentViewController" customModule="eureception" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fCc-n2-RWT"/>
                         <viewControllerLayoutGuide type="bottom" id="7Lf-4y-zvD"/>
@@ -49,7 +49,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb0-GP-Upp">
                                 <rect key="frame" x="100" y="270" width="568" height="66"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_contact" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-p6-tFZ">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_contact_mini" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-p6-tFZ">
                                         <rect key="frame" x="0.0" y="8" width="50" height="50"/>
                                         <animations/>
                                         <constraints>
@@ -80,7 +80,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiA-m0-U1C">
                                 <rect key="frame" x="100" y="452" width="568" height="66"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_company" translatesAutoresizingMaskIntoConstraints="NO" id="4ZQ-HO-a8D">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_company_mini" translatesAutoresizingMaskIntoConstraints="NO" id="4ZQ-HO-a8D">
                                         <rect key="frame" x="0.0" y="8" width="50" height="50"/>
                                         <animations/>
                                         <constraints>
@@ -111,14 +111,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-uU-3Nb">
                                 <rect key="frame" x="100" y="543" width="568" height="66"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_member" translatesAutoresizingMaskIntoConstraints="NO" id="K3K-ig-9W4">
-                                        <rect key="frame" x="0.0" y="7" width="50" height="50"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="K3K-ig-9W4" secondAttribute="height" multiplier="1:1" id="sCv-YE-dgi"/>
-                                            <constraint firstAttribute="width" constant="50" id="sZk-Gf-V2J"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Q0Q-pe-MnD">
                                         <rect key="frame" x="70" y="0.0" width="498" height="66"/>
                                         <animations/>
@@ -126,6 +118,14 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_member_mini" translatesAutoresizingMaskIntoConstraints="NO" id="K3K-ig-9W4">
+                                        <rect key="frame" x="0.0" y="8" width="50" height="50"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="K3K-ig-9W4" secondAttribute="height" multiplier="1:1" id="sCv-YE-dgi"/>
+                                            <constraint firstAttribute="width" constant="50" id="sZk-Gf-V2J"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -142,7 +142,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Stv-TP-YT2">
                                 <rect key="frame" x="100" y="361" width="568" height="66"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_name" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-AL-zS5">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_name_mini" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-AL-zS5">
                                         <rect key="frame" x="0.0" y="8" width="50" height="50"/>
                                         <animations/>
                                         <constraints>
@@ -256,10 +256,10 @@
     <resources>
         <image name="eureka_logo" width="147" height="30"/>
         <image name="icon_back" width="33" height="33"/>
-        <image name="icon_company" width="50" height="50"/>
-        <image name="icon_contact" width="50" height="50"/>
-        <image name="icon_member" width="50" height="50"/>
-        <image name="icon_name" width="50" height="50"/>
+        <image name="icon_company_mini" width="36" height="36"/>
+        <image name="icon_contact_mini" width="36" height="36"/>
+        <image name="icon_member_mini" width="36" height="36"/>
+        <image name="icon_name_mini" width="36" height="36"/>
         <image name="icon_send" width="78" height="39"/>
     </resources>
 </document>

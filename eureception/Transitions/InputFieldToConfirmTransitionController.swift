@@ -33,7 +33,7 @@ class InputFieldToConfirmTransitionController: NSObject, UIViewControllerAnimate
         if operation == .Push {
             
             let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-            let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! ConfirmViewController
+            let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! ConfirmAppointmentViewController
             let inputFieldView = (fromVC as! InputFieldTransition).inputFieldView
             let nextButotn = (fromVC as! InputFieldTransition).nextButton
             
@@ -102,7 +102,7 @@ class InputFieldToConfirmTransitionController: NSObject, UIViewControllerAnimate
             
         } else if operation == .Pop {
             
-            let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! ConfirmViewController
+            let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! ConfirmAppointmentViewController
             let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
             
             let inputFieldView = (toVC as! InputFieldTransition).inputFieldView
