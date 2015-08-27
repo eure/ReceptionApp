@@ -214,15 +214,15 @@
 		4B9870491B89729200F72342 /* TopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButton.swift; sourceTree = "<group>"; };
 		4B98704B1B8977C900F72342 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		4B98704D1B8977EF00F72342 /* GeneralTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralTransaction.swift; sourceTree = "<group>"; };
-		4B992F9C1B75146B0073473F /* Reception.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reception.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B992F9C1B75146B0073473F /* eureception.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eureception.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B992F9F1B75146B0073473F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B992FA61B75146B0073473F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B992FA91B75146B0073473F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B992FAB1B75146B0073473F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B992FB01B75146B0073473F /* ReceptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B992FB01B75146B0073473F /* eureception.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eureception.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B992FB41B75146B0073473F /* ReceptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceptionTests.swift; sourceTree = "<group>"; };
 		4B992FB61B75146B0073473F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B992FBB1B75146B0073473F /* ReceptionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceptionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B992FBB1B75146B0073473F /* eureception.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eureception.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B992FBF1B75146B0073473F /* ReceptionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceptionUITests.swift; sourceTree = "<group>"; };
 		4B992FC11B75146B0073473F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B992FCE1B75148F0073473F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -495,9 +495,9 @@
 		4B992F9D1B75146B0073473F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B992F9C1B75146B0073473F /* Reception.app */,
-				4B992FB01B75146B0073473F /* ReceptionTests.xctest */,
-				4B992FBB1B75146B0073473F /* ReceptionUITests.xctest */,
+				4B992F9C1B75146B0073473F /* eureception.app */,
+				4B992FB01B75146B0073473F /* eureception.xctest */,
+				4B992FBB1B75146B0073473F /* eureception.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -521,7 +521,8 @@
 				4B1B92B91B75B1B600C28005 /* Localizable.strings */,
 				4B2CA5FC1B8EB74800BCD9A4 /* Reception.xcdatamodeld */,
 			);
-			path = Reception;
+			name = Reception;
+			path = eureception;
 			sourceTree = "<group>";
 		};
 		4B992FB31B75146B0073473F /* ReceptionTests */ = {
@@ -832,9 +833,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B992F9B1B75146B0073473F /* Reception */ = {
+		4B992F9B1B75146B0073473F /* eureception */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B992FC41B75146B0073473F /* Build configuration list for PBXNativeTarget "Reception" */;
+			buildConfigurationList = 4B992FC41B75146B0073473F /* Build configuration list for PBXNativeTarget "eureception" */;
 			buildPhases = (
 				1D21DE0A1905CD34C7D061D3 /* Check Pods Manifest.lock */,
 				4B992F981B75146B0073473F /* Sources */,
@@ -849,14 +850,14 @@
 			);
 			dependencies = (
 			);
-			name = Reception;
+			name = eureception;
 			productName = Reception;
-			productReference = 4B992F9C1B75146B0073473F /* Reception.app */;
+			productReference = 4B992F9C1B75146B0073473F /* eureception.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4B992FAF1B75146B0073473F /* ReceptionTests */ = {
+		4B992FAF1B75146B0073473F /* eureceptionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B992FC71B75146B0073473F /* Build configuration list for PBXNativeTarget "ReceptionTests" */;
+			buildConfigurationList = 4B992FC71B75146B0073473F /* Build configuration list for PBXNativeTarget "eureceptionTests" */;
 			buildPhases = (
 				4B992FAC1B75146B0073473F /* Sources */,
 				4B992FAD1B75146B0073473F /* Frameworks */,
@@ -867,14 +868,14 @@
 			dependencies = (
 				4B992FB21B75146B0073473F /* PBXTargetDependency */,
 			);
-			name = ReceptionTests;
+			name = eureceptionTests;
 			productName = ReceptionTests;
-			productReference = 4B992FB01B75146B0073473F /* ReceptionTests.xctest */;
+			productReference = 4B992FB01B75146B0073473F /* eureception.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4B992FBA1B75146B0073473F /* ReceptionUITests */ = {
+		4B992FBA1B75146B0073473F /* eureceptionUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B992FCA1B75146B0073473F /* Build configuration list for PBXNativeTarget "ReceptionUITests" */;
+			buildConfigurationList = 4B992FCA1B75146B0073473F /* Build configuration list for PBXNativeTarget "eureceptionUITests" */;
 			buildPhases = (
 				4B992FB71B75146B0073473F /* Sources */,
 				4B992FB81B75146B0073473F /* Frameworks */,
@@ -885,9 +886,9 @@
 			dependencies = (
 				4B992FBD1B75146B0073473F /* PBXTargetDependency */,
 			);
-			name = ReceptionUITests;
+			name = eureceptionUITests;
 			productName = ReceptionUITests;
-			productReference = 4B992FBB1B75146B0073473F /* ReceptionUITests.xctest */;
+			productReference = 4B992FBB1B75146B0073473F /* eureception.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -913,7 +914,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4B992F971B75146B0073473F /* Build configuration list for PBXProject "Reception" */;
+			buildConfigurationList = 4B992F971B75146B0073473F /* Build configuration list for PBXProject "eureception" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -928,9 +929,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B992F9B1B75146B0073473F /* Reception */,
-				4B992FAF1B75146B0073473F /* ReceptionTests */,
-				4B992FBA1B75146B0073473F /* ReceptionUITests */,
+				4B992F9B1B75146B0073473F /* eureception */,
+				4B992FAF1B75146B0073473F /* eureceptionTests */,
+				4B992FBA1B75146B0073473F /* eureceptionUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1182,12 +1183,12 @@
 /* Begin PBXTargetDependency section */
 		4B992FB21B75146B0073473F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B992F9B1B75146B0073473F /* Reception */;
+			target = 4B992F9B1B75146B0073473F /* eureception */;
 			targetProxy = 4B992FB11B75146B0073473F /* PBXContainerItemProxy */;
 		};
 		4B992FBD1B75146B0073473F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B992F9B1B75146B0073473F /* Reception */;
+			target = 4B992F9B1B75146B0073473F /* eureception */;
 			targetProxy = 4B992FBC1B75146B0073473F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1309,14 +1310,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Reception/Info.plist;
+				INFOPLIST_FILE = eureception/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.Reception;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = eureception;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Reception/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "eureception/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1333,13 +1334,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Reception/Info.plist;
+				INFOPLIST_FILE = eureception/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.Reception;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = eureception;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Reception/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "eureception/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1351,8 +1352,8 @@
 				INFOPLIST_FILE = ReceptionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.ReceptionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reception.app/Reception";
+				PRODUCT_NAME = eureception;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eureception.app/eureception";
 			};
 			name = Debug;
 		};
@@ -1363,8 +1364,8 @@
 				INFOPLIST_FILE = ReceptionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.ReceptionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reception.app/Reception";
+				PRODUCT_NAME = eureception;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eureception.app/eureception";
 			};
 			name = Release;
 		};
@@ -1374,7 +1375,7 @@
 				INFOPLIST_FILE = ReceptionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.ReceptionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = eureception;
 				TEST_TARGET_NAME = Reception;
 				USES_XCTRUNNER = YES;
 			};
@@ -1386,7 +1387,7 @@
 				INFOPLIST_FILE = ReceptionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.ReceptionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = eureception;
 				TEST_TARGET_NAME = Reception;
 				USES_XCTRUNNER = YES;
 			};
@@ -1395,7 +1396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B992F971B75146B0073473F /* Build configuration list for PBXProject "Reception" */ = {
+		4B992F971B75146B0073473F /* Build configuration list for PBXProject "eureception" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B992FC21B75146B0073473F /* Debug */,
@@ -1404,7 +1405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B992FC41B75146B0073473F /* Build configuration list for PBXNativeTarget "Reception" */ = {
+		4B992FC41B75146B0073473F /* Build configuration list for PBXNativeTarget "eureception" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B992FC51B75146B0073473F /* Debug */,
@@ -1413,7 +1414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B992FC71B75146B0073473F /* Build configuration list for PBXNativeTarget "ReceptionTests" */ = {
+		4B992FC71B75146B0073473F /* Build configuration list for PBXNativeTarget "eureceptionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B992FC81B75146B0073473F /* Debug */,
@@ -1422,7 +1423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B992FCA1B75146B0073473F /* Build configuration list for PBXNativeTarget "ReceptionUITests" */ = {
+		4B992FCA1B75146B0073473F /* Build configuration list for PBXNativeTarget "eureceptionUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B992FCB1B75146B0073473F /* Debug */,

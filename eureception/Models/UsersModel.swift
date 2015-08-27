@@ -26,11 +26,11 @@ class UsersModel: BaseModel {
             
             switch _result {
             case .Success(let json):
-                break
+                
+                result(result: .Success([]))
             case .Failure(let data, let errorType):
                 
-                result(result: .Failure()
-                break
+                result(result: .Failure(.SomethingError))
             }
         }
     }

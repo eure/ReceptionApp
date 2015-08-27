@@ -10,5 +10,5 @@ import Foundation
 
 struct Container {
 
-    static var UsersModel = Reception.UsersModel()
+    static var UsersModel = eureception.UsersModel()
 }

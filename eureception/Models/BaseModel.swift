@@ -11,9 +11,13 @@ import Alamofire
 import SwiftyJSON
 import CoreStore
 
+enum ModelErrorType: ErrorType {
+    case SomethingError
+}
+
 enum ModelResult<T> {
     case Success(T)
-    case Failure(NSError)
+    case Failure(ModelErrorType)
 }
 
 class BaseModel {
