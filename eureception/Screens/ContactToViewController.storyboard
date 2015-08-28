@@ -77,14 +77,14 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactToSuggestCell" rowHeight="116" id="YLg-Ab-NZJ" customClass="ContactToSuggestCell" customModule="eureception" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="648" height="116"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactToSuggestCell" rowHeight="120" id="YLg-Ab-NZJ" customClass="ContactToSuggestCell" customModule="eureception" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="648" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YLg-Ab-NZJ" id="2a5-l3-mHJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="648" height="115.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="648" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_list" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-V5-xXS">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_list" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-V5-xXS">
                                                     <rect key="frame" x="20" y="33" width="50" height="50"/>
                                                     <animations/>
                                                     <constraints>
@@ -92,8 +92,8 @@
                                                         <constraint firstAttribute="width" secondItem="8Ch-V5-xXS" secondAttribute="height" multiplier="1:1" id="tmp-ic-xEK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="585" placeholderIntrinsicHeight="74" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="dsS-Dl-a5I">
-                                                    <rect key="frame" x="90" y="10" width="553" height="74"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="553" placeholderIntrinsicHeight="74" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="dsS-Dl-a5I">
+                                                    <rect key="frame" x="90" y="5" width="553" height="74"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="65"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -102,8 +102,8 @@
                                                         <rect key="frame" x="90" y="5" width="145" height="74"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDW-lL-Vs3">
-                                                    <rect key="frame" x="90" y="89" width="553" height="16.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDW-lL-Vs3">
+                                                    <rect key="frame" x="90" y="89" width="553" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,12 +116,12 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="dsS-Dl-a5I" secondAttribute="trailing" constant="5" id="8bv-O3-prM"/>
-                                                <constraint firstAttribute="bottom" secondItem="hDW-lL-Vs3" secondAttribute="bottom" constant="10" id="EPM-zY-tvf"/>
+                                                <constraint firstAttribute="bottom" secondItem="hDW-lL-Vs3" secondAttribute="bottom" priority="750" constant="16" id="EPM-zY-tvf"/>
                                                 <constraint firstItem="hDW-lL-Vs3" firstAttribute="leading" secondItem="dsS-Dl-a5I" secondAttribute="leading" id="Hpt-Ho-jWN"/>
-                                                <constraint firstItem="hDW-lL-Vs3" firstAttribute="top" secondItem="dsS-Dl-a5I" secondAttribute="bottom" constant="5" id="ITC-2t-jLR"/>
+                                                <constraint firstItem="hDW-lL-Vs3" firstAttribute="top" secondItem="dsS-Dl-a5I" secondAttribute="bottom" constant="10" id="ITC-2t-jLR"/>
                                                 <constraint firstItem="dsS-Dl-a5I" firstAttribute="leading" secondItem="8Ch-V5-xXS" secondAttribute="trailing" constant="20" id="cav-iN-rjb"/>
                                                 <constraint firstAttribute="trailing" secondItem="hDW-lL-Vs3" secondAttribute="trailing" constant="5" id="m8Z-NB-wkL"/>
-                                                <constraint firstItem="dsS-Dl-a5I" firstAttribute="top" secondItem="2a5-l3-mHJ" secondAttribute="top" constant="10" id="mdg-dN-fTW"/>
+                                                <constraint firstItem="dsS-Dl-a5I" firstAttribute="top" secondItem="2a5-l3-mHJ" secondAttribute="top" constant="5" id="mdg-dN-fTW"/>
                                                 <constraint firstItem="8Ch-V5-xXS" firstAttribute="leading" secondItem="2a5-l3-mHJ" secondAttribute="leading" constant="20" id="x7T-l5-s7e"/>
                                                 <constraint firstItem="8Ch-V5-xXS" firstAttribute="centerY" secondItem="2a5-l3-mHJ" secondAttribute="centerY" id="zbu-bq-EHQ"/>
                                             </constraints>

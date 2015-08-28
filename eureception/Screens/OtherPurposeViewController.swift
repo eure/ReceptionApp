@@ -18,6 +18,7 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         super.viewDidLoad()
         
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
+        self.textView.font = UIFont.eureFont(size: 55)
         self.messageLabel.text = "ご用件をご記入ください"
         self.messageLabel.textColor = UIColor.eureColor
         self.iconImageView.tintColor = UIColor.eureColor
@@ -40,8 +41,6 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         self.textViewMask.startPoint = CGPoint(x: 0.5, y: 0)
         self.textViewMask.endPoint = CGPoint(x: 0.5, y: 1)
         self.textViewContainerView.layer.mask = textViewMask
-        
-        self.textView.textContainerInset = UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
         
         self.nextButton.enabled = false
         
@@ -69,6 +68,12 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         
         super.viewDidLayoutSubviews()
         self.textViewMask.frame = self.textView.bounds
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.textView.becomeFirstResponder()
     }
     
     // MARK: Private

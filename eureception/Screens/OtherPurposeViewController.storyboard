@@ -63,22 +63,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_memo" translatesAutoresizingMaskIntoConstraints="NO" id="xcq-Rh-PS8">
-                                        <rect key="frame" x="0.0" y="69" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="88.5" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Trr-R3-6G8"/>
                                             <constraint firstAttribute="width" secondItem="xcq-Rh-PS8" secondAttribute="height" multiplier="1:1" id="zFR-9i-icp"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hL-4s-NRs">
-                                        <rect key="frame" x="70" y="34" width="577" height="283.5"/>
+                                        <rect key="frame" x="70" y="68.5" width="577" height="249"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aof-66-CkR">
-                                                <rect key="frame" x="0.0" y="0.0" width="577" height="283.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="577" height="249"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reason for visit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVs-2c-OAm">
-                                                <rect key="frame" x="8" y="28" width="112.5" height="20.5"/>
+                                                <rect key="frame" x="8" y="10" width="112.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
                                             <constraint firstAttribute="bottom" secondItem="aof-66-CkR" secondAttribute="bottom" id="4zP-XS-YVb"/>
                                             <constraint firstAttribute="trailing" secondItem="aof-66-CkR" secondAttribute="trailing" id="PE2-yQ-e0m"/>
                                             <constraint firstItem="AVs-2c-OAm" firstAttribute="leading" secondItem="6hL-4s-NRs" secondAttribute="leading" constant="8" id="QTp-8T-azO"/>
-                                            <constraint firstItem="AVs-2c-OAm" firstAttribute="top" secondItem="6hL-4s-NRs" secondAttribute="top" constant="28" id="eai-6L-vwX"/>
+                                            <constraint firstItem="AVs-2c-OAm" firstAttribute="top" secondItem="6hL-4s-NRs" secondAttribute="top" constant="10" id="eai-6L-vwX"/>
                                             <constraint firstItem="aof-66-CkR" firstAttribute="top" secondItem="6hL-4s-NRs" secondAttribute="top" id="p2h-5k-0hS"/>
                                             <constraint firstItem="aof-66-CkR" firstAttribute="leading" secondItem="6hL-4s-NRs" secondAttribute="leading" id="pYn-1i-nf7"/>
                                         </constraints>
@@ -98,13 +98,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6hL-4s-NRs" secondAttribute="bottom" id="9xA-6N-dir"/>
-                                    <constraint firstItem="xcq-Rh-PS8" firstAttribute="top" secondItem="zmA-Ba-VN0" secondAttribute="bottom" constant="40" id="BDg-94-CnI"/>
+                                    <constraint firstItem="xcq-Rh-PS8" firstAttribute="top" secondItem="zmA-Ba-VN0" secondAttribute="bottom" constant="60" id="BDg-94-CnI"/>
                                     <constraint firstItem="xcq-Rh-PS8" firstAttribute="leading" secondItem="kXG-bN-48N" secondAttribute="leading" id="RHM-VH-05P"/>
                                     <constraint firstItem="zmA-Ba-VN0" firstAttribute="leading" secondItem="kXG-bN-48N" secondAttribute="leading" constant="10" id="VNy-nk-FYF"/>
                                     <constraint firstAttribute="trailing" secondItem="6hL-4s-NRs" secondAttribute="trailing" id="izo-s7-znT"/>
                                     <constraint firstItem="6hL-4s-NRs" firstAttribute="leading" secondItem="xcq-Rh-PS8" secondAttribute="trailing" constant="20" id="map-TQ-iRc"/>
                                     <constraint firstItem="zmA-Ba-VN0" firstAttribute="top" secondItem="kXG-bN-48N" secondAttribute="top" constant="8" id="wes-ke-98y"/>
-                                    <constraint firstItem="6hL-4s-NRs" firstAttribute="top" secondItem="zmA-Ba-VN0" secondAttribute="bottom" constant="6" id="yL7-l6-k6p"/>
+                                    <constraint firstItem="6hL-4s-NRs" firstAttribute="top" secondItem="zmA-Ba-VN0" secondAttribute="bottom" constant="40" id="yL7-l6-k6p"/>
                                 </constraints>
                             </view>
                         </subviews>
