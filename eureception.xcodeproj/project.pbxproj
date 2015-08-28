@@ -35,6 +35,8 @@
 		4B696C1B1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */; };
 		4B696C1D1B8FEE9C0096A169 /* VisitorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */; };
 		4B696C1F1B8FEF910096A169 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1E1B8FEF910096A169 /* Dispatcher.swift */; };
+		4B696C251B902B3B0096A169 /* Pods-eureception.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4B696C231B902B3B0096A169 /* Pods-eureception.debug.xcconfig */; settings = {ASSET_TAGS = (); }; };
+		4B696C261B902B3B0096A169 /* Pods-eureception.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4B696C241B902B3B0096A169 /* Pods-eureception.release.xcconfig */; settings = {ASSET_TAGS = (); }; };
 		4B79AFA51B8D2E4B002EBF8E /* InputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */; };
 		4B79AFA71B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */; };
 		4B98702E1B89681300F72342 /* ContactToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98702D1B89681300F72342 /* ContactToViewController.swift */; };
@@ -217,6 +219,8 @@
 		4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToOtherPurposeTransitionController.swift; sourceTree = "<group>"; };
 		4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsModel.swift; sourceTree = "<group>"; };
 		4B696C1E1B8FEF910096A169 /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		4B696C231B902B3B0096A169 /* Pods-eureception.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-eureception.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eureception/Pods-eureception.debug.xcconfig"; sourceTree = "<group>"; };
+		4B696C241B902B3B0096A169 /* Pods-eureception.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-eureception.release.xcconfig"; path = "Pods/Target Support Files/Pods-eureception/Pods-eureception.release.xcconfig"; sourceTree = "<group>"; };
 		4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldTransitionController.swift; sourceTree = "<group>"; };
 		4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmAppointmentToCompletionTransitionContorller.swift; sourceTree = "<group>"; };
 		4B98702D1B89681300F72342 /* ContactToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToViewController.swift; sourceTree = "<group>"; };
@@ -408,8 +412,6 @@
 		4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTransaction.swift; sourceTree = "<group>"; };
 		80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eureception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D783990AC8D57A4135811A /* Pods_Reception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D36A461C27446E763B1B2691 /* Pods-Reception.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reception.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reception/Pods-Reception.debug.xcconfig"; sourceTree = "<group>"; };
-		F05E78A53D6A656B0F2DFDA9 /* Pods-Reception.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reception.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reception/Pods-Reception.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,8 +446,8 @@
 		059EAA107FA4D7663025669A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D36A461C27446E763B1B2691 /* Pods-Reception.debug.xcconfig */,
-				F05E78A53D6A656B0F2DFDA9 /* Pods-Reception.release.xcconfig */,
+				4B696C231B902B3B0096A169 /* Pods-eureception.debug.xcconfig */,
+				4B696C241B902B3B0096A169 /* Pods-eureception.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -890,6 +892,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B992FC41B75146B0073473F /* Build configuration list for PBXNativeTarget "eureception" */;
 			buildPhases = (
+				4B696C221B902A690096A169 /* Run Script */,
 				4B992F981B75146B0073473F /* Sources */,
 				4B992F991B75146B0073473F /* Frameworks */,
 				4B992F9A1B75146B0073473F /* Resources */,
@@ -1006,6 +1009,7 @@
 				4BD0CC2A1B8EEC1400A37716 /* OtherPurposeViewController.storyboard in Resources */,
 				4BB07A621B8C9A6C000065F3 /* Exo-Light-Italic.otf in Resources */,
 				4BD0CC2C1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard in Resources */,
+				4B696C251B902B3B0096A169 /* Pods-eureception.debug.xcconfig in Resources */,
 				4B9870401B896E4100F72342 /* ContactToViewController.storyboard in Resources */,
 				4BB07A5E1B8C9A6C000065F3 /* Exo-ExtraBold-Italic.otf in Resources */,
 				4BB07A5B1B8C9A6C000065F3 /* Exo-Bold.otf in Resources */,
@@ -1021,6 +1025,7 @@
 				4BB07A591B8C9A6C000065F3 /* Exo-Black.otf in Resources */,
 				4B98703E1B896E3600F72342 /* TopViewController.storyboard in Resources */,
 				4B3EDC221B75EDAC00873B8C /* AppConfiguration.swift.sample in Resources */,
+				4B696C261B902B3B0096A169 /* Pods-eureception.release.xcconfig in Resources */,
 				4B0169EA1B8BE6C900208CA9 /* ConfirmAppointmentViewController.storyboard in Resources */,
 				4B9870481B896E6400F72342 /* PersonCountViewController.storyboard in Resources */,
 				4BB07A611B8C9A6C000065F3 /* Exo-ExtraLight.otf in Resources */,
@@ -1046,6 +1051,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4B696C221B902A690096A169 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo ${PODS_ROOT} > ~/Desktop/a.txt\ndiff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\ncat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\nexit 1\nfi";
+		};
 		4BD2BCD61B8331650064F51E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1348,7 +1367,7 @@
 		};
 		4B992FC51B75146B0073473F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D36A461C27446E763B1B2691 /* Pods-Reception.debug.xcconfig */;
+			baseConfigurationReference = 4B696C231B902B3B0096A169 /* Pods-eureception.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1373,7 +1392,7 @@
 		};
 		4B992FC61B75146B0073473F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F05E78A53D6A656B0F2DFDA9 /* Pods-Reception.release.xcconfig */;
+			baseConfigurationReference = 4B696C241B902B3B0096A169 /* Pods-eureception.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
