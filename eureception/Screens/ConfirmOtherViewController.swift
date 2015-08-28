@@ -38,10 +38,6 @@ class ConfirmOtherViewController: BaseConfirmViewController {
             
         }
         
-        Container.SlackModel.callSlack(transaction: transaction) { (result) -> Void in
-            
-        }
-        
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

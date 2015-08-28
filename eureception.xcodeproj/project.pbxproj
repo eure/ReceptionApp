@@ -13,31 +13,30 @@
 		4B0169EA1B8BE6C900208CA9 /* ConfirmAppointmentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0169E91B8BE6C900208CA9 /* ConfirmAppointmentViewController.storyboard */; };
 		4B1B92B71B75B1B600C28005 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B92B91B75B1B600C28005 /* Localizable.strings */; };
 		4B2391DD1B82F874001D636D /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2391DC1B82F874001D636D /* Visitor.swift */; };
-		4B2AE0DA1B8DA62400111C51 /* KozGoPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */; settings = {ASSET_TAGS = (); }; };
-		4B2CA5FE1B8EB74800BCD9A4 /* eureception.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA5FC1B8EB74800BCD9A4 /* eureception.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		4B2CA6001B8EB9E300BCD9A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA5FF1B8EB9E300BCD9A4 /* User.swift */; settings = {ASSET_TAGS = (); }; };
-		4B2CA6021B8EBA7000BCD9A4 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6011B8EBA7000BCD9A4 /* UsersModel.swift */; settings = {ASSET_TAGS = (); }; };
-		4B2CA6041B8EBA7800BCD9A4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6031B8EBA7800BCD9A4 /* BaseModel.swift */; settings = {ASSET_TAGS = (); }; };
-		4B2CA6061B8EBAB900BCD9A4 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6051B8EBAB900BCD9A4 /* Container.swift */; settings = {ASSET_TAGS = (); }; };
-		4B2F75181B8D52D90087DEBE /* InputFieldToConfirmAppointmentTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75171B8D52D90087DEBE /* InputFieldToConfirmAppointmentTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
-		4B2F751A1B8D66B00087DEBE /* TopToContactTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
-		4B2F751C1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
+		4B2AE0DA1B8DA62400111C51 /* KozGoPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */; };
+		4B2CA5FE1B8EB74800BCD9A4 /* eureception.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA5FC1B8EB74800BCD9A4 /* eureception.xcdatamodeld */; };
+		4B2CA6001B8EB9E300BCD9A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA5FF1B8EB9E300BCD9A4 /* User.swift */; };
+		4B2CA6021B8EBA7000BCD9A4 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6011B8EBA7000BCD9A4 /* UsersModel.swift */; };
+		4B2CA6041B8EBA7800BCD9A4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6031B8EBA7800BCD9A4 /* BaseModel.swift */; };
+		4B2CA6061B8EBAB900BCD9A4 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA6051B8EBAB900BCD9A4 /* Container.swift */; };
+		4B2F75181B8D52D90087DEBE /* InputFieldToConfirmAppointmentTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75171B8D52D90087DEBE /* InputFieldToConfirmAppointmentTransitionController.swift */; };
+		4B2F751A1B8D66B00087DEBE /* TopToContactTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */; };
+		4B2F751C1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */; };
 		4B3EDC201B75ECFD00873B8C /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3EDC1F1B75ECFD00873B8C /* AppConfiguration.swift */; };
 		4B3EDC221B75EDAC00873B8C /* AppConfiguration.swift.sample in Resources */ = {isa = PBXBuildFile; fileRef = 4B3EDC211B75EDAC00873B8C /* AppConfiguration.swift.sample */; };
 		4B3EDC251B75F57900873B8C /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3EDC241B75F57900873B8C /* UIColor+Util.swift */; };
 		4B497C421B800EEA002F1262 /* Pods_Reception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D783990AC8D57A4135811A /* Pods_Reception.framework */; };
 		4B497C431B800EEA002F1262 /* Pods_Reception.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93D783990AC8D57A4135811A /* Pods_Reception.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4B5231B21B8F03AD006DE64A /* KozGoPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B5231B11B8F03AD006DE64A /* KozGoPro-Regular.otf */; settings = {ASSET_TAGS = (); }; };
-		4B696C131B8F2BD50096A169 /* BaseConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C121B8F2BD50096A169 /* BaseConfirmViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4B696C151B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C141B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
-		4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
-		4B696C191B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C181B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
-		4B696C1B1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
-		4B696C1D1B8FEE9C0096A169 /* VisitorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */; settings = {ASSET_TAGS = (); }; };
-		4B696C1F1B8FEF910096A169 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1E1B8FEF910096A169 /* Dispatcher.swift */; settings = {ASSET_TAGS = (); }; };
-		4B696C211B8FFDAE0096A169 /* SlackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C201B8FFDAE0096A169 /* SlackModel.swift */; settings = {ASSET_TAGS = (); }; };
-		4B79AFA51B8D2E4B002EBF8E /* InputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
-		4B79AFA71B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */; settings = {ASSET_TAGS = (); }; };
+		4B5231B21B8F03AD006DE64A /* KozGoPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B5231B11B8F03AD006DE64A /* KozGoPro-Regular.otf */; };
+		4B696C131B8F2BD50096A169 /* BaseConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C121B8F2BD50096A169 /* BaseConfirmViewController.swift */; };
+		4B696C151B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C141B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift */; };
+		4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */; };
+		4B696C191B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C181B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift */; };
+		4B696C1B1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */; };
+		4B696C1D1B8FEE9C0096A169 /* VisitorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */; };
+		4B696C1F1B8FEF910096A169 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1E1B8FEF910096A169 /* Dispatcher.swift */; };
+		4B79AFA51B8D2E4B002EBF8E /* InputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */; };
+		4B79AFA71B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */; };
 		4B98702E1B89681300F72342 /* ContactToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98702D1B89681300F72342 /* ContactToViewController.swift */; };
 		4B9870301B89683100F72342 /* CompanyNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98702F1B89683100F72342 /* CompanyNameViewController.swift */; };
 		4B9870321B89684500F72342 /* YourNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9870311B89684500F72342 /* YourNameViewController.swift */; };
@@ -122,39 +121,40 @@
 		4B9930BB1B7515470073473F /* JEWeakCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B99305A1B7515470073473F /* JEWeakCache.m */; };
 		4B9D42E51B765C5B0047C99D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D42E41B765C5B0047C99D /* BaseNavigationController.swift */; };
 		4B9D42E91B765D500047C99D /* CompletionToTopTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D42E81B765D500047C99D /* CompletionToTopTransitionController.swift */; };
-		4BB07A421B8C7CD1000065F3 /* CompletionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A411B8C7CD1000065F3 /* CompletionViewController.storyboard */; settings = {ASSET_TAGS = (); }; };
-		4BB07A441B8C7CEE000065F3 /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A431B8C7CEE000065F3 /* CompletionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4BB07A581B8C9A6C000065F3 /* Exo-Black-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A461B8C9A6C000065F3 /* Exo-Black-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A591B8C9A6C000065F3 /* Exo-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A471B8C9A6C000065F3 /* Exo-Black.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A5A1B8C9A6C000065F3 /* Exo-Bold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A481B8C9A6C000065F3 /* Exo-Bold-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A5B1B8C9A6C000065F3 /* Exo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A491B8C9A6C000065F3 /* Exo-Bold.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A5C1B8C9A6C000065F3 /* Exo-DemiBold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4A1B8C9A6C000065F3 /* Exo-DemiBold-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A5D1B8C9A6C000065F3 /* Exo-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4B1B8C9A6C000065F3 /* Exo-DemiBold.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A5E1B8C9A6C000065F3 /* Exo-ExtraBold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4C1B8C9A6C000065F3 /* Exo-ExtraBold-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A5F1B8C9A6C000065F3 /* Exo-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4D1B8C9A6C000065F3 /* Exo-ExtraBold.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A601B8C9A6C000065F3 /* Exo-ExtraLight-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4E1B8C9A6C000065F3 /* Exo-ExtraLight-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A611B8C9A6C000065F3 /* Exo-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4F1B8C9A6C000065F3 /* Exo-ExtraLight.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A621B8C9A6C000065F3 /* Exo-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A501B8C9A6C000065F3 /* Exo-Light-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A631B8C9A6C000065F3 /* Exo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A511B8C9A6C000065F3 /* Exo-Light.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A641B8C9A6C000065F3 /* Exo-Medium-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A521B8C9A6C000065F3 /* Exo-Medium-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A651B8C9A6C000065F3 /* Exo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A531B8C9A6C000065F3 /* Exo-Medium.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A661B8C9A6C000065F3 /* Exo-Regular-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A541B8C9A6C000065F3 /* Exo-Regular-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A671B8C9A6C000065F3 /* Exo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A551B8C9A6C000065F3 /* Exo-Regular.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A681B8C9A6C000065F3 /* Exo-Thin-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A561B8C9A6C000065F3 /* Exo-Thin-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A691B8C9A6C000065F3 /* Exo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A571B8C9A6C000065F3 /* Exo-Thin.otf */; settings = {ASSET_TAGS = (); }; };
-		4BB07A6B1B8CB00B000065F3 /* UIFont+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A6A1B8CB00B000065F3 /* UIFont+Util.swift */; settings = {ASSET_TAGS = (); }; };
-		4BB07A6D1B8CB197000065F3 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A6C1B8CB197000065F3 /* InputTextField.swift */; settings = {ASSET_TAGS = (); }; };
-		4BB07A6F1B8CB354000065F3 /* NSAttributedString+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A6E1B8CB354000065F3 /* NSAttributedString+Util.swift */; settings = {ASSET_TAGS = (); }; };
-		4BB07A711B8CB70A000065F3 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A701B8CB70A000065F3 /* SubmitButton.swift */; settings = {ASSET_TAGS = (); }; };
-		4BB07A731B8CBA36000065F3 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A721B8CBA36000065F3 /* HomeButton.swift */; settings = {ASSET_TAGS = (); }; };
-		4BD0CC281B8EEB8200A37716 /* OtherPurposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0CC271B8EEB8200A37716 /* OtherPurposeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4BD0CC2A1B8EEC1400A37716 /* OtherPurposeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD0CC291B8EEC1400A37716 /* OtherPurposeViewController.storyboard */; settings = {ASSET_TAGS = (); }; };
-		4BD0CC2C1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD0CC2B1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard */; settings = {ASSET_TAGS = (); }; };
-		4BD0CC2E1B8EEC4E00A37716 /* ConfirmOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0CC2D1B8EEC4E00A37716 /* ConfirmOtherViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4BB07A421B8C7CD1000065F3 /* CompletionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A411B8C7CD1000065F3 /* CompletionViewController.storyboard */; };
+		4BB07A441B8C7CEE000065F3 /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A431B8C7CEE000065F3 /* CompletionViewController.swift */; };
+		4BB07A581B8C9A6C000065F3 /* Exo-Black-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A461B8C9A6C000065F3 /* Exo-Black-Italic.otf */; };
+		4BB07A591B8C9A6C000065F3 /* Exo-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A471B8C9A6C000065F3 /* Exo-Black.otf */; };
+		4BB07A5A1B8C9A6C000065F3 /* Exo-Bold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A481B8C9A6C000065F3 /* Exo-Bold-Italic.otf */; };
+		4BB07A5B1B8C9A6C000065F3 /* Exo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A491B8C9A6C000065F3 /* Exo-Bold.otf */; };
+		4BB07A5C1B8C9A6C000065F3 /* Exo-DemiBold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4A1B8C9A6C000065F3 /* Exo-DemiBold-Italic.otf */; };
+		4BB07A5D1B8C9A6C000065F3 /* Exo-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4B1B8C9A6C000065F3 /* Exo-DemiBold.otf */; };
+		4BB07A5E1B8C9A6C000065F3 /* Exo-ExtraBold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4C1B8C9A6C000065F3 /* Exo-ExtraBold-Italic.otf */; };
+		4BB07A5F1B8C9A6C000065F3 /* Exo-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4D1B8C9A6C000065F3 /* Exo-ExtraBold.otf */; };
+		4BB07A601B8C9A6C000065F3 /* Exo-ExtraLight-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4E1B8C9A6C000065F3 /* Exo-ExtraLight-Italic.otf */; };
+		4BB07A611B8C9A6C000065F3 /* Exo-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A4F1B8C9A6C000065F3 /* Exo-ExtraLight.otf */; };
+		4BB07A621B8C9A6C000065F3 /* Exo-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A501B8C9A6C000065F3 /* Exo-Light-Italic.otf */; };
+		4BB07A631B8C9A6C000065F3 /* Exo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A511B8C9A6C000065F3 /* Exo-Light.otf */; };
+		4BB07A641B8C9A6C000065F3 /* Exo-Medium-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A521B8C9A6C000065F3 /* Exo-Medium-Italic.otf */; };
+		4BB07A651B8C9A6C000065F3 /* Exo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A531B8C9A6C000065F3 /* Exo-Medium.otf */; };
+		4BB07A661B8C9A6C000065F3 /* Exo-Regular-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A541B8C9A6C000065F3 /* Exo-Regular-Italic.otf */; };
+		4BB07A671B8C9A6C000065F3 /* Exo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A551B8C9A6C000065F3 /* Exo-Regular.otf */; };
+		4BB07A681B8C9A6C000065F3 /* Exo-Thin-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A561B8C9A6C000065F3 /* Exo-Thin-Italic.otf */; };
+		4BB07A691B8C9A6C000065F3 /* Exo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB07A571B8C9A6C000065F3 /* Exo-Thin.otf */; };
+		4BB07A6B1B8CB00B000065F3 /* UIFont+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A6A1B8CB00B000065F3 /* UIFont+Util.swift */; };
+		4BB07A6D1B8CB197000065F3 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A6C1B8CB197000065F3 /* InputTextField.swift */; };
+		4BB07A6F1B8CB354000065F3 /* NSAttributedString+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A6E1B8CB354000065F3 /* NSAttributedString+Util.swift */; };
+		4BB07A711B8CB70A000065F3 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A701B8CB70A000065F3 /* SubmitButton.swift */; };
+		4BB07A731B8CBA36000065F3 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A721B8CBA36000065F3 /* HomeButton.swift */; };
+		4BD0CC281B8EEB8200A37716 /* OtherPurposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0CC271B8EEB8200A37716 /* OtherPurposeViewController.swift */; };
+		4BD0CC2A1B8EEC1400A37716 /* OtherPurposeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD0CC291B8EEC1400A37716 /* OtherPurposeViewController.storyboard */; };
+		4BD0CC2C1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD0CC2B1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard */; };
+		4BD0CC2E1B8EEC4E00A37716 /* ConfirmOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0CC2D1B8EEC4E00A37716 /* ConfirmOtherViewController.swift */; };
 		4BD2BCD41B8331580064F51E /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD21B8331580064F51E /* ReactiveCocoa.framework */; };
 		4BD2BCD51B8331580064F51E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD31B8331580064F51E /* Result.framework */; };
 		4BD2BCF61B8348EC0064F51E /* NSString+Japanese.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */; };
 		4BD2BD071B83573F0064F51E /* AppointmentTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */; };
+		99758B144299857A9BB45557 /* Pods_eureception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,7 +217,6 @@
 		4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToOtherPurposeTransitionController.swift; sourceTree = "<group>"; };
 		4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsModel.swift; sourceTree = "<group>"; };
 		4B696C1E1B8FEF910096A169 /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
-		4B696C201B8FFDAE0096A169 /* SlackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackModel.swift; sourceTree = "<group>"; };
 		4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldTransitionController.swift; sourceTree = "<group>"; };
 		4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmAppointmentToCompletionTransitionContorller.swift; sourceTree = "<group>"; };
 		4B98702D1B89681300F72342 /* ContactToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToViewController.swift; sourceTree = "<group>"; };
@@ -407,6 +406,7 @@
 		4BD2BCD91B8348EC0064F51E /* NSString+Japanese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Japanese.h"; sourceTree = "<group>"; };
 		4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Japanese.m"; sourceTree = "<group>"; };
 		4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTransaction.swift; sourceTree = "<group>"; };
+		80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eureception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D783990AC8D57A4135811A /* Pods_Reception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36A461C27446E763B1B2691 /* Pods-Reception.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reception.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reception/Pods-Reception.debug.xcconfig"; sourceTree = "<group>"; };
 		F05E78A53D6A656B0F2DFDA9 /* Pods-Reception.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reception.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reception/Pods-Reception.release.xcconfig"; sourceTree = "<group>"; };
@@ -420,6 +420,7 @@
 				4BD2BCD51B8331580064F51E /* Result.framework in Frameworks */,
 				4B497C421B800EEA002F1262 /* Pods_Reception.framework in Frameworks */,
 				4BD2BCD41B8331580064F51E /* ReactiveCocoa.framework in Frameworks */,
+				99758B144299857A9BB45557 /* Pods_eureception.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +482,6 @@
 				4B2CA6031B8EBA7800BCD9A4 /* BaseModel.swift */,
 				4B2CA6011B8EBA7000BCD9A4 /* UsersModel.swift */,
 				4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */,
-				4B696C201B8FFDAE0096A169 /* SlackModel.swift */,
 				4B2CA5FF1B8EB9E300BCD9A4 /* User.swift */,
 				4B2391DC1B82F874001D636D /* Visitor.swift */,
 			);
@@ -606,6 +606,7 @@
 				4BD2BCD31B8331580064F51E /* Result.framework */,
 				4B992FD11B7515470073473F /* JEToolkit */,
 				93D783990AC8D57A4135811A /* Pods_Reception.framework */,
+				80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -889,7 +890,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B992FC41B75146B0073473F /* Build configuration list for PBXNativeTarget "eureception" */;
 			buildPhases = (
-				1D21DE0A1905CD34C7D061D3 /* Check Pods Manifest.lock */,
 				4B992F981B75146B0073473F /* Sources */,
 				4B992F991B75146B0073473F /* Frameworks */,
 				4B992F9A1B75146B0073473F /* Resources */,
@@ -1046,21 +1046,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D21DE0A1905CD34C7D061D3 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		4BD2BCD61B8331650064F51E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1089,7 +1074,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reception/Pods-Reception-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eureception/Pods-eureception-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB1AB37D9990A427DFF82DB7 /* Copy Pods Resources */ = {
@@ -1104,7 +1089,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reception/Pods-Reception-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eureception/Pods-eureception-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1203,7 +1188,6 @@
 				4B9930971B7515470073473F /* JEOrderedDictionary.m in Sources */,
 				4B99309F1B7515470073473F /* NSDate+JEToolkit.swift in Sources */,
 				4B9D42E51B765C5B0047C99D /* BaseNavigationController.swift in Sources */,
-				4B696C211B8FFDAE0096A169 /* SlackModel.swift in Sources */,
 				4B9930A21B7515470073473F /* NSError+JEToolkit.m in Sources */,
 				4B9930A41B7515470073473F /* NSMutableArray+JEToolkit.m in Sources */,
 				4B9930851B7515470073473F /* NSMutableString+JEDebugging.m in Sources */,
@@ -1373,6 +1357,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = eureception/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1397,6 +1382,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = eureception/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

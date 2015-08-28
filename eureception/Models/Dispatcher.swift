@@ -51,23 +51,7 @@ enum Dispatcher {
             ],
             response: response)
     }
-    
-    static func callSlack(message message: String, channel: String, response: (result: Result<JSON>) -> Void) {
-        
-        self.dispatch(
-            url: "https://slack.com/api/chat.postMessage",
-            parameters: [
-                "token": AppConfiguration.SlackToken,
-                "channel": channel,
-                "text": message,
-                "parse": "full",
-                "username": "エウレカ受付",
-                "link_names": 1,
-                "icon_url": "https://avatars0.githubusercontent.com/u/3447204?v=3&s=200"
-            ],
-            response: response)
-    }
-        
+     
     private static let baseURL = "https://reception.eure.jp/api/v1"
     private static func dispatch(url url: String, parameters: [String: AnyObject]?, response: (result: Result<JSON>) -> Void) {
         

@@ -198,7 +198,7 @@ public extension BaseDataTransaction {
     func importUniqueObjects<T where T: NSManagedObject, T: ImportableUniqueObject>(
         into: Into<T>,
         sourceArray: [T.ImportSource],
-        preProcess: ((inout mapping: [T.UniqueIDType: T.ImportSource]) throws -> Void)? = nil) throws {
+        preProcess: ((mapping: [T.UniqueIDType: T.ImportSource]) throws -> [T.UniqueIDType: T.ImportSource])? = nil) throws {
             
             CoreStore.assert(
                 self.bypassesQueueing || self.transactionQueue.isCurrentExecutionContext(),
@@ -225,11 +225,11 @@ public extension BaseDataTransaction {
                     
                     try autoreleasepool {
                         
-                        try preProcess(mapping: &mapping)
+                        mapping = try preProcess(mapping: mapping)
                     }
                 }
                 
-                for object in self.fetchAll(From(T), Where("%K IN %@", T.uniqueIDKeyPath, Array(mapping.keys))) ?? [] {
+                for object in self.fetchAll(From(T), Where(T.uniqueIDKeyPath, isMemberOf: mapping.keys)) ?? [] {
                     
                     try autoreleasepool {
                         
@@ -265,7 +265,7 @@ public extension BaseDataTransaction {
     func importUniqueObjects<T where T: NSManagedObject, T: ImportableUniqueObject>(
         into: Into<T>,
         sourceArray: [T.ImportSource],
-        preProcess: ((inout mapping: [T.UniqueIDType: T.ImportSource]) throws -> Void)? = nil,
+        preProcess: ((mapping: [T.UniqueIDType: T.ImportSource]) throws -> [T.UniqueIDType: T.ImportSource])? = nil,
         postProcess: (sorted: [T]) -> Void) throws {
             
             CoreStore.assert(
@@ -295,12 +295,12 @@ public extension BaseDataTransaction {
                     
                     try autoreleasepool {
                         
-                        try preProcess(mapping: &mapping)
+                        mapping = try preProcess(mapping: mapping)
                     }
                 }
                 
                 var objects = Dictionary<T.UniqueIDType, T>()
-                for object in self.fetchAll(From(T), Where("%K IN %@", T.uniqueIDKeyPath, Array(mapping.keys))) ?? [] {
+                for object in self.fetchAll(From(T), Where(T.uniqueIDKeyPath, isMemberOf: mapping.keys)) ?? [] {
                     
                     try autoreleasepool {
                         

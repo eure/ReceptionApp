@@ -1,12 +1,9 @@
 PODS:
   - Alamofire (2.0.0-beta.3)
-  - Bolts/Tasks (1.2.1)
   - CoreStore (1.3.0):
     - GCDKit (= 1.1.1)
   - EasyAnimation (0.7.0)
   - GCDKit (1.1.1)
-  - Parse (1.8.1):
-    - Bolts/Tasks (>= 1.2.0)
   - Spring (1.0.3)
   - SwiftyJSON (2.2.1)
 
@@ -14,7 +11,6 @@ DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift-2.0`)
   - CoreStore (from `https://github.com/JohnEstropia/CoreStore.git`, branch `develop`)
   - EasyAnimation (from `https://github.com/icanzilb/EasyAnimation.git`, branch `swift2`)
-  - Parse
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`, branch `xcode7`)
 
@@ -40,7 +36,7 @@ CHECKOUT OPTIONS:
     :commit: 0fd77fec2a33e237ab99069c36410eb7101126c6
     :git: https://github.com/Alamofire/Alamofire.git
   CoreStore:
-    :commit: 16aabe1f3b6f5ae21bbe651b419e6abea2ebc703
+    :commit: 56ea14d53cdeb3280c70533888c2c9f311e2962b
     :git: https://github.com/JohnEstropia/CoreStore.git
   EasyAnimation:
     :commit: e27a4fa156647f0bf4ddbc73244d8a52105a4887
@@ -54,11 +50,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 39dddb7d3725d1771b1d2f7099c8bd45bd83ffbb
-  Bolts: 7686a5cb204d1ac54cee26f12d9b7622db3f80d1
   CoreStore: 5108c1a144a6810129272b0666f796603c6245ae
   EasyAnimation: f58cd2cb74807f67280a2aff7a6e5bf8da423c19
   GCDKit: 376cff50fa8ecc256afae1b7df93c9c7bd27bb4b
-  Parse: 2155953b1565494095d5fa5c83b3c77f2c677c09
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 

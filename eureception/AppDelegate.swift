@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,12 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             JEDebugging.setExceptionLoggingEnabled(true)
             JEDebugging.start()
         #endif
-        
-        Parse.setApplicationId(
-            AppConfiguration.ParseKey.ApplicationKey,
-            clientKey: AppConfiguration.ParseKey.ClientKey
-        )
-        
+                
         Container.UsersModel.getUsers { (result) -> Void in
             switch result {
             case .Success(let user):

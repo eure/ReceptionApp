@@ -8,7 +8,7 @@
     "6533DCA9C1C673037DD2F49A7574B681383114AB" : 0,
     "B16A5A80C3B6317485543848ADC32B5E2158C457" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9DDCCEC4-20C9-4BC0-8E07-94808E1B5086",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "29FCFAC8-B57F-46CC-94FD-9A2611FF65E2",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7" : "Reception\/",
     "6533DCA9C1C673037DD2F49A7574B681383114AB" : "Reception\/Frameworks\/JEToolkit\/",
@@ -16,7 +16,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "eureception",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "eureception.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "eureception.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JohnEstropia\/JEToolkit.git",

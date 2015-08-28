@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreStore
+import SwiftyJSON
 
 @objc(User)
 class User: NSManagedObject, ImportableUniqueObject {
@@ -42,4 +43,41 @@ class User: NSManagedObject, ImportableUniqueObject {
         }
         
     }
+    
+    // MARK: ImportableUniqueObject 
+    
+    static var uniqueIDKeyPath: String {
+        return "id"
+    }
+    
+    var uniqueIDValue: NSNumber {
+        get { return NSNumber(longLong: self.id) }
+        set { self.id = newValue.longLongValue }
+    }
+    
+    static func uniqueIDFromImportSource(source: JSON, inTransaction transaction: BaseDataTransaction) throws -> NSNumber? {
+        
+        return source["id"].number
+    }
+    
+    func updateFromImportSource(source: JSON, inTransaction transaction: BaseDataTransaction) throws {
+        
+        self.id = source["id"].int64Value
+        self.imageURL = source["face_image_url"].stringValue
+        self.nameEn = source["name_en"].stringValue
+        self.nameJa = source["name_ja"].stringValue
+        self.slackID = source["slack_account_id"].stringValue
+        self.slackName = source["slack_account_name"].stringValue
+        
+    }
+    
+    static func shouldUpdateFromImportSource(source: JSON, inTransaction transaction: BaseDataTransaction) -> Bool {
+        return true
+    }
+    
+    static func shouldInsertFromImportSource(source: JSON, inTransaction transaction: BaseDataTransaction) -> Bool {
+        return true
+    }
+    
+    
 }
