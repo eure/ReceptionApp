@@ -149,7 +149,7 @@ extension ContactToViewController: UITableViewDelegate, UITableViewDataSource {
         
         let controller = YourNameViewController.viewControllerFromStoryboard()
 
-        let transaction = AppointTransaction(user: user)
+        let transaction = AppointmentTransaction(user: user)
         controller.transaction = transaction
         
         self.navigationController?.pushViewController(controller, animated: true)

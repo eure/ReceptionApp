@@ -8,9 +8,9 @@
 
 import Parse
 
-class AppointTransaction: Transaction {
+class AppointmentTransaction: Transaction {
     
-    var visitor: Visitor?
+    var visitor: AppointmentVisitor?
     var user: User
     
     init(user: User) {

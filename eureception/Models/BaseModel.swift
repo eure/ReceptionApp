@@ -23,19 +23,3 @@ enum ModelResult<T> {
 class BaseModel {
     
 }
-
-enum ReceptionResponseErrorType: ErrorType {
-    case SomethingError
-}
-struct ReceptionResponseSerializer: ResponseSerializer {
-    
-    var serializeResponse: (NSURLRequest?, NSHTTPURLResponse?, NSData?) -> Result<JSON> {
-        
-        return { request, response, data in
-            if let jsonData = data {
-                return .Success(JSON(jsonData))
-            }
-            return .Failure(data, ReceptionResponseErrorType.SomethingError)
-        }
-    }
-}

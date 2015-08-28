@@ -11,26 +11,19 @@ import Alamofire
 import SwiftyJSON
 import CoreStore
 
-class UsersModel: BaseModel {
+final class UsersModel: BaseModel {
     
-    func getUsers(result: ((result: ModelResult<[User]>) -> Void)) {
+    func getUsers(completion: ((result: ModelResult<[User]>) -> Void)) {
         
-        Manager.sharedInstance.request(
-            Alamofire.Method.POST,
-            "https://reception.eure.jp/api/v1/users",
-            parameters: [ : ],
-            encoding: ParameterEncoding.URL,
-            headers: nil
-            )
-        .response(queue: nil, responseSerializer: ReceptionResponseSerializer()) { (request, response, _result) -> Void in
-            
-            switch _result {
+        Dispatcher.getUser { (result) -> Void in
+            switch result {
             case .Success(let json):
                 
-                result(result: .Success([]))
+                JEDump(json)
+                completion(result: .Success([]))
             case .Failure(let data, let errorType):
                 
-                result(result: .Failure(.SomethingError))
+                completion(result: .Failure(.SomethingError))
             }
         }
     }

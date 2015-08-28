@@ -12,7 +12,7 @@ class ConfirmAppointmentViewController: BaseConfirmViewController {
 
     // MARK: Public
     
-    var transaction: AppointTransaction?
+    var transaction: AppointmentTransaction?
     
     override func viewDidLoad() {
         
@@ -47,7 +47,15 @@ class ConfirmAppointmentViewController: BaseConfirmViewController {
         guard let transaction = self.transaction else {
             return
         }
-        SlackDispatcher.call(transaction)
+        
+        Container.VisitorsModel.sendVisitor(transaction: transaction) { (result) -> Void in
+            
+        }
+        
+        Container.SlackModel.callSlack(transaction: transaction) { (result) -> Void in
+            
+        }
+        
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

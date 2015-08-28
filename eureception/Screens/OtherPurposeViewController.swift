@@ -85,7 +85,8 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         guard let purpose = self.textView.text else {
             return
         }
-        let transaction = OtherTransaction.init(purpose: purpose)
+        let visitor = OtherVisitor(purpose: purpose)
+        let transaction = OtherTransaction(visitor: visitor)
         controller.transaction = transaction
         
         self.navigationController?.pushViewController(controller, animated: true)

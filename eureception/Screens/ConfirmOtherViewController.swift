@@ -18,9 +18,8 @@ class ConfirmOtherViewController: BaseConfirmViewController {
         self.messageLabel.textColor = UIColor.eureColor
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.text = "以下、内容をご確認ください"
-
         
-        self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.purpose ?? "", color: UIColor.eureBlackTextColor, size: 36)
+        self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.visitor.purpose ?? "", color: UIColor.eureBlackTextColor, size: 36)
     }
     
     @IBOutlet weak var iconImageView: UIImageView!
@@ -34,7 +33,15 @@ class ConfirmOtherViewController: BaseConfirmViewController {
         guard let transaction = self.transaction else {
             return
         }
-        SlackDispatcher.call(transaction)
+        
+        Container.VisitorsModel.sendVisitor(transaction: transaction) { (result) -> Void in
+            
+        }
+        
+        Container.SlackModel.callSlack(transaction: transaction) { (result) -> Void in
+            
+        }
+        
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

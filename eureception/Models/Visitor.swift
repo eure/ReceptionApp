@@ -8,13 +8,25 @@
 
 import Foundation
 
-struct Visitor {
+protocol Visitor {
+    
+}
+
+struct AppointmentVisitor: Visitor {
     
     var name: String = ""
     var numberOfPersons: Int = 1
     var companyName: String = ""
-
     init() {
 
-    }    
+    }
+}
+
+struct OtherVisitor: Visitor {
+    
+    var purpose: String
+    
+    init(purpose: String) {
+        self.purpose = purpose
+    }
 }

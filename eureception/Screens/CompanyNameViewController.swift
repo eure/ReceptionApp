@@ -11,7 +11,7 @@ import UIKit
 class CompanyNameViewController: BaseTransactionViewController, InputFieldTransition {
 
     // MARK: Public
-    var transaction: AppointTransaction?
+    var transaction: AppointmentTransaction?
     
     override func viewDidLoad() {
         super.viewDidLoad()

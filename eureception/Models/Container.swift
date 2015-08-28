@@ -11,4 +11,6 @@ import Foundation
 struct Container {
 
     static var UsersModel = eureception.UsersModel()
+    static var VisitorsModel = eureception.VisitorsModel()
+    static var SlackModel = eureception.SlackModel()
 }

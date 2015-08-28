@@ -12,7 +12,6 @@
 		4B0169E81B8BE6BB00208CA9 /* ConfirmAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0169E71B8BE6BB00208CA9 /* ConfirmAppointmentViewController.swift */; };
 		4B0169EA1B8BE6C900208CA9 /* ConfirmAppointmentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0169E91B8BE6C900208CA9 /* ConfirmAppointmentViewController.storyboard */; };
 		4B1B92B71B75B1B600C28005 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B92B91B75B1B600C28005 /* Localizable.strings */; };
-		4B2391DB1B82EDBA001D636D /* SlackDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2391DA1B82EDBA001D636D /* SlackDispatcher.swift */; };
 		4B2391DD1B82F874001D636D /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2391DC1B82F874001D636D /* Visitor.swift */; };
 		4B2AE0DA1B8DA62400111C51 /* KozGoPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */; settings = {ASSET_TAGS = (); }; };
 		4B2CA5FE1B8EB74800BCD9A4 /* eureception.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA5FC1B8EB74800BCD9A4 /* eureception.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
@@ -34,6 +33,9 @@
 		4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B696C191B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C181B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B696C1B1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
+		4B696C1D1B8FEE9C0096A169 /* VisitorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */; settings = {ASSET_TAGS = (); }; };
+		4B696C1F1B8FEF910096A169 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1E1B8FEF910096A169 /* Dispatcher.swift */; settings = {ASSET_TAGS = (); }; };
+		4B696C211B8FFDAE0096A169 /* SlackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C201B8FFDAE0096A169 /* SlackModel.swift */; settings = {ASSET_TAGS = (); }; };
 		4B79AFA51B8D2E4B002EBF8E /* InputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4B79AFA71B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */; settings = {ASSET_TAGS = (); }; };
 		4B98702E1B89681300F72342 /* ContactToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98702D1B89681300F72342 /* ContactToViewController.swift */; };
@@ -152,7 +154,7 @@
 		4BD2BCD41B8331580064F51E /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD21B8331580064F51E /* ReactiveCocoa.framework */; };
 		4BD2BCD51B8331580064F51E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD31B8331580064F51E /* Result.framework */; };
 		4BD2BCF61B8348EC0064F51E /* NSString+Japanese.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */; };
-		4BD2BD071B83573F0064F51E /* AppointTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BD061B83573F0064F51E /* AppointTransaction.swift */; };
+		4BD2BD071B83573F0064F51E /* AppointmentTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,7 +196,6 @@
 		4B1B92BA1B75B1BD00C28005 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4B1B92BB1B75B1CF00C28005 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B1B92BC1B75B1D400C28005 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4B2391DA1B82EDBA001D636D /* SlackDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackDispatcher.swift; sourceTree = "<group>"; };
 		4B2391DC1B82F874001D636D /* Visitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
 		4B2AE0D91B8DA62400111C51 /* KozGoPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KozGoPro-Medium.otf"; sourceTree = "<group>"; };
 		4B2CA5FD1B8EB74800BCD9A4 /* eureception.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eureception.xcdatamodel; sourceTree = "<group>"; };
@@ -214,6 +215,9 @@
 		4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmToCompletionTransitionController.swift; sourceTree = "<group>"; };
 		4B696C181B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldToConfirmOtherTransitionController.swift; sourceTree = "<group>"; };
 		4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToOtherPurposeTransitionController.swift; sourceTree = "<group>"; };
+		4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsModel.swift; sourceTree = "<group>"; };
+		4B696C1E1B8FEF910096A169 /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		4B696C201B8FFDAE0096A169 /* SlackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackModel.swift; sourceTree = "<group>"; };
 		4B79AFA41B8D2E4B002EBF8E /* InputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldTransitionController.swift; sourceTree = "<group>"; };
 		4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmAppointmentToCompletionTransitionContorller.swift; sourceTree = "<group>"; };
 		4B98702D1B89681300F72342 /* ContactToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToViewController.swift; sourceTree = "<group>"; };
@@ -402,7 +406,7 @@
 		4BD2BCD31B8331580064F51E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = SOURCE_ROOT; };
 		4BD2BCD91B8348EC0064F51E /* NSString+Japanese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Japanese.h"; sourceTree = "<group>"; };
 		4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Japanese.m"; sourceTree = "<group>"; };
-		4BD2BD061B83573F0064F51E /* AppointTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointTransaction.swift; sourceTree = "<group>"; };
+		4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTransaction.swift; sourceTree = "<group>"; };
 		93D783990AC8D57A4135811A /* Pods_Reception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36A461C27446E763B1B2691 /* Pods-Reception.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reception.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reception/Pods-Reception.debug.xcconfig"; sourceTree = "<group>"; };
 		F05E78A53D6A656B0F2DFDA9 /* Pods-Reception.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reception.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reception/Pods-Reception.release.xcconfig"; sourceTree = "<group>"; };
@@ -470,12 +474,14 @@
 			isa = PBXGroup;
 			children = (
 				4B98704B1B8977C900F72342 /* Transaction.swift */,
-				4BD2BD061B83573F0064F51E /* AppointTransaction.swift */,
+				4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */,
 				4B98704D1B8977EF00F72342 /* OtherTransaction.swift */,
-				4B2391DA1B82EDBA001D636D /* SlackDispatcher.swift */,
+				4B696C1E1B8FEF910096A169 /* Dispatcher.swift */,
 				4B2CA6051B8EBAB900BCD9A4 /* Container.swift */,
 				4B2CA6031B8EBA7800BCD9A4 /* BaseModel.swift */,
 				4B2CA6011B8EBA7000BCD9A4 /* UsersModel.swift */,
+				4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */,
+				4B696C201B8FFDAE0096A169 /* SlackModel.swift */,
 				4B2CA5FF1B8EB9E300BCD9A4 /* User.swift */,
 				4B2391DC1B82F874001D636D /* Visitor.swift */,
 			);
@@ -1114,6 +1120,7 @@
 				4B98702E1B89681300F72342 /* ContactToViewController.swift in Sources */,
 				4B99307F1B7515470073473F /* NSDate+JEDebugging.m in Sources */,
 				4B9930A71B7515470073473F /* NSString+JEToolkit.m in Sources */,
+				4B696C1D1B8FEE9C0096A169 /* VisitorsModel.swift in Sources */,
 				4B99308A1B7515470073473F /* NSSet+JEDebugging.m in Sources */,
 				4B9930861B7515470073473F /* NSNumber+JEDebugging.m in Sources */,
 				4B9930921B7515470073473F /* JEBaseLoggerSettings.m in Sources */,
@@ -1130,7 +1137,6 @@
 				4B9930A81B7515470073473F /* NSURL+JEToolkit.m in Sources */,
 				4B9930B11B7515470073473F /* UIScrollView+JEToolkit.m in Sources */,
 				4B9870321B89684500F72342 /* YourNameViewController.swift in Sources */,
-				4B2391DB1B82EDBA001D636D /* SlackDispatcher.swift in Sources */,
 				4B9930B31B7515470073473F /* UITableView+JEToolkit.swift in Sources */,
 				4B696C131B8F2BD50096A169 /* BaseConfirmViewController.swift in Sources */,
 				4B9930871B7515470073473F /* NSObject+JEDebugging.m in Sources */,
@@ -1161,6 +1167,7 @@
 				4B98704C1B8977C900F72342 /* Transaction.swift in Sources */,
 				4BD2BCF61B8348EC0064F51E /* NSString+Japanese.m in Sources */,
 				4B9930B01B7515470073473F /* UINib+JEToolkit.m in Sources */,
+				4B696C1F1B8FEF910096A169 /* Dispatcher.swift in Sources */,
 				4BD0CC281B8EEB8200A37716 /* OtherPurposeViewController.swift in Sources */,
 				4B9930A91B7515470073473F /* NSValue+JEToolkit.m in Sources */,
 				4B9930931B7515470073473F /* JEConsoleLoggerSettings.m in Sources */,
@@ -1172,7 +1179,7 @@
 				4B99308B1B7515470073473F /* NSString+JEDebugging.m in Sources */,
 				4B9870301B89683100F72342 /* CompanyNameViewController.swift in Sources */,
 				4B992FA01B75146B0073473F /* AppDelegate.swift in Sources */,
-				4BD2BD071B83573F0064F51E /* AppointTransaction.swift in Sources */,
+				4BD2BD071B83573F0064F51E /* AppointmentTransaction.swift in Sources */,
 				4B99307E1B7515470073473F /* NSArray+JEDebugging.m in Sources */,
 				4BB07A6B1B8CB00B000065F3 /* UIFont+Util.swift in Sources */,
 				4B696C151B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift in Sources */,
@@ -1196,6 +1203,7 @@
 				4B9930971B7515470073473F /* JEOrderedDictionary.m in Sources */,
 				4B99309F1B7515470073473F /* NSDate+JEToolkit.swift in Sources */,
 				4B9D42E51B765C5B0047C99D /* BaseNavigationController.swift in Sources */,
+				4B696C211B8FFDAE0096A169 /* SlackModel.swift in Sources */,
 				4B9930A21B7515470073473F /* NSError+JEToolkit.m in Sources */,
 				4B9930A41B7515470073473F /* NSMutableArray+JEToolkit.m in Sources */,
 				4B9930851B7515470073473F /* NSMutableString+JEDebugging.m in Sources */,

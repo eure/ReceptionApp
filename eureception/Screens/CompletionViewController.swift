@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import GCDKit
 
 class CompletionViewController: BaseViewController {
 
-    var transaction: AppointTransaction?
+    var transaction: AppointmentTransaction?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +19,28 @@ class CompletionViewController: BaseViewController {
 
         self.iconImageView.tintColor = UIColor.whiteColor()
         
-        self.titleLabel.font = UIFont.eureBoldFont(size: 32)
-        self.titleLabel.text = "受け付けました"
-        
-        self.subtitleLabel.font = UIFont.eureBoldFont(size: 22)
-        self.subtitleLabel.text = "ただいま係りの者が参りますので、\nもう少々お待ちくださいませ"
-        
+        self.titleLabel.attributedText = NSAttributedString(string: "受け付けました", attributes: [
+            NSKernAttributeName : NSNumber(integer: 2),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 32),
+            NSForegroundColorAttributeName : UIColor.eureColor,
+            ]
+        )
+       
+        self.subtitleLabel.attributedText = NSAttributedString(string: "ただいま係りの者が参りますので、\nもう少々お待ちくださいませ", attributes: [
+            NSKernAttributeName : NSNumber(integer: 2),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 22),
+            NSForegroundColorAttributeName : UIColor.eureColor,
+            ]
+        )
+                
         self.titleLabel.textColor = UIColor.whiteColor()
         self.subtitleLabel.textColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
+        
+        GCDBlock.after(.Main, delay: 10) { [weak self] () -> Void in
+            
+            self?.navigationController?.popToRootViewControllerAnimated(true)
+        }
     }
 
     @IBOutlet weak var iconImageView: UIImageView!

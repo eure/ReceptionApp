@@ -10,7 +10,7 @@ import UIKit
 import CoreStore
 
 @objc(User)
-class User: NSManagedObject {
+class User: NSManagedObject, ImportableUniqueObject {
     
     @NSManaged var id: Int64
     @NSManaged var imageURL: String!

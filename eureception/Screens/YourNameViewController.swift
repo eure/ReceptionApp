@@ -12,7 +12,7 @@ import ReactiveCocoa
 class YourNameViewController: BaseTransactionViewController, InputFieldTransition {
 
     // MARK: Public
-    var transaction: AppointTransaction?
+    var transaction: AppointmentTransaction?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +73,7 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
             return
         }
         
-        var visitor = self.transaction?.visitor ?? Visitor()
+        var visitor = self.transaction?.visitor ?? AppointmentVisitor()
         visitor.name = name
         self.transaction?.visitor = visitor
         controller.transaction = self.transaction

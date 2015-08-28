@@ -8,9 +8,9 @@
 
 struct OtherTransaction: Transaction {
     
-    let purpose: String
+    let visitor: OtherVisitor
     
-    init(purpose: String) {
-        self.purpose = purpose
+    init(visitor: OtherVisitor){
+        self.visitor = visitor
     }
 }
