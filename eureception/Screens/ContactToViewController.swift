@@ -42,7 +42,7 @@ class ContactToViewController: BaseTransactionViewController {
                     guard let value = event.value else {
                         return
                     }
-                    
+                    JEDump(self?.usersListMonitor.objectsInAllSections())
                     self?.results = self?.usersListMonitor.objectsInAllSections().filter { $0.compare(value) == true } ?? []
                 }
         }
@@ -63,6 +63,7 @@ class ContactToViewController: BaseTransactionViewController {
                     UIView.animateWithDuration(0.3, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                         
                         self?.textFieldTop.constant = 30
+                        self?.messageLabel.alpha = 0
                         self?.view.layoutIfNeeded()
                         }, completion: { (finish) -> Void in
                     })
@@ -85,6 +86,7 @@ class ContactToViewController: BaseTransactionViewController {
                     UIView.animateWithDuration(0.3, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                         
                         self?.textFieldTop.constant = 200
+                        self?.messageLabel.alpha = 1
                         self?.view.layoutIfNeeded()
                         }, completion: { (finish) -> Void in
                     })
@@ -95,6 +97,7 @@ class ContactToViewController: BaseTransactionViewController {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
+        
         self.textField.becomeFirstResponder()
     }
     override func viewDidAppear(animated: Bool) {

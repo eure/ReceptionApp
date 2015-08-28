@@ -18,7 +18,7 @@ enum Dispatcher {
     
     static func getUser(response: (result: Result<JSON>) -> Void) {
         
-        self.dispatch(url: baseURL + "/users", parameters: nil, response: response)
+        self.dispatch(url: baseURL + "/users", method: .GET, parameters: nil, response: response)
     }
     
     static func sendVisitor(transaction transaction: AppointmentTransaction, response: (result: Result<JSON>) -> Void) {
@@ -35,7 +35,7 @@ enum Dispatcher {
                 "visitor_type" : "appointment",
                 "user_id" : NSNumber(longLong: transaction.user.id),
                 "visitor_name" : visitor.name,
-                "visitor_count" : visitor.numberOfPersons,
+                "visitor_person_count" : visitor.numberOfPersons,
                 "visitor_company_name" : visitor.companyName
             ],
             response: response)
@@ -53,10 +53,10 @@ enum Dispatcher {
     }
      
     private static let baseURL = "https://reception.eure.jp/api/v1"
-    private static func dispatch(url url: String, parameters: [String: AnyObject]?, response: (result: Result<JSON>) -> Void) {
+    private static func dispatch(url url: String, method: Alamofire.Method = .POST, parameters: [String: AnyObject]?, response: (result: Result<JSON>) -> Void) {
         
         Manager.sharedInstance.request(
-            Alamofire.Method.POST,
+            method,
             url,
             parameters: parameters,
             encoding: ParameterEncoding.URL,
@@ -77,10 +77,8 @@ struct ReceptionResponseSerializer: ResponseSerializer {
     var serializeResponse: (NSURLRequest?, NSHTTPURLResponse?, NSData?) -> Result<JSON> {
         
         return { request, response, data in
-            JEDump(response, "response")
-            JEDump(data, "data")
             if let jsonData = data {
-                let json = JSON(jsonData)
+                let json = JSON(data: jsonData)
                 JEDump(json, "response")
                 return .Success(json)
             }

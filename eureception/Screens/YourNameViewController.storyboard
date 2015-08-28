@@ -9,7 +9,7 @@
         <!--Your Name View Controller-->
         <scene sceneID="ALV-AW-HFo">
             <objects>
-                <viewController id="oPY-ro-37V" customClass="YourNameViewController" customModule="Reception" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oPY-ro-37V" customClass="YourNameViewController" customModule="eureception" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="41b-dd-Yeu"/>
                         <viewControllerLayoutGuide type="bottom" id="wLD-ic-o8m"/>
@@ -23,7 +23,7 @@
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yn-oy-8Kd">
-                                <rect key="frame" x="36" y="49.5" width="50" height="50"/>
+                                <rect key="frame" x="36" y="50" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="JG7-Yl-T7q"/>
@@ -35,36 +35,46 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pth-QA-xcf">
-                                <rect key="frame" x="60" y="290" width="648" height="100"/>
+                                <rect key="frame" x="60" y="170" width="648" height="176"/>
                                 <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjs-P0-D4y" customClass="InputTextField" customModule="eureception" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="81" width="543" height="90"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="NlZ-pB-iZw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cof-6f-eK5">
+                                        <rect key="frame" x="25" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_name" translatesAutoresizingMaskIntoConstraints="NO" id="g2E-J7-Faa">
-                                        <rect key="frame" x="20" y="25" width="50" height="50"/>
+                                        <rect key="frame" x="20" y="101" width="50" height="50"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="na9-C1-K1n"/>
                                             <constraint firstAttribute="width" secondItem="g2E-J7-Faa" secondAttribute="height" multiplier="1:1" id="yYc-hs-Ycz"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjs-P0-D4y" customClass="InputTextField" customModule="Reception" customModuleProvider="target">
-                                        <rect key="frame" x="100" y="5" width="543" height="90"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="Cof-6f-eK5" firstAttribute="top" secondItem="pth-QA-xcf" secondAttribute="top" id="7QD-vg-gb9"/>
+                                    <constraint firstItem="Cof-6f-eK5" firstAttribute="leading" secondItem="g2E-J7-Faa" secondAttribute="leading" constant="5" id="9dC-qZ-vTP"/>
+                                    <constraint firstItem="g2E-J7-Faa" firstAttribute="centerY" secondItem="vjs-P0-D4y" secondAttribute="centerY" id="Tlg-dJ-95f"/>
                                     <constraint firstAttribute="trailing" secondItem="vjs-P0-D4y" secondAttribute="trailing" constant="5" id="VxS-0G-uM2"/>
                                     <constraint firstAttribute="bottom" secondItem="vjs-P0-D4y" secondAttribute="bottom" constant="5" id="ag2-Vk-rNV"/>
-                                    <constraint firstAttribute="height" constant="100" id="eax-FJ-J1b"/>
-                                    <constraint firstItem="vjs-P0-D4y" firstAttribute="top" secondItem="pth-QA-xcf" secondAttribute="top" constant="5" id="gQb-Kl-Q2G"/>
+                                    <constraint firstAttribute="height" constant="176" id="eax-FJ-J1b"/>
                                     <constraint firstItem="vjs-P0-D4y" firstAttribute="leading" secondItem="g2E-J7-Faa" secondAttribute="trailing" constant="30" id="hcq-4o-Wbi"/>
                                     <constraint firstItem="g2E-J7-Faa" firstAttribute="leading" secondItem="pth-QA-xcf" secondAttribute="leading" constant="20" id="qsC-p6-lVk"/>
-                                    <constraint firstItem="g2E-J7-Faa" firstAttribute="centerY" secondItem="pth-QA-xcf" secondAttribute="centerY" id="xUi-m3-vdm"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezi-lv-aZz" customClass="NextButton" customModule="Reception" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezi-lv-aZz" customClass="NextButton" customModule="eureception" customModuleProvider="target">
                                 <rect key="frame" x="320" y="536" width="128" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="K7Z-ns-BYu">
@@ -98,7 +108,7 @@
                             <constraint firstItem="6Yn-oy-8Kd" firstAttribute="leading" secondItem="H6g-zP-nCF" secondAttribute="leading" constant="36" id="VO6-DL-Box"/>
                             <constraint firstItem="wLD-ic-o8m" firstAttribute="top" secondItem="ezi-lv-aZz" secondAttribute="bottom" constant="360" id="XeW-Oq-9K3"/>
                             <constraint firstItem="wPg-Qh-HEb" firstAttribute="top" secondItem="41b-dd-Yeu" secondAttribute="bottom" constant="60" id="eas-he-Ypi"/>
-                            <constraint firstItem="pth-QA-xcf" firstAttribute="top" secondItem="wPg-Qh-HEb" secondAttribute="bottom" constant="200" id="r6I-Av-YCE"/>
+                            <constraint firstItem="pth-QA-xcf" firstAttribute="top" secondItem="wPg-Qh-HEb" secondAttribute="bottom" constant="80" id="r6I-Av-YCE"/>
                             <constraint firstItem="6Yn-oy-8Kd" firstAttribute="centerY" secondItem="wPg-Qh-HEb" secondAttribute="centerY" id="y07-5i-Xv7"/>
                         </constraints>
                     </view>
@@ -109,6 +119,7 @@
                         <outlet property="iconImageView" destination="g2E-J7-Faa" id="loD-sx-FMV"/>
                         <outlet property="inputFieldView" destination="pth-QA-xcf" id="veR-y9-SBv"/>
                         <outlet property="logoImageView" destination="wPg-Qh-HEb" id="wpb-id-mNq"/>
+                        <outlet property="messageLabel" destination="Cof-6f-eK5" id="Wz3-Sn-Omd"/>
                         <outlet property="nextButton" destination="ezi-lv-aZz" id="ggh-LP-Oyr"/>
                         <outlet property="textField" destination="vjs-P0-D4y" id="KwJ-YU-s6g"/>
                     </connections>

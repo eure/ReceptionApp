@@ -15,6 +15,10 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.font = UIFont.eureBoldFont(size: 18)
+        self.messageLabel.text = "貴社名をご記入ください"
 
         self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "COMPANY NAME",
@@ -56,6 +60,7 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
     
     // MARK: Private
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
+    @IBOutlet private dynamic weak var messageLabel: UILabel!
     @IBOutlet private dynamic weak var textField: UITextField!
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {

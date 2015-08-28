@@ -15,6 +15,9 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.font = UIFont.eureBoldFont(size: 18)
+        self.messageLabel.text = "ご訪問者様数を設定してください"
 
         // Do any additional setup after loading the view.
         self.minusButton.tintColor = UIColor.eureColor
@@ -53,6 +56,7 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
     
     // MARK: Private
     @IBOutlet private dynamic weak var countLabel: UILabel!
+    @IBOutlet private dynamic weak var messageLabel: UILabel!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     @IBOutlet private dynamic weak var minusButton: UIButton!
     @IBOutlet private dynamic weak var plusButton: UIButton!

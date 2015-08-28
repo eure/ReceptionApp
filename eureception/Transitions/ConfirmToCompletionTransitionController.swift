@@ -18,7 +18,7 @@ class ConfirmToCompletionTransitionController: NSObject, UIViewControllerAnimate
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! ConfirmOtherViewController
+        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! BaseConfirmViewController
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)  as! CompletionViewController
         let containerView = transitionContext.containerView()!
         
@@ -32,8 +32,7 @@ class ConfirmToCompletionTransitionController: NSObject, UIViewControllerAnimate
         maskLayer.masksToBounds = true
         
         toVC.view.layer.mask = maskLayer
-        
-        
+                
         toVC.iconImageView.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1)
         toVC.titleLabel.layer.transform = CATransform3DMakeScale(1.2, 1.2, 1)
         toVC.subtitleLabel.layer.transform = CATransform3DMakeScale(1.2, 1.2, 1)

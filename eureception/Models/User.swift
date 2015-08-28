@@ -10,7 +10,6 @@ import UIKit
 import CoreStore
 import SwiftyJSON
 
-@objc(User)
 class User: NSManagedObject, ImportableUniqueObject {
     
     @NSManaged var id: Int64
@@ -69,6 +68,7 @@ class User: NSManagedObject, ImportableUniqueObject {
         self.slackID = source["slack_account_id"].stringValue
         self.slackName = source["slack_account_name"].stringValue
         
+        JEDump(self, "User")
     }
     
     static func shouldUpdateFromImportSource(source: JSON, inTransaction transaction: BaseDataTransaction) -> Bool {

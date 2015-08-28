@@ -17,6 +17,10 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.font = UIFont.eureBoldFont(size: 18)
+        self.messageLabel.text = "お名前をご記入ください"
+        
         self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "YOUR NAME",
             color: UIColor.eureLightGrayTextColor,
@@ -57,6 +61,7 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
     
     // MARK: Private
     @IBOutlet private dynamic weak var textField: UITextField!
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {

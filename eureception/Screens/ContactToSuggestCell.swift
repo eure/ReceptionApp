@@ -28,7 +28,7 @@ class ContactToSuggestCell: UITableViewCell {
     var user: User? {
         didSet {
             self.nameJaLabel.text = self.user?.nameJa
-            self.nameEnLabel.attributedText = NSAttributedString.eureBoldAttributedString(self.user?.nameEn ?? "", color: UIColor.eureColor, size: 16 )
+            self.nameEnLabel.attributedText = NSAttributedString.eureAttributedString(self.user?.nameEn ?? "", color: UIColor.eureColor, size: 16 )
         }
     }
     

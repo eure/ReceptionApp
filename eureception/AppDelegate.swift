@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreStore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             JEDebugging.setExceptionLoggingEnabled(true)
             JEDebugging.start()
         #endif
-                
+        
+        try! CoreStore.addSQLiteStoreAndWait()
+        
         Container.UsersModel.getUsers { (result) -> Void in
             switch result {
             case .Success(let user):

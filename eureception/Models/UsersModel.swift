@@ -19,8 +19,22 @@ final class UsersModel: BaseModel {
             switch result {
             case .Success(let json):
                 
-                JEDump(json)
-                completion(result: .Success([]))
+                JEDump(json, "UsersModel.user")
+                JEDump(json["users"].arrayValue, "UsersModel.user")
+                
+                CoreStore.beginAsynchronous { transaction in
+                    
+                    _ = try? transaction.importUniqueObjects(
+                        Into(User),
+                        sourceArray: json["users"].arrayValue
+                    )
+                    
+                    transaction.commit { result in
+                        
+                        JEDump(json)
+                        completion(result: .Success([]))
+                    }
+                }
             case .Failure(let data, let errorType):
                 
                 completion(result: .Failure(.SomethingError))
