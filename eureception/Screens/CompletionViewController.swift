@@ -19,14 +19,14 @@ class CompletionViewController: BaseViewController {
 
         self.iconImageView.tintColor = UIColor.whiteColor()
         
-        self.titleLabel.attributedText = NSAttributedString(string: "受け付けました", attributes: [
-            NSKernAttributeName : NSNumber(integer: 2),
-            NSFontAttributeName : UIFont.eureBoldFont(size: 32),
+        self.titleLabel.attributedText = NSAttributedString(string: "THANK YOU!", attributes: [
+            NSKernAttributeName : NSNumber(integer: 8),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 36),
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )
        
-        self.subtitleLabel.attributedText = NSAttributedString(string: "ただいま係りの者が参りますので、\nもう少々お待ちくださいませ", attributes: [
+        self.subtitleLabel.attributedText = NSAttributedString(string: "受付が完了しました\nただいま係りの者が参りますので\nもう少々お待ちくださいませ", attributes: [
             NSKernAttributeName : NSNumber(integer: 2),
             NSFontAttributeName : UIFont.eureBoldFont(size: 22),
             NSForegroundColorAttributeName : UIColor.eureColor,

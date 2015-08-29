@@ -13,7 +13,7 @@ class ConfirmToCompletionTransitionController: NSObject, UIViewControllerAnimate
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         
-        return 0.5
+        return 0.7
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -45,18 +45,18 @@ class ConfirmToCompletionTransitionController: NSObject, UIViewControllerAnimate
             maskLayer.transform = CATransform3DMakeScale(13, 13, 1)
             }) { (finish) -> Void in
                 toVC.view.layer.mask = nil
-                
-            }.animateAndChainWithDuration(0.2, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
-                
+        }.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: [], animations: { () -> Void in
+            
                 toVC.iconImageView.layer.transform = CATransform3DIdentity
                 toVC.titleLabel.layer.transform = CATransform3DIdentity
                 toVC.subtitleLabel.layer.transform = CATransform3DIdentity
                 toVC.iconImageView.alpha = 1
                 toVC.titleLabel.alpha = 1
                 toVC.subtitleLabel.alpha = 1
-                }) { (finish) -> Void in
-                    
+            }) { (finish) -> Void in
+                
                     transitionContext.completeTransition(true)
         }
+        
     }
 }
