@@ -76,7 +76,7 @@ class TopViewController: BaseViewController {
     
     @IBAction func handleotherButton(sender: AnyObject) {
         
-        let controller = OtherPurposeViewController.viewControllerFromStoryboard()
+        let controller = CompanyNameViewController.viewControllerFromStoryboard()
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

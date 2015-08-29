@@ -24,9 +24,9 @@ struct AppointmentVisitor: Visitor {
 
 struct OtherVisitor: Visitor {
     
-    var purpose: String
+    var purpose: String = ""
+    var companyName: String = ""
     
-    init(purpose: String) {
-        self.purpose = purpose
+    init() {
     }
 }

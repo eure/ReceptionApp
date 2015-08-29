@@ -8,7 +8,7 @@
 
 struct OtherTransaction: Transaction {
     
-    let visitor: OtherVisitor
+    var visitor: OtherVisitor
     
     init(visitor: OtherVisitor){
         self.visitor = visitor

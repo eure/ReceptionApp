@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
-
 class OtherPurposeViewController: BaseTransactionViewController, InputFieldTransition {
+    
+    var transaction: OtherTransaction?
     
     @IBOutlet weak var inputFieldView: UIView!
     @IBOutlet dynamic weak var nextButton: NextButton!
@@ -90,8 +91,7 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         guard let purpose = self.textView.text else {
             return
         }
-        let visitor = OtherVisitor(purpose: purpose)
-        let transaction = OtherTransaction(visitor: visitor)
+        self.transaction?.visitor.purpose = purpose
         controller.transaction = transaction
         
         self.navigationController?.pushViewController(controller, animated: true)
