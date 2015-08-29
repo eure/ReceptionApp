@@ -19,7 +19,7 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
         
         self.messageLabel.textColor = UIColor.eureColor
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
-        self.messageLabel.text = "お名前をご記入ください"
+        self.messageLabel.text = "お客様のお名前をご記入ください"
         
         self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "YOUR NAME",

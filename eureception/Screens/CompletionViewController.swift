@@ -26,7 +26,7 @@ class CompletionViewController: BaseViewController {
             ]
         )
        
-        self.subtitleLabel.attributedText = NSAttributedString(string: "受付が完了しました\nただいま係りの者が参りますので\nもう少々お待ちくださいませ", attributes: [
+        self.subtitleLabel.attributedText = NSAttributedString(string: "受付が完了しました\nただいま担当者が参りますので\nもう少々お待ちくださいませ", attributes: [
             NSKernAttributeName : NSNumber(integer: 2),
             NSFontAttributeName : UIFont.eureBoldFont(size: 22),
             NSForegroundColorAttributeName : UIColor.eureColor,

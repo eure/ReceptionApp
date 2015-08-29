@@ -52,7 +52,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="LbX-4B-zf6">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="LbX-4B-zf6">
                                         <rect key="frame" x="595" y="123" width="33" height="33"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご予約のある方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUA-UW-ep0">
@@ -101,7 +101,7 @@
                                             <constraint firstAttribute="height" constant="142" id="Yli-LJ-eh1"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-CN-kAt">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-CN-kAt">
                                         <rect key="frame" x="595" y="123" width="33" height="33"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他ご用件の方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Dd-4OQ">

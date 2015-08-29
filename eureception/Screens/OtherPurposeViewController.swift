@@ -25,6 +25,8 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         self.iconImageView.tintColor = UIColor.eureColor
         self.textView.tintColor = UIColor.eureColor
         
+        self.textView.text = self.transaction?.visitor.purpose
+        
         self.textViewMask.colors = [
             UIColor.clearColor().CGColor,
             UIColor.whiteColor().CGColor,
