@@ -87,7 +87,7 @@
                                 <rect key="frame" x="40" y="538" width="688" height="280"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
-                                        <rect key="frame" x="301" y="187" width="86" height="36"/>
+                                        <rect key="frame" x="301.5" y="187" width="85.5" height="36"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -132,14 +132,14 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ようこそeurekaへ ご用件をお選びください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-Rr-W2I">
-                                <rect key="frame" x="210" y="168" width="348" height="18"/>
+                                <rect key="frame" x="210" y="160" width="348" height="18"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvw-tB-Ha6">
-                                <rect key="frame" x="320" y="900" width="128" height="34"/>
+                                <rect key="frame" x="320.5" y="900.5" width="127.5" height="33.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -149,7 +149,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cBh-Rr-W2I" firstAttribute="top" secondItem="QQE-Z3-hyo" secondAttribute="bottom" constant="78" id="0GH-iO-8Nv"/>
+                            <constraint firstItem="cBh-Rr-W2I" firstAttribute="top" secondItem="QQE-Z3-hyo" secondAttribute="bottom" constant="70" id="0GH-iO-8Nv"/>
                             <constraint firstItem="TVz-5V-aKW" firstAttribute="top" secondItem="C7k-QB-7JQ" secondAttribute="bottom" constant="30" id="1k0-0P-ARK"/>
                             <constraint firstAttribute="trailing" secondItem="TVz-5V-aKW" secondAttribute="trailing" constant="40" id="47t-eC-cBh"/>
                             <constraint firstItem="gKg-3C-LaT" firstAttribute="top" secondItem="Jvw-tB-Ha6" secondAttribute="bottom" constant="90.5" id="Dwj-Jf-5TV"/>
@@ -158,7 +158,7 @@
                             <constraint firstItem="cBh-Rr-W2I" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="QEN-nO-I9x"/>
                             <constraint firstItem="C7k-QB-7JQ" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="ejb-dJ-nR5"/>
                             <constraint firstItem="Jvw-tB-Ha6" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="gva-60-v7K"/>
-                            <constraint firstItem="C7k-QB-7JQ" firstAttribute="top" secondItem="cBh-Rr-W2I" secondAttribute="bottom" constant="42" id="h9U-bd-Rfc"/>
+                            <constraint firstItem="C7k-QB-7JQ" firstAttribute="top" secondItem="cBh-Rr-W2I" secondAttribute="bottom" constant="50" id="h9U-bd-Rfc"/>
                             <constraint firstItem="TVz-5V-aKW" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="i4b-vC-eRq"/>
                             <constraint firstItem="QQE-Z3-hyo" firstAttribute="top" secondItem="wxg-N2-rZv" secondAttribute="bottom" constant="60" id="tDp-DY-ARN"/>
                         </constraints>

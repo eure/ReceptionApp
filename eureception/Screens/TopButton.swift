@@ -62,15 +62,24 @@ class TopButton: UIControl {
             
             super.highlighted = newValue
             
-            UIView.animateWithDuration(
-                0.1,
-                delay: 0,
-                options: .BeginFromCurrentState,
-                animations: { () -> Void in
+            if newValue {
+                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
+                  
+                    self.alpha = 0.6
+                    self.layer.transform = CATransform3DMakeScale(0.99, 0.99, 1)
+                    self.shape.fillColor = UIColor(white: 0, alpha: 0.02).CGColor
+                    }, completion: { (finish) -> Void in
+                        
+                })
+            } else {
+                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                     
-                    self.alpha = newValue ? 0.6 : 1                
-                }) { (finish) -> Void in
-                    
+                    self.alpha = 1
+                    self.layer.transform = CATransform3DIdentity
+                    self.shape.fillColor = UIColor.clearColor().CGColor
+                    }, completion: { (finish) -> Void in
+                        
+                })
             }
         }
     }
