@@ -47,7 +47,8 @@ enum Dispatcher {
             url: baseURL + "/visitor",
             parameters: [
                 "visitor_type" : "other",
-                "visitor_purpose" : transaction.visitor.purpose
+                "visitor_purpose" : transaction.visitor.purpose,
+                "visitor_company_name" : transaction.visitor.companyName
             ],
             response: response)
     }

@@ -14,17 +14,23 @@ class ConfirmOtherViewController: BaseConfirmViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.iconImageView.tintColor = UIColor.eureLightGrayTextColor
+        self.icons.forEach { $0.tintColor = UIColor.eureLightGrayTextColor }
         self.messageLabel.textColor = UIColor.eureColor
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.text = "以下、内容をご確認ください"
         
+        if let visitor = transaction?.visitor {
+            JEDump(visitor.companyName)
+            self.companyNameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.eureBlackTextColor, size: 32)
+        }
         self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.visitor.purpose ?? "", color: UIColor.eureBlackTextColor, size: 36)
     }
     
-    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet dynamic weak var companyNameView: UIView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var purposeView: UIView!
+    @IBOutlet var icons: [UIImageView]!
     
     override dynamic func handleSubmitButton(sender: AnyObject) {
         

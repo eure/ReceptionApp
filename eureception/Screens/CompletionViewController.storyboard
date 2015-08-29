@@ -46,10 +46,10 @@
                                     <outlet property="iconImageView" destination="mgg-ie-UQv" id="4bd-kG-GQx"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-Gb-Vrl">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-Gb-Vrl">
                                 <rect key="frame" x="159" y="314" width="450" height="336"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="受付が完了しました ただいま係りの者が参りますので もう少々お待ちくださいませ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qh-y6-Yaf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="受付が完了しました ただいま係りの者が参りますので もう少々お待ちくださいませ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qh-y6-Yaf">
                                         <rect key="frame" x="60" y="257" width="330" height="79"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -64,7 +64,7 @@
                                             <constraint firstAttribute="height" constant="115" id="kfi-RO-olR"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THANK YOU!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeI-1Z-OdW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="THANK YOU!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeI-1Z-OdW">
                                         <rect key="frame" x="117" y="175" width="216.5" height="42"/>
                                         <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="36"/>
                                         <nil key="highlightedColor"/>

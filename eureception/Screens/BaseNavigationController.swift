@@ -25,9 +25,9 @@ extension BaseNavigationController: UINavigationControllerDelegate {
         case ((_ as TopViewController), (_ as ContactToViewController)), ((_ as ContactToViewController), (_ as TopViewController)):
             return TopToContactTransitionController(operation: operation)
             
-        case ((_ as TopViewController), (_ as OtherPurposeViewController)), ((_ as OtherPurposeViewController), (_ as TopViewController)):
+        case ((_ as TopViewController), (_ as CompanyNameViewController)), ((_ as CompanyNameViewController), (_ as TopViewController)):
            
-            return TopToOtherPurposeTransitionController(operation: operation)
+            return TopToCompanyNamePurposeTransitionController(operation: operation)
             
         case ((_ as ContactToViewController), (_ as InputFieldTransition)), ((_ as InputFieldTransition), (_ as ContactToViewController)):
             

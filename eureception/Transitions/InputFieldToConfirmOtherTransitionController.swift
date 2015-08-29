@@ -40,9 +40,11 @@ class InputFieldToConfirmOtherTransitionController: NSObject, UIViewControllerAn
             let submitButton = toVC.submitButton
             let messageLabel = toVC.messageLabel
             let purposeView = toVC.purposeView
+            let companyNameView = toVC.companyNameView
             
             let initTransform = CATransform3DMakeTranslation(offset, 0, 0)
             
+            companyNameView.layer.transform  = initTransform
             purposeView.layer.transform = initTransform
             submitButton.alpha = 0
             messageLabel.alpha = 0
@@ -64,6 +66,13 @@ class InputFieldToConfirmOtherTransitionController: NSObject, UIViewControllerAn
                     
                     UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                         
+                        companyNameView.layer.transform = CATransform3DIdentity
+                        }, completion: { (finish) -> Void in
+                            
+                    })
+                    
+                    UIView.animateWithDuration(0.3, delay: 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
+                        
                         messageLabel.alpha = 1
                         submitButton.alpha = 1
                         purposeView.layer.transform = CATransform3DIdentity
@@ -84,6 +93,7 @@ class InputFieldToConfirmOtherTransitionController: NSObject, UIViewControllerAn
             let submitButton = fromVC.submitButton
             let messageLabel = fromVC.messageLabel
             let purposeView = fromVC.purposeView
+            let companyNameView = fromVC.companyNameView
             
             let transform = CATransform3DMakeTranslation(offset, 0, 0)
             
@@ -92,10 +102,18 @@ class InputFieldToConfirmOtherTransitionController: NSObject, UIViewControllerAn
             
             containerView.insertSubview(toVC.view, atIndex: 0)
             
+            
             UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                 
                 submitButton.alpha = 0
                 messageLabel.alpha = 0
+                
+                companyNameView.layer.transform = transform
+                }, completion: { (finish) -> Void in
+                    
+            })
+            
+            UIView.animateWithDuration(0.3, delay: 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                 
                 purposeView.layer.transform = transform
                 }, completion: { (finish) -> Void in

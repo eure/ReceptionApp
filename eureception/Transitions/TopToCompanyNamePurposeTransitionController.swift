@@ -1,5 +1,5 @@
 //
-//  TopToOtherPurposeTransitionController.swift
+//  TopToCompanyNamePurposeTransitionController.swift
 //  eureception
 //
 //  Created by Hiroshi Kimura on 8/27/15.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-class TopToOtherPurposeTransitionController: NSObject, UIViewControllerAnimatedTransitioning {
+class TopToCompanyNamePurposeTransitionController: NSObject, UIViewControllerAnimatedTransitioning {
     
     var operation: UINavigationControllerOperation = .None
     convenience init(operation: UINavigationControllerOperation) {
@@ -32,7 +32,7 @@ class TopToOtherPurposeTransitionController: NSObject, UIViewControllerAnimatedT
         if operation == .Push {
             
             let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! TopViewController
-            let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)  as! OtherPurposeViewController
+            let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)  as! CompanyNameViewController
             
             toVC.inputFieldView.layer.transform = CATransform3DMakeTranslation(offset, 0, 0)
             toVC.backButton.alpha = 0
@@ -65,7 +65,7 @@ class TopToOtherPurposeTransitionController: NSObject, UIViewControllerAnimatedT
             
         } else if operation == .Pop {
             
-            let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! OtherPurposeViewController
+            let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! CompanyNameViewController
             let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)  as! TopViewController
             
             containerView.insertSubview(toVC.view, atIndex: 0)

@@ -91,8 +91,9 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         guard let purpose = self.textView.text else {
             return
         }
+        JEDump(self.transaction?.visitor.companyName)
         self.transaction?.visitor.purpose = purpose
-        controller.transaction = transaction
+        controller.transaction = self.transaction
         
         self.navigationController?.pushViewController(controller, animated: true)
     }

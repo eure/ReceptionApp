@@ -110,7 +110,8 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
         default:
             let controller = OtherPurposeViewController.viewControllerFromStoryboard()
             
-            let visitor = OtherVisitor()
+            var visitor = OtherVisitor()
+            visitor.companyName = companyName
             let transaction = OtherTransaction(visitor: visitor)
             controller.transaction = transaction
             self.navigationController?.pushViewController(controller, animated: true)

@@ -28,7 +28,7 @@
 		4B696C151B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C141B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift */; };
 		4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */; };
 		4B696C191B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C181B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift */; };
-		4B696C1B1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */; };
+		4B696C1B1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1A1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift */; };
 		4B696C1D1B8FEE9C0096A169 /* VisitorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */; };
 		4B696C1F1B8FEF910096A169 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1E1B8FEF910096A169 /* Dispatcher.swift */; };
 		4B696C251B902B3B0096A169 /* Pods-eureception.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4B696C231B902B3B0096A169 /* Pods-eureception.debug.xcconfig */; settings = {ASSET_TAGS = (); }; };
@@ -215,7 +215,7 @@
 		4B696C141B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOtherToCompletionTransitionController.swift; sourceTree = "<group>"; };
 		4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmToCompletionTransitionController.swift; sourceTree = "<group>"; };
 		4B696C181B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldToConfirmOtherTransitionController.swift; sourceTree = "<group>"; };
-		4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToOtherPurposeTransitionController.swift; sourceTree = "<group>"; };
+		4B696C1A1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToCompanyNamePurposeTransitionController.swift; sourceTree = "<group>"; };
 		4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsModel.swift; sourceTree = "<group>"; };
 		4B696C1E1B8FEF910096A169 /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		4B696C231B902B3B0096A169 /* Pods-eureception.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-eureception.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eureception/Pods-eureception.debug.xcconfig"; sourceTree = "<group>"; };
@@ -830,7 +830,7 @@
 			isa = PBXGroup;
 			children = (
 				4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */,
-				4B696C1A1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift */,
+				4B696C1A1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift */,
 				4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */,
 				4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */,
 				4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */,
@@ -1217,7 +1217,7 @@
 				4B0169E61B8B370600208CA9 /* ContactToSuggestCell.swift in Sources */,
 				4B9930911B7515470073473F /* JEDebugging.swift in Sources */,
 				4B99309B1B7515470073473F /* NSArray+JEToolkit.m in Sources */,
-				4B696C1B1B8F39EE0096A169 /* TopToOtherPurposeTransitionController.swift in Sources */,
+				4B696C1B1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
