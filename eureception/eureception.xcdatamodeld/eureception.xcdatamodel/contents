@@ -5,10 +5,11 @@
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nameEn" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nameJa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="removed" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="slackID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="slackName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

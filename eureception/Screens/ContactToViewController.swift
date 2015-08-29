@@ -17,10 +17,11 @@ class ContactToViewController: BaseTransactionViewController {
         self.iconImageView.tintColor = UIColor.eureColor
         self.tableView.rowHeight = 116
         self.tableView.tableFooterView = UIView()
+        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
         
         self.messageLabel.textColor = UIColor.eureColor
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
-        self.messageLabel.text = "訪問先をご記入ください"
+        self.messageLabel.text = "弊社担当者をご記入ください"
         
         self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "CONTACT TO...",
@@ -92,6 +93,25 @@ class ContactToViewController: BaseTransactionViewController {
                     })
                 }
         }
+        
+        self.tableViewMask.colors = [
+            UIColor.clearColor().CGColor,
+            UIColor.whiteColor().CGColor,
+            UIColor.whiteColor().CGColor,
+            UIColor.clearColor().CGColor,
+        ]
+        
+        self.tableViewMask.locations = [
+            0,
+            0.02,
+            0.98,
+            1
+        ]
+        
+        self.tableViewMask.startPoint = CGPoint(x: 0.5, y: 0)
+        self.tableViewMask.endPoint = CGPoint(x: 0.5, y: 1)
+        
+        self.tableViewContainerView.layer.mask = tableViewMask
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -108,7 +128,16 @@ class ContactToViewController: BaseTransactionViewController {
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        
+        super.viewDidLayoutSubviews()
+        
+        self.tableViewMask.frame = self.tableView.frame
+    }
+    
     @IBOutlet dynamic weak var inputFieldView: UIView!
+    @IBOutlet dynamic weak var tableViewContainerView: UIView!
     @IBOutlet dynamic weak var tableView: UITableView!
     
     // MARK: Private
@@ -116,7 +145,8 @@ class ContactToViewController: BaseTransactionViewController {
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
     @IBOutlet private dynamic weak var textField: UITextField!
     @IBOutlet private dynamic weak var messageLabel: UILabel!
-  
+    private let tableViewMask = CAGradientLayer()
+    
     private var results: [User] = [] {
         didSet {
             
@@ -124,7 +154,7 @@ class ContactToViewController: BaseTransactionViewController {
         }
     }
     
-    private let usersListMonitor = CoreStore.monitorList(From(User), OrderBy(.Ascending("id")))
+    private let usersListMonitor = CoreStore.monitorList(From(User), Where("removed == false"), OrderBy(.Ascending("id")))
 }
 
 extension ContactToViewController: UITableViewDelegate, UITableViewDataSource {

@@ -19,13 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         #if DEBUG
             JEDebugging.setConsoleLoggerSettings(JEDebugging.copyConsoleLoggerSettings())
-//            JEDebugging.setHUDLoggerSettings(JEDebugging.copyHUDLoggerSettings())
+            JEDebugging.setHUDLoggerSettings(JEDebugging.copyHUDLoggerSettings())
             JEDebugging.setApplicationLifeCycleLoggingEnabled(true)
             JEDebugging.setExceptionLoggingEnabled(true)
-            JEDebugging.start()
+//            JEDebugging.start()
         #endif
         
-        try! CoreStore.addSQLiteStoreAndWait()
+        try! CoreStore.addSQLiteStoreAndWait(fileName: "eureception", resetStoreOnModelMismatch: true)
         
         Container.UsersModel.getUsers { (result) -> Void in
             switch result {

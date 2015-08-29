@@ -22,11 +22,7 @@
 		4B2F75181B8D52D90087DEBE /* InputFieldToConfirmAppointmentTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75171B8D52D90087DEBE /* InputFieldToConfirmAppointmentTransitionController.swift */; };
 		4B2F751A1B8D66B00087DEBE /* TopToContactTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */; };
 		4B2F751C1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */; };
-		4B3EDC201B75ECFD00873B8C /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3EDC1F1B75ECFD00873B8C /* AppConfiguration.swift */; };
-		4B3EDC221B75EDAC00873B8C /* AppConfiguration.swift.sample in Resources */ = {isa = PBXBuildFile; fileRef = 4B3EDC211B75EDAC00873B8C /* AppConfiguration.swift.sample */; };
 		4B3EDC251B75F57900873B8C /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3EDC241B75F57900873B8C /* UIColor+Util.swift */; };
-		4B497C421B800EEA002F1262 /* Pods_Reception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D783990AC8D57A4135811A /* Pods_Reception.framework */; };
-		4B497C431B800EEA002F1262 /* Pods_Reception.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93D783990AC8D57A4135811A /* Pods_Reception.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B5231B21B8F03AD006DE64A /* KozGoPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B5231B11B8F03AD006DE64A /* KozGoPro-Regular.otf */; };
 		4B696C131B8F2BD50096A169 /* BaseConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C121B8F2BD50096A169 /* BaseConfirmViewController.swift */; };
 		4B696C151B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C141B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift */; };
@@ -148,15 +144,18 @@
 		4BB07A6F1B8CB354000065F3 /* NSAttributedString+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A6E1B8CB354000065F3 /* NSAttributedString+Util.swift */; };
 		4BB07A711B8CB70A000065F3 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A701B8CB70A000065F3 /* SubmitButton.swift */; };
 		4BB07A731B8CBA36000065F3 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB07A721B8CBA36000065F3 /* HomeButton.swift */; };
+		4BC8EDF01B9182050057C5FB /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD21B8331580064F51E /* ReactiveCocoa.framework */; };
+		4BC8EDF11B9182050057C5FB /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD21B8331580064F51E /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4BC8EDF21B9182060057C5FB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD31B8331580064F51E /* Result.framework */; };
+		4BC8EDF31B9182060057C5FB /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD31B8331580064F51E /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4BC8EDF41B9182060057C5FB /* Pods_eureception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */; };
+		4BC8EDF51B9182060057C5FB /* Pods_eureception.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BD0CC281B8EEB8200A37716 /* OtherPurposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0CC271B8EEB8200A37716 /* OtherPurposeViewController.swift */; };
 		4BD0CC2A1B8EEC1400A37716 /* OtherPurposeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD0CC291B8EEC1400A37716 /* OtherPurposeViewController.storyboard */; };
 		4BD0CC2C1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD0CC2B1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard */; };
 		4BD0CC2E1B8EEC4E00A37716 /* ConfirmOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0CC2D1B8EEC4E00A37716 /* ConfirmOtherViewController.swift */; };
-		4BD2BCD41B8331580064F51E /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD21B8331580064F51E /* ReactiveCocoa.framework */; };
-		4BD2BCD51B8331580064F51E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD2BCD31B8331580064F51E /* Result.framework */; };
 		4BD2BCF61B8348EC0064F51E /* NSString+Japanese.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */; };
 		4BD2BD071B83573F0064F51E /* AppointmentTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */; };
-		99758B144299857A9BB45557 /* Pods_eureception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,13 +176,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4B497C441B800EEA002F1262 /* Embed Frameworks */ = {
+		4BC8EDF61B9182060057C5FB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4B497C431B800EEA002F1262 /* Pods_Reception.framework in Embed Frameworks */,
+				4BC8EDF11B9182050057C5FB /* ReactiveCocoa.framework in Embed Frameworks */,
+				4BC8EDF51B9182060057C5FB /* Pods_eureception.framework in Embed Frameworks */,
+				4BC8EDF31B9182060057C5FB /* Result.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,8 +209,6 @@
 		4B2F75171B8D52D90087DEBE /* InputFieldToConfirmAppointmentTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldToConfirmAppointmentTransitionController.swift; sourceTree = "<group>"; };
 		4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToContactTransitionController.swift; sourceTree = "<group>"; };
 		4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToInputFieldTransitionController.swift; sourceTree = "<group>"; };
-		4B3EDC1F1B75ECFD00873B8C /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
-		4B3EDC211B75EDAC00873B8C /* AppConfiguration.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppConfiguration.swift.sample; sourceTree = "<group>"; };
 		4B3EDC241B75F57900873B8C /* UIColor+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Util.swift"; sourceTree = "<group>"; };
 		4B5231B11B8F03AD006DE64A /* KozGoPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KozGoPro-Regular.otf"; sourceTree = "<group>"; };
 		4B696C121B8F2BD50096A169 /* BaseConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConfirmViewController.swift; sourceTree = "<group>"; };
@@ -411,7 +410,6 @@
 		4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Japanese.m"; sourceTree = "<group>"; };
 		4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTransaction.swift; sourceTree = "<group>"; };
 		80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eureception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93D783990AC8D57A4135811A /* Pods_Reception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,10 +417,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BD2BCD51B8331580064F51E /* Result.framework in Frameworks */,
-				4B497C421B800EEA002F1262 /* Pods_Reception.framework in Frameworks */,
-				4BD2BCD41B8331580064F51E /* ReactiveCocoa.framework in Frameworks */,
-				99758B144299857A9BB45557 /* Pods_eureception.framework in Frameworks */,
+				4BC8EDF01B9182050057C5FB /* ReactiveCocoa.framework in Frameworks */,
+				4BC8EDF41B9182060057C5FB /* Pods_eureception.framework in Frameworks */,
+				4BC8EDF21B9182060057C5FB /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,8 +558,6 @@
 				4B1B92A01B75A4A600C28005 /* Screens */,
 				4B992FCD1B7514730073473F /* Bases */,
 				4B992F9F1B75146B0073473F /* AppDelegate.swift */,
-				4B3EDC1F1B75ECFD00873B8C /* AppConfiguration.swift */,
-				4B3EDC211B75EDAC00873B8C /* AppConfiguration.swift.sample */,
 				4B992FA61B75146B0073473F /* Assets.xcassets */,
 				4B992FA81B75146B0073473F /* LaunchScreen.storyboard */,
 				4B992FAB1B75146B0073473F /* Info.plist */,
@@ -607,7 +602,6 @@
 				4BD2BCD21B8331580064F51E /* ReactiveCocoa.framework */,
 				4BD2BCD31B8331580064F51E /* Result.framework */,
 				4B992FD11B7515470073473F /* JEToolkit */,
-				93D783990AC8D57A4135811A /* Pods_Reception.framework */,
 				80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */,
 			);
 			path = Frameworks;
@@ -898,8 +892,8 @@
 				4B992F9A1B75146B0073473F /* Resources */,
 				6E5C59B12CD9DE1A8B905D41 /* Embed Pods Frameworks */,
 				AB1AB37D9990A427DFF82DB7 /* Copy Pods Resources */,
-				4B497C441B800EEA002F1262 /* Embed Frameworks */,
 				4BD2BCD61B8331650064F51E /* ShellScript */,
+				4BC8EDF61B9182060057C5FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1024,7 +1018,6 @@
 				4BB07A601B8C9A6C000065F3 /* Exo-ExtraLight-Italic.otf in Resources */,
 				4BB07A591B8C9A6C000065F3 /* Exo-Black.otf in Resources */,
 				4B98703E1B896E3600F72342 /* TopViewController.storyboard in Resources */,
-				4B3EDC221B75EDAC00873B8C /* AppConfiguration.swift.sample in Resources */,
 				4B696C261B902B3B0096A169 /* Pods-eureception.release.xcconfig in Resources */,
 				4B0169EA1B8BE6C900208CA9 /* ConfirmAppointmentViewController.storyboard in Resources */,
 				4B9870481B896E6400F72342 /* PersonCountViewController.storyboard in Resources */,
@@ -1154,7 +1147,6 @@
 				4B9930B81B7515470073473F /* JEDispatch.m in Sources */,
 				4B9930811B7515470073473F /* NSError+JEDebugging.m in Sources */,
 				4B696C191B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift in Sources */,
-				4B3EDC201B75ECFD00873B8C /* AppConfiguration.swift in Sources */,
 				4B2CA6041B8EBA7800BCD9A4 /* BaseModel.swift in Sources */,
 				4B9930B41B7515470073473F /* UITextView+JEToolkit.m in Sources */,
 				4B79AFA71B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift in Sources */,
@@ -1386,7 +1378,7 @@
 				PRODUCT_NAME = eureception;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "eureception/Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -1410,7 +1402,8 @@
 				PRODUCT_NAME = eureception;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "eureception/Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

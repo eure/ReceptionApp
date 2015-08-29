@@ -18,23 +18,31 @@ class User: NSManagedObject, ImportableUniqueObject {
     @NSManaged var nameJa: String!
     @NSManaged var slackID: String!
     @NSManaged var slackName: String!
+    @NSManaged var removed: Bool
     
     var nameKatana: String {
         
-        return (self.nameEn as NSString).stringByTransliteratingRomajiToKatakana()
+        let value = self.nameEn.characters.split(" ").map { String($0) }.reverse().reduce(String()) { $0 + $1 }
+        return value.stringByTransliteratingRomajiToKatakana()
     }
     
     var nameHiragana: String {
         
-        return (self.nameEn as NSString).stringByTransliteratingRomajiToHiragana()
+        let value = self.nameEn.characters.split(" ").map { String($0) }.reverse().reduce(String()) { $0 + $1 }
+        return value.stringByTransliteratingRomajiToHiragana()
     }
     
     func compare(candidate: String) -> Bool {
         
-        if nameEn.lowercaseString.rangeOfString(candidate.lowercaseString) != nil ||
-            nameJa.rangeOfString(candidate) != nil ||
-            nameKatana.rangeOfString(candidate) != nil ||
-            nameHiragana.rangeOfString(candidate) != nil {
+        func excludeSpace(string: String) -> String {
+            
+            return string.stringByReplacingOccurrencesOfString(" ", withString: "")
+        }
+        
+        if excludeSpace(nameEn).lowercaseString.hasPrefix(candidate.lowercaseString) ||
+            excludeSpace(nameJa).hasPrefix(candidate) ||
+            excludeSpace(nameKatana).hasPrefix(candidate) ||
+            excludeSpace(nameHiragana).hasPrefix(candidate) {
                 
                 return true
         } else {

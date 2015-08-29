@@ -6,8 +6,6 @@
 //  Copyright © 2015 eureka. All rights reserved.
 //
 
-import Parse
-
 class AppointmentTransaction: Transaction {
     
     var visitor: AppointmentVisitor?
