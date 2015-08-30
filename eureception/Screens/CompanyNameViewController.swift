@@ -82,7 +82,7 @@ class CompanyNameViewController : BaseTransactionViewController, InputFieldTrans
     override func viewDidLayoutSubviews() {
         
         super.viewDidLayoutSubviews()
-        self.textViewMask.frame = self.textView.bounds
+        self.textViewMask.frame = self.textViewContainerView.bounds
     }
     
     @IBOutlet dynamic weak var inputFieldView: UIView!
