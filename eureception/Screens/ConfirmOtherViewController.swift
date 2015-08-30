@@ -23,7 +23,7 @@ class ConfirmOtherViewController: BaseConfirmViewController {
             JEDump(visitor.companyName)
             self.companyNameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.eureBlackTextColor, size: 32)
         }
-        self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.visitor.purpose ?? "", color: UIColor.eureBlackTextColor, size: 36)
+        self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.visitor?.purpose ?? "", color: UIColor.eureBlackTextColor, size: 36)
     }
     
     @IBOutlet weak var companyNameLabel: UILabel!

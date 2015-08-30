@@ -1,17 +1,20 @@
 //
-//  NextButton.swift
-//  Reception
+//  PurposeButton.swift
+//  eureception
 //
-//  Created by Muukii on 8/24/15.
+//  Created by Hiroshi Kimura on 8/30/15.
 //  Copyright © 2015 eureka. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class NextButton: UIControl {
-
-    @IBOutlet var nextImageView: UIImageView?
+class PurposeButton: UIControl {
+    
     var backgroundLayer = CAShapeLayer()
+    
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var subtitleLabel: UILabel?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -24,14 +27,17 @@ class NextButton: UIControl {
         
         super.awakeFromNib()
         self.backgroundLayer.fillColor = UIColor.whiteColor().CGColor
-        self.backgroundLayer.strokeColor = UIColor.eureLightGrayTextColor.CGColor
-        self.nextImageView?.tintColor = UIColor.eureColor
+        self.backgroundLayer.strokeColor = UIColor.eureLightGrayColor.CGColor
+        self.titleLabel?.textColor = UIColor.eureColor
+        self.titleLabel?.font = UIFont.eureBoldFont(size: 32)
+        self.subtitleLabel?.textColor = UIColor.eureColor
+        self.subtitleLabel?.font = UIFont.eureBoldFont(size: 18)
     }
     
     override func layoutSublayersOfLayer(layer: CALayer) {
         
         super.layoutSublayersOfLayer(layer)
-        self.backgroundLayer.path = UIBezierPath(ovalInRect: self.bounds).CGPath
+        self.backgroundLayer.path = UIBezierPath(roundedRect: CGRectInset(self.bounds, 1, 1), cornerRadius: 8).CGPath
     }
     
     override var enabled: Bool {
@@ -56,15 +62,8 @@ class NextButton: UIControl {
             
             UIView.animateWithDuration(0.2, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                 
-                if newValue {
-                    self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
-                    self.backgroundLayer.strokeColor = UIColor.eureColor.CGColor
-                    self.nextImageView?.tintColor = UIColor.whiteColor()
-                } else {
-                    self.backgroundLayer.fillColor = UIColor.whiteColor().CGColor
-                    self.backgroundLayer.strokeColor = UIColor.eureLightGrayTextColor.CGColor
-                    self.nextImageView?.tintColor = UIColor.eureColor
-                }
+                self.alpha = newValue ? 0.4 : 1
+                
                 }) { (finish) -> Void in
             }
         }

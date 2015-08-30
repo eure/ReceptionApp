@@ -28,7 +28,6 @@
 		4B696C151B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C141B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift */; };
 		4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */; };
 		4B696C191B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C181B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift */; };
-		4B696C1B1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1A1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift */; };
 		4B696C1D1B8FEE9C0096A169 /* VisitorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */; };
 		4B696C1F1B8FEF910096A169 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B696C1E1B8FEF910096A169 /* Dispatcher.swift */; };
 		4B696C251B902B3B0096A169 /* Pods-eureception.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4B696C231B902B3B0096A169 /* Pods-eureception.debug.xcconfig */; settings = {ASSET_TAGS = (); }; };
@@ -156,6 +155,10 @@
 		4BD0CC2E1B8EEC4E00A37716 /* ConfirmOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0CC2D1B8EEC4E00A37716 /* ConfirmOtherViewController.swift */; };
 		4BD2BCF61B8348EC0064F51E /* NSString+Japanese.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */; };
 		4BD2BD071B83573F0064F51E /* AppointmentTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */; };
+		4BEB7FAA1B93287C004CC553 /* OtherPurposeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FA91B93287B004CC553 /* OtherPurposeSelectViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4BEB7FAC1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAB1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4BEB7FAE1B932AA5004CC553 /* PurposeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAD1B932AA5004CC553 /* PurposeButton.swift */; settings = {ASSET_TAGS = (); }; };
+		4BEB7FB01B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,7 +218,6 @@
 		4B696C141B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOtherToCompletionTransitionController.swift; sourceTree = "<group>"; };
 		4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmToCompletionTransitionController.swift; sourceTree = "<group>"; };
 		4B696C181B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldToConfirmOtherTransitionController.swift; sourceTree = "<group>"; };
-		4B696C1A1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToCompanyNamePurposeTransitionController.swift; sourceTree = "<group>"; };
 		4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsModel.swift; sourceTree = "<group>"; };
 		4B696C1E1B8FEF910096A169 /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		4B696C231B902B3B0096A169 /* Pods-eureception.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-eureception.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eureception/Pods-eureception.debug.xcconfig"; sourceTree = "<group>"; };
@@ -409,6 +411,10 @@
 		4BD2BCD91B8348EC0064F51E /* NSString+Japanese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Japanese.h"; sourceTree = "<group>"; };
 		4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Japanese.m"; sourceTree = "<group>"; };
 		4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTransaction.swift; sourceTree = "<group>"; };
+		4BEB7FA91B93287B004CC553 /* OtherPurposeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPurposeSelectViewController.swift; sourceTree = "<group>"; };
+		4BEB7FAB1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OtherPurposeSelectViewController.storyboard; sourceTree = "<group>"; };
+		4BEB7FAD1B932AA5004CC553 /* PurposeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeButton.swift; sourceTree = "<group>"; };
+		4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToPurposeSelectTransitionController.swift; sourceTree = "<group>"; };
 		80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eureception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -456,8 +462,6 @@
 				4B9D42E41B765C5B0047C99D /* BaseNavigationController.swift */,
 				4B9870491B89729200F72342 /* TopButton.swift */,
 				4B0169E31B8B33EF00208CA9 /* NextButton.swift */,
-				4BB07A701B8CB70A000065F3 /* SubmitButton.swift */,
-				4BB07A721B8CBA36000065F3 /* HomeButton.swift */,
 				4BB07A6C1B8CB197000065F3 /* InputTextField.swift */,
 				4B98703B1B896E2600F72342 /* TopViewController.swift */,
 				4B98703D1B896E3600F72342 /* TopViewController.storyboard */,
@@ -466,6 +470,8 @@
 				4B696C111B8F2B9B0096A169 /* Other */,
 				4BB07A431B8C7CEE000065F3 /* CompletionViewController.swift */,
 				4BB07A411B8C7CD1000065F3 /* CompletionViewController.storyboard */,
+				4BB07A721B8CBA36000065F3 /* HomeButton.swift */,
+				4BB07A701B8CB70A000065F3 /* SubmitButton.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -522,6 +528,9 @@
 				4BD0CC291B8EEC1400A37716 /* OtherPurposeViewController.storyboard */,
 				4BD0CC2D1B8EEC4E00A37716 /* ConfirmOtherViewController.swift */,
 				4BD0CC2B1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard */,
+				4BEB7FA91B93287B004CC553 /* OtherPurposeSelectViewController.swift */,
+				4BEB7FAB1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard */,
+				4BEB7FAD1B932AA5004CC553 /* PurposeButton.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -830,7 +839,7 @@
 			isa = PBXGroup;
 			children = (
 				4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */,
-				4B696C1A1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift */,
+				4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */,
 				4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */,
 				4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */,
 				4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */,
@@ -990,6 +999,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BEB7FAC1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard in Resources */,
 				4BB07A5A1B8C9A6C000065F3 /* Exo-Bold-Italic.otf in Resources */,
 				4B992FAA1B75146B0073473F /* LaunchScreen.storyboard in Resources */,
 				4B1B92B71B75B1B600C28005 /* Localizable.strings in Resources */,
@@ -1117,6 +1127,7 @@
 				4B98702E1B89681300F72342 /* ContactToViewController.swift in Sources */,
 				4B99307F1B7515470073473F /* NSDate+JEDebugging.m in Sources */,
 				4B9930A71B7515470073473F /* NSString+JEToolkit.m in Sources */,
+				4BEB7FB01B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift in Sources */,
 				4B696C1D1B8FEE9C0096A169 /* VisitorsModel.swift in Sources */,
 				4B99308A1B7515470073473F /* NSSet+JEDebugging.m in Sources */,
 				4B9930861B7515470073473F /* NSNumber+JEDebugging.m in Sources */,
@@ -1167,6 +1178,7 @@
 				4BD0CC281B8EEB8200A37716 /* OtherPurposeViewController.swift in Sources */,
 				4B9930A91B7515470073473F /* NSValue+JEToolkit.m in Sources */,
 				4B9930931B7515470073473F /* JEConsoleLoggerSettings.m in Sources */,
+				4BEB7FAA1B93287C004CC553 /* OtherPurposeSelectViewController.swift in Sources */,
 				4B2F75181B8D52D90087DEBE /* InputFieldToConfirmAppointmentTransitionController.swift in Sources */,
 				4B0169E41B8B33EF00208CA9 /* NextButton.swift in Sources */,
 				4B98703A1B8968B300F72342 /* BaseTransactionViewController.swift in Sources */,
@@ -1180,6 +1192,7 @@
 				4BB07A6B1B8CB00B000065F3 /* UIFont+Util.swift in Sources */,
 				4B696C151B8F35450096A169 /* ConfirmOtherToCompletionTransitionController.swift in Sources */,
 				4B9930991B7515470073473F /* JESettings.m in Sources */,
+				4BEB7FAE1B932AA5004CC553 /* PurposeButton.swift in Sources */,
 				4B9D42E91B765D500047C99D /* CompletionToTopTransitionController.swift in Sources */,
 				4B99308E1B7515470073473F /* UIImage+JEDebugging.m in Sources */,
 				4B9930AC1B7515470073473F /* UIColor+JEToolkit.m in Sources */,
@@ -1217,7 +1230,6 @@
 				4B0169E61B8B370600208CA9 /* ContactToSuggestCell.swift in Sources */,
 				4B9930911B7515470073473F /* JEDebugging.swift in Sources */,
 				4B99309B1B7515470073473F /* NSArray+JEToolkit.m in Sources */,
-				4B696C1B1B8F39EE0096A169 /* TopToCompanyNamePurposeTransitionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

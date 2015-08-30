@@ -8,9 +8,5 @@
 
 struct OtherTransaction: Transaction {
     
-    var visitor: OtherVisitor
-    
-    init(visitor: OtherVisitor){
-        self.visitor = visitor
-    }
+    var visitor: OtherVisitor?
 }

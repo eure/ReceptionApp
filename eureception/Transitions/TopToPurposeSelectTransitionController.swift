@@ -1,17 +1,17 @@
 //
-//  TopToCompanyNamePurposeTransitionController.swift
+//  TopToPurposeSelectTransitionController.swift
 //  eureception
 //
-//  Created by Hiroshi Kimura on 8/27/15.
+//  Created by Hiroshi Kimura on 8/30/15.
 //  Copyright © 2015 eureka. All rights reserved.
 //
 
 import Foundation
 
-
-class TopToCompanyNamePurposeTransitionController: NSObject, UIViewControllerAnimatedTransitioning {
+class TopToPurposeSelectTransitionController: NSObject, UIViewControllerAnimatedTransitioning {
     
     var operation: UINavigationControllerOperation = .None
+    
     convenience init(operation: UINavigationControllerOperation) {
         
         self.init()
@@ -24,19 +24,17 @@ class TopToCompanyNamePurposeTransitionController: NSObject, UIViewControllerAni
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        
+    
         let containerView = transitionContext.containerView()!
         
         let offset = UIScreen.mainScreen().bounds.width
         
         if operation == .Push {
-            
             let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! TopViewController
-            let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)  as! CompanyNameViewController
+            let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)  as! OtherPurposeSelectViewController
             
-            toVC.inputFieldView.layer.transform = CATransform3DMakeTranslation(offset, 0, 0)
-            toVC.backButton.alpha = 0
-            
+            toVC.selectView.layer.transform = CATransform3DMakeTranslation(offset, 0, 0)
+
             let transform = CATransform3DMakeTranslation(-offset, 0, 0)
             UIView.animateAndChainWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
                 
@@ -55,17 +53,15 @@ class TopToCompanyNamePurposeTransitionController: NSObject, UIViewControllerAni
                     containerView.addSubview(toVC.view)
             }).animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
                 
-                toVC.inputFieldView.layer.transform = CATransform3DIdentity
+                toVC.selectView.layer.transform = CATransform3DIdentity
                 toVC.backButton.alpha = 1
                 }, completion: { (finish) -> Void in
                     
                     transitionContext.completeTransition(true)
             })
+        } else {
             
-            
-        } else if operation == .Pop {
-            
-            let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! CompanyNameViewController
+            let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! OtherPurposeSelectViewController
             let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)  as! TopViewController
             
             containerView.insertSubview(toVC.view, atIndex: 0)
@@ -78,8 +74,7 @@ class TopToCompanyNamePurposeTransitionController: NSObject, UIViewControllerAni
             
             UIView.animateAndChainWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
                 
-                fromVC.inputFieldView.layer.transform = CATransform3DMakeTranslation(offset, 0, 0)
-                fromVC.backButton.alpha = 0
+                fromVC.selectView.layer.transform = CATransform3DMakeTranslation(offset, 0, 0)
                 
                 }, completion: { (finish) -> Void in
                     

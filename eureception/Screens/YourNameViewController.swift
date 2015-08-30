@@ -81,7 +81,7 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
         var visitor = self.transaction?.visitor ?? AppointmentVisitor()
         visitor.name = name
         self.transaction?.visitor = visitor
-        controller.transaction = self.transaction
+        controller.appointmentTransaction = self.transaction
         
         self.navigationController?.pushViewController(controller, animated: true)
     }

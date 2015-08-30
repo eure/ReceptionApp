@@ -8,10 +8,11 @@
 
 import UIKit
 
-class CompanyNameViewController: BaseTransactionViewController, InputFieldTransition {
+class CompanyNameViewController : BaseTransactionViewController, InputFieldTransition {
 
     // MARK: Public
-    var transaction: Transaction?
+    var otherTransaction: OtherTransaction?
+    var appointmentTransaction: AppointmentTransaction?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,15 +47,14 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
         self.textViewMask.endPoint = CGPoint(x: 0.5, y: 1)
         self.textViewContainerView.layer.mask = textViewMask
         
-        
-        switch self.transaction {
-        case (let transaction as AppointmentTransaction)?:
+        if let transaction = self.appointmentTransaction {
             
             self.textView.text = transaction.visitor?.companyName
-        case (let transaction as OtherTransaction)?:
+        }
+        
+        if let transaction = self.otherTransaction {
             
-            self.textView.text = transaction.visitor.companyName
-        default: break
+            self.textView.text = transaction.visitor?.companyName
         }
         
         self.textView.tintColor = UIColor.eureColor
@@ -100,24 +100,26 @@ class CompanyNameViewController: BaseTransactionViewController, InputFieldTransi
         
         let companyName = self.textView.text ?? ""
         
-        switch self.transaction {
-        case (let transaction as AppointmentTransaction)?:
+        if let transaction = self.appointmentTransaction {
+            
             let controller = PersonCountViewController.viewControllerFromStoryboard()
             transaction.visitor?.companyName = companyName
             controller.transaction = transaction
             self.navigationController?.pushViewController(controller, animated: true)
             
-        default:
-            let controller = OtherPurposeViewController.viewControllerFromStoryboard()
-            
-            var visitor = OtherVisitor()
-            visitor.companyName = companyName
-            let transaction = OtherTransaction(visitor: visitor)
-            controller.transaction = transaction
-            self.navigationController?.pushViewController(controller, animated: true)
-            
+            return
         }
         
+        let controller = OtherPurposeViewController.viewControllerFromStoryboard()
+        
+        var visitor = OtherVisitor()
+        visitor.companyName = companyName
+        var transaction = OtherTransaction()
+        transaction.visitor = visitor
+        
+        self.otherTransaction = transaction
+        controller.transaction = transaction
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 

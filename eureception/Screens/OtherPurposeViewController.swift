@@ -18,14 +18,14 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.textView.font = UIFont.eureFont(size: 55)
-        self.messageLabel.text = "ご用件をご記入ください"
+        self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.text = "ご用件をご記入ください"
         self.iconImageView.tintColor = UIColor.eureColor
         self.textView.tintColor = UIColor.eureColor
         
-        self.textView.text = self.transaction?.visitor.purpose
+        self.textView.text = self.transaction?.visitor?.purpose
         
         self.textViewMask.colors = [
             UIColor.clearColor().CGColor,
@@ -93,8 +93,7 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         guard let purpose = self.textView.text else {
             return
         }
-        JEDump(self.transaction?.visitor.companyName)
-        self.transaction?.visitor.purpose = purpose
+        self.transaction?.visitor?.purpose = purpose
         controller.transaction = self.transaction
         
         self.navigationController?.pushViewController(controller, animated: true)

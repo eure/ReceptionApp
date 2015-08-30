@@ -8,4 +8,7 @@
 
 protocol Transaction {
     
+    typealias VisitorType: Visitor
+    
+    var visitor: VisitorType? { get set }
 }
