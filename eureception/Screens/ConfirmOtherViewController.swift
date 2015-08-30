@@ -20,9 +20,15 @@ class ConfirmOtherViewController: BaseConfirmViewController {
         self.messageLabel.text = "以下、内容をご確認ください"
         
         if let visitor = transaction?.visitor {
-            JEDump(visitor.companyName)
+            
             self.companyNameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.eureBlackTextColor, size: 32)
+            
+            if StringIsEmpty(visitor.companyName) {
+                self.companyNameHeight.constant = 0
+                self.companyNameBottom.constant = 0
+            }
         }
+        
         self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.visitor?.purpose ?? "", color: UIColor.eureBlackTextColor, size: 36)
     }
     
@@ -31,6 +37,9 @@ class ConfirmOtherViewController: BaseConfirmViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var purposeView: UIView!
     @IBOutlet var icons: [UIImageView]!
+    
+    @IBOutlet weak var companyNameHeight: NSLayoutConstraint!
+    @IBOutlet weak var companyNameBottom: NSLayoutConstraint!
     
     override dynamic func handleSubmitButton(sender: AnyObject) {
         

@@ -56,6 +56,14 @@ extension BaseNavigationController: UINavigationControllerDelegate {
         case ((_ as InputFieldTransition), (_ as ConfirmOtherViewController)), ((_ as ConfirmOtherViewController), (_ as InputFieldTransition)):
             
             return InputFieldToConfirmOtherTransitionController(operation: operation)
+            
+        case ((_ as OtherPurposeSelectViewController), (_ as InputFieldTransition)), ((_ as InputFieldTransition), (_ as OtherPurposeSelectViewController)):
+            
+            return PurposeSelectToInputFieldTransitionController(operation: operation)
+            
+        case ((_ as OtherPurposeSelectViewController), (_ as ConfirmOtherViewController)), ((_ as ConfirmOtherViewController), (_ as OtherPurposeSelectViewController)):
+            
+            return PurposeSelectToConfirmOtherTransitionController(operation: operation)
         default:
             break
         }

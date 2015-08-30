@@ -37,6 +37,7 @@ class OtherPurposeSelectViewController: BaseTransactionViewController {
     @IBAction private dynamic func handleDeliveryButton(sender: AnyObject) {
         
         let controller = ConfirmOtherViewController.viewControllerFromStoryboard()
+        controller.transaction = OtherTransaction.Delivery()
         
         self.navigationController?.pushViewController(controller, animated: true)
     }

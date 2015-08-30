@@ -159,6 +159,8 @@
 		4BEB7FAC1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAB1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard */; settings = {ASSET_TAGS = (); }; };
 		4BEB7FAE1B932AA5004CC553 /* PurposeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAD1B932AA5004CC553 /* PurposeButton.swift */; settings = {ASSET_TAGS = (); }; };
 		4BEB7FB01B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
+		4BEB7FB21B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
+		4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -415,6 +417,8 @@
 		4BEB7FAB1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OtherPurposeSelectViewController.storyboard; sourceTree = "<group>"; };
 		4BEB7FAD1B932AA5004CC553 /* PurposeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeButton.swift; sourceTree = "<group>"; };
 		4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToPurposeSelectTransitionController.swift; sourceTree = "<group>"; };
+		4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeSelectToInputFieldTransitionController.swift; sourceTree = "<group>"; };
+		4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeSelectToConfirmOtherTransitionController.swift; sourceTree = "<group>"; };
 		80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eureception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -840,6 +844,8 @@
 			children = (
 				4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */,
 				4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */,
+				4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */,
+				4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift */,
 				4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */,
 				4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */,
 				4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */,
@@ -1138,6 +1144,7 @@
 				4B9930961B7515470073473F /* JEHUDLogView.m in Sources */,
 				4B99308C1B7515470073473F /* NSValue+JEDebugging.m in Sources */,
 				4B98704E1B8977EF00F72342 /* OtherTransaction.swift in Sources */,
+				4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift in Sources */,
 				4B99308D1B7515470073473F /* UIColor+JEDebugging.m in Sources */,
 				4B3EDC251B75F57900873B8C /* UIColor+Util.swift in Sources */,
 				4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */,
@@ -1151,6 +1158,7 @@
 				4B9930831B7515470073473F /* NSHashTable+JEDebugging.m in Sources */,
 				4B99309C1B7515470073473F /* NSCache+JEToolkit.m in Sources */,
 				4B2CA6021B8EBA7000BCD9A4 /* UsersModel.swift in Sources */,
+				4BEB7FB21B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift in Sources */,
 				4B9930821B7515470073473F /* NSException+JEDebugging.m in Sources */,
 				4B99308F1B7515470073473F /* UIViewController+JEDebugging.m in Sources */,
 				4B9930841B7515470073473F /* NSMapTable+JEDebugging.m in Sources */,
