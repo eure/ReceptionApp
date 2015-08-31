@@ -133,7 +133,7 @@ class ContactToViewController: BaseTransactionViewController {
         
         super.viewDidLayoutSubviews()
         
-        self.tableViewMask.frame = self.tableView.frame
+        self.tableViewMask.frame = self.tableViewContainerView.bounds
     }
     
     @IBOutlet dynamic weak var inputFieldView: UIView!
