@@ -60,6 +60,20 @@ class TopViewController: BaseViewController {
         )
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        Container.UsersModel.getUsers { (result) -> Void in
+            switch result {
+            case .Success(let user):
+                break
+            case .Failure(let errorType):
+                break
+            }
+        }
+    }
+    
     @IBOutlet dynamic weak var welcomeLabel: UILabel!
     @IBOutlet dynamic weak var welcomeBottomLabel: UILabel!
     @IBOutlet dynamic weak var otherButton: TopButton!

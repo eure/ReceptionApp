@@ -75,8 +75,7 @@ class User: NSManagedObject, ImportableUniqueObject {
         self.nameJa = source["name_ja"].stringValue
         self.slackID = source["slack_account_id"].stringValue
         self.slackName = source["slack_account_name"].stringValue
-        
-        JEDump(self, "User")
+        self.removed = source["deleted"].boolValue        
     }
     
     static func shouldUpdateFromImportSource(source: JSON, inTransaction transaction: BaseDataTransaction) -> Bool {

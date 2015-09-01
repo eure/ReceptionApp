@@ -27,14 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         try! CoreStore.addSQLiteStoreAndWait(fileName: "eureception", resetStoreOnModelMismatch: true)
         
-        Container.UsersModel.getUsers { (result) -> Void in
-            switch result {
-            case .Success(let user):
-                break
-            case .Failure(let errorType):
-                break
-            }            
-        }
         return true
     }
 
