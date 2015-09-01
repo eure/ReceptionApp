@@ -90,7 +90,7 @@ class TopViewController: BaseViewController {
     
     @IBAction func handleotherButton(sender: AnyObject) {
         
-        let controller = CompanyNameViewController.viewControllerFromStoryboard()
+        let controller = OtherPurposeSelectViewController.viewControllerFromStoryboard()
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

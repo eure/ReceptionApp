@@ -70,6 +70,10 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
     override func viewDidLayoutSubviews() {
         
         super.viewDidLayoutSubviews()
+<<<<<<< HEAD
+=======
+        JEDump(self.textView)
+>>>>>>> master
         self.textViewMask.frame = self.textViewContainerView.bounds
     }
     

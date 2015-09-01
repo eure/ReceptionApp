@@ -97,7 +97,7 @@
                                     <rect key="frame" x="170" y="202" width="42" height="21"/>
                                 </variation>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oid-nv-dNx">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oid-nv-dNx">
                                 <rect key="frame" x="100" y="270" width="568" height="66"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_company_mini" translatesAutoresizingMaskIntoConstraints="NO" id="7cS-vT-igt">
@@ -155,6 +155,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="backButton" destination="eA1-xI-0ev" id="Wsh-PJ-Lua"/>
+                        <outlet property="companyNameBottom" destination="P2G-H0-cRy" id="eP8-Yr-aBi"/>
+                        <outlet property="companyNameHeight" destination="Neu-sv-dE0" id="43l-8C-D4M"/>
                         <outlet property="companyNameLabel" destination="aeK-AB-LzR" id="ZV7-gN-Zlb"/>
                         <outlet property="companyNameView" destination="Oid-nv-dNx" id="edi-02-SDw"/>
                         <outlet property="logoImageView" destination="Rkr-QK-W19" id="DVu-Xw-PGm"/>

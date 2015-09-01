@@ -10,6 +10,7 @@ import Foundation
 
 protocol Visitor {
     
+    var companyName: String { get set }
 }
 
 struct AppointmentVisitor: Visitor {

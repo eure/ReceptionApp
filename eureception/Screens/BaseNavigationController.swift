@@ -25,9 +25,9 @@ extension BaseNavigationController: UINavigationControllerDelegate {
         case ((_ as TopViewController), (_ as ContactToViewController)), ((_ as ContactToViewController), (_ as TopViewController)):
             return TopToContactTransitionController(operation: operation)
             
-        case ((_ as TopViewController), (_ as CompanyNameViewController)), ((_ as CompanyNameViewController), (_ as TopViewController)):
+        case ((_ as TopViewController), (_ as OtherPurposeSelectViewController)), ((_ as OtherPurposeSelectViewController), (_ as TopViewController)):
            
-            return TopToCompanyNamePurposeTransitionController(operation: operation)
+            return TopToPurposeSelectTransitionController(operation: operation)
             
         case ((_ as ContactToViewController), (_ as InputFieldTransition)), ((_ as InputFieldTransition), (_ as ContactToViewController)):
             
@@ -56,6 +56,14 @@ extension BaseNavigationController: UINavigationControllerDelegate {
         case ((_ as InputFieldTransition), (_ as ConfirmOtherViewController)), ((_ as ConfirmOtherViewController), (_ as InputFieldTransition)):
             
             return InputFieldToConfirmOtherTransitionController(operation: operation)
+            
+        case ((_ as OtherPurposeSelectViewController), (_ as InputFieldTransition)), ((_ as InputFieldTransition), (_ as OtherPurposeSelectViewController)):
+            
+            return PurposeSelectToInputFieldTransitionController(operation: operation)
+            
+        case ((_ as OtherPurposeSelectViewController), (_ as ConfirmOtherViewController)), ((_ as ConfirmOtherViewController), (_ as OtherPurposeSelectViewController)):
+            
+            return PurposeSelectToConfirmOtherTransitionController(operation: operation)
         default:
             break
         }
