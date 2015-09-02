@@ -20,6 +20,20 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0.2</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>ac476cbe7697ca305760ca3c77870cb3616ed3b8</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>

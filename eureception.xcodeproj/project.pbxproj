@@ -156,6 +156,8 @@
 		4BD0CC2E1B8EEC4E00A37716 /* ConfirmOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0CC2D1B8EEC4E00A37716 /* ConfirmOtherViewController.swift */; };
 		4BD2BCF61B8348EC0064F51E /* NSString+Japanese.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */; };
 		4BD2BD071B83573F0064F51E /* AppointmentTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */; };
+		4BF528EA1B96945800A73152 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF528E81B96945800A73152 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
+		4BF528EB1B96945800A73152 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF528E91B96945800A73152 /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -409,6 +411,8 @@
 		4BD2BCD91B8348EC0064F51E /* NSString+Japanese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Japanese.h"; sourceTree = "<group>"; };
 		4BD2BCDA1B8348EC0064F51E /* NSString+Japanese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Japanese.m"; sourceTree = "<group>"; };
 		4BD2BD061B83573F0064F51E /* AppointmentTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTransaction.swift; sourceTree = "<group>"; };
+		4BF528E81B96945800A73152 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		4BF528E91B96945800A73152 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eureception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -418,8 +422,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BC8EDF01B9182050057C5FB /* ReactiveCocoa.framework in Frameworks */,
+				4BF528EB1B96945800A73152 /* Crashlytics.framework in Frameworks */,
 				4BC8EDF41B9182060057C5FB /* Pods_eureception.framework in Frameworks */,
 				4BC8EDF21B9182060057C5FB /* Result.framework in Frameworks */,
+				4BF528EA1B96945800A73152 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +604,8 @@
 		4B992FD01B7515470073473F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BF528E81B96945800A73152 /* Fabric.framework */,
+				4BF528E91B96945800A73152 /* Crashlytics.framework */,
 				4BD2BCD71B8348EC0064F51E /* SimpleFurigana */,
 				4BD2BCD21B8331580064F51E /* ReactiveCocoa.framework */,
 				4BD2BCD31B8331580064F51E /* Result.framework */,
@@ -892,6 +900,7 @@
 				4B992F9A1B75146B0073473F /* Resources */,
 				6E5C59B12CD9DE1A8B905D41 /* Embed Pods Frameworks */,
 				AB1AB37D9990A427DFF82DB7 /* Copy Pods Resources */,
+				4B501B361B95CB990048284F /* Fabric */,
 				4BD2BCD61B8331650064F51E /* ShellScript */,
 				4BC8EDF61B9182060057C5FB /* Embed Frameworks */,
 			);
@@ -1044,6 +1053,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4B501B361B95CB990048284F /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Frameworks/Fabric.framework/run ac476cbe7697ca305760ca3c77870cb3616ed3b8 8f0ed50a465e6924c58f86d0264bccaf1214714bc29d468ab1c072391e692d79";
+		};
 		4B696C221B902A690096A169 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1364,6 +1387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1374,9 +1398,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.Reception;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.reception;
 				PRODUCT_NAME = eureception;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "af967b3e-c997-4d11-9586-c12fb7341c1c";
 				SWIFT_OBJC_BRIDGING_HEADER = "eureception/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1398,9 +1422,9 @@
 				INFOPLIST_FILE = eureception/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.Reception;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.eure.reception;
 				PRODUCT_NAME = eureception;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d8b4b094-8939-4288-9a24-b14acdf79eff";
 				SWIFT_OBJC_BRIDGING_HEADER = "eureception/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 2;

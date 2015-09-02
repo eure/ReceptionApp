@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreStore
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #endif
         
         try! CoreStore.addSQLiteStoreAndWait(fileName: "eureception", resetStoreOnModelMismatch: true)
+        
+        Fabric.with([Crashlytics.self()])
         
         return true
     }

@@ -33,10 +33,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 0fd77fec2a33e237ab99069c36410eb7101126c6
+    :commit: 1bc35abfa7c167ba54af4e87158af7945cc9984e
     :git: https://github.com/Alamofire/Alamofire.git
   CoreStore:
-    :commit: 56ea14d53cdeb3280c70533888c2c9f311e2962b
+    :commit: 0de1733efe5d6061ee46c83d56b944a57f1e179d
     :git: https://github.com/JohnEstropia/CoreStore.git
   EasyAnimation:
     :commit: e27a4fa156647f0bf4ddbc73244d8a52105a4887
