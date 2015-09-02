@@ -8,6 +8,9 @@
 
 import Foundation
 import UIKit
+import RxCocoa
+import RxSwift
+
 class OtherPurposeViewController: BaseTransactionViewController, InputFieldTransition {
     
     var transaction: OtherTransaction?
@@ -47,16 +50,15 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         
         self.nextButton.enabled = false
         
-        self.textView.rac_textSignal()
-            .toSignalProducer()
-            .map { ($0 as! String).characters.count }
-            .startWithSignal { (signal, disposable) -> () in
-                
-                signal.observe { [weak self] event in
-                    
-                    self?.textViewPlaceHolder.hidden = event.value > 0
-                    self?.nextButton.enabled = event.value > 0
+        self.textView
+            .rx_text
+            .map { $0.characters.count }
+            .subscribe { [weak self] event in
+                guard let value = event.value else {
+                    return
                 }
+                self?.textViewPlaceHolder.hidden = value > 0
+                self?.nextButton.enabled = value > 0
         }
         
         self.textViewPlaceHolder.attributedText = NSAttributedString(string: "REASON FOR VISIT", attributes: [

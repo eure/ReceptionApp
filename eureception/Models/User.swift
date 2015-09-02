@@ -22,33 +22,37 @@ class User: NSManagedObject, ImportableUniqueObject {
     
     var nameKatana: String {
         
-        let value = self.nameEn.characters.split(" ").map { String($0) }.reverse().reduce(String()) { $0 + $1 }
+        let value = self.separateSpace(self.nameEn).reduce(String()) { $0 + " " + $1 }
         return value.stringByTransliteratingRomajiToKatakana()
     }
     
     var nameHiragana: String {
         
-        let value = self.nameEn.characters.split(" ").map { String($0) }.reverse().reduce(String()) { $0 + $1 }
+        let value = self.separateSpace(self.nameEn).reduce(String()) { $0 + " " + $1 }
         return value.stringByTransliteratingRomajiToHiragana()
     }
     
+    func separateSpace(string: String) -> [String] {
+        
+        let results = string.characters.split(" ").reverse().map { String($0) }
+        return results
+    }
+    
     func compare(candidate: String) -> Bool {
+                      
+        let _nameEn = separateSpace(self.nameEn.lowercaseString)
+        let _nameJa = separateSpace(self.nameJa)
+        let _nameKatakana = separateSpace(self.nameKatana)
+        let _nameHiragana = separateSpace(self.nameHiragana)
         
-        func excludeSpace(string: String) -> String {
+        for _candidate in (_nameEn + _nameJa + _nameKatakana + _nameHiragana) {
             
-            return string.stringByReplacingOccurrencesOfString(" ", withString: "")
-        }
-        
-        if excludeSpace(nameEn).lowercaseString.hasPrefix(candidate.lowercaseString) ||
-            excludeSpace(nameJa).hasPrefix(candidate) ||
-            excludeSpace(nameKatana).hasPrefix(candidate) ||
-            excludeSpace(nameHiragana).hasPrefix(candidate) {
-                
+            if _candidate.hasPrefix(candidate) {
                 return true
-        } else {
-            return false
+            }
         }
         
+        return false
     }
     
     // MARK: ImportableUniqueObject 

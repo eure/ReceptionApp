@@ -8,6 +8,8 @@ pod 'EasyAnimation', :git=>'https://github.com/icanzilb/EasyAnimation.git', :bra
 pod 'CoreStore', :git=>'https://github.com/JohnEstropia/CoreStore.git', :branch=>'develop'
 pod 'SwiftyJSON', :git=>'https://github.com/SwiftyJSON/SwiftyJSON.git', :branch=>'xcode7'
 pod 'Spring', :git=>'https://github.com/MengTo/Spring.git', :branch=>'swift2'
+pod 'RxSwift', :git=>'https://github.com/ReactiveX/RxSwift.git', :branch=>'rxswift-2.0'
+pod 'RxCocoa', :git=>'https://github.com/ReactiveX/RxSwift.git', :branch=>'rxswift-2.0'
 end
 
 target 'eureceptionTests' do

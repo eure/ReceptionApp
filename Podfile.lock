@@ -4,6 +4,9 @@ PODS:
     - GCDKit (= 1.1.1)
   - EasyAnimation (0.7.0)
   - GCDKit (1.1.1)
+  - RxCocoa (2.0-alpha.1):
+    - RxSwift
+  - RxSwift (2.0-alpha.1)
   - Spring (1.0.3)
   - SwiftyJSON (2.2.1)
 
@@ -11,6 +14,8 @@ DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift-2.0`)
   - CoreStore (from `https://github.com/JohnEstropia/CoreStore.git`, branch `develop`)
   - EasyAnimation (from `https://github.com/icanzilb/EasyAnimation.git`, branch `swift2`)
+  - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`, branch `rxswift-2.0`)
+  - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`, branch `rxswift-2.0`)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`, branch `xcode7`)
 
@@ -24,6 +29,12 @@ EXTERNAL SOURCES:
   EasyAnimation:
     :branch: swift2
     :git: https://github.com/icanzilb/EasyAnimation.git
+  RxCocoa:
+    :branch: rxswift-2.0
+    :git: https://github.com/ReactiveX/RxSwift.git
+  RxSwift:
+    :branch: rxswift-2.0
+    :git: https://github.com/ReactiveX/RxSwift.git
   Spring:
     :branch: swift2
     :git: https://github.com/MengTo/Spring.git
@@ -33,14 +44,20 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 0fd77fec2a33e237ab99069c36410eb7101126c6
+    :commit: 1bc35abfa7c167ba54af4e87158af7945cc9984e
     :git: https://github.com/Alamofire/Alamofire.git
   CoreStore:
-    :commit: 56ea14d53cdeb3280c70533888c2c9f311e2962b
+    :commit: 0de1733efe5d6061ee46c83d56b944a57f1e179d
     :git: https://github.com/JohnEstropia/CoreStore.git
   EasyAnimation:
     :commit: e27a4fa156647f0bf4ddbc73244d8a52105a4887
     :git: https://github.com/icanzilb/EasyAnimation.git
+  RxCocoa:
+    :commit: c530c746bd8bea65c6db18e7a64fb751ef8a051c
+    :git: https://github.com/ReactiveX/RxSwift.git
+  RxSwift:
+    :commit: c530c746bd8bea65c6db18e7a64fb751ef8a051c
+    :git: https://github.com/ReactiveX/RxSwift.git
   Spring:
     :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
     :git: https://github.com/MengTo/Spring.git
@@ -53,6 +70,8 @@ SPEC CHECKSUMS:
   CoreStore: 5108c1a144a6810129272b0666f796603c6245ae
   EasyAnimation: f58cd2cb74807f67280a2aff7a6e5bf8da423c19
   GCDKit: 376cff50fa8ecc256afae1b7df93c9c7bd27bb4b
+  RxCocoa: 57bb963008172e8bfe1431fd3cf4750d1728d8fd
+  RxSwift: 48982aff7a725bc6d0799aae6d539f360b940ff4
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 

@@ -56,6 +56,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-eureception/CoreStore.framework'
   install_framework 'Pods-eureception/EasyAnimation.framework'
   install_framework 'Pods-eureception/GCDKit.framework'
+  install_framework 'Pods-eureception/RxCocoa.framework'
+  install_framework 'Pods-eureception/RxSwift.framework'
   install_framework 'Pods-eureception/Spring.framework'
   install_framework 'Pods-eureception/SwiftyJSON.framework'
 fi
@@ -64,6 +66,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-eureception/CoreStore.framework'
   install_framework 'Pods-eureception/EasyAnimation.framework'
   install_framework 'Pods-eureception/GCDKit.framework'
+  install_framework 'Pods-eureception/RxCocoa.framework'
+  install_framework 'Pods-eureception/RxSwift.framework'
   install_framework 'Pods-eureception/Spring.framework'
   install_framework 'Pods-eureception/SwiftyJSON.framework'
 fi

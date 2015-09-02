@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreStore
+import RxCocoa
+import RxSwift
 
 class ContactToViewController: BaseTransactionViewController {
 
@@ -32,67 +34,53 @@ class ContactToViewController: BaseTransactionViewController {
         self.textField.tintColor = UIColor.eureColor
         
         // Do any additional setup after loading the view.
+        
         self.textField
-            .rac_signalForControlEvents(UIControlEvents.EditingChanged)
-            .toSignalProducer()
-            .map { ($0 as! UITextField).text ?? "" }
-            .startWithSignal { (signal, disposable) -> () in
+            .rx_text
+            .subscribe { [weak self] event in
                 
-                signal.observe { [weak self] event in
-                    
-                    guard let value = event.value else {
-                        return
-                    }
-                    JEDump(self?.usersListMonitor.objectsInAllSections())
-                    self?.results = self?.usersListMonitor.objectsInAllSections().filter { $0.compare(value) == true } ?? []
+                guard let value = event.value else {
+                    return
                 }
+                JEDump(self?.usersListMonitor.objectsInAllSections())
+                self?.results = self?.usersListMonitor.objectsInAllSections().filter { $0.compare(value) == true } ?? []
         }
         
         self.textField
-            .rac_signalForControlEvents(UIControlEvents.EditingChanged)
-            .toSignalProducer()
-            .map { ($0 as! UITextField).text ?? "" }
-            .filter { $0.characters.count > 0}
-            .startWithSignal { (signal, disposable) -> () in
+            .rx_text
+            .filter { $0.characters.count > 0 }
+            .subscribe { [weak self] event in
                 
-                signal.observe { [weak self] event in
-                    
-                    guard !(self?.textFieldTop.constant == 30) else {
-                        return
-                    }
-                    
-                    UIView.animateWithDuration(0.3, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
-                        
-                        self?.textFieldTop.constant = 30
-                        self?.messageLabel.alpha = 0
-                        self?.view.layoutIfNeeded()
-                        }, completion: { (finish) -> Void in
-                    })
+                guard !(self?.textFieldTop.constant == 30) else {
+                    return
                 }
+                
+                UIView.animateWithDuration(0.3, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
+                    
+                    self?.textFieldTop.constant = 30
+                    self?.messageLabel.alpha = 0
+                    self?.view.layoutIfNeeded()
+                    }, completion: { (finish) -> Void in
+                })
         }
         
         self.textField
-            .rac_signalForControlEvents(UIControlEvents.EditingChanged)
-            .toSignalProducer()
-            .map { ($0 as! UITextField).text ?? "" }
-            .filter { $0.characters.count == 0}
-            .startWithSignal { (signal, disposable) -> () in
+            .rx_text
+            .filter { $0.characters.count == 0 }
+            .subscribe { [weak self] event in
                 
-                signal.observe { [weak self] event in
-                    
-                    guard !(self?.textFieldTop.constant == 100) else {
-                        return
-                    }
-                    
-                    UIView.animateWithDuration(0.3, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
-                        
-                        self?.textFieldTop.constant = 200
-                        self?.messageLabel.alpha = 1
-                        self?.view.layoutIfNeeded()
-                        }, completion: { (finish) -> Void in
-                    })
+                guard !(self?.textFieldTop.constant == 100) else {
+                    return
                 }
-        }
+                
+                UIView.animateWithDuration(0.3, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
+                    
+                    self?.textFieldTop.constant = 200
+                    self?.messageLabel.alpha = 1
+                    self?.view.layoutIfNeeded()
+                    }, completion: { (finish) -> Void in
+                })
+        }                     
         
         self.tableViewMask.colors = [
             UIColor.clearColor().CGColor,

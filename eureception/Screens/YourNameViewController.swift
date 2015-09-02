@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import ReactiveCocoa
+import RxCocoa
+import RxSwift
 
 class YourNameViewController: BaseTransactionViewController, InputFieldTransition {
 
@@ -35,19 +36,16 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
         self.iconImageView.tintColor = UIColor.eureColor
         
         self.nextButton.enabled = false
-        
-        self.textField
-            .rac_signalForControlEvents(UIControlEvents.EditingChanged)
-            .toSignalProducer()
-            .map { ($0 as! UITextField).text ?? "" }
-            .startWithSignal { (signal, disposable) -> () in
                 
-                signal.observe { [weak self] event in
-                    
-                    let result = event.value?.characters.count > 0
-                    self?.nextButton.enabled = result
-                }
+        self.textField
+            .rx_text
+            .subscribe { [weak self] event in
+                
+                let result = event.value?.characters.count > 0
+                self?.nextButton.enabled = result
         }
+        
+
     }
     
     override func viewWillAppear(animated: Bool) {

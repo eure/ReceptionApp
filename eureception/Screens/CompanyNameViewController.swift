@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class CompanyNameViewController : BaseTransactionViewController, InputFieldTransition {
 
@@ -59,17 +61,16 @@ class CompanyNameViewController : BaseTransactionViewController, InputFieldTrans
         
         self.textView.tintColor = UIColor.eureColor
         self.iconImageView.tintColor = UIColor.eureColor
-        
-        self.textView.rac_textSignal()
-            .toSignalProducer()
-            .map { ($0 as! String).characters.count }
-            .startWithSignal { (signal, disposable) -> () in
-                
-                signal.observe { [weak self] event in
-                    
-                    self?.textViewPlaceHolder.hidden = event.value > 0
-                    self?.nextButton.enabled = event.value > 0
+                     
+        self.textView
+            .rx_text
+            .map { $0.characters.count }
+            .subscribe { [weak self] event in
+                guard let value = event.value else {
+                    return
                 }
+                self?.textViewPlaceHolder.hidden = value > 0
+                self?.nextButton.enabled = value > 0
         }
     }
     
