@@ -156,9 +156,11 @@
 		4BEB7FAE1B932AA5004CC553 /* PurposeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAD1B932AA5004CC553 /* PurposeButton.swift */; settings = {ASSET_TAGS = (); }; };
 		4BEB7FB01B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4BEB7FB21B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
-		4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
+		4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift */; settings = {ASSET_TAGS = (); }; };
 		4BF528EA1B96945800A73152 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF528E81B96945800A73152 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
 		4BF528EB1B96945800A73152 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF528E91B96945800A73152 /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
+		4BF528ED1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF528EC1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4BF528EF1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF528EE1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -412,9 +414,11 @@
 		4BEB7FAD1B932AA5004CC553 /* PurposeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeButton.swift; sourceTree = "<group>"; };
 		4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToPurposeSelectTransitionController.swift; sourceTree = "<group>"; };
 		4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeSelectToInputFieldTransitionController.swift; sourceTree = "<group>"; };
-		4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeSelectToConfirmOtherTransitionController.swift; sourceTree = "<group>"; };
+		4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeSelectToConfirmOtherPresetTransitionController.swift; sourceTree = "<group>"; };
 		4BF528E81B96945800A73152 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		4BF528E91B96945800A73152 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		4BF528EC1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOtherPresetViewController.swift; sourceTree = "<group>"; };
+		4BF528EE1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmOtherPresetViewController.storyboard; sourceTree = "<group>"; };
 		80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eureception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -530,6 +534,8 @@
 				4BD0CC2B1B8EEC3100A37716 /* ConfirmOtherViewController.storyboard */,
 				4BEB7FA91B93287B004CC553 /* OtherPurposeSelectViewController.swift */,
 				4BEB7FAB1B93296D004CC553 /* OtherPurposeSelectViewController.storyboard */,
+				4BF528EC1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift */,
+				4BF528EE1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard */,
 				4BEB7FAD1B932AA5004CC553 /* PurposeButton.swift */,
 			);
 			name = Other;
@@ -841,7 +847,7 @@
 				4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */,
 				4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */,
 				4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */,
-				4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift */,
+				4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift */,
 				4B2F751B1B8D6C620087DEBE /* ContactToInputFieldTransitionController.swift */,
 				4B696C161B8F36340096A169 /* ConfirmToCompletionTransitionController.swift */,
 				4B79AFA61B8D37F7002EBF8E /* ConfirmAppointmentToCompletionTransitionContorller.swift */,
@@ -1021,6 +1027,7 @@
 				4BB07A5B1B8C9A6C000065F3 /* Exo-Bold.otf in Resources */,
 				4BB07A651B8C9A6C000065F3 /* Exo-Medium.otf in Resources */,
 				4B9870421B896E4A00F72342 /* CompanyNameViewController.storyboard in Resources */,
+				4BF528EF1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard in Resources */,
 				4BB07A691B8C9A6C000065F3 /* Exo-Thin.otf in Resources */,
 				4BB07A421B8C7CD1000065F3 /* CompletionViewController.storyboard in Resources */,
 				4BB07A671B8C9A6C000065F3 /* Exo-Regular.otf in Resources */,
@@ -1138,7 +1145,7 @@
 				4B9930961B7515470073473F /* JEHUDLogView.m in Sources */,
 				4B99308C1B7515470073473F /* NSValue+JEDebugging.m in Sources */,
 				4B98704E1B8977EF00F72342 /* OtherTransaction.swift in Sources */,
-				4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherTransitionController.swift in Sources */,
+				4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift in Sources */,
 				4B99308D1B7515470073473F /* UIColor+JEDebugging.m in Sources */,
 				4B3EDC251B75F57900873B8C /* UIColor+Util.swift in Sources */,
 				4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */,
@@ -1204,6 +1211,7 @@
 				4B0169E81B8BE6BB00208CA9 /* ConfirmAppointmentViewController.swift in Sources */,
 				4B9930891B7515470073473F /* NSPointerArray+JEDebugging.m in Sources */,
 				4B9930A01B7515470073473F /* NSDateFormatter+JEToolkit.m in Sources */,
+				4BF528ED1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift in Sources */,
 				4B98703C1B896E2600F72342 /* TopViewController.swift in Sources */,
 				4B9930881B7515470073473F /* NSOrderedSet+JEDebugging.m in Sources */,
 				4B2CA6061B8EBAB900BCD9A4 /* Container.swift in Sources */,

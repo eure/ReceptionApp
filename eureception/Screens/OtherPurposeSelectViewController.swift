@@ -22,7 +22,7 @@ class OtherPurposeSelectViewController: BaseTransactionViewController {
         
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.textColor = UIColor.eureColor
-        self.messageLabel.text = "ご用件をお選びください"
+        self.messageLabel.text = "詳細なご用件をお選びください"
         
         self.deliveryButton.titleLabel?.text = "Delivery"
         self.deliveryButton.subtitleLabel?.text = "配達"
@@ -36,7 +36,7 @@ class OtherPurposeSelectViewController: BaseTransactionViewController {
     
     @IBAction private dynamic func handleDeliveryButton(sender: AnyObject) {
         
-        let controller = ConfirmOtherViewController.viewControllerFromStoryboard()
+        let controller = ConfirmOtherPresetViewController.viewControllerFromStoryboard()
         controller.transaction = OtherTransaction.Delivery()
         
         self.navigationController?.pushViewController(controller, animated: true)

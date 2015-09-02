@@ -14,7 +14,7 @@ struct OtherTransaction: Transaction {
         
         var visitor = OtherVisitor()
         visitor.companyName = ""
-        visitor.purpose = "ご用件 : 配達"
+        visitor.purpose = "納品"
         
         var transaction = OtherTransaction()
         transaction.visitor = visitor

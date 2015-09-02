@@ -45,6 +45,10 @@ extension BaseNavigationController: UINavigationControllerDelegate {
             
             return ConfirmOtherToCompletionTransitionController()
             
+        case ((_ as ConfirmOtherPresetViewController), (_ as CompletionViewController)):
+            
+            return ConfirmOtherToCompletionTransitionController()
+            
         case ((_ as CompletionViewController), (_ as TopViewController)):
             
             return CompletionToTopTransitionController()
@@ -61,9 +65,9 @@ extension BaseNavigationController: UINavigationControllerDelegate {
             
             return PurposeSelectToInputFieldTransitionController(operation: operation)
             
-        case ((_ as OtherPurposeSelectViewController), (_ as ConfirmOtherViewController)), ((_ as ConfirmOtherViewController), (_ as OtherPurposeSelectViewController)):
+        case ((_ as OtherPurposeSelectViewController), (_ as ConfirmOtherPresetViewController)), ((_ as ConfirmOtherPresetViewController), (_ as OtherPurposeSelectViewController)):
             
-            return PurposeSelectToConfirmOtherTransitionController(operation: operation)
+            return PurposeSelectToConfirmOtherPresetTransitionController(operation: operation)
         default:
             break
         }

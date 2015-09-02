@@ -8,6 +8,7 @@
 
 import UIKit
 import GCDKit
+import AudioToolbox
 
 class CompletionViewController: BaseViewController {
 
@@ -41,6 +42,13 @@ class CompletionViewController: BaseViewController {
             
             self?.navigationController?.popToRootViewControllerAnimated(true)
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let soundIdRing:SystemSoundID = 1000
+        AudioServicesPlaySystemSound(soundIdRing)
     }
 
     @IBOutlet weak var iconImageView: UIImageView!
