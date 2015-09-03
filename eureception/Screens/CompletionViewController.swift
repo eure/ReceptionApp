@@ -47,8 +47,8 @@ class CompletionViewController: BaseViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let soundIdRing:SystemSoundID = 1000
-        AudioServicesPlaySystemSound(soundIdRing)
+//        let soundIdRing:SystemSoundID = 1000
+//        AudioServicesPlaySystemSound(soundIdRing)
     }
 
     @IBOutlet weak var iconImageView: UIImageView!
