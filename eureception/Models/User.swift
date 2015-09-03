@@ -22,15 +22,27 @@ class User: NSManagedObject, ImportableUniqueObject {
     
     var nameKatana: String {
         
+        if let string = _nameKatakana {
+            return string
+        }
+        
         let value = self.separateSpace(self.nameEn).reduce(String()) { $0 + " " + $1 }
-        return value.stringByTransliteratingRomajiToKatakana()
+        _nameKatakana = value.stringByTransliteratingRomajiToKatakana()
+        return _nameKatakana!
     }
+    var _nameKatakana: String?
     
     var nameHiragana: String {
         
+        if let string = _nameHiragana {
+            return string
+        }
         let value = self.separateSpace(self.nameEn).reduce(String()) { $0 + " " + $1 }
-        return value.stringByTransliteratingRomajiToHiragana()
+        _nameHiragana = value.stringByTransliteratingRomajiToHiragana()
+        return _nameHiragana!
     }
+    
+    var _nameHiragana: String?
     
     func separateSpace(string: String) -> [String] {
         
