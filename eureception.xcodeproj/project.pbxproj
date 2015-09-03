@@ -1425,7 +1425,7 @@
 				PRODUCT_NAME = eureception;
 				PROVISIONING_PROFILE = "d8b4b094-8939-4288-9a24-b14acdf79eff";
 				SWIFT_OBJC_BRIDGING_HEADER = "eureception/Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

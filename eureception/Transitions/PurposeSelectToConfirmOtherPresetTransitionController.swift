@@ -35,11 +35,13 @@ class PurposeSelectToConfirmOtherPresetTransitionController: NSObject, UIViewCon
             
             let submitButton = toVC.submitButton
             let messageJaLabel = toVC.messageJaLabel
-            let messageEnLabel = toVC.messageEnLabel                        
+            let messageEnLabel = toVC.messageEnLabel
+            let iconImageView = toVC.iconImageView
             
             submitButton.alpha = 0
             messageJaLabel.alpha = 0
             messageEnLabel.alpha = 0
+            iconImageView.alpha = 0
             
             UIView.animateAndChainWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                 
@@ -54,6 +56,7 @@ class PurposeSelectToConfirmOtherPresetTransitionController: NSObject, UIViewCon
                         messageJaLabel.alpha = 1
                         messageEnLabel.alpha = 1
                         submitButton.alpha = 1
+                        iconImageView.alpha = 1
                         
                         }, completion: { (finish) -> Void in
                             
@@ -69,6 +72,7 @@ class PurposeSelectToConfirmOtherPresetTransitionController: NSObject, UIViewCon
             let submitButton = fromVC.submitButton
             let messageJaLabel = fromVC.messageJaLabel
             let messageEnLabel = fromVC.messageEnLabel
+            let iconImageView = fromVC.iconImageView
             
             toVC.selectView.layer.transform = CATransform3DMakeTranslation(-offset, 0, 0)
             
@@ -79,6 +83,8 @@ class PurposeSelectToConfirmOtherPresetTransitionController: NSObject, UIViewCon
                 submitButton.alpha = 0
                 messageJaLabel.alpha = 0
                 messageEnLabel.alpha = 0
+                iconImageView.alpha = 0
+                
                 }, completion: { (finish) -> Void in
                     
                     fromVC.view.removeFromSuperview()

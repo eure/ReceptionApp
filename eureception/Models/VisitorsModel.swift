@@ -13,22 +13,15 @@ final class VisitorsModel: BaseModel {
     
     func sendVisitor(transaction transaction: AppointmentTransaction, completion: (result: ModelResult<JSON>) -> Void) {
        
-        #if DEBUG
-            #else
         Dispatcher.sendVisitor(transaction: transaction) { (result) -> Void in
             
         }
-        #endif
     }
     
     func sendVisitor(transaction transaction: OtherTransaction, completion: (result: ModelResult<JSON>) -> Void) {
         
-        #if DEBUG
-            #else
         Dispatcher.sendVisitor(transaction: transaction) { (result) -> Void in
             
         }
-        #endif
-        
     }
 }

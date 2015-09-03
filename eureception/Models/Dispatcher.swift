@@ -14,11 +14,13 @@ enum DispatcherErrorType: ErrorType {
     case SomethingError
 }
 
+
+
 enum Dispatcher {
     
     static func getUser(response: (result: Result<JSON>) -> Void) {
         
-        self.dispatch(url: baseURL + "/users", method: .GET, parameters: nil, response: response)
+        self.dispatch(url: baseURL + "/users", method: .GET, parameters: ["api_key": APIKey], response: response)
     }
     
     static func sendVisitor(transaction transaction: AppointmentTransaction, response: (result: Result<JSON>) -> Void) {
@@ -32,6 +34,7 @@ enum Dispatcher {
         self.dispatch(
             url: baseURL + "/visitor",
             parameters: [
+                "api_key": APIKey,
                 "visitor_type" : "appointment",
                 "user_id" : NSNumber(longLong: transaction.user.id),
                 "visitor_name" : visitor.name,
@@ -46,13 +49,15 @@ enum Dispatcher {
         self.dispatch(
             url: baseURL + "/visitor",
             parameters: [
+                "api_key": APIKey,
                 "visitor_type" : "other",
                 "visitor_purpose" : transaction.visitor!.purpose,
                 "visitor_company_name" : transaction.visitor!.companyName
             ],
             response: response)
     }
-     
+    
+    private static let APIKey = "O4mug2zIiuNcfd0WKMYN0Nz4EnrPa5"
     private static let baseURL = "https://reception.eure.jp/api/v1"
     private static func dispatch(url url: String, method: Alamofire.Method = .POST, parameters: [String: AnyObject]?, response: (result: Result<JSON>) -> Void) {
         

@@ -58,29 +58,35 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXn-iO-I4g">
-                                <rect key="frame" x="363" y="344" width="42" height="20.5"/>
+                                <rect key="frame" x="363" y="452" width="42" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5b-U4-GYo">
-                                <rect key="frame" x="363" y="294" width="42" height="20.5"/>
+                                <rect key="frame" x="363" y="402" width="42" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_big_other" translatesAutoresizingMaskIntoConstraints="NO" id="uzX-LT-0MQ">
+                                <rect key="frame" x="341" y="290" width="86" height="86"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LF4-fB-IOV" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="0Gr-Dj-L85"/>
                             <constraint firstItem="weg-v7-5FV" firstAttribute="top" secondItem="LF4-fB-IOV" secondAttribute="bottom" constant="145" id="2ix-BS-qwg"/>
+                            <constraint firstItem="uzX-LT-0MQ" firstAttribute="top" secondItem="5gm-Lf-7Cg" secondAttribute="bottom" constant="200" id="494-qB-7il"/>
+                            <constraint firstItem="uzX-LT-0MQ" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="BOQ-uF-XaR"/>
                             <constraint firstItem="u2K-eg-ayG" firstAttribute="leading" secondItem="dVq-3D-aeI" secondAttribute="leading" constant="36" id="G0C-OE-rf1"/>
                             <constraint firstItem="5gm-Lf-7Cg" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="ICE-mJ-rLj"/>
+                            <constraint firstItem="D5b-U4-GYo" firstAttribute="top" secondItem="uzX-LT-0MQ" secondAttribute="bottom" constant="26" id="NOJ-6u-d8y"/>
                             <constraint firstItem="KXn-iO-I4g" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="Zkt-Ul-DAp"/>
-                            <constraint firstItem="D5b-U4-GYo" firstAttribute="top" secondItem="5gm-Lf-7Cg" secondAttribute="bottom" constant="204" id="f1Z-Gs-JnE"/>
                             <constraint firstItem="5gm-Lf-7Cg" firstAttribute="top" secondItem="ikO-8d-fRk" secondAttribute="bottom" constant="60" id="ipF-4b-di0"/>
                             <constraint firstItem="u2K-eg-ayG" firstAttribute="centerY" secondItem="5gm-Lf-7Cg" secondAttribute="centerY" id="jzo-LZ-mJG"/>
                             <constraint firstItem="D5b-U4-GYo" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="n8z-K1-Y7f"/>
@@ -91,6 +97,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="backButton" destination="u2K-eg-ayG" id="64V-n9-nYs"/>
+                        <outlet property="iconImageView" destination="uzX-LT-0MQ" id="C7n-H0-Mr3"/>
                         <outlet property="logoImageView" destination="5gm-Lf-7Cg" id="fOV-PK-jjU"/>
                         <outlet property="messageEnLabel" destination="D5b-U4-GYo" id="1B3-LR-0Yf"/>
                         <outlet property="messageJaLabel" destination="KXn-iO-I4g" id="jd1-ja-dtd"/>
@@ -105,6 +112,7 @@
     <resources>
         <image name="eureka_logo" width="147" height="30"/>
         <image name="icon_back" width="33" height="33"/>
+        <image name="icon_big_other" width="86" height="86"/>
         <image name="icon_send" width="78" height="39"/>
     </resources>
 </document>

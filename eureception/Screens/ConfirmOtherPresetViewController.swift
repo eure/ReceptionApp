@@ -17,14 +17,22 @@ class ConfirmOtherPresetViewController: BaseConfirmViewController {
         
         super.viewDidLoad()
         
-        self.messageEnLabel.text = "Ready to send?"
-        self.messageJaLabel.text = "担当者へ連絡します\nよろしいですか？"
-        self.messageEnLabel.textColor = UIColor.eureColor
-        self.messageEnLabel.font = UIFont.eureBoldFont(size: 45)
-        self.messageJaLabel.textColor = UIColor.eureColor
-        self.messageJaLabel.font = UIFont.eureBoldFont(size: 20)
+        self.iconImageView.tintColor = UIColor.eureColor
+        self.messageEnLabel.attributedText = NSAttributedString(string: "Ready to send?", attributes: [
+            NSKernAttributeName : NSNumber(integer: 3),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 33),
+            NSForegroundColorAttributeName : UIColor.eureColor,
+            ]
+        )
+        self.messageJaLabel.attributedText = NSAttributedString(string: "担当者へ連絡します\nよろしいですか？", attributes: [
+            NSKernAttributeName : NSNumber(integer: 3),
+            NSFontAttributeName : UIFont.eureBoldFont(size: 21),
+            NSForegroundColorAttributeName : UIColor.eureColor,
+            ]
+        )
     }
     
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var messageEnLabel: UILabel!
     @IBOutlet weak var messageJaLabel: UILabel!
     

@@ -32,10 +32,6 @@ class PurposeButton: UIControl {
         self.iconImageView?.tintColor = UIColor.eureColor
         self.shape.fillColor = UIColor.whiteColor().CGColor
         self.shape.strokeColor = UIColor.eureLightGrayColor.CGColor
-        self.titleLabel?.textColor = UIColor.eureColor
-        self.titleLabel?.font = UIFont.eureBoldFont(size: 32)
-        self.subtitleLabel?.textColor = UIColor.eureColor
-        self.subtitleLabel?.font = UIFont.eureBoldFont(size: 16)
     }
     
     override func layoutSublayersOfLayer(layer: CALayer) {

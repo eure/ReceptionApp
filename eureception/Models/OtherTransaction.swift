@@ -13,7 +13,7 @@ struct OtherTransaction: Transaction {
     static func Delivery() -> OtherTransaction {
         
         var visitor = OtherVisitor()
-        visitor.companyName = ""
+        visitor.companyName = "配達"
         visitor.purpose = "納品"
         
         var transaction = OtherTransaction()
