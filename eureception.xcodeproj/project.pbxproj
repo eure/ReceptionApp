@@ -161,7 +161,6 @@
 		4BF528EB1B96945800A73152 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF528E91B96945800A73152 /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
 		4BF528ED1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF528EC1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4BF528EF1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF528EE1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard */; settings = {ASSET_TAGS = (); }; };
-		605761541B9EF6F10075CA77 /* ReceptionDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605761531B9EF6F10075CA77 /* ReceptionDefaults.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -420,7 +419,6 @@
 		4BF528E91B96945800A73152 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		4BF528EC1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOtherPresetViewController.swift; sourceTree = "<group>"; };
 		4BF528EE1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmOtherPresetViewController.storyboard; sourceTree = "<group>"; };
-		605761531B9EF6F10075CA77 /* ReceptionDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceptionDefaults.swift; sourceTree = "<group>"; };
 		80D5A0B2E29772BF8B3B6F63 /* Pods_eureception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eureception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -495,7 +493,6 @@
 				4B696C1C1B8FEE9C0096A169 /* VisitorsModel.swift */,
 				4B2CA5FF1B8EB9E300BCD9A4 /* User.swift */,
 				4B2391DC1B82F874001D636D /* Visitor.swift */,
-				605761531B9EF6F10075CA77 /* ReceptionDefaults.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1220,7 +1217,6 @@
 				4B2CA6061B8EBAB900BCD9A4 /* Container.swift in Sources */,
 				4B99309E1B7515470073473F /* NSDate+JEToolkit.m in Sources */,
 				4B9930B21B7515470073473F /* UITableView+JEToolkit.m in Sources */,
-				605761541B9EF6F10075CA77 /* ReceptionDefaults.swift in Sources */,
 				4BB07A6F1B8CB354000065F3 /* NSAttributedString+Util.swift in Sources */,
 				4B9930B61B7515470073473F /* UIView+JEToolkit.swift in Sources */,
 				4B9930971B7515470073473F /* JEOrderedDictionary.m in Sources */,

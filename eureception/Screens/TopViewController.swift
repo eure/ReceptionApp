@@ -110,7 +110,7 @@ class TopViewController: BaseViewController , UIGestureRecognizerDelegate {
                 style: .Default,
                 handler: { (_) -> Void in
                     
-                    ReceptionDefaults().floor = 5
+                    VisitorDefaults().floor = 5
                 }
             )
         )
@@ -120,7 +120,7 @@ class TopViewController: BaseViewController , UIGestureRecognizerDelegate {
                 style: .Default,
                 handler: { (_) -> Void in
                     
-                    ReceptionDefaults().floor = 6
+                    VisitorDefaults().floor = 6
                 }
             )
         )

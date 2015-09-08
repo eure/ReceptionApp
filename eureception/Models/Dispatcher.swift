@@ -39,7 +39,8 @@ enum Dispatcher {
                 "user_id" : NSNumber(longLong: transaction.user.id),
                 "visitor_name" : visitor.name,
                 "visitor_person_count" : visitor.numberOfPersons,
-                "visitor_company_name" : visitor.companyName
+                "visitor_company_name" : visitor.companyName,
+                "visitor_floor" : visitor.floor
             ],
             response: response)
     }
@@ -52,7 +53,8 @@ enum Dispatcher {
                 "api_key": APIKey,
                 "visitor_type" : "other",
                 "visitor_purpose" : transaction.visitor!.purpose,
-                "visitor_company_name" : transaction.visitor!.companyName
+                "visitor_company_name" : transaction.visitor!.companyName,
+                "visitor_floor" : transaction.visitor!.floor
             ],
             response: response)
     }
