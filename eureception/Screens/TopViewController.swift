@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopViewController: BaseViewController {
+class TopViewController: BaseViewController , UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,12 @@ class TopViewController: BaseViewController {
             NSForegroundColorAttributeName : UIColor.eureColor,
             ]
         )
+        
+        let longPressGesture = UILongPressGestureRecognizer()
+        longPressGesture.addTarget(self, action: "handleLongPressGesture:")
+        longPressGesture.minimumPressDuration = 3
+        longPressGesture.delegate = self
+        self.longButton.addGestureRecognizer(longPressGesture)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -78,6 +84,7 @@ class TopViewController: BaseViewController {
     @IBOutlet dynamic weak var welcomeBottomLabel: UILabel!
     @IBOutlet dynamic weak var otherButton: TopButton!
     @IBOutlet dynamic weak var appointButton: TopButton!
+    @IBOutlet weak var longButton: UIButton!
     
     // MARK: Private
     @IBOutlet private dynamic weak var logoImageView: UIImageView!
@@ -92,5 +99,31 @@ class TopViewController: BaseViewController {
         
         let controller = OtherPurposeSelectViewController.viewControllerFromStoryboard()
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private dynamic func handleLongPressGesture(gesture: UILongPressGestureRecognizer) {
+
+        let alert = UIAlertController(title: "", message: "階を選択してください", preferredStyle: .Alert)
+        alert.addAction(
+            UIAlertAction(
+                title: "5階",
+                style: .Default,
+                handler: { (_) -> Void in
+                    
+                    ReceptionDefaults().floor = 5
+                }
+            )
+        )
+        alert.addAction(
+            UIAlertAction(
+                title: "6階",
+                style: .Default,
+                handler: { (_) -> Void in
+                    
+                    ReceptionDefaults().floor = 6
+                }
+            )
+        )
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }

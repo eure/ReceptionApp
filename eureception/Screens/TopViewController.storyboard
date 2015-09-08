@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jf7-RZ-406">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jf7-RZ-406">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
@@ -89,7 +89,7 @@
                                 <rect key="frame" x="40" y="538" width="688" height="280"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
-                                        <rect key="frame" x="301.5" y="187" width="85.5" height="36"/>
+                                        <rect key="frame" x="301" y="187" width="86" height="36"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,12 +143,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvw-tB-Ha6">
-                                <rect key="frame" x="320.5" y="900.5" width="127.5" height="33.5"/>
+                                <rect key="frame" x="320" y="900" width="128" height="34"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaG-63-gJK">
+                                <rect key="frame" x="320" y="902" width="128" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,6 +179,7 @@
                     <connections>
                         <outlet property="appointButton" destination="C7k-QB-7JQ" id="hQ4-kE-ptm"/>
                         <outlet property="logoImageView" destination="QQE-Z3-hyo" id="Gc1-0O-MRp"/>
+                        <outlet property="longButton" destination="ZaG-63-gJK" id="1mi-sH-tnv"/>
                         <outlet property="otherButton" destination="TVz-5V-aKW" id="cZS-UD-xK0"/>
                         <outlet property="welcomeBottomLabel" destination="Jvw-tB-Ha6" id="kH3-mo-kWS"/>
                         <outlet property="welcomeLabel" destination="cBh-Rr-W2I" id="AfM-L4-tfA"/>
