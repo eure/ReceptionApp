@@ -63,9 +63,7 @@ class TopViewController: BaseViewController , UIGestureRecognizerDelegate {
         longPressGesture.addTarget(self, action: "handleLongPressGesture:")
         longPressGesture.minimumPressDuration = 3
         longPressGesture.delegate = self
-        self.longButton.addGestureRecognizer(longPressGesture)
-        
-        VisitorDefaults().floor = 6
+        self.longButton.addGestureRecognizer(longPressGesture)        
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -60,7 +60,11 @@ enum Dispatcher {
     }
     
     private static let APIKey = "O4mug2zIiuNcfd0WKMYN0Nz4EnrPa5"
-    private static let baseURL = "https://reception.eure.jp/api/v1"
+    #if DEBUG
+        private static let baseURL = "https://reception.eure.jp/api/v1/dev"
+    #else
+        private static let baseURL = "https://reception.eure.jp/api/v1"
+    #endif
     private static func dispatch(url url: String, method: Alamofire.Method = .POST, parameters: [String: AnyObject]?, response: (result: Result<JSON>) -> Void) {
         
         Manager.sharedInstance.request(
