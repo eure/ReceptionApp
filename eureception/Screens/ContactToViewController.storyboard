@@ -76,7 +76,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74y-IG-WU6">
                                 <rect key="frame" x="60" y="399" width="648" height="305"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0sO-jg-TCr">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0sO-jg-TCr">
                                         <rect key="frame" x="0.0" y="0.0" width="648" height="305"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,6 +146,12 @@
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0sO-jg-TCr" firstAttribute="top" secondItem="74y-IG-WU6" secondAttribute="top" id="2Gv-aw-9M1"/>
+                                    <constraint firstAttribute="trailing" secondItem="0sO-jg-TCr" secondAttribute="trailing" id="R3f-m8-34f"/>
+                                    <constraint firstAttribute="bottom" secondItem="0sO-jg-TCr" secondAttribute="bottom" id="flf-2Y-nsm"/>
+                                    <constraint firstItem="0sO-jg-TCr" firstAttribute="leading" secondItem="74y-IG-WU6" secondAttribute="leading" id="oTU-P6-0yY"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
