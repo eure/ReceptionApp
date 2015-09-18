@@ -24,17 +24,17 @@ class ConfirmAppointmentViewController: BaseConfirmViewController {
         self.companyNameView.backgroundColor = UIColor.eureColor
         self.countview.backgroundColor = UIColor.eureColor
         
-        self.icons.forEach { $0.tintColor = UIColor.eureLightGrayTextColor }
+        self.icons.forEach { $0.tintColor = UIColor.whiteColor() }
         
-        self.contactToLabel.attributedText = NSAttributedString.eureAttributedString(self.transaction?.user.nameJa ?? "", color: UIColor.eureBlackTextColor, size: 32)
+        self.contactToLabel.attributedText = NSAttributedString.eureAttributedString(self.transaction?.user.nameJa ?? "", color: UIColor.whiteColor(), size: 32)
         
         if let visitor = self.transaction?.visitor {
             let size: CGFloat = 32
-            self.nameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.name ?? "", color: UIColor.eureBlackTextColor, size: size)
+            self.nameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.name ?? "", color: UIColor.whiteColor(), size: size)
             
-            self.companyLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.eureBlackTextColor, size: size)
+            self.companyLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.whiteColor(), size: size)
                         
-            self.countLabel.attributedText = NSAttributedString.eureAttributedString("\(visitor.numberOfPersons)人", color: UIColor.eureBlackTextColor, size: size)
+            self.countLabel.attributedText = NSAttributedString.eureAttributedString("\(visitor.numberOfPersons)人", color: UIColor.whiteColor(), size: size)
         }
         
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)

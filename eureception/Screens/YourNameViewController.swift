@@ -27,10 +27,10 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
         
         self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "YOUR NAME",
-            color: UIColor.eureLightGrayTextColor,
+            color: UIColor.eureLightEureColor,
             size: 55
         )
-        self.textField.textColor = UIColor.eureBlackTextColor
+        self.textField.textColor = UIColor.whiteColor()
         self.textField.tintColor = UIColor.whiteColor()
         self.textField.text = self.transaction?.visitor?.name
         

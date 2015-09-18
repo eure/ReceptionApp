@@ -33,7 +33,7 @@ class ContactToViewController: BaseTransactionViewController {
         
         self.textField.attributedPlaceholder = NSAttributedString.eureBoldAttributedString(
             "CONTACT TO...",
-            color: UIColor.eureLightGrayTextColor,
+            color: UIColor.eureLightEureColor,
             size: 55
         )
         

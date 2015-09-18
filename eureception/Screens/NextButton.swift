@@ -25,7 +25,7 @@ class NextButton: UIControl {
         
         super.awakeFromNib()
         self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
-        self.backgroundLayer.strokeColor = UIColor.eureLightGrayTextColor.CGColor
+        self.backgroundLayer.strokeColor = UIColor.whiteColor().CGColor
         self.nextImageView?.tintColor = UIColor.whiteColor()
     }
     
@@ -63,7 +63,7 @@ class NextButton: UIControl {
                     self.nextImageView?.tintColor = UIColor.eureColor
                 } else {
                     self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
-                    self.backgroundLayer.strokeColor = UIColor.eureLightGrayTextColor.CGColor
+                    self.backgroundLayer.strokeColor = UIColor.whiteColor().CGColor
                     self.nextImageView?.tintColor = UIColor.whiteColor()
                 }
                 }) { (finish) -> Void in

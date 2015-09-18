@@ -64,6 +64,7 @@ class CompanyNameViewController : BaseTransactionViewController, InputFieldTrans
         }
         
         self.textView.tintColor = UIColor.whiteColor()
+        self.textView.textColor = UIColor.whiteColor()
         self.iconImageView.tintColor = UIColor.whiteColor()
                      
         self.textView

@@ -47,7 +47,7 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
             
             self.countLabel.attributedText = NSAttributedString.eureBoldAttributedString(
                 "\(self.count)人",
-                color: UIColor.eureBlackTextColor,
+                color: UIColor.whiteColor(),
                 size: 55
             )
         }

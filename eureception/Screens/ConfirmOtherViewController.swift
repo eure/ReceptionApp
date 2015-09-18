@@ -18,14 +18,14 @@ class ConfirmOtherViewController: BaseConfirmViewController {
         self.companyNameView.backgroundColor = UIColor.eureColor
         self.purposeView.backgroundColor = UIColor.eureColor
         
-        self.icons.forEach { $0.tintColor = UIColor.eureLightGrayTextColor }
+        self.icons.forEach { $0.tintColor = UIColor.whiteColor() }
         self.messageLabel.textColor = UIColor.whiteColor()
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.text = "以下、内容をご確認ください"
         
         if let visitor = transaction?.visitor {
             
-            self.companyNameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.eureBlackTextColor, size: 32)
+            self.companyNameLabel.attributedText = NSAttributedString.eureAttributedString(visitor.companyName, color: UIColor.whiteColor(), size: 32)
             
             if StringIsEmpty(visitor.companyName) {
                 self.companyNameHeight.constant = 0
@@ -33,7 +33,7 @@ class ConfirmOtherViewController: BaseConfirmViewController {
             }
         }
         
-        self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.visitor?.purpose ?? "", color: UIColor.eureBlackTextColor, size: 36)
+        self.textView.attributedText = NSAttributedString.eureAttributedString(self.transaction?.visitor?.purpose ?? "", color: UIColor.whiteColor(), size: 36)
     }
     
     @IBOutlet weak var companyNameLabel: UILabel!

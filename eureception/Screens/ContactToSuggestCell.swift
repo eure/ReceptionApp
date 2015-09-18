@@ -15,7 +15,7 @@ class ContactToSuggestCell: UITableViewCell {
         // Initialization code
         
         self.backgroundColor = UIColor.eureColor
-        self.iconImageView.tintColor = UIColor.eureLightGrayTextColor
+        self.iconImageView.tintColor = UIColor.whiteColor()
         
         self.nameJaLabel.font = UIFont.eureFont(size: 55)
         self.nameJaLabel.textColor = UIColor.whiteColor()
