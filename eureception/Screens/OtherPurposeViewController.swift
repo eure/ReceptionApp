@@ -31,6 +31,7 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         self.messageLabel.text = "ご用件をご記入ください"
         self.iconImageView.tintColor = UIColor.whiteColor()
         self.textView.tintColor = UIColor.whiteColor()
+        self.textView.textColor = UIColor.whiteColor()
         
         self.textView.text = self.transaction?.visitor?.purpose
         

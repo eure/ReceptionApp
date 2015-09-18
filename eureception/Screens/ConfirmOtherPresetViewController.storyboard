@@ -90,7 +90,7 @@
                             <constraint firstItem="5gm-Lf-7Cg" firstAttribute="top" secondItem="ikO-8d-fRk" secondAttribute="bottom" constant="60" id="ipF-4b-di0"/>
                             <constraint firstItem="u2K-eg-ayG" firstAttribute="centerY" secondItem="5gm-Lf-7Cg" secondAttribute="centerY" id="jzo-LZ-mJG"/>
                             <constraint firstItem="D5b-U4-GYo" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="n8z-K1-Y7f"/>
-                            <constraint firstItem="KXn-iO-I4g" firstAttribute="top" secondItem="D5b-U4-GYo" secondAttribute="bottom" constant="30" id="r5E-V2-dl4"/>
+                            <constraint firstItem="KXn-iO-I4g" firstAttribute="top" secondItem="D5b-U4-GYo" secondAttribute="bottom" constant="25" id="r5E-V2-dl4"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>

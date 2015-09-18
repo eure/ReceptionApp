@@ -47,7 +47,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="568" placeholderIntrinsicHeight="429" translatesAutoresizingMaskIntoConstraints="NO" id="mel-OV-XVw">
-                                <rect key="frame" x="100" y="361" width="568" height="313"/>
+                                <rect key="frame" x="100" y="356" width="568" height="313"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_memo_mini" translatesAutoresizingMaskIntoConstraints="NO" id="TxF-He-5ir">
                                         <rect key="frame" x="0.0" y="8" width="50" height="50"/>
@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以下、内容をご確認ください" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYJ-Le-Xql">
-                                <rect key="frame" x="104" y="216" width="260" height="24"/>
+                                <rect key="frame" x="104" y="211" width="260" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,7 +140,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Oid-nv-dNx" firstAttribute="top" secondItem="vYJ-Le-Xql" secondAttribute="bottom" constant="30" id="0Ho-Cp-S8V"/>
+                            <constraint firstItem="Oid-nv-dNx" firstAttribute="top" secondItem="vYJ-Le-Xql" secondAttribute="bottom" constant="35" id="0Ho-Cp-S8V"/>
                             <constraint firstItem="Oid-nv-dNx" firstAttribute="leading" secondItem="tAy-oi-DoB" secondAttribute="leading" constant="100" id="6pR-BG-aSd"/>
                             <constraint firstItem="eA1-xI-0ev" firstAttribute="centerY" secondItem="Rkr-QK-W19" secondAttribute="centerY" id="96G-j9-qqh"/>
                             <constraint firstItem="Oid-nv-dNx" firstAttribute="top" secondItem="Rkr-QK-W19" secondAttribute="bottom" constant="180" id="BMN-hh-TEv"/>
@@ -149,7 +149,7 @@
                             <constraint firstItem="mel-OV-XVw" firstAttribute="centerX" secondItem="tAy-oi-DoB" secondAttribute="centerX" id="Knt-KZ-Kw4"/>
                             <constraint firstItem="Y9b-bC-LhF" firstAttribute="centerX" secondItem="tAy-oi-DoB" secondAttribute="centerX" id="Lfl-s1-5AD"/>
                             <constraint firstItem="2bd-cs-8A0" firstAttribute="top" secondItem="Y9b-bC-LhF" secondAttribute="bottom" constant="145" id="NsA-2a-QpE"/>
-                            <constraint firstItem="mel-OV-XVw" firstAttribute="top" secondItem="Oid-nv-dNx" secondAttribute="bottom" constant="25" id="P2G-H0-cRy"/>
+                            <constraint firstItem="mel-OV-XVw" firstAttribute="top" secondItem="Oid-nv-dNx" secondAttribute="bottom" constant="20" id="P2G-H0-cRy"/>
                             <constraint firstItem="vYJ-Le-Xql" firstAttribute="leading" secondItem="mel-OV-XVw" secondAttribute="leading" constant="4" id="Upi-du-cyR"/>
                             <constraint firstItem="eA1-xI-0ev" firstAttribute="leading" secondItem="tAy-oi-DoB" secondAttribute="leading" constant="36" id="Veq-GM-Obn"/>
                             <constraint firstItem="Rkr-QK-W19" firstAttribute="centerX" secondItem="tAy-oi-DoB" secondAttribute="centerX" id="mvE-Rk-ieL"/>
