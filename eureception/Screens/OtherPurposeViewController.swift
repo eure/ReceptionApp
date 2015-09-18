@@ -21,19 +21,23 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.eureColor
+        self.inputFieldView.backgroundColor = UIColor.eureColor
+        self.textViewContainerView.backgroundColor = UIColor.eureColor
+        
         self.textView.font = UIFont.eureFont(size: 55)
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
-        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.textColor = UIColor.whiteColor()
         self.messageLabel.text = "ご用件をご記入ください"
-        self.iconImageView.tintColor = UIColor.eureColor
-        self.textView.tintColor = UIColor.eureColor
+        self.iconImageView.tintColor = UIColor.whiteColor()
+        self.textView.tintColor = UIColor.whiteColor()
         
         self.textView.text = self.transaction?.visitor?.purpose
         
         self.textViewMask.colors = [
             UIColor.clearColor().CGColor,
-            UIColor.whiteColor().CGColor,
-            UIColor.whiteColor().CGColor,
+            UIColor.eureColor.CGColor,
+            UIColor.eureColor.CGColor,
             UIColor.clearColor().CGColor,
         ]
         

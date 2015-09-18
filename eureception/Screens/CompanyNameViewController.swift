@@ -19,7 +19,11 @@ class CompanyNameViewController : BaseTransactionViewController, InputFieldTrans
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.messageLabel.textColor = UIColor.eureColor
+        self.view.backgroundColor = UIColor.eureColor
+        self.inputFieldView.backgroundColor = UIColor.eureColor
+        self.textViewContainerView.backgroundColor = UIColor.eureColor
+        
+        self.messageLabel.textColor = UIColor.whiteColor()
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.textView.font = UIFont.eureFont(size: 55)
         self.messageLabel.text = "貴社名をご記入ください"
@@ -33,8 +37,8 @@ class CompanyNameViewController : BaseTransactionViewController, InputFieldTrans
         
         self.textViewMask.colors = [
             UIColor.clearColor().CGColor,
-            UIColor.whiteColor().CGColor,
-            UIColor.whiteColor().CGColor,
+            UIColor.eureColor.CGColor,
+            UIColor.eureColor.CGColor,
             UIColor.clearColor().CGColor,
         ]
         
@@ -59,8 +63,8 @@ class CompanyNameViewController : BaseTransactionViewController, InputFieldTrans
             self.textView.text = transaction.visitor?.companyName
         }
         
-        self.textView.tintColor = UIColor.eureColor
-        self.iconImageView.tintColor = UIColor.eureColor
+        self.textView.tintColor = UIColor.whiteColor()
+        self.iconImageView.tintColor = UIColor.whiteColor()
                      
         self.textView
             .rx_text

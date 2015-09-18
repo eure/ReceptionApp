@@ -25,8 +25,8 @@ class HomeButton: UIControl {
         super.awakeFromNib()
         self.backgroundColor = UIColor.clearColor()
         self.backgroundLayer.fillColor = UIColor(white: 1, alpha: 0.1).CGColor
-        self.backgroundLayer.strokeColor = UIColor.whiteColor().CGColor
-        self.iconImageView?.tintColor = UIColor.whiteColor()
+        self.backgroundLayer.strokeColor = UIColor.eureColor.CGColor
+        self.iconImageView?.tintColor = UIColor.eureColor
     }
     
     override func layoutSublayersOfLayer(layer: CALayer) {
@@ -58,11 +58,11 @@ class HomeButton: UIControl {
             UIView.animateWithDuration(0.2, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                 
                 if newValue {
-                    self.backgroundLayer.fillColor = UIColor.whiteColor().CGColor
-                    self.iconImageView?.tintColor = UIColor.eureColor
+                    self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
+                    self.iconImageView?.tintColor = UIColor.whiteColor()
                 } else {
                     self.backgroundLayer.fillColor = UIColor(white: 1, alpha: 0.1).CGColor
-                    self.iconImageView?.tintColor = UIColor.whiteColor()
+                    self.iconImageView?.tintColor = UIColor.eureColor
                 }
                 }) { (finish) -> Void in
             }

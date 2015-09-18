@@ -24,9 +24,10 @@ class SubmitButton: UIControl {
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        self.backgroundLayer.fillColor = UIColor.whiteColor().CGColor
-        self.backgroundLayer.strokeColor = UIColor.eureColor.CGColor
-        self.iconImageView?.tintColor = UIColor.eureColor
+        self.backgroundColor = UIColor.eureColor
+        self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
+        self.backgroundLayer.strokeColor = UIColor.whiteColor().CGColor
+        self.iconImageView?.tintColor = UIColor.whiteColor()
     }
     
     override func layoutSublayersOfLayer(layer: CALayer) {
@@ -58,11 +59,11 @@ class SubmitButton: UIControl {
             UIView.animateWithDuration(0.2, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                 
                 if newValue {
-                    self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
-                    self.iconImageView?.tintColor = UIColor.whiteColor()
-                } else {
                     self.backgroundLayer.fillColor = UIColor.whiteColor().CGColor
                     self.iconImageView?.tintColor = UIColor.eureColor
+                } else {
+                    self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
+                    self.iconImageView?.tintColor = UIColor.whiteColor()
                 }
                 }) { (finish) -> Void in
             }

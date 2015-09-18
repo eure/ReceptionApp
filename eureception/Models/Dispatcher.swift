@@ -60,7 +60,7 @@ enum Dispatcher {
     }
     
     private static let APIKey = "O4mug2zIiuNcfd0WKMYN0Nz4EnrPa5"
-    private static let baseURL = "https://reception.eure.jp/api/v1"
+    private static let baseURL = ""
 
     private static func dispatch(url url: String, method: Alamofire.Method = .POST, parameters: [String: AnyObject]?, response: (result: Result<JSON>) -> Void) {
         

@@ -20,36 +20,39 @@ class OtherPurposeSelectViewController: BaseTransactionViewController {
         
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.eureColor
+        self.selectView.backgroundColor = UIColor.eureColor
+        
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
-        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.textColor = UIColor.whiteColor()
         self.messageLabel.text = "詳細なご用件をお選びください"
         
         
         self.deliveryButton.titleLabel?.attributedText = NSAttributedString(string: "DELIVERY", attributes: [
             NSKernAttributeName : NSNumber(integer: 6),
             NSFontAttributeName : UIFont.eureBoldFont(size: 35),
-            NSForegroundColorAttributeName : UIColor.eureColor,
+            NSForegroundColorAttributeName : UIColor.whiteColor(),
             ]
         )
         
         self.deliveryButton.subtitleLabel?.attributedText = NSAttributedString(string: "納品", attributes: [
             NSKernAttributeName : NSNumber(integer: 2),
             NSFontAttributeName : UIFont.eureBoldFont(size: 17),
-            NSForegroundColorAttributeName : UIColor.eureColor,
+            NSForegroundColorAttributeName : UIColor.whiteColor(),
             ]
         )
         
         self.otherButton.titleLabel?.attributedText = NSAttributedString(string: "OTHER", attributes: [
             NSKernAttributeName : NSNumber(integer: 6),
             NSFontAttributeName : UIFont.eureBoldFont(size: 35),
-            NSForegroundColorAttributeName : UIColor.eureColor,
+            NSForegroundColorAttributeName : UIColor.whiteColor(),
             ]
         )
         
         self.otherButton.subtitleLabel?.attributedText = NSAttributedString(string: "その他", attributes: [
             NSKernAttributeName : NSNumber(integer: 2),
             NSFontAttributeName : UIFont.eureBoldFont(size: 17),
-            NSForegroundColorAttributeName : UIColor.eureColor,
+            NSForegroundColorAttributeName : UIColor.whiteColor(),
             ]
         )
     }

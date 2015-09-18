@@ -28,16 +28,20 @@ class PurposeButton: UIControl {
         
         super.awakeFromNib()
         
-        self.iconImageView?.tintColor = UIColor.eureColor
-        self.iconImageView?.tintColor = UIColor.eureColor
-        self.shape.fillColor = UIColor.whiteColor().CGColor
-        self.shape.strokeColor = UIColor.eureLightGrayColor.CGColor
+        self.backgroundColor = UIColor.eureColor
+        self.tintColor = UIColor.whiteColor()
+        self.iconImageView?.tintColor = UIColor.whiteColor()
+        self.iconImageView?.tintColor = UIColor.whiteColor()
     }
     
     override func layoutSublayersOfLayer(layer: CALayer) {
         
         super.layoutSublayersOfLayer(layer)
-        self.shape.path = UIBezierPath(roundedRect: CGRectInset(self.bounds, 1, 1), cornerRadius: 8).CGPath
+        let width = (1.0 / UIScreen.mainScreen().scale) * 5.0
+        let path = UIBezierPath(roundedRect: CGRectInset(self.bounds, width / 2, width / 2), cornerRadius: 8)
+        self.shape.path = path.CGPath
+        self.shape.fillColor = UIColor.clearColor().CGColor
+        self.shape.strokeColor = UIColor.eureLightEureColor.CGColor
     }
     
     override var enabled: Bool {

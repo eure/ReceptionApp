@@ -14,8 +14,12 @@ class ConfirmOtherViewController: BaseConfirmViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.eureColor
+        self.companyNameView.backgroundColor = UIColor.eureColor
+        self.purposeView.backgroundColor = UIColor.eureColor
+        
         self.icons.forEach { $0.tintColor = UIColor.eureLightGrayTextColor }
-        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.textColor = UIColor.whiteColor()
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.text = "以下、内容をご確認ください"
         

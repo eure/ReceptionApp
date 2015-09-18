@@ -16,12 +16,18 @@ class ContactToViewController: BaseTransactionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.iconImageView.tintColor = UIColor.eureColor
+        self.view.backgroundColor = UIColor.eureColor
+        self.inputFieldView.backgroundColor = UIColor.eureColor
+        self.iconImageView.tintColor = UIColor.whiteColor()
+        
+        self.tableViewContainerView.backgroundColor = UIColor.eureColor
         self.tableView.rowHeight = 116
+        self.tableView.backgroundColor = UIColor.eureColor
+        self.tableView.separatorColor = UIColor.eureLightEureColor
         self.tableView.tableFooterView = UIView()
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
         
-        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.textColor = UIColor.whiteColor()
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.text = "弊社担当者をご記入ください"
         
@@ -31,7 +37,7 @@ class ContactToViewController: BaseTransactionViewController {
             size: 55
         )
         
-        self.textField.tintColor = UIColor.eureColor
+        self.textField.tintColor = UIColor.whiteColor()
         
         // Do any additional setup after loading the view.
         
@@ -84,8 +90,8 @@ class ContactToViewController: BaseTransactionViewController {
         
         self.tableViewMask.colors = [
             UIColor.clearColor().CGColor,
-            UIColor.whiteColor().CGColor,
-            UIColor.whiteColor().CGColor,
+            UIColor.eureColor.CGColor,
+            UIColor.eureColor.CGColor,
             UIColor.clearColor().CGColor,
         ]
         
@@ -161,6 +167,7 @@ extension ContactToViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithClass(ContactToSuggestCell.self, forIndexPath: indexPath)
         cell.user = self.results[indexPath.row]
+        
         return cell
     }
     

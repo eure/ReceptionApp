@@ -13,8 +13,8 @@ class BaseTransactionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.logoImageView.tintColor = UIColor.eureColor
-        self.backButton.tintColor = UIColor.eureColor
+        self.logoImageView.tintColor = UIColor.whiteColor()
+        self.backButton.tintColor = UIColor.whiteColor()
     }
     
     @IBOutlet weak var logoImageView: UIImageView!

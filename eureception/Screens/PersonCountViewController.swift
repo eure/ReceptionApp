@@ -15,14 +15,18 @@ class PersonCountViewController: BaseTransactionViewController, InputFieldTransi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.messageLabel.textColor = UIColor.eureColor
+        
+        self.view.backgroundColor = UIColor.eureColor
+        self.inputFieldView.backgroundColor = UIColor.eureColor
+        
+        self.messageLabel.textColor = UIColor.whiteColor()
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.text = "ご訪問者様数を設定してください"
 
         // Do any additional setup after loading the view.
-        self.minusButton.tintColor = UIColor.eureColor
-        self.plusButton.tintColor = UIColor.eureColor
-        self.iconImageView.tintColor = UIColor.eureColor
+        self.minusButton.tintColor = UIColor.whiteColor()
+        self.plusButton.tintColor = UIColor.whiteColor()
+        self.iconImageView.tintColor = UIColor.whiteColor()
         
         self.count = self.transaction?.visitor?.numberOfPersons ?? 1
     }

@@ -18,6 +18,12 @@ class ConfirmAppointmentViewController: BaseConfirmViewController {
         
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.eureColor
+        self.contactToView.backgroundColor = UIColor.eureColor
+        self.nameView.backgroundColor = UIColor.eureColor
+        self.companyNameView.backgroundColor = UIColor.eureColor
+        self.countview.backgroundColor = UIColor.eureColor
+        
         self.icons.forEach { $0.tintColor = UIColor.eureLightGrayTextColor }
         
         self.contactToLabel.attributedText = NSAttributedString.eureAttributedString(self.transaction?.user.nameJa ?? "", color: UIColor.eureBlackTextColor, size: 32)
@@ -33,7 +39,7 @@ class ConfirmAppointmentViewController: BaseConfirmViewController {
         
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.text = "以下、内容をご確認ください"
-        self.messageLabel.textColor = UIColor.eureColor
+        self.messageLabel.textColor = UIColor.whiteColor()
         
         self.labels.forEach { label in
             

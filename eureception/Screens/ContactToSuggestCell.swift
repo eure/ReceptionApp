@@ -13,14 +13,16 @@ class ContactToSuggestCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.backgroundColor = UIColor.eureColor
         self.iconImageView.tintColor = UIColor.eureLightGrayTextColor
         
         self.nameJaLabel.font = UIFont.eureFont(size: 55)
-        self.nameJaLabel.textColor = UIColor.eureColor
-        self.nameEnLabel.textColor = UIColor.eureColor
+        self.nameJaLabel.textColor = UIColor.whiteColor()
+        self.nameEnLabel.textColor = UIColor.whiteColor()
                         
         let selectedView = UIView(frame: self.bounds)
-        selectedView.backgroundColor = UIColor.eureLightGrayColor
+        selectedView.backgroundColor = UIColor.eureLightEureColor
         self.selectedBackgroundView = selectedView
         self.layer.cornerRadius = 20
     }
@@ -28,7 +30,7 @@ class ContactToSuggestCell: UITableViewCell {
     var user: User? {
         didSet {
             self.nameJaLabel.text = self.user?.nameJa
-            self.nameEnLabel.attributedText = NSAttributedString.eureAttributedString(self.user?.nameEn ?? "", color: UIColor.eureColor, size: 16 )
+            self.nameEnLabel.attributedText = NSAttributedString.eureAttributedString(self.user?.nameEn ?? "", color: UIColor.whiteColor(), size: 16 )
         }
     }
     

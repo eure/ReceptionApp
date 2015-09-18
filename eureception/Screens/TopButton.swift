@@ -13,6 +13,9 @@ class TopButton: UIControl {
     override func awakeFromNib() {
         
         super.awakeFromNib()
+        
+        self.backgroundColor = UIColor.eureColor
+        self.tintColor = UIColor.whiteColor()
         self.layer.addSublayer(self.shape)
         self.clipsToBounds = true
     }
@@ -25,7 +28,7 @@ class TopButton: UIControl {
         self.shape.path = path.CGPath
         self.shape.fillColor = UIColor.clearColor().CGColor
         self.shape.lineWidth = width
-        self.shape.strokeColor = UIColor.eureLightGrayColor.CGColor
+        self.shape.strokeColor = UIColor.eureLightEureColor.CGColor
     }
     
     var title: String? {

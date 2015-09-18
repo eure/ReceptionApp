@@ -18,7 +18,10 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.messageLabel.textColor = UIColor.eureColor
+        self.view.backgroundColor = UIColor.eureColor
+        self.inputFieldView.backgroundColor = UIColor.eureColor
+        
+        self.messageLabel.textColor = UIColor.whiteColor()
         self.messageLabel.font = UIFont.eureBoldFont(size: 18)
         self.messageLabel.text = "お客様のお名前をご記入ください"
         
@@ -28,12 +31,12 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
             size: 55
         )
         self.textField.textColor = UIColor.eureBlackTextColor
-        self.textField.tintColor = UIColor.eureColor
+        self.textField.tintColor = UIColor.whiteColor()
         self.textField.text = self.transaction?.visitor?.name
         
         JEDump(self.transaction)
         
-        self.iconImageView.tintColor = UIColor.eureColor
+        self.iconImageView.tintColor = UIColor.whiteColor()
         
         self.nextButton.enabled = false
                 

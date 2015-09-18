@@ -18,14 +18,15 @@ class NextButton: UIControl {
         
         self.layer.insertSublayer(self.backgroundLayer, atIndex: 0)
         self.backgroundLayer.lineWidth = 2
+        self.backgroundColor = UIColor.eureColor
     }
     
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        self.backgroundLayer.fillColor = UIColor.whiteColor().CGColor
+        self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
         self.backgroundLayer.strokeColor = UIColor.eureLightGrayTextColor.CGColor
-        self.nextImageView?.tintColor = UIColor.eureColor
+        self.nextImageView?.tintColor = UIColor.whiteColor()
     }
     
     override func layoutSublayersOfLayer(layer: CALayer) {
@@ -57,13 +58,13 @@ class NextButton: UIControl {
             UIView.animateWithDuration(0.2, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
                 
                 if newValue {
-                    self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
-                    self.backgroundLayer.strokeColor = UIColor.eureColor.CGColor
-                    self.nextImageView?.tintColor = UIColor.whiteColor()
-                } else {
                     self.backgroundLayer.fillColor = UIColor.whiteColor().CGColor
-                    self.backgroundLayer.strokeColor = UIColor.eureLightGrayTextColor.CGColor
+                    self.backgroundLayer.strokeColor = UIColor.whiteColor().CGColor
                     self.nextImageView?.tintColor = UIColor.eureColor
+                } else {
+                    self.backgroundLayer.fillColor = UIColor.eureColor.CGColor
+                    self.backgroundLayer.strokeColor = UIColor.eureLightGrayTextColor.CGColor
+                    self.nextImageView?.tintColor = UIColor.whiteColor()
                 }
                 }) { (finish) -> Void in
             }

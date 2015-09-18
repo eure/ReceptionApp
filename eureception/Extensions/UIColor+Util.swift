@@ -20,6 +20,7 @@ extension UIColor {
         static let eureBlackTextColor = UIColor(hexString: "323232")!
         static let eureLightGrayTextColor = UIColor(hexString: "#E6E6E6")!
         static let eureLightGrayColor = UIColor(hexString: "f5f5f5")!
+        static let eureLightEureColor = UIColor(hexString: "#dfe1a4")!
     }
     
     class var eureColor: UIColor {
@@ -55,6 +56,11 @@ extension UIColor {
     class var eureBlackTextColor: UIColor {
         
         return Cache.eureBlackTextColor
+    }
+    
+    class var eureLightEureColor: UIColor {
+        
+        return Cache.eureLightEureColor
     }
 
 }
