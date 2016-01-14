@@ -1,26 +1,47 @@
 //
-//  CancelDisposable.swift
-//  RxSwift
+//  BooleanDisposable.swift
+//  Rx
 //
-//  Created by Krunoslav Zaher on 7/25/15.
-//  Copyright (c) 2015 Krunoslav Zaher. All rights reserved.
+//  Created by Junior B. on 10/29/15.
+//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
 import Foundation
 
-public class BooleanDisposable : Cancelable {
-    private var _disposed: Bool = false
+/**
+Represents a disposable resource that can be checked for disposal status.
+*/
+public class BooleanDisposable : Disposable, Cancelable {
+ 
+    internal static let BooleanDisposableTrue = BooleanDisposable(disposed: true)
+    private var _disposed = false
+    
+    /**
+        Initializes a new instance of the `BooleanDisposable` class
+     */
+    public init() {
+    }
+    
+    /**
+        Initializes a new instance of the `BooleanDisposable` class with given value
+     */
+    public init(disposed: Bool) {
+        self._disposed = disposed
+    }
+    
+    /**
+        - returns: Was resource disposed.
+     */
     public var disposed: Bool {
         get {
             return _disposed
         }
     }
     
-    public init() {
-        
-    }
-    
-    public func dispose()  {
+    /**
+        Sets the status to disposed, which can be observer through the `disposed` property.
+     */
+    public func dispose() {
         _disposed = true
     }
 }

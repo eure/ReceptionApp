@@ -1,11 +1,15 @@
 # GCDKit
-[![Version](https://img.shields.io/cocoapods/v/CoreStore.svg?style=flat)](http://cocoadocs.org/docsets/GCDKit)
-[![Platform](https://img.shields.io/cocoapods/p/CoreStore.svg?style=flat)](http://cocoadocs.org/docsets/GCDKit)
-[![License](https://img.shields.io/cocoapods/l/CoreStore.svg?style=flat)](https://raw.githubusercontent.com/JohnEstropia/GCDKit/master/LICENSE)
+[![Build Status](https://travis-ci.org/JohnEstropia/GCDKit.svg)](https://travis-ci.org/JohnEstropia/GCDKit)
+[![Version](https://img.shields.io/cocoapods/v/GCDKit.svg?style=flat)](http://cocoadocs.org/docsets/GCDKit)
+[![Platform](https://img.shields.io/cocoapods/p/GCDKit.svg?style=flat)](http://cocoadocs.org/docsets/GCDKit)
+[![License](https://img.shields.io/cocoapods/l/GCDKit.svg?style=flat)](https://raw.githubusercontent.com/JohnEstropia/GCDKit/master/LICENSE)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
 GCDKit is Grand Central Dispatch simplified with Swift.
+
+- for Swift 1.2: Use version [1.0.1](https://github.com/JohnEstropia/GCDKit/releases/tag/1.0.1)
+- for Swift 2.1: Use the master branch
 
 ---
 

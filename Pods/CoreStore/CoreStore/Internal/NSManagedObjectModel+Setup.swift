@@ -65,10 +65,13 @@ internal extension NSManagedObjectModel {
         }
         else if let resolvedVersion = modelVersions.first ?? modelVersionHints.first {
             
-            CoreStore.log(
-                .Warning,
-                message: "The MigrationChain leaf versions do not include any of the model file's embedded versions. Resolving to version \"\(resolvedVersion)\"."
-            )
+            if !modelVersionHints.isEmpty {
+                
+                CoreStore.log(
+                    .Warning,
+                    message: "The MigrationChain leaf versions do not include any of the model file's embedded versions. Resolving to version \"\(resolvedVersion)\"."
+                )
+            }
             currentModelVersion = resolvedVersion
         }
         else {
@@ -154,7 +157,7 @@ internal extension NSManagedObjectModel {
     
         return self.entityNameMapping.reduce([:]) { (var mapping, pair) in
             
-            mapping[pair.0] = (NSClassFromString(pair.1)! as! NSManagedObject.Type)
+            mapping[pair.1] = (NSClassFromString(pair.0)! as! NSManagedObject.Type)
             return mapping
         }
     }

@@ -3,44 +3,67 @@
 //  Rx
 //
 //  Created by Krunoslav Zaher on 3/28/15.
-//  Copyright (c) 2015 Krunoslav Zaher. All rights reserved.
+//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
 import Foundation
 
-// Variables can be useful when interacting with imperative 
-public class Variable<Element> : ObservableType {
+/**
+Variable is a wrapper for `BehaviorSubject`.
+
+Unlike `BehaviorSubject` it can't terminate with error, and when variable is deallocated
+ it will complete it's observable sequence (`asObservable`).
+*/
+public class Variable<Element> {
+
     public typealias E = Element
     
-    let subject: BehaviorSubject<Element>
+    private let _subject: BehaviorSubject<Element>
     
-    public private(set) var value: E
+    private var _lock = SpinLock()
+ 
+    // state
+    private var _value: E
     
-    private var lock = SpinLock()
+    /**
+    Gets or sets current value of variable.
     
-    public init(_ value: Element) {
-        self.value = value
-        self.subject = BehaviorSubject(value: value)
-        self.subject.on(.Next(value))
-    }
+    If case new value is set, all observers are notified of that change.
     
-    /// Subscribes `observer` to receive events from this observable
-    public func subscribe<O: ObserverType where O.E == E>(observer: O) -> Disposable {
-        return self.subject.subscribe(observer)
-    }
-    
-    public func asObservable() -> Observable<E> {
-        return self.subject
-    }
-    
-    public func sendNext(value: Element) {
-        lock.performLocked {
-            self.value = value
+    Even is case equal value is set, observers will still be notified.
+    */
+    public var value: E {
+        get {
+            _lock.lock(); defer { _lock.unlock() }
+            return _value
         }
-        self.subject.on(.Next(value))
+        set(newValue) {
+            _lock.lock()
+            _value = newValue
+            _lock.unlock()
+
+            _subject.on(.Next(newValue))
+        }
     }
     
+    /**
+    Initializes variable with initial value.
+    
+    - parameter value: Initial variable value.
+    */
+    public init(_ value: Element) {
+        _value = value
+        _subject = BehaviorSubject(value: value)
+    }
+    
+    /**
+    - returns: Canonical interface for push style sequence
+    */
+    public func asObservable() -> Observable<E> {
+        return _subject
+    }
+
     deinit {
-        self.subject.on(.Completed)
+        _subject.on(.Completed)
     }
 }

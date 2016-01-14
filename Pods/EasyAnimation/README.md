@@ -1,6 +1,6 @@
 ![](etc/EA.png)
 
-#### ver 0.7.0
+#### ver 1.0.1
 
 _The library doesn't use any private APIs - apps using it should be fine for release on the App Store._
 
@@ -29,6 +29,10 @@ Intro
 `UIView.animateWithDuration:animations:` is really easy to use and you're so familiar with its syntax that you often want it to do just a bit more for you automatically. But it doesn't and you need to import *Bloated.framework* by *Beginner Ninja Coder* in order to make a bit more advanced animations than what `animateWithDuration:animations:` allows you to.
 
 **EasyAnimation** extends what UIKit offers in terms of animations and makes your life much easier because you can do much more without learning some perky new syntax.
+
+### Versions
+
+Easy Animation 1.0+ is written in _Swift 2.0_. If you are looking for a Swift 1.2 version check [Easy Animation 0.7](https://github.com/icanzilb/EasyAnimation/releases/tag/0.7.0).
 
 <a name="layers"></a>
 Easy Layer Animations
@@ -116,7 +120,9 @@ With **EasyAnimation** you just put your code as the `completion` parameter valu
 
 Spring Layer Animations
 ========
-One thing I really miss when using CoreAnimation and `CABasicAnimation` is that there's no easy way to create spring animations. Luckily a handy library called `RBBAnimation` provides an excellent implementation of spring animations for layers - I translated the code to Swift and included `RBBSpringAnimation` into `EasyAnimation`. 
+One thing I really missed since iOS9 when using CoreAnimation and `CABasicAnimation` was that there was no easy way to create spring animations. Luckily a handy library called `RBBAnimation` provides an excellent implementation of spring animations for layers - I translated the code to Swift and included `RBBSpringAnimation` into `EasyAnimation`. 
+
+Easy Animation takes care to use the new in iOS9 spring animation class `CASpringAnimation` when your app runs on iOS9 or higher and falls back to `RBBSpringAnimation` when your app runs on iOS8.
 
 Here's how the code to create a spring animation for the layer position, transform and corner radius looks like:
 
@@ -184,6 +190,8 @@ This will make the whole chain (e.g. the 4 animations) repeat continuosly.
 
 If you want to pause between any two animations in the chain - just use the `delay` parameter and it will all just work.
 
+**Note**: `animateAndChainWithDuration` does not create a serial queue to which you could add animations at any time. You schedule your animations once with one call like the example above and it runs on its own, you can't add or remove animations to and from the sequence.
+
 <a name="stop"></a>
 
 Cancel Chain Animations
@@ -220,11 +228,13 @@ The animation will not stop immediately but once it completes the current step o
 Installation
 ========
 
-* To install the library via Cocoapods (recommended) add to your project's **Podfile**:
+* __Cocoapods__: Add to your project's **Podfile**:
 
 `pod 'EasyAnimation'`
 
-* To install with the source code - clone this repo or download the source code as a zip file. Include all files within the `EasyAnimation` folder into your project.
+* __Carthage__: I'm being told the repo supports now Carthage integration.
+
+* __Source code__: To install with the source code - clone this repo or download the source code as a zip file. Include all files within the `EasyAnimation` folder into your project.
 
 <a href="credit"></a>
 
@@ -268,16 +278,14 @@ License
 To Do
 =========
 
-* polish spring animation to look exactly like the UIKit one
 * add `CALayer.animateWithDuration:animations:`.. for the people who want to use different methods for view and layer animations
 * `.Autoreverse` for chain animations (if possible)
 * add support for keyframe animation along the path via a custom property
-* cool demos...
-* iOS9 - use new animation syntax, integrate the built-in `CASpringAnimation` class
 
 
 Version History
 ========
 
+* 1.0 - Swift 2.0 and iOS9
 * 0.7 - round of bug fixes and a number of improvements
 * 0.6 - first beta version

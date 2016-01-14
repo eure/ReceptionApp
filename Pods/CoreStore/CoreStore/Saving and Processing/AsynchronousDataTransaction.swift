@@ -25,7 +25,9 @@
 
 import Foundation
 import CoreData
-import GCDKit
+#if USE_FRAMEWORKS
+    import GCDKit
+#endif
 
 
 // MARK: - AsynchronousDataTransaction
@@ -54,14 +56,15 @@ public final class AsynchronousDataTransaction: BaseDataTransaction {
         )
         
         self.isCommitted = true
-        let semaphore = GCDSemaphore(0)
+        let group = GCDGroup()
+        group.enter()
         self.context.saveAsynchronouslyWithCompletion { (result) -> Void in
             
             self.result = result
             completion(result: result)
-            semaphore.signal()
+            group.leave()
         }
-        semaphore.wait()
+        group.wait()
     }
     
     /**
@@ -170,7 +173,7 @@ public final class AsynchronousDataTransaction: BaseDataTransaction {
             "Attempted to delete an entities from an already committed \(typeName(self))."
         )
         
-        super.delete([object1, object2] + objects)
+        super.delete(([object1, object2] + objects).flatMap { $0 })
     }
     
     /**
@@ -178,7 +181,7 @@ public final class AsynchronousDataTransaction: BaseDataTransaction {
     
     - parameter objects: the `NSManagedObject`s type to be deleted
     */
-    public override func delete(objects: [NSManagedObject?]) {
+    public override func delete<S: SequenceType where S.Generator.Element: NSManagedObject>(objects: S) {
         
         CoreStore.assert(
             !self.isCommitted,
@@ -189,16 +192,21 @@ public final class AsynchronousDataTransaction: BaseDataTransaction {
     }
     
     /**
-    Rolls back the transaction by resetting the `NSManagedObjectContext`. After calling this method, all `NSManagedObjects` fetched within the transaction will become invalid. This method should not be used after the `commit()` method was already called once.
-    */
-    public override func rollback() {
+     Rolls back the transaction by resetting the `NSManagedObjectContext`. After calling this method, all `NSManagedObjects` fetched within the transaction will become invalid. This method should not be used after the `commit()` method was already called once.
+     */
+    @available(*, deprecated=1.3.4, message="Resetting the context is inherently unsafe. This method will be removed in the near future. Use `beginUnsafe()` to create transactions with `undo` support.")
+    public func rollback() {
         
         CoreStore.assert(
             !self.isCommitted,
             "Attempted to rollback an already committed \(typeName(self))."
         )
+        CoreStore.assert(
+            self.transactionQueue.isCurrentExecutionContext(),
+            "Attempted to rollback a \(typeName(self)) outside its designated queue."
+        )
         
-        super.rollback()
+        self.context.reset()
     }
     
     
@@ -208,7 +216,7 @@ public final class AsynchronousDataTransaction: BaseDataTransaction {
         
         self.closure = closure
         
-        super.init(mainContext: mainContext, queue: queue)
+        super.init(mainContext: mainContext, queue: queue, supportsUndo: false, bypassesQueueing: false)
     }
     
     internal func perform() {

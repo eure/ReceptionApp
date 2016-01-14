@@ -23,6 +23,7 @@
 //  SOFTWARE.
 //
 
+#import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
 FOUNDATION_EXPORT double CoreStoreVersionNumber;

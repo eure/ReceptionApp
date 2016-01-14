@@ -25,7 +25,9 @@
 
 import Foundation
 import CoreData
-import GCDKit
+#if USE_FRAMEWORKS
+    import GCDKit
+#endif
 
 
 // MARK: - DataStack
@@ -79,17 +81,9 @@ public extension DataStack {
     - returns: the `NSManagedObject` array for objects that exists in the `DataStack`
     */
     @warn_unused_result
-    public func fetchExisting<T: NSManagedObject>(objects: [T]) -> [T] {
+    public func fetchExisting<T: NSManagedObject, S: SequenceType where S.Generator.Element == T>(objects: S) -> [T] {
         
-        var existingObjects = [T]()
-        for object in objects {
-            
-            if let existingObject = (try? self.mainContext.existingObjectWithID(object.objectID)) as? T {
-                
-                existingObjects.append(existingObject)
-            }
-        }
-        return existingObjects
+        return objects.flatMap { (try? self.mainContext.existingObjectWithID($0.objectID)) as? T }
     }
     
     /**
@@ -99,17 +93,9 @@ public extension DataStack {
     - returns: the `NSManagedObject` array for objects that exists in the `DataStack`
     */
     @warn_unused_result
-    public func fetchExisting<T: NSManagedObject>(objectIDs: [NSManagedObjectID]) -> [T] {
+    public func fetchExisting<T: NSManagedObject, S: SequenceType where S.Generator.Element == NSManagedObjectID>(objectIDs: S) -> [T] {
         
-        var existingObjects = [T]()
-        for objectID in objectIDs {
-            
-            if let existingObject = (try? self.mainContext.existingObjectWithID(objectID)) as? T {
-                
-                existingObjects.append(existingObject)
-            }
-        }
-        return existingObjects
+        return objectIDs.flatMap { (try? self.mainContext.existingObjectWithID($0)) as? T }
     }
     
     /**

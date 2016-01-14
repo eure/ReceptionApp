@@ -25,7 +25,9 @@
 
 import Foundation
 import CoreData
-import GCDKit
+#if USE_FRAMEWORKS
+    import GCDKit
+#endif
 
 
 // MARK: - DataStack
@@ -146,7 +148,8 @@ public extension DataStack {
             
             let metadata = try NSPersistentStoreCoordinator.metadataForPersistentStoreOfType(
                 NSSQLiteStoreType,
-                URL: fileURL
+                URL: fileURL,
+                options: self.optionsForSQLiteStore()
             )
             
             return self.upgradeSQLiteStoreIfNeeded(
@@ -265,7 +268,8 @@ public extension DataStack {
             
             metadata = try NSPersistentStoreCoordinator.metadataForPersistentStoreOfType(
                 NSSQLiteStoreType,
-                URL: fileURL
+                URL: fileURL,
+                options: self.optionsForSQLiteStore()
             )
         }
         catch {
@@ -323,7 +327,8 @@ public extension DataStack {
             
             metadata = try NSPersistentStoreCoordinator.metadataForPersistentStoreOfType(
                 NSSQLiteStoreType,
-                URL: fileURL
+                URL: fileURL,
+                options: self.optionsForSQLiteStore()
             )
         }
         catch {

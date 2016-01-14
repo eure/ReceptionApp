@@ -3,8 +3,10 @@
 //  RxCocoa
 //
 //  Created by Krunoslav Zaher on 4/2/15.
-//  Copyright (c) 2015 Krunoslav Zaher. All rights reserved.
+//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
+
+#if os(iOS) || os(tvOS)
 
 import Foundation
 #if !RX_NO_MODULE
@@ -15,6 +17,14 @@ import UIKit
 // Items
 
 extension UITableView {
+    
+    /**
+    Binds sequences of elements to table view rows.
+    
+    - parameter source: Observable sequence of items.
+    - parameter cellFactory: Transform between sequence elements and view cells.
+    - returns: Disposable object that can be used to unbind.
+    */
     public func rx_itemsWithCellFactory<S: SequenceType, O: ObservableType where O.E == S>
         (source: O)
         (cellFactory: (UITableView, Int, S.Generator.Element) -> UITableViewCell)
@@ -24,8 +34,17 @@ extension UITableView {
         return self.rx_itemsWithDataSource(dataSource)(source: source)
     }
 
+    /**
+    Binds sequences of elements to table view rows.
+    
+    - parameter cellIdentifier: Identifier used to dequeue cells.
+    - parameter source: Observable sequence of items.
+    - parameter configureCell: Transform between sequence elements and view cells.
+    - parameter cellType: Type of table view cell.
+    - returns: Disposable object that can be used to unbind.
+    */
     public func rx_itemsWithCellIdentifier<S: SequenceType, Cell: UITableViewCell, O : ObservableType where O.E == S>
-        (cellIdentifier: String)
+        (cellIdentifier: String, cellType: Cell.Type = Cell.self)
         (source: O)
         (configureCell: (Int, S.Generator.Element, Cell) -> Void)
         -> Disposable {
@@ -36,9 +55,16 @@ extension UITableView {
             return cell
         }
         
-            return self.rx_itemsWithDataSource(dataSource)(source: source)
+        return self.rx_itemsWithDataSource(dataSource)(source: source)
     }
     
+    /**
+    Binds sequences of elements to table view rows using a custom reactive data used to perform the transformation.
+    
+    - parameter dataSource: Data source used to transform elements to view cells.
+    - parameter source: Observable sequence of items.
+    - returns: Disposable object that can be used to unbind.
+    */
     public func rx_itemsWithDataSource<DataSource: protocol<RxTableViewDataSourceType, UITableViewDataSource>, S: SequenceType, O: ObservableType where DataSource.Element == S, O.E == S>
         (dataSource: DataSource)
         (source: O)
@@ -54,37 +80,65 @@ extension UITableView {
 
 extension UITableView {
  
-    // factories
-
-    override func rx_createDelegateProxy() -> RxScrollViewDelegateProxy {
+    /**
+    Factory method that enables subclasses to implement their own `rx_delegate`.
+    
+    - returns: Instance of delegate proxy that wraps `delegate`.
+    */
+    public override func rx_createDelegateProxy() -> RxScrollViewDelegateProxy {
         return RxTableViewDelegateProxy(parentObject: self)
     }
+
+    /**
+    Factory method that enables subclasses to implement their own `rx_dataSource`.
     
-    // proxies
+    - returns: Instance of delegate proxy that wraps `dataSource`.
+    */
+    public func rx_createDataSourceProxy() -> RxTableViewDataSourceProxy {
+        return RxTableViewDataSourceProxy(parentObject: self)
+    }
     
+    /**
+    Reactive wrapper for `dataSource`.
+    
+    For more information take a look at `DelegateProxyType` protocol documentation.
+    */
     public var rx_dataSource: DelegateProxy {
-        return proxyForObject(self) as RxTableViewDataSourceProxy
+        return proxyForObject(RxTableViewDataSourceProxy.self, self)
     }
    
+    /**
+    Installs data source as forwarding delegate on `rx_dataSource`.
+    
+    It enables using normal delegate mechanism with reactive delegate mechanism.
+    
+    - parameter dataSource: Data source object.
+    - returns: Disposable object that can be used to unbind the data source.
+    */
     public func rx_setDataSource(dataSource: UITableViewDataSource)
         -> Disposable {
-        let proxy: RxTableViewDataSourceProxy = proxyForObject(self)
+        let proxy = proxyForObject(RxTableViewDataSourceProxy.self, self)
             
         return installDelegate(proxy, delegate: dataSource, retainDelegate: false, onProxyForObject: self)
     }
     
     // events
     
-    
+    /**
+    Reactive wrapper for `delegate` message `tableView:didSelectRowAtIndexPath:`.
+    */
     public var rx_itemSelected: ControlEvent<NSIndexPath> {
         let source = rx_delegate.observe("tableView:didSelectRowAtIndexPath:")
             .map { a in
                 return a[1] as! NSIndexPath
             }
 
-        return ControlEvent(source: source)
+        return ControlEvent(events: source)
     }
  
+    /**
+    Reactive wrapper for `delegate` message `tableView:commitEditingStyle:forRowAtIndexPath:`.
+    */
     public var rx_itemInserted: ControlEvent<NSIndexPath> {
         let source = rx_dataSource.observe("tableView:commitEditingStyle:forRowAtIndexPath:")
             .filter { a in
@@ -94,9 +148,12 @@ extension UITableView {
                 return (a[2] as! NSIndexPath)
         }
         
-        return ControlEvent(source: source)
+        return ControlEvent(events: source)
     }
     
+    /**
+    Reactive wrapper for `delegate` message `tableView:commitEditingStyle:forRowAtIndexPath:`.
+    */
     public var rx_itemDeleted: ControlEvent<NSIndexPath> {
         let source = rx_dataSource.observe("tableView:commitEditingStyle:forRowAtIndexPath:")
             .filter { a in
@@ -106,28 +163,88 @@ extension UITableView {
                 return (a[2] as! NSIndexPath)
             }
         
-        return ControlEvent(source: source)
+        return ControlEvent(events: source)
     }
     
+    /**
+    Reactive wrapper for `delegate` message `tableView:moveRowAtIndexPath:toIndexPath:`.
+    */
     public var rx_itemMoved: ControlEvent<ItemMovedEvent> {
         let source: Observable<ItemMovedEvent> = rx_dataSource.observe("tableView:moveRowAtIndexPath:toIndexPath:")
             .map { a in
                 return ((a[1] as! NSIndexPath), (a[2] as! NSIndexPath))
             }
         
-        return ControlEvent(source: source)
+        return ControlEvent(events: source)
     }
     
-    // typed events
-    // This method only works in case one of the `rx_subscribeItemsTo` methods was used.
-    public func rx_modelSelected<T>() -> ControlEvent<T> {
-        let source: Observable<T> = rx_itemSelected.map { ip in
-            let dataSource: RxTableViewReactiveArrayDataSource<T> = castOrFatalError(self.rx_dataSource.forwardToDelegate(), message: "This method only works in case one of the `rx_subscribeItemsTo` methods was used.")
+    /**
+    Reactive wrapper for `delegate` message `tableView:didSelectRowAtIndexPath:`.
+    
+    It can be only used when one of the `rx_itemsWith*` methods is used to bind observable sequence.
+    
+        tableView.rx_modelSelected(MyModel.self)
+            .map { ...
+
+    If custom data source is being bound, new `rx_modelSelected` wrapper needs to be written also.
+    
+        public func rx_myModelSelected<T>() -> ControlEvent<T> {
+            let source: Observable<T> = rx_itemSelected.map { indexPath in
+                let dataSource: MyDataSource = self.rx_dataSource.forwardToDelegate() as! MyDataSource
+    
+                return dataSource.modelAtIndex(indexPath.item)!
+            }
             
-            return dataSource.modelAtIndex(ip.item)!
+            return ControlEvent(source: source)
+        }
+    
+    */
+    public func rx_modelSelected<T>(modelType: T.Type) -> ControlEvent<T> {
+        let source: Observable<T> = rx_itemSelected.flatMap { [weak self] indexPath -> Observable<T> in
+            guard let view = self else {
+                return Observable.empty()
+            }
+
+            return Observable.just(try view.rx_modelAtIndexPath(indexPath))
         }
         
-        return ControlEvent(source: source)
+        return ControlEvent(events: source)
     }
-    
+
+
+    /**
+     Synchronous helper method for retrieving a model at indexPath through a reactive data source
+     */
+    public func rx_modelAtIndexPath<T>(indexPath: NSIndexPath) throws -> T {
+        let dataSource: RxTableViewReactiveArrayDataSource<T> = castOrFatalError(self.rx_dataSource.forwardToDelegate(), message: "This method only works in case one of the `rx_items*` methods was used.")
+        
+        guard let element = dataSource.modelAtIndex(indexPath.item) else {
+            throw RxCocoaError.ItemsNotYetBound(object: self)
+        }
+        
+        return element
+    }
 }
+
+#endif
+
+#if os(tvOS)
+    
+    extension UITableView {
+        
+        /**
+         Reactive wrapper for `delegate` message `tableView:didUpdateFocusInContext:withAnimationCoordinator:`.
+         */
+        public var rx_didUpdateFocusInContextWithAnimationCoordinator: ControlEvent<(context: UIFocusUpdateContext, animationCoordinator: UIFocusAnimationCoordinator)> {
+            
+            let source = rx_delegate.observe("tableView:didUpdateFocusInContext:withAnimationCoordinator:")
+                .map { a -> (context: UIFocusUpdateContext, animationCoordinator: UIFocusAnimationCoordinator) in
+                    let context = a[1] as! UIFocusUpdateContext
+                    let animationCoordinator = a[2] as! UIFocusAnimationCoordinator
+                    return (context: context, animationCoordinator: animationCoordinator)
+            }
+            
+            return ControlEvent(events: source)
+        }
+    }
+#endif

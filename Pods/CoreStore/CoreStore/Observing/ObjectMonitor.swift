@@ -25,7 +25,9 @@
 
 import Foundation
 import CoreData
-import GCDKit
+#if USE_FRAMEWORKS
+    import GCDKit
+#endif
 
 
 // MARK: - ObjectMonitor
@@ -40,6 +42,7 @@ The created `ObjectMonitor` instance needs to be held on (retained) for as long 
 
 Observers registered via `addObserver(_:)` are not retained. `ObjectMonitor` only keeps a `weak` reference to all observers, thus keeping itself free from retain-cycles.
 */
+@available(OSX, unavailable)
 public final class ObjectMonitor<T: NSManagedObject> {
     
     // MARK: Public
@@ -71,7 +74,7 @@ public final class ObjectMonitor<T: NSManagedObject> {
     
     - parameter observer: an `ObjectObserver` to send change notifications to
     */
-    public func addObserver<U: ObjectObserver where U.EntityType == T>(observer: U) {
+    public func addObserver<U: ObjectObserver where U.ObjectEntityType == T>(observer: U) {
         
         CoreStore.assert(
             NSThread.isMainThread(),
@@ -146,7 +149,7 @@ public final class ObjectMonitor<T: NSManagedObject> {
     
     - parameter observer: an `ObjectObserver` to unregister notifications to
     */
-    public func removeObserver<U: ObjectObserver where U.EntityType == T>(observer: U) {
+    public func removeObserver<U: ObjectObserver where U.ObjectEntityType == T>(observer: U) {
         
         CoreStore.assert(
             NSThread.isMainThread(),
@@ -164,23 +167,18 @@ public final class ObjectMonitor<T: NSManagedObject> {
     
     internal init(dataStack: DataStack, object: T) {
         
-        let context = dataStack.mainContext
-        
         let fetchRequest = NSFetchRequest()
         fetchRequest.entity = object.entity
-        
         fetchRequest.fetchLimit = 0
         fetchRequest.resultType = .ManagedObjectResultType
         fetchRequest.sortDescriptors = []
-        
-        let originalObjectID = object.objectID
-        Where("SELF", isEqualTo: originalObjectID).applyToFetchRequest(fetchRequest)
+        fetchRequest.includesPendingChanges = false
+        fetchRequest.shouldRefreshRefetchedObjects = true
         
         let fetchedResultsController = NSFetchedResultsController(
+            dataStack: dataStack,
             fetchRequest: fetchRequest,
-            managedObjectContext: context,
-            sectionNameKeyPath: nil,
-            cacheName: nil
+            fetchClauses: [Where("SELF", isEqualTo: object.objectID)]
         )
         
         let fetchedResultsControllerDelegate = FetchedResultsControllerDelegate()
@@ -194,6 +192,11 @@ public final class ObjectMonitor<T: NSManagedObject> {
         try! fetchedResultsController.performFetch()
         
         self.lastCommittedAttributes = (self.object?.committedValuesForKeys(nil) as? [String: NSObject]) ?? [:]
+    }
+    
+    deinit {
+        
+        self.fetchedResultsControllerDelegate.fetchedResultsController = nil
     }
     
     
@@ -254,21 +257,34 @@ public final class ObjectMonitor<T: NSManagedObject> {
 
 // MARK: - ObjectMonitor: Equatable
 
+@available(OSX, unavailable)
 public func ==<T: NSManagedObject>(lhs: ObjectMonitor<T>, rhs: ObjectMonitor<T>) -> Bool {
     
     return lhs === rhs
 }
 
+@available(OSX, unavailable)
 extension ObjectMonitor: Equatable { }
 
 
 // MARK: - ObjectMonitor: FetchedResultsControllerHandler
 
+@available(OSX, unavailable)
 extension ObjectMonitor: FetchedResultsControllerHandler {
     
     // MARK: FetchedResultsControllerHandler
     
-    private func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+    internal func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            ObjectMonitorWillChangeObjectNotification,
+            object: self
+        )
+    }
+    
+    internal func controllerDidChangeContent(controller: NSFetchedResultsController) { }
+    
+    internal func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
         
         switch type {
             
@@ -279,7 +295,7 @@ extension ObjectMonitor: FetchedResultsControllerHandler {
                 userInfo: [UserInfoKeyObject: anObject]
             )
             
-        case .Update, .Move where indexPath == newIndexPath:
+        case .Update:
             NSNotificationCenter.defaultCenter().postNotificationName(
                 ObjectMonitorDidUpdateObjectNotification,
                 object: self,
@@ -291,58 +307,11 @@ extension ObjectMonitor: FetchedResultsControllerHandler {
         }
     }
     
-    private func controllerWillChangeContent(controller: NSFetchedResultsController) {
+    internal func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) { }
+    
+    internal func controller(controller: NSFetchedResultsController, sectionIndexTitleForSectionName sectionName: String?) -> String? {
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            ObjectMonitorWillChangeObjectNotification,
-            object: self
-        )
-    }
-}
-
-
-// MARK: - FetchedResultsControllerHandler
-
-private protocol FetchedResultsControllerHandler: class {
-    
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?)
-    
-    func controllerWillChangeContent(controller: NSFetchedResultsController)
-}
-
-
-// MARK: - FetchedResultsControllerDelegate
-
-private final class FetchedResultsControllerDelegate: NSObject, NSFetchedResultsControllerDelegate {
-    
-    // MARK: NSFetchedResultsControllerDelegate
-    
-    @objc dynamic func controllerWillChangeContent(controller: NSFetchedResultsController) {
-        
-        self.handler?.controllerWillChangeContent(controller)
-    }
-    
-    @objc dynamic func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-        
-        self.handler?.controller(controller, didChangeObject: anObject, atIndexPath: indexPath, forChangeType: type, newIndexPath: newIndexPath)
-    }
-    
-    
-    // MARK: Private
-    
-    weak var handler: FetchedResultsControllerHandler?
-    weak var fetchedResultsController: NSFetchedResultsController? {
-        
-        didSet {
-            
-            oldValue?.delegate = nil
-            self.fetchedResultsController?.delegate = self
-        }
-    }
-    
-    deinit {
-        
-        self.fetchedResultsController?.delegate = nil
+        return sectionName
     }
 }
 

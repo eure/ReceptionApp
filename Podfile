@@ -3,13 +3,12 @@
 use_frameworks!
 
 target 'eureception' do
-pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'swift-2.0'
-pod 'EasyAnimation', :git=>'https://github.com/icanzilb/EasyAnimation.git', :branch=>'swift2'
-pod 'CoreStore', :git=>'https://github.com/JohnEstropia/CoreStore.git', :branch=>'develop'
-pod 'SwiftyJSON', :git=>'https://github.com/SwiftyJSON/SwiftyJSON.git', :branch=>'xcode7'
-pod 'Spring', :git=>'https://github.com/MengTo/Spring.git', :branch=>'swift2'
-pod 'RxSwift', :git=>'https://github.com/ReactiveX/RxSwift.git', :branch=>'rxswift-2.0'
-pod 'RxCocoa', :git=>'https://github.com/ReactiveX/RxSwift.git', :branch=>'rxswift-2.0'
+pod 'Alamofire'
+pod 'EasyAnimation'
+pod 'CoreStore'
+pod 'SwiftyJSON'
+pod 'RxSwift', '~> 2.0.0'
+pod 'RxCocoa', '~> 2.0.0'
 end
 
 target 'eureceptionTests' do

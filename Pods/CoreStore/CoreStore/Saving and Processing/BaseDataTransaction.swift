@@ -25,7 +25,9 @@
 
 import Foundation
 import CoreData
-import GCDKit
+#if USE_FRAMEWORKS
+    import GCDKit
+#endif
 
 
 // MARK: - BaseDataTransaction
@@ -167,7 +169,7 @@ public /*abstract*/ class BaseDataTransaction {
     */
     public func delete(object1: NSManagedObject?, _ object2: NSManagedObject?, _ objects: NSManagedObject?...) {
         
-        self.delete([object1, object2] + objects)
+        self.delete(([object1, object2] + objects).flatMap { $0 })
     }
     
     /**
@@ -175,7 +177,7 @@ public /*abstract*/ class BaseDataTransaction {
     
     - parameter objects: the `NSManagedObject`s to be deleted
     */
-    public func delete(objects: [NSManagedObject?]) {
+    public func delete<S: SequenceType where S.Generator.Element: NSManagedObject>(objects: S) {
         
         CoreStore.assert(
             self.bypassesQueueing || self.transactionQueue.isCurrentExecutionContext(),
@@ -183,25 +185,7 @@ public /*abstract*/ class BaseDataTransaction {
         )
         
         let context = self.context
-        for case let object? in objects {
-            
-            context.fetchExisting(object)?.deleteFromContext()
-        }
-    }
-    
-    // MARK: Saving changes
-    
-    /**
-    Rolls back the transaction by resetting the `NSManagedObjectContext`. After calling this method, all `NSManagedObjects` fetched within the transaction will become invalid.
-    */
-    public func rollback() {
-        
-        CoreStore.assert(
-            self.bypassesQueueing || self.transactionQueue.isCurrentExecutionContext(),
-            "Attempted to rollback a \(typeName(self)) outside its designated queue."
-        )
-        
-        self.context.reset()
+        objects.forEach { context.fetchExisting($0)?.deleteFromContext() }
     }
     
     
@@ -210,26 +194,33 @@ public /*abstract*/ class BaseDataTransaction {
     internal let context: NSManagedObjectContext
     internal let transactionQueue: GCDQueue
     internal let childTransactionQueue: GCDQueue = .createSerial("com.corestore.datastack.childtransactionqueue")
+    internal let supportsUndo: Bool
+    internal let bypassesQueueing: Bool
+    
     
     internal var isCommitted = false
     internal var result: SaveResult?
     
-    internal init(mainContext: NSManagedObjectContext, queue: GCDQueue) {
-        
-        self.transactionQueue = queue
+    internal init(mainContext: NSManagedObjectContext, queue: GCDQueue, supportsUndo: Bool, bypassesQueueing: Bool) {
         
         let context = mainContext.temporaryContextInTransactionWithConcurrencyType(
             queue == .Main
                 ? .MainQueueConcurrencyType
                 : .PrivateQueueConcurrencyType
         )
+        self.transactionQueue = queue
         self.context = context
+        self.supportsUndo = supportsUndo
+        self.bypassesQueueing = bypassesQueueing
         
         context.parentTransaction = self
-    }
-    
-    internal var bypassesQueueing: Bool {
-        
-        return false
+        if !supportsUndo {
+            
+            context.undoManager = nil
+        }
+        else if context.undoManager == nil {
+            
+            context.undoManager = NSUndoManager()
+        }
     }
 }

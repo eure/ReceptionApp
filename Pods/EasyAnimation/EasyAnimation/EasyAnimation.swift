@@ -128,22 +128,22 @@ extension UIView {
     private static func replaceAnimationMethods() {
         //replace actionForLayer...
         method_exchangeImplementations(
-            class_getInstanceMethod(self, "actionForLayer:forKey:"),
-            class_getInstanceMethod(self, "EA_actionForLayer:forKey:"))
+            class_getInstanceMethod(self, Selector("actionForLayer:forKey:")),
+            class_getInstanceMethod(self, Selector("EA_actionForLayer:forKey:")))
         
         //replace animateWithDuration...
         method_exchangeImplementations(
-            class_getClassMethod(self, "animateWithDuration:animations:"),
-            class_getClassMethod(self, "EA_animateWithDuration:animations:"))
+            class_getClassMethod(self, Selector("animateWithDuration:animations:")),
+            class_getClassMethod(self, Selector("EA_animateWithDuration:animations:")))
         method_exchangeImplementations(
-            class_getClassMethod(self, "animateWithDuration:animations:completion:"),
-            class_getClassMethod(self, "EA_animateWithDuration:animations:completion:"))
+            class_getClassMethod(self, Selector("animateWithDuration:animations:completion:")),
+            class_getClassMethod(self, Selector("EA_animateWithDuration:animations:completion:")))
         method_exchangeImplementations(
-            class_getClassMethod(self, "animateWithDuration:delay:options:animations:completion:"),
-            class_getClassMethod(self, "EA_animateWithDuration:delay:options:animations:completion:"))
+            class_getClassMethod(self, Selector("animateWithDuration:delay:options:animations:completion:")),
+            class_getClassMethod(self, Selector("EA_animateWithDuration:delay:options:animations:completion:")))
         method_exchangeImplementations(
-            class_getClassMethod(self, "animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:"),
-            class_getClassMethod(self, "EA_animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:"))
+            class_getClassMethod(self, Selector("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:")),
+            class_getClassMethod(self, Selector("EA_animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:")))
         
     }
     
@@ -443,8 +443,8 @@ extension CALayer {
     private static func replaceAnimationMethods() {
         //replace actionForKey
         method_exchangeImplementations(
-            class_getInstanceMethod(self, "actionForKey:"),
-            class_getInstanceMethod(self, "EA_actionForKey:"))
+            class_getInstanceMethod(self, Selector("actionForKey:")),
+            class_getInstanceMethod(self, Selector("EA_actionForKey:")))
     }
     
     public func EA_actionForKey(key: String!) -> CAAction! {

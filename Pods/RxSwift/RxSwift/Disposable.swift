@@ -3,12 +3,17 @@
 //  Rx
 //
 //  Created by Krunoslav Zaher on 2/8/15.
-//  Copyright (c) 2015 Krunoslav Zaher. All rights reserved.
+//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
 import Foundation
 
-public protocol Disposable : class
-{
+/**
+Respresents disposable resource.
+*/
+public protocol Disposable {
+    /**
+    Dispose resource.
+    */
     func dispose()
 }

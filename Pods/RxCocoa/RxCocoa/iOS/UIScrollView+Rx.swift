@@ -3,8 +3,10 @@
 //  RxCocoa
 //
 //  Created by Krunoslav Zaher on 4/3/15.
-//  Copyright (c) 2015 Krunoslav Zaher. All rights reserved.
+//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
+
+#if os(iOS) || os(tvOS)
 
 import Foundation
 #if !RX_NO_MODULE
@@ -14,24 +16,31 @@ import UIKit
 
 extension UIScrollView {
     
-    // factory
+    /**
+    Factory method that enables subclasses to implement their own `rx_delegate`.
     
-    func rx_createDelegateProxy() -> RxScrollViewDelegateProxy {
+    - returns: Instance of delegate proxy that wraps `delegate`.
+    */
+    public func rx_createDelegateProxy() -> RxScrollViewDelegateProxy {
         return RxScrollViewDelegateProxy(parentObject: self)
     }
     
-    // proxy 
+    /**
+    Reactive wrapper for `delegate`.
     
+    For more information take a look at `DelegateProxyType` protocol documentation.
+    */
     public var rx_delegate: DelegateProxy {
-        return proxyForObject(self) as RxScrollViewDelegateProxy
+        return proxyForObject(RxScrollViewDelegateProxy.self, self)
     }
     
-    // properties
-    
+    /**
+    Reactive wrapper for `contentOffset`.
+    */
     public var rx_contentOffset: ControlProperty<CGPoint> {
-        let proxy = proxyForObject(self) as RxScrollViewDelegateProxy
+        let proxy = proxyForObject(RxScrollViewDelegateProxy.self, self)
         
-        return ControlProperty(source: proxy.contentOffsetSubject, observer: ObserverOf { [weak self] event in
+        return ControlProperty(values: proxy.contentOffsetSubject, valueSink: AnyObserver { [weak self] event in
             switch event {
             case .Next(let value):
                 self?.contentOffset = value
@@ -43,12 +52,19 @@ extension UIScrollView {
         })
     }
     
-    // delegate
-
-    // For more detailed explanations, take a look at `DelegateProxyType.swift`
+    /**
+    Installs delegate as forwarding delegate on `rx_delegate`.
+    
+    It enables using normal delegate mechanism with reactive delegate mechanism.
+    
+    - parameter delegate: Delegate object.
+    - returns: Disposable object that can be used to unbind the delegate.
+    */
     public func rx_setDelegate(delegate: UIScrollViewDelegate)
         -> Disposable {
-        let proxy: RxScrollViewDelegateProxy = proxyForObject(self)
+        let proxy = proxyForObject(RxScrollViewDelegateProxy.self, self)
         return installDelegate(proxy, delegate: delegate, retainDelegate: false, onProxyForObject: self)
     }
 }
+
+#endif

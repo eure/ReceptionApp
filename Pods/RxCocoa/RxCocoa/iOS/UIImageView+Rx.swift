@@ -3,8 +3,10 @@
 //  RxCocoa
 //
 //  Created by Krunoslav Zaher on 4/1/15.
-//  Copyright (c) 2015 Krunoslav Zaher. All rights reserved.
+//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
+
+#if os(iOS) || os(tvOS)
 
 import Foundation
 #if !RX_NO_MODULE
@@ -14,22 +16,32 @@ import UIKit
 
 extension UIImageView {
     
-    public var rx_image: ObserverOf<UIImage!> {
-        return self.rx_imageAnimated(false)
+    /**
+    Bindable sink for `image` property.
+    */
+    public var rx_image: AnyObserver<UIImage?> {
+        return self.rx_imageAnimated(nil)
     }
     
-    public func rx_imageAnimated(animated: Bool) -> ObserverOf<UIImage!> {
-        return ObserverOf { [weak self] event in
+    /**
+    Bindable sink for `image` property.
+    
+    - parameter transitionType: Optional transition type while setting the image (kCATransitionFade, kCATransitionMoveIn, ...)
+    */
+    public func rx_imageAnimated(transitionType: String?) -> AnyObserver<UIImage?> {
+        return AnyObserver { [weak self] event in
             MainScheduler.ensureExecutingOnScheduler()
             
             switch event {
             case .Next(let value):
-                if animated && value != nil {
-                    let transition = CATransition()
-                    transition.duration = 0.25
-                    transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-                    transition.type = kCATransitionFade
-                    self?.layer.addAnimation(transition, forKey: kCATransition)
+                if let transitionType = transitionType {
+                    if value != nil {
+                        let transition = CATransition()
+                        transition.duration = 0.25
+                        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+                        transition.type = transitionType
+                        self?.layer.addAnimation(transition, forKey: kCATransition)
+                    }
                 }
                 else {
                     self?.layer.removeAllAnimations()
@@ -45,3 +57,5 @@ extension UIImageView {
     }
     
 }
+
+#endif
