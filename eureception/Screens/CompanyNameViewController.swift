@@ -70,13 +70,12 @@ class CompanyNameViewController : BaseTransactionViewController, InputFieldTrans
         self.textView
             .rx_text
             .map { $0.characters.count }
-            .subscribe { [weak self] event in
-                guard let value = event.value else {
-                    return
-                }
-                self?.textViewPlaceHolder.hidden = value > 0
-                self?.nextButton.enabled = value > 0
+            .subscribeNext { [weak self] count in
+                
+                self?.textViewPlaceHolder.hidden = count > 0
+                self?.nextButton.enabled = count > 0
         }
+        .addDisposableTo(self.disposeBag)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -95,14 +94,15 @@ class CompanyNameViewController : BaseTransactionViewController, InputFieldTrans
     @IBOutlet dynamic weak var nextButton: NextButton!
     
     // MARK: Private
-    @IBOutlet private dynamic weak var iconImageView: UIImageView!
-    @IBOutlet private dynamic weak var messageLabel: UILabel!
-    @IBOutlet private dynamic weak var textView: UITextView!
-    @IBOutlet private dynamic weak var textViewContainerView: UIView!
-    @IBOutlet private dynamic weak var textViewPlaceHolder: UILabel!
+    @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var textViewContainerView: UIView!
+    @IBOutlet private weak var textViewPlaceHolder: UILabel!
     private let textViewMask = CAGradientLayer()
+    private let disposeBag = DisposeBag()
     
-    @IBAction private dynamic func handleNextButton(sender: AnyObject) {
+    @IBAction private func handleNextButton(sender: AnyObject) {
         
         let companyName = self.textView.text ?? ""
         

@@ -19,7 +19,3 @@ enum ModelResult<T> {
     case Success(T)
     case Failure(ModelErrorType)
 }
-
-class BaseModel {
-    
-}

@@ -16,3 +16,4 @@ class BaseViewController: UIViewController {
         return true
     }
 }
+

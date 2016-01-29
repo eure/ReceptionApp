@@ -10,24 +10,28 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-enum DispatcherErrorType: ErrorType {
-    case SomethingError
-}
-
-
-
 enum Dispatcher {
     
-    static func getUser(response: (result: Result<JSON>) -> Void) {
+    struct Error: ErrorType {
+        let message: String
+        let debugMessage: String
+        
+        init(message: String, debugMessage: String? = nil) {
+            self.message = message
+            self.debugMessage = debugMessage ?? message
+        }
+    }
+    
+    static func getUser(response: (result: Result<JSON, Error>) -> Void) {
         
         self.dispatch(url: baseURL + "/users", method: .GET, parameters: ["api_key": APIKey], response: response)
     }
     
-    static func sendVisitor(transaction transaction: AppointmentTransaction, response: (result: Result<JSON>) -> Void) {
+    static func sendVisitor(transaction transaction: AppointmentTransaction, response: (result: Result<JSON, Error>) -> Void) {
         
         guard let visitor = transaction.visitor else {
             
-            response(result: .Failure(nil, DispatcherErrorType.SomethingError))
+            response(result: .Failure(Error(message: "")))
             return
         }
         
@@ -45,7 +49,7 @@ enum Dispatcher {
             response: response)
     }
     
-    static func sendVisitor(transaction transaction: OtherTransaction, response: (result: Result<JSON>) -> Void) {
+    static func sendVisitor(transaction transaction: OtherTransaction, response: (result: Result<JSON, Error>) -> Void) {
         
         self.dispatch(
             url: baseURL + "/visitor",
@@ -62,36 +66,28 @@ enum Dispatcher {
     private static let APIKey = "O4mug2zIiuNcfd0WKMYN0Nz4EnrPa5"
     private static let baseURL = "https://reception.eure.jp/api/v1"
 
-    private static func dispatch(url url: String, method: Alamofire.Method = .POST, parameters: [String: AnyObject]?, response: (result: Result<JSON>) -> Void) {
+    private static func dispatch(url url: String, method: Alamofire.Method = .POST, parameters: [String: AnyObject]?, response: (result: Result<JSON, Error>) -> Void) {
+        
+        let responseSerializer = ResponseSerializer { (request, response, data, error) -> Result<JSON, Error> in
+            
+            if let jsonData = data {
+                let json = JSON(data: jsonData)
+                JEDump(json, "response")
+                return .Success(json)
+            }
+            return .Failure(Error(message: "Failed to dispatch"))
+        }
         
         Manager.sharedInstance.request(
             method,
             url,
             parameters: parameters,
             encoding: ParameterEncoding.URL,
-            headers: nil
-            )
-            .response(queue: nil, responseSerializer: ReceptionResponseSerializer()) { (_request, _response, _result) -> Void in
+            headers: nil)
+            .response(queue: nil, responseSerializer: responseSerializer) { _response in
                 
-                response(result: _result)
+                response(result: _response.result)
         }
-    }
-}
-
-enum ReceptionResponseErrorType: ErrorType {
-    case SomethingError
-}
-struct ReceptionResponseSerializer: ResponseSerializer {
-    
-    var serializeResponse: (NSURLRequest?, NSHTTPURLResponse?, NSData?) -> Result<JSON> {
-        
-        return { request, response, data in
-            if let jsonData = data {
-                let json = JSON(data: jsonData)
-                JEDump(json, "response")
-                return .Success(json)
-            }
-            return .Failure(data, ReceptionResponseErrorType.SomethingError)
-        }
+        .resume()
     }
 }

@@ -33,22 +33,19 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
         self.textField.textColor = UIColor.whiteColor()
         self.textField.tintColor = UIColor.whiteColor()
         self.textField.text = self.transaction?.visitor?.name
-        
-        JEDump(self.transaction)
-        
+                
         self.iconImageView.tintColor = UIColor.whiteColor()
         
         self.nextButton.enabled = false
                 
         self.textField
             .rx_text
-            .subscribe { [weak self] event in
+            .subscribeNext { [weak self] text in
                 
-                let result = event.value?.characters.count > 0
+                let result = text.characters.count > 0
                 self?.nextButton.enabled = result
-        }
-        
-
+            }
+            .addDisposableTo(self.disposeBag)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -64,6 +61,7 @@ class YourNameViewController: BaseTransactionViewController, InputFieldTransitio
     @IBOutlet private dynamic weak var textField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet private dynamic weak var iconImageView: UIImageView!
+    private let disposeBag = DisposeBag()
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         

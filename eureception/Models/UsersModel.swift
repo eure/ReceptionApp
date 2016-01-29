@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import CoreStore
 
-final class UsersModel: BaseModel {
+final class UsersModel {
     
     func getUsers(completion: ((result: ModelResult<[User]>) -> Void)) {
         
@@ -35,7 +35,7 @@ final class UsersModel: BaseModel {
                         completion(result: .Success([]))
                     }
                 }
-            case .Failure(let data, let errorType):
+            case .Failure(let errorType):
                 
                 completion(result: .Failure(.SomethingError))
             }

@@ -39,23 +39,19 @@ class ContactToViewController: BaseTransactionViewController {
         
         self.textField.tintColor = UIColor.whiteColor()
         
-        // Do any additional setup after loading the view.
-        
         self.textField
             .rx_text
-            .subscribe { [weak self] event in
+            .subscribeNext { [weak self] text in
                 
-                guard let value = event.value else {
-                    return
-                }
-                JEDump(self?.usersListMonitor.objectsInAllSections())
-                self?.results = self?.usersListMonitor.objectsInAllSections().filter { $0.compare(value) == true } ?? []
-        }
+                self?.results = self?.usersListMonitor.objectsInAllSections().filter { $0.compare(text) == true } ?? []
+            }
+            .addDisposableTo(self.disposeBag)
+        
         
         self.textField
             .rx_text
             .filter { $0.characters.count > 0 }
-            .subscribe { [weak self] event in
+            .subscribeNext { [weak self] _ in
                 
                 guard !(self?.textFieldTop.constant == 30) else {
                     return
@@ -68,12 +64,13 @@ class ContactToViewController: BaseTransactionViewController {
                     self?.view.layoutIfNeeded()
                     }, completion: { (finish) -> Void in
                 })
-        }
+            }
+            .addDisposableTo(self.disposeBag)
         
         self.textField
             .rx_text
             .filter { $0.characters.count == 0 }
-            .subscribe { [weak self] event in
+            .subscribeNext { [weak self] _ in
                 
                 guard !(self?.textFieldTop.constant == 100) else {
                     return
@@ -86,7 +83,8 @@ class ContactToViewController: BaseTransactionViewController {
                     self?.view.layoutIfNeeded()
                     }, completion: { (finish) -> Void in
                 })
-        }                     
+            }
+            .addDisposableTo(self.disposeBag)
         
         self.tableViewMask.colors = [
             UIColor.clearColor().CGColor,
@@ -140,6 +138,7 @@ class ContactToViewController: BaseTransactionViewController {
     @IBOutlet private dynamic weak var textField: UITextField!
     @IBOutlet private dynamic weak var messageLabel: UILabel!
     private let tableViewMask = CAGradientLayer()
+    private let disposeBag = DisposeBag()
     
     private var results: [User] = [] {
         didSet {

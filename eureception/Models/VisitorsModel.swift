@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-final class VisitorsModel: BaseModel {
+final class VisitorsModel {
     
     func sendVisitor(transaction transaction: AppointmentTransaction, completion: (result: ModelResult<JSON>) -> Void) {
        

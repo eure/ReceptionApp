@@ -58,13 +58,12 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
         self.textView
             .rx_text
             .map { $0.characters.count }
-            .subscribe { [weak self] event in
-                guard let value = event.value else {
-                    return
-                }
-                self?.textViewPlaceHolder.hidden = value > 0
-                self?.nextButton.enabled = value > 0
+            .subscribeNext { [weak self] count in
+                
+                self?.textViewPlaceHolder.hidden = count > 0
+                self?.nextButton.enabled = count > 0
         }
+        .addDisposableTo(self.disposeBag)
         
         self.textViewPlaceHolder.attributedText = NSAttributedString(string: "REASON FOR VISIT", attributes: [
             NSKernAttributeName : NSNumber(integer: 6),
@@ -93,6 +92,7 @@ class OtherPurposeViewController: BaseTransactionViewController, InputFieldTrans
     @IBOutlet private dynamic weak var textViewContainerView: UIView!
     @IBOutlet private dynamic weak var textView: UITextView!
     private let textViewMask = CAGradientLayer()
+    private let disposeBag = DisposeBag()
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         
