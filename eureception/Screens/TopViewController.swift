@@ -69,7 +69,7 @@ class TopViewController: BaseViewController , UIGestureRecognizerDelegate {
         
         super.viewWillAppear(animated)
         
-        Container.UsersModel.getUsers { (result) -> Void in
+        Container.UserService.getUsers { (result) -> Void in
             switch result {
             case .Success(let user):
                 break

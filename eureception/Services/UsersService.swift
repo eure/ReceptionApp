@@ -1,5 +1,5 @@
 //
-//  UsersModel.swift
+//  UserService.swift
 //  Reception
 //
 //  Created by Hiroshi Kimura on 8/27/15.
@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import CoreStore
 
-final class UsersModel {
+final class UserService {
     
     func getUsers(completion: ((result: ModelResult<[User]>) -> Void)) {
         
@@ -19,8 +19,8 @@ final class UsersModel {
             switch result {
             case .Success(let json):
                 
-                JEDump(json, "UsersModel.user")
-                JEDump(json["users"].arrayValue, "UsersModel.user")
+                JEDump(json, "UserService.user")
+                JEDump(json["users"].arrayValue, "UserService.user")
                 
                 CoreStore.beginAsynchronous { transaction in
                     

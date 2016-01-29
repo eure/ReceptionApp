@@ -1,5 +1,5 @@
 //
-//  VisitorsModel.swift
+//  VisitorService.swift
 //  eureception
 //
 //  Created by Hiroshi Kimura on 8/28/15.
@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-final class VisitorsModel {
+final class VisitorService {
     
     func sendVisitor(transaction transaction: AppointmentTransaction, completion: (result: ModelResult<JSON>) -> Void) {
        

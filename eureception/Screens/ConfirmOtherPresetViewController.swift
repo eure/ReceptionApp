@@ -45,7 +45,7 @@ class ConfirmOtherPresetViewController: BaseConfirmViewController {
             return
         }
         
-        Container.VisitorsModel.sendVisitor(transaction: transaction) { (result) -> Void in
+        Container.VisitorService.sendVisitor(transaction: transaction) { (result) -> Void in
             
         }
         
