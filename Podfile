@@ -3,19 +3,12 @@
 use_frameworks!
 
 target 'eureception' do
-pod 'Alamofire'
-pod 'EasyAnimation'
-pod 'CoreStore'
-pod 'SwiftyJSON'
-pod 'RxSwift', '~> 2.0.0'
-pod 'RxCocoa', '~> 2.0.0'
-end
-
-target 'eureceptionTests' do
-
-end
-
-target 'eureceptionUITests' do
-
+pod 'Alamofire', '~> 3.0.0'
+pod 'EasyAnimation', '~> 1.0.0'
+pod 'CoreStore', '~> 1.4.4'
+pod 'SwiftyJSON', '~> 2.3.2'
+pod 'RxSwift', '~> 2.1.0'
+pod 'RxCocoa', '~> 2.1.0'
+pod 'JEToolkit', '~> 3.0.0'
 end
 

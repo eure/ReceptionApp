@@ -145,13 +145,11 @@ extension Request {
         - returns: A data response serializer.
     */
     public static func dataResponseSerializer() -> ResponseSerializer<NSData, NSError> {
-        return ResponseSerializer { _, response, data, error in
+        return ResponseSerializer { _, _, data, error in
             guard error == nil else { return .Failure(error!) }
 
-            if let response = response where response.statusCode == 204 { return .Success(NSData()) }
-
-            guard let validData = data else {
-                let failureReason = "Data could not be serialized. Input data was nil."
+            guard let validData = data where validData.length > 0 else {
+                let failureReason = "Data could not be serialized. Input data was nil or zero length."
                 let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
@@ -192,10 +190,8 @@ extension Request {
         return ResponseSerializer { _, response, data, error in
             guard error == nil else { return .Failure(error!) }
 
-            if let response = response where response.statusCode == 204 { return .Success("") }
-
-            guard let validData = data else {
-                let failureReason = "String could not be serialized. Input data was nil."
+            guard let validData = data where validData.length > 0 else {
+                let failureReason = "String could not be serialized. Input data was nil or zero length."
                 let error = Error.errorWithCode(.StringSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
@@ -208,7 +204,7 @@ extension Request {
 
             let actualEncoding = encoding ?? NSISOLatin1StringEncoding
 
-            if let string = String(data: validData, encoding: actualEncoding) {
+            if let string = NSString(data: validData, encoding: actualEncoding) as? String {
                 return .Success(string)
             } else {
                 let failureReason = "String could not be serialized with encoding: \(actualEncoding)"
@@ -256,10 +252,8 @@ extension Request {
         options options: NSJSONReadingOptions = .AllowFragments)
         -> ResponseSerializer<AnyObject, NSError>
     {
-        return ResponseSerializer { _, response, data, error in
+        return ResponseSerializer { _, _, data, error in
             guard error == nil else { return .Failure(error!) }
-
-            if let response = response where response.statusCode == 204 { return .Success(NSNull()) }
 
             guard let validData = data where validData.length > 0 else {
                 let failureReason = "JSON could not be serialized. Input data was nil or zero length."
@@ -312,10 +306,8 @@ extension Request {
         options options: NSPropertyListReadOptions = NSPropertyListReadOptions())
         -> ResponseSerializer<AnyObject, NSError>
     {
-        return ResponseSerializer { _, response, data, error in
+        return ResponseSerializer { _, _, data, error in
             guard error == nil else { return .Failure(error!) }
-
-            if let response = response where response.statusCode == 204 { return .Success(NSNull()) }
 
             guard let validData = data where validData.length > 0 else {
                 let failureReason = "Property list could not be serialized. Input data was nil or zero length."

@@ -1,29 +1,45 @@
 PODS:
-  - Alamofire (3.1.4)
-  - CoreStore (1.4.2):
-    - GCDKit (= 1.1.5)
+  - Alamofire (3.0.1)
+  - CoreStore (1.4.4):
+    - GCDKit (= 1.1.7)
   - EasyAnimation (1.0.2)
-  - GCDKit (1.1.5)
-  - RxCocoa (2.0.0):
+  - GCDKit (1.1.7)
+  - JEToolkit (3.0.0):
+    - JEToolkit/JEDebugging (= 3.0.0)
+    - JEToolkit/JEOrderedDictionary (= 3.0.0)
+    - JEToolkit/JESettings (= 3.0.0)
+    - JEToolkit/JEToolkit (= 3.0.0)
+    - JEToolkit/JEWeakCache (= 3.0.0)
+  - JEToolkit/JEDebugging (3.0.0):
+    - JEToolkit/JEToolkit
+  - JEToolkit/JEOrderedDictionary (3.0.0)
+  - JEToolkit/JESettings (3.0.0)
+  - JEToolkit/JEToolkit (3.0.0)
+  - JEToolkit/JEWeakCache (3.0.0)
+  - RxCocoa (2.1.0):
     - RxSwift (~> 2.0)
-  - RxSwift (2.0.0)
+  - RxSwift (2.1.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Alamofire
-  - CoreStore
-  - EasyAnimation
-  - RxCocoa (~> 2.0.0)
-  - RxSwift (~> 2.0.0)
-  - SwiftyJSON
+  - Alamofire (~> 3.0.0)
+  - CoreStore (~> 1.4.4)
+  - EasyAnimation (~> 1.0.0)
+  - JEToolkit (~> 3.0.0)
+  - RxCocoa (~> 2.1.0)
+  - RxSwift (~> 2.1.0)
+  - SwiftyJSON (~> 2.3.2)
 
 SPEC CHECKSUMS:
-  Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
-  CoreStore: c8912312c33d56cae7709d1f6c178b44df9adae8
+  Alamofire: 2457e1b2e6c46bb05c3a598c542b7bfd08893775
+  CoreStore: 52e005801278f976daa191538ddbcb84e89bbbc7
   EasyAnimation: 9615e40f58aa7d8d6a67de66e0edda1903ffa990
-  GCDKit: 1dacc836052dd7dd777022f4b30b94beac68b338
-  RxCocoa: b0ebd70b4f7450bdb3c8987b122f8fd568dc1e2f
-  RxSwift: d83246efa6f16c50c143bec134649d045498f601
+  GCDKit: 00a091f8b7cb83c0591288d5a60b080a971b979c
+  JEToolkit: 839fb9e170eee8951a2dad1161c10d9755a79c91
+  RxCocoa: 79b5feb8378545336e756a0a33fcf5e95050b71c
+  RxSwift: 110fb07f81c17c2c3b3254d168363057b1880d18
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: dbabdc6c98e2b34749f09a7c46e61ed7708f9664
+
+COCOAPODS: 1.0.0.beta.2
