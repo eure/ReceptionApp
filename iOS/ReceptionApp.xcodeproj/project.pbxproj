@@ -88,8 +88,6 @@
 		4BEB7FB01B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */; };
 		4BEB7FB21B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */; };
 		4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift */; };
-		4BF528EA1B96945800A73152 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF528E81B96945800A73152 /* Fabric.framework */; };
-		4BF528EB1B96945800A73152 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF528E91B96945800A73152 /* Crashlytics.framework */; };
 		4BF528ED1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF528EC1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift */; };
 		4BF528EF1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF528EE1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard */; };
 		602EA7AC1C8FCDB400442BEF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602EA7AB1C8FCDB400442BEF /* main.swift */; };
@@ -202,8 +200,6 @@
 		4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToPurposeSelectTransitionController.swift; sourceTree = "<group>"; };
 		4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeSelectToInputFieldTransitionController.swift; sourceTree = "<group>"; };
 		4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeSelectToConfirmOtherPresetTransitionController.swift; sourceTree = "<group>"; };
-		4BF528E81B96945800A73152 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		4BF528E91B96945800A73152 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		4BF528EC1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOtherPresetViewController.swift; sourceTree = "<group>"; };
 		4BF528EE1B96C78200A73152 /* ConfirmOtherPresetViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmOtherPresetViewController.storyboard; sourceTree = "<group>"; };
 		602EA7AB1C8FCDB400442BEF /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -221,8 +217,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BF528EB1B96945800A73152 /* Crashlytics.framework in Frameworks */,
-				4BF528EA1B96945800A73152 /* Fabric.framework in Frameworks */,
 				DC3ABA7670CFE0CBAD15B4BB /* Pods_ReceptionApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,8 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				60705E7D1C92C754005716B3 /* AVFoundation.framework */,
-				4BF528E81B96945800A73152 /* Fabric.framework */,
-				4BF528E91B96945800A73152 /* Crashlytics.framework */,
 				4BD2BCD71B8348EC0064F51E /* SimpleFurigana */,
 				3B167CE2451BDF0C9BD6923F /* Pods_ReceptionApp.framework */,
 			);
@@ -449,7 +441,6 @@
 				4B992F981B75146B0073473F /* Sources */,
 				4B992F991B75146B0073473F /* Frameworks */,
 				4B992F9A1B75146B0073473F /* Resources */,
-				4B501B361B95CB990048284F /* Fabric */,
 				4BC8EDF61B9182060057C5FB /* Embed Frameworks */,
 				C1363B001C0A8E96C4EB916E /* Embed Pods Frameworks */,
 				6B2EC9107B128853DF62ADF6 /* Copy Pods Resources */,
@@ -560,20 +551,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
-		};
-		4B501B361B95CB990048284F /* Fabric */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Fabric;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
 		};
 		4B696C221B902A690096A169 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;

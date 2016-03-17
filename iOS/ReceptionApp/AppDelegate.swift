@@ -25,10 +25,7 @@
 //
 
 import UIKit
-
-import Crashlytics
 import CoreStore
-import Fabric
 import JEToolkit
 
 
@@ -52,8 +49,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             JEDebugging.setExceptionLoggingEnabled(false)
             JEDebugging.start()
         #endif
-
-        Fabric.with([Crashlytics.self()])
 
         try! CoreStore.addSQLiteStoreAndWait(
             fileName: "ReceptionApp",
