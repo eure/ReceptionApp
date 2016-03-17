@@ -1,0 +1,3 @@
+[submodule "Frameworks/SimpleFurigana"]
+	path = Frameworks/SimpleFurigana
+	url = https://github.com/shinjukunian/SimpleFurigana.git

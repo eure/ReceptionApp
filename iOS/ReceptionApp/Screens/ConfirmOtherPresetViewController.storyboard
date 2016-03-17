@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kZF-rt-fhv">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Confirm Other Preset View Controller-->
+        <scene sceneID="EJv-9N-bZs">
+            <objects>
+                <viewController id="kZF-rt-fhv" customClass="ConfirmOtherPresetViewController" customModule="ReceptionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ikO-8d-fRk"/>
+                        <viewControllerLayoutGuide type="bottom" id="weg-v7-5FV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dVq-3D-aeI">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eureka_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5gm-Lf-7Cg">
+                                <rect key="frame" x="310" y="60" width="147" height="30"/>
+                                <animations/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF4-fB-IOV" customClass="SubmitButton" customModule="ReceptionApp" customModuleProvider="target">
+                                <rect key="frame" x="309" y="729" width="150" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_send" translatesAutoresizingMaskIntoConstraints="NO" id="7VK-uT-XZh">
+                                        <rect key="frame" x="20" y="13" width="110" height="110"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Oga-Tz-9TA"/>
+                                    <constraint firstItem="7VK-uT-XZh" firstAttribute="leading" secondItem="LF4-fB-IOV" secondAttribute="leading" constant="20" id="THW-f1-ykF"/>
+                                    <constraint firstAttribute="width" secondItem="LF4-fB-IOV" secondAttribute="height" multiplier="1:1" id="f1I-p0-y8Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="7VK-uT-XZh" secondAttribute="bottom" constant="27" id="o6h-bI-yIi"/>
+                                    <constraint firstAttribute="trailing" secondItem="7VK-uT-XZh" secondAttribute="trailing" constant="20" id="psq-xv-eQB"/>
+                                    <constraint firstItem="7VK-uT-XZh" firstAttribute="top" secondItem="LF4-fB-IOV" secondAttribute="top" constant="13" id="uXy-tb-fhm"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="handleSubmitButton:" destination="kZF-rt-fhv" eventType="touchUpInside" id="Wes-7y-BxH"/>
+                                    <outlet property="iconImageView" destination="7VK-uT-XZh" id="NY6-wt-RQ6"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-eg-ayG">
+                                <rect key="frame" x="36" y="50" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Eav-ip-U3O"/>
+                                    <constraint firstAttribute="width" constant="50" id="ggR-91-ITh"/>
+                                </constraints>
+                                <state key="normal" image="icon_back"/>
+                                <connections>
+                                    <action selector="handleBackButton:" destination="kZF-rt-fhv" eventType="touchUpInside" id="4G0-xP-dDd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXn-iO-I4g">
+                                <rect key="frame" x="363" y="452" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5b-U4-GYo">
+                                <rect key="frame" x="363" y="402" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_big_other" translatesAutoresizingMaskIntoConstraints="NO" id="uzX-LT-0MQ">
+                                <rect key="frame" x="341" y="290" width="86" height="86"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LF4-fB-IOV" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="0Gr-Dj-L85"/>
+                            <constraint firstItem="weg-v7-5FV" firstAttribute="top" secondItem="LF4-fB-IOV" secondAttribute="bottom" constant="145" id="2ix-BS-qwg"/>
+                            <constraint firstItem="uzX-LT-0MQ" firstAttribute="top" secondItem="5gm-Lf-7Cg" secondAttribute="bottom" constant="200" id="494-qB-7il"/>
+                            <constraint firstItem="uzX-LT-0MQ" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="BOQ-uF-XaR"/>
+                            <constraint firstItem="u2K-eg-ayG" firstAttribute="leading" secondItem="dVq-3D-aeI" secondAttribute="leading" constant="36" id="G0C-OE-rf1"/>
+                            <constraint firstItem="5gm-Lf-7Cg" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="ICE-mJ-rLj"/>
+                            <constraint firstItem="D5b-U4-GYo" firstAttribute="top" secondItem="uzX-LT-0MQ" secondAttribute="bottom" constant="26" id="NOJ-6u-d8y"/>
+                            <constraint firstItem="KXn-iO-I4g" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="Zkt-Ul-DAp"/>
+                            <constraint firstItem="5gm-Lf-7Cg" firstAttribute="top" secondItem="ikO-8d-fRk" secondAttribute="bottom" constant="60" id="ipF-4b-di0"/>
+                            <constraint firstItem="u2K-eg-ayG" firstAttribute="centerY" secondItem="5gm-Lf-7Cg" secondAttribute="centerY" id="jzo-LZ-mJG"/>
+                            <constraint firstItem="D5b-U4-GYo" firstAttribute="centerX" secondItem="dVq-3D-aeI" secondAttribute="centerX" id="n8z-K1-Y7f"/>
+                            <constraint firstItem="KXn-iO-I4g" firstAttribute="top" secondItem="D5b-U4-GYo" secondAttribute="bottom" constant="25" id="r5E-V2-dl4"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="backButton" destination="u2K-eg-ayG" id="64V-n9-nYs"/>
+                        <outlet property="iconImageView" destination="uzX-LT-0MQ" id="C7n-H0-Mr3"/>
+                        <outlet property="logoImageView" destination="5gm-Lf-7Cg" id="fOV-PK-jjU"/>
+                        <outlet property="messageEnLabel" destination="D5b-U4-GYo" id="1B3-LR-0Yf"/>
+                        <outlet property="messageJaLabel" destination="KXn-iO-I4g" id="jd1-ja-dtd"/>
+                        <outlet property="submitButton" destination="LF4-fB-IOV" id="yRf-Z8-7Mz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LV4-eY-YIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="519"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eureka_logo" width="147" height="30"/>
+        <image name="icon_back" width="33" height="33"/>
+        <image name="icon_big_other" width="86" height="86"/>
+        <image name="icon_send" width="78" height="39"/>
+    </resources>
+</document>

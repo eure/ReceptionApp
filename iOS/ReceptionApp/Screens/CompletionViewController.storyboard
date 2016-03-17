@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdI-fo-k4d">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Exo-DemiBold.otf">
+            <string>Exo-DemiBold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Completion View Controller-->
+        <scene sceneID="QEY-pc-m6x">
+            <objects>
+                <viewController id="PdI-fo-k4d" customClass="CompletionViewController" customModule="ReceptionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mGY-cy-gtd"/>
+                        <viewControllerLayoutGuide type="bottom" id="nJC-1B-adJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qo9-NQ-zG3">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mx3-aZ-xab" customClass="HomeButton" customModule="ReceptionApp" customModuleProvider="target">
+                                <rect key="frame" x="320" y="768" width="128" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_top" translatesAutoresizingMaskIntoConstraints="NO" id="mgg-ie-UQv">
+                                        <rect key="frame" x="20" y="20" width="88" height="88"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mgg-ie-UQv" secondAttribute="bottom" constant="20" id="5s2-eY-HXK"/>
+                                    <constraint firstItem="mgg-ie-UQv" firstAttribute="top" secondItem="mx3-aZ-xab" secondAttribute="top" constant="20" id="8TY-5c-9jx"/>
+                                    <constraint firstAttribute="width" secondItem="mx3-aZ-xab" secondAttribute="height" multiplier="1:1" id="Qaw-jd-vyg"/>
+                                    <constraint firstAttribute="trailing" secondItem="mgg-ie-UQv" secondAttribute="trailing" constant="20" id="gsB-la-6T0"/>
+                                    <constraint firstItem="mgg-ie-UQv" firstAttribute="leading" secondItem="mx3-aZ-xab" secondAttribute="leading" constant="20" id="rZL-xF-gVO"/>
+                                    <constraint firstAttribute="width" constant="128" id="zmX-ee-d7C"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="handleHomeButton:" destination="PdI-fo-k4d" eventType="touchUpInside" id="K3F-BM-yGg"/>
+                                    <outlet property="iconImageView" destination="mgg-ie-UQv" id="4bd-kG-GQx"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-Gb-Vrl">
+                                <rect key="frame" x="159" y="314" width="450" height="336"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="受付が完了しました ただいま係りの者が参りますので もう少々お待ちくださいませ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qh-y6-Yaf">
+                                        <rect key="frame" x="60" y="257" width="330" height="79"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_check" translatesAutoresizingMaskIntoConstraints="NO" id="5gd-56-2Pu">
+                                        <rect key="frame" x="146" y="0.0" width="157" height="115"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="157" id="A2a-kS-gOa"/>
+                                            <constraint firstAttribute="height" constant="115" id="kfi-RO-olR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="THANK YOU!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeI-1Z-OdW">
+                                        <rect key="frame" x="117" y="175" width="217" height="42"/>
+                                        <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="36"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="8qh-y6-Yaf" firstAttribute="centerX" secondItem="6Zv-Gb-Vrl" secondAttribute="centerX" id="32a-d2-XJK"/>
+                                    <constraint firstItem="5gd-56-2Pu" firstAttribute="centerX" secondItem="6Zv-Gb-Vrl" secondAttribute="centerX" id="AwZ-7N-hA2"/>
+                                    <constraint firstAttribute="trailing" secondItem="8qh-y6-Yaf" secondAttribute="trailing" constant="60" id="KgG-Bq-IR9"/>
+                                    <constraint firstItem="CeI-1Z-OdW" firstAttribute="centerX" secondItem="6Zv-Gb-Vrl" secondAttribute="centerX" id="R9S-oZ-vNL"/>
+                                    <constraint firstAttribute="bottom" secondItem="8qh-y6-Yaf" secondAttribute="bottom" id="S0z-iv-gaK"/>
+                                    <constraint firstItem="5gd-56-2Pu" firstAttribute="top" secondItem="6Zv-Gb-Vrl" secondAttribute="top" id="jY9-dH-nXs"/>
+                                    <constraint firstItem="8qh-y6-Yaf" firstAttribute="top" secondItem="CeI-1Z-OdW" secondAttribute="bottom" constant="40" id="m70-7V-ZVJ"/>
+                                    <constraint firstItem="CeI-1Z-OdW" firstAttribute="top" secondItem="5gd-56-2Pu" secondAttribute="bottom" constant="60" id="pLE-tj-SVM"/>
+                                    <constraint firstItem="8qh-y6-Yaf" firstAttribute="leading" secondItem="6Zv-Gb-Vrl" secondAttribute="leading" constant="60" id="xyZ-eK-86z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nJC-1B-adJ" firstAttribute="top" secondItem="mx3-aZ-xab" secondAttribute="bottom" constant="128" id="e6Q-CC-rXf"/>
+                            <constraint firstItem="6Zv-Gb-Vrl" firstAttribute="centerY" secondItem="Qo9-NQ-zG3" secondAttribute="centerY" constant="-30" id="rcr-sC-JkY"/>
+                            <constraint firstItem="mx3-aZ-xab" firstAttribute="centerX" secondItem="Qo9-NQ-zG3" secondAttribute="centerX" id="vyT-bw-Frg"/>
+                            <constraint firstItem="6Zv-Gb-Vrl" firstAttribute="centerX" secondItem="Qo9-NQ-zG3" secondAttribute="centerX" id="xhZ-CN-nkJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="iconImageView" destination="5gd-56-2Pu" id="Ri9-JS-3Xg"/>
+                        <outlet property="subtitleLabel" destination="8qh-y6-Yaf" id="2nt-JN-Xxr"/>
+                        <outlet property="titleLabel" destination="CeI-1Z-OdW" id="xTB-VV-Q6n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXx-nd-lTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256" y="314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_check" width="157" height="115"/>
+        <image name="icon_top" width="44" height="39"/>
+    </resources>
+</document>

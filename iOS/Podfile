@@ -1,0 +1,14 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+use_frameworks!
+
+target 'ReceptionApp' do
+pod 'Alamofire', '~> 3.2.0’
+pod 'EasyAnimation', '~> 1.0.0'
+pod 'CoreStore', '~> 1.4.4'
+pod 'SwiftyJSON', '~> 2.3.2'
+pod 'RxSwift', '~> 2.2.0’
+pod 'RxCocoa', '~> 2.2.0’
+pod 'JEToolkit', '~> 3.0.3'
+end
+

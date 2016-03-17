@@ -1,0 +1,54 @@
+// Localizable.strings
+// Japanese - 日本語
+//
+
+
+// MARK: - Object -
+// MARK: NetworkManager
+"NetworkManager.alert.notWiFi" = "ただいまWi-Fiに接続しておりません。\nお手数おかけいたしますが、お近くの社員までお声がけ下さい。";
+
+// MARK: OtherTransaction
+"OtherTransaction.delivery" = "配達";
+"OtherTransaction.deliveryOfGoods" = "納品";
+
+// MARK: - ViewController -
+// MARK: CompanyNameViewController
+"CompanyNameViewController.label.company" = "貴社名をご記入ください";
+
+// MARK: CompletionViewController
+"CompletionViewController.label.completion" = "受付が完了しました\nただいま担当者が参りますので\nもう少々お待ちくださいませ";
+
+// MARK: ConfirmAppointmentViewController
+"ConfirmAppointmentViewController.label.confirm" = "以下、内容をご確認ください";
+
+// MARK: ConfirmOtherPresetViewController
+"ConfirmOtherPresetViewController.label.confirm" = "担当者へ連絡します\nよろしいですか？";
+
+// MARK: ConfirmOtherViewController
+"ConfirmOtherViewController.label.confirm" = "以下、内容をご確認ください";
+
+// MARK: ContactToViewController
+"ContactToViewController.label.charge" = "弊社担当者をご記入ください";
+
+// MARK: OtherPurposeSelectViewController
+"OtherPurposeSelectViewController.label.business" = "詳細なご用件をお選びください";
+"OtherPurposeSelectViewController.label.delivery" = "納品";
+"OtherPurposeSelectViewController.label.other" = "その他";
+
+
+// MARK: OtherPurposeViewController
+"OtherPurposeViewController.label.business" = "ご用件をご記入ください";
+
+// MARK: PersonCountViewController
+"PersonCountViewController.label.selectPersonNumber" = "ご訪問者様数を設定してください";
+"PersonCountViewController.label.personNumber" = "%d人";
+"PersonCountViewController.label.peopleNumber" = "%d人";
+
+// MARK: TopViewController
+"TopViewController.label.selectBusiness" = "ようこそ%@へ ご用件をお選びください";
+"TopViewController.label.appointment" = "ご予約のある方はこちら";
+"TopViewController.label.other" = "その他ご用件の方はこちら";
+"TopViewController.alert.selectFloorNumber" = "フロアを選択してください";
+
+// MARK: YourNameViewController
+"YourNameViewController.label.name" = "お客様のお名前をご記入ください";

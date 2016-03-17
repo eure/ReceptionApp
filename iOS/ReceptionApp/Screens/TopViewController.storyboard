@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jf7-RZ-406">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Exo-DemiBold.otf">
+            <string>Exo-DemiBold</string>
+            <string>Exo-DemiBold</string>
+            <string>Exo-DemiBold</string>
+        </mutableArray>
+        <mutableArray key="KozGoPro-Medium.otf">
+            <string>KozGoPro-Medium</string>
+            <string>KozGoPro-Medium</string>
+            <string>KozGoPro-Medium</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Top View Controller-->
+        <scene sceneID="SAk-PX-xvX">
+            <objects>
+                <viewController id="Ha9-Ds-Otx" customClass="TopViewController" customModule="ReceptionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wxg-N2-rZv"/>
+                        <viewControllerLayoutGuide type="bottom" id="gKg-3C-LaT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="spf-8Z-saC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eureka_logo" translatesAutoresizingMaskIntoConstraints="NO" id="QQE-Z3-hyo">
+                                <rect key="frame" x="310" y="60" width="147" height="30"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7k-QB-7JQ" customClass="TopButton" customModule="ReceptionApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="228" width="688" height="280"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_big_appointment" translatesAutoresizingMaskIntoConstraints="NO" id="RbM-qm-gMl">
+                                        <rect key="frame" x="273" y="30" width="142" height="142"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RbM-qm-gMl" secondAttribute="height" multiplier="1:1" id="TOI-p9-Jd9"/>
+                                            <constraint firstAttribute="width" constant="142" id="rrb-rF-056"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPOINTMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyh-Mu-F3f">
+                                        <rect key="frame" x="250" y="187" width="187" height="36"/>
+                                        <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="LbX-4B-zf6">
+                                        <rect key="frame" x="595" y="123" width="33" height="33"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご予約のある方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUA-UW-ep0">
+                                        <rect key="frame" x="261" y="233" width="165" height="15"/>
+                                        <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RbM-qm-gMl" firstAttribute="centerX" secondItem="C7k-QB-7JQ" secondAttribute="centerX" id="7Kg-gE-ykM"/>
+                                    <constraint firstAttribute="height" constant="280" id="7bZ-pJ-CzI"/>
+                                    <constraint firstItem="nyh-Mu-F3f" firstAttribute="centerX" secondItem="C7k-QB-7JQ" secondAttribute="centerX" id="BZT-6y-YMe"/>
+                                    <constraint firstItem="LbX-4B-zf6" firstAttribute="centerY" secondItem="C7k-QB-7JQ" secondAttribute="centerY" id="BlZ-O7-NiQ"/>
+                                    <constraint firstItem="RbM-qm-gMl" firstAttribute="top" secondItem="C7k-QB-7JQ" secondAttribute="top" constant="30" id="YxM-WL-wPQ"/>
+                                    <constraint firstItem="VUA-UW-ep0" firstAttribute="top" secondItem="nyh-Mu-F3f" secondAttribute="bottom" constant="10" id="c5g-Mz-Tyt"/>
+                                    <constraint firstAttribute="trailing" secondItem="LbX-4B-zf6" secondAttribute="trailing" constant="60" id="plx-Gi-Ogh"/>
+                                    <constraint firstItem="nyh-Mu-F3f" firstAttribute="top" secondItem="RbM-qm-gMl" secondAttribute="bottom" constant="15" id="udk-4A-34k"/>
+                                    <constraint firstItem="VUA-UW-ep0" firstAttribute="centerX" secondItem="C7k-QB-7JQ" secondAttribute="centerX" id="yXW-eg-kcv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="handleApointButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="Ysu-8w-AUz"/>
+                                    <outlet property="iconImageView" destination="RbM-qm-gMl" id="6xT-My-tq4"/>
+                                    <outlet property="imageView" destination="egE-v2-xLp" id="WHE-f3-17q"/>
+                                    <outlet property="subtitleLabel" destination="VUA-UW-ep0" id="z5T-Rg-daP"/>
+                                    <outlet property="titleLabel" destination="nyh-Mu-F3f" id="eBF-bC-eMY"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-5V-aKW" customClass="TopButton" customModule="ReceptionApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="538" width="688" height="280"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
+                                        <rect key="frame" x="301" y="187" width="86" height="36"/>
+                                        <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="28"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_big_other" translatesAutoresizingMaskIntoConstraints="NO" id="egE-v2-xLp">
+                                        <rect key="frame" x="273" y="30" width="142" height="142"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="egE-v2-xLp" secondAttribute="height" multiplier="1:1" id="EiV-Nn-L9A"/>
+                                            <constraint firstAttribute="height" constant="142" id="Yli-LJ-eh1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-CN-kAt">
+                                        <rect key="frame" x="595" y="123" width="33" height="33"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他ご用件の方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Dd-4OQ">
+                                        <rect key="frame" x="254" y="233" width="180" height="15"/>
+                                        <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jyo-CN-kAt" secondAttribute="trailing" constant="60" id="4mo-jY-uFf"/>
+                                    <constraint firstItem="GLc-Dd-4OQ" firstAttribute="top" secondItem="tFm-iq-1gL" secondAttribute="bottom" constant="10" id="7cQ-QD-ROk"/>
+                                    <constraint firstItem="jyo-CN-kAt" firstAttribute="centerY" secondItem="TVz-5V-aKW" secondAttribute="centerY" id="FbP-il-Usy"/>
+                                    <constraint firstItem="egE-v2-xLp" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="XEV-6J-5RQ"/>
+                                    <constraint firstAttribute="height" constant="280" id="aoz-3F-5u7"/>
+                                    <constraint firstItem="GLc-Dd-4OQ" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="da5-2e-8nz"/>
+                                    <constraint firstItem="egE-v2-xLp" firstAttribute="top" secondItem="TVz-5V-aKW" secondAttribute="top" constant="30" id="lLb-UK-dbh"/>
+                                    <constraint firstItem="tFm-iq-1gL" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="ln8-da-cDY"/>
+                                    <constraint firstItem="tFm-iq-1gL" firstAttribute="top" secondItem="egE-v2-xLp" secondAttribute="bottom" constant="15" id="r3B-bE-nGX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="handleotherButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="3hx-W9-XPY"/>
+                                    <outlet property="imageView" destination="RbM-qm-gMl" id="hL5-Bt-XIa"/>
+                                    <outlet property="subtitleLabel" destination="GLc-Dd-4OQ" id="IF6-OM-Pru"/>
+                                    <outlet property="titleLabel" destination="tFm-iq-1gL" id="jyu-xI-Qdu"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ようこそeurekaへ ご用件をお選びください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-Rr-W2I">
+                                <rect key="frame" x="210" y="160" width="348" height="18"/>
+                                <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvw-tB-Ha6">
+                                <rect key="frame" x="320" y="900" width="128" height="34"/>
+                                <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaG-63-gJK">
+                                <rect key="frame" x="320" y="902" width="128" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cBh-Rr-W2I" firstAttribute="top" secondItem="QQE-Z3-hyo" secondAttribute="bottom" constant="70" id="0GH-iO-8Nv"/>
+                            <constraint firstItem="TVz-5V-aKW" firstAttribute="top" secondItem="C7k-QB-7JQ" secondAttribute="bottom" constant="30" id="1k0-0P-ARK"/>
+                            <constraint firstAttribute="trailing" secondItem="TVz-5V-aKW" secondAttribute="trailing" constant="40" id="47t-eC-cBh"/>
+                            <constraint firstItem="gKg-3C-LaT" firstAttribute="top" secondItem="Jvw-tB-Ha6" secondAttribute="bottom" constant="90.5" id="Dwj-Jf-5TV"/>
+                            <constraint firstItem="QQE-Z3-hyo" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="G1K-bK-2F8"/>
+                            <constraint firstAttribute="trailing" secondItem="C7k-QB-7JQ" secondAttribute="trailing" constant="40" id="I8B-qc-i79"/>
+                            <constraint firstItem="cBh-Rr-W2I" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="QEN-nO-I9x"/>
+                            <constraint firstItem="C7k-QB-7JQ" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="ejb-dJ-nR5"/>
+                            <constraint firstItem="Jvw-tB-Ha6" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="gva-60-v7K"/>
+                            <constraint firstItem="C7k-QB-7JQ" firstAttribute="top" secondItem="cBh-Rr-W2I" secondAttribute="bottom" constant="50" id="h9U-bd-Rfc"/>
+                            <constraint firstItem="TVz-5V-aKW" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="i4b-vC-eRq"/>
+                            <constraint firstItem="QQE-Z3-hyo" firstAttribute="top" secondItem="wxg-N2-rZv" secondAttribute="bottom" constant="60" id="tDp-DY-ARN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xuI-aG-lCR"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="appointButton" destination="C7k-QB-7JQ" id="hQ4-kE-ptm"/>
+                        <outlet property="logoImageView" destination="QQE-Z3-hyo" id="Gc1-0O-MRp"/>
+                        <outlet property="longButton" destination="ZaG-63-gJK" id="1mi-sH-tnv"/>
+                        <outlet property="otherButton" destination="TVz-5V-aKW" id="cZS-UD-xK0"/>
+                        <outlet property="welcomeBottomLabel" destination="Jvw-tB-Ha6" id="kH3-mo-kWS"/>
+                        <outlet property="welcomeLabel" destination="cBh-Rr-W2I" id="AfM-L4-tfA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJB-nt-O9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590" y="-9"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="AHu-qW-e36">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Jf7-RZ-406" customClass="BaseNavigationController" customModule="ReceptionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XVg-5i-jVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ha9-Ds-Otx" kind="relationship" relationship="rootViewController" id="41f-57-231"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvi-MR-FBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="-9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eureka_logo" width="147" height="30"/>
+        <image name="icon_big_appointment" width="86" height="86"/>
+        <image name="icon_big_other" width="86" height="86"/>
+        <image name="icon_next" width="33" height="33"/>
+    </resources>
+</document>

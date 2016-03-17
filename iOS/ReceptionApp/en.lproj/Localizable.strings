@@ -1,0 +1,54 @@
+
+// English - 英語
+//
+
+
+// MARK: - Object -
+// MARK: NetworkManager
+"NetworkManager.alert.notWiFi" = "This iPad does not connect to a Wi-Fi network now.\nPlease don't hesitate to contact our staff.";
+
+// MARK: OtherTransaction
+"OtherTransaction.delivery" = "Delivery";
+"OtherTransaction.deliveryOfGoods" = "Delivery";
+
+// MARK: - ViewController -
+// MARK: CompanyNameViewController
+"CompanyNameViewController.label.company" = "What is your Company/Organization's name?";
+
+// MARK: CompletionViewController
+"CompletionViewController.label.completion" = "We have received your request.\nOur staff will be with you shortly.\nPlease wait.";
+
+// MARK: ConfirmAppointmentViewController
+"ConfirmAppointmentViewController.label.confirm" = "Are these information correct?";
+
+// MARK: ConfirmOtherPresetViewController
+"ConfirmOtherPresetViewController.label.confirm" = "Our staff will be notified.\nDo you wish to proceed?";
+
+// MARK: ConfirmOtherViewController
+"ConfirmOtherViewController.label.confirm" = "Are these information correct?";
+
+// MARK: ContactToViewController
+"ContactToViewController.label.charge" = "Please write the name of the person you would like to reach";
+
+// MARK: OtherPurposeSelectViewController
+"OtherPurposeSelectViewController.label.business" = "Choose the details of your visit";
+"OtherPurposeSelectViewController.label.delivery" = "Delivery";
+"OtherPurposeSelectViewController.label.other" = "Other";
+
+
+// MARK: OtherPurposeViewController
+"OtherPurposeViewController.label.business" = "Please write the details of your visit";
+
+// MARK: PersonCountViewController
+"PersonCountViewController.label.selectPersonNumber" = "Please tell us how many people there are in your group";
+"PersonCountViewController.label.personNumber" = "%d person";
+"PersonCountViewController.label.peopleNumber" = "%d people";
+
+// MARK: TopViewController
+"TopViewController.label.selectBusiness" = "Welcome to %@! How may we help you?";
+"TopViewController.label.appointment" = "If you have an appointment, tap here";
+"TopViewController.label.other" = "For other visit purposes, tap here";
+"TopViewController.alert.selectFloorNumber" = "Choose which floor";
+
+// MARK: YourNameViewController
+"YourNameViewController.label.name" = "Please tell us your name";

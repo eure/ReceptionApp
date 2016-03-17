@@ -1,0 +1,6 @@
+framework module JEToolkit {
+  umbrella header "JEToolkit-umbrella.h"
+
+  export *
+  module * { export * }
+}
