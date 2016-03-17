@@ -10,7 +10,7 @@
 
 ## Setup
 
-- `$ cd ReceptionApp`
+- `$ cd ReceptionApp/iOS`
 
 - `$ pod install`
 
@@ -30,8 +30,8 @@
 
 - Developer
   - Hiroshi Kimura（https://github.com/muukii）
-  - John Estropia（https://github.com/JohnEstropia）
   - Kazuki Yusa（https://github.com/yusayusa）
+  - John Estropia（https://github.com/JohnEstropia）
 - Designer
   - Sho Kameya
 - Director
