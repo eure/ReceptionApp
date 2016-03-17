@@ -29,9 +29,9 @@
 ## Author
 
 - Developer
-  - Hiroshi Kimura（https://github.com/muukii）
-  - Kazuki Yusa（https://github.com/yusayusa）
-  - John Estropia（https://github.com/JohnEstropia）
+  -  [Hiroshi Kimura](https://github.com/muukii "Hiroshi Kimura")
+  -  [Kazuki Yusa](https://github.com/yusayusa "Kazuki Yusa")
+  -  [John Estropia](https://github.com/JohnEstropia "John Estropia")
 - Designer
   - Sho Kameya
 - Director
