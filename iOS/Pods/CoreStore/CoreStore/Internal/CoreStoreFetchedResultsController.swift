@@ -1,8 +1,8 @@
 //
-//  NSManagedObject+Convenience.swift
+//  CoreStoreFetchedResultsController.swift
 //  CoreStore
 //
-//  Copyright © 2015 John Rommel Estropia
+//  Copyright © 2016 John Rommel Estropia
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,16 +27,17 @@ import Foundation
 import CoreData
 
 
-// MARK: - NSFetchedResultsController
+// MARK: - CoreStoreFetchedResultsController
 
-public extension NSFetchedResultsController {
+@available(OSX, unavailable)
+internal final class CoreStoreFetchedResultsController<T: NSManagedObject>: NSFetchedResultsController {
     
-    /**
-     Utility for creating an `NSFetchedResultsController` from a `DataStack`. This is useful to partially support Objective-C classes by passing an `NSFetchedResultsController` instance instead of a `ListMonitor`.
-     */
-    public static func createForStack<T: NSManagedObject>(dataStack: DataStack, fetchRequest: NSFetchRequest, from: From<T>? = nil, sectionBy: SectionBy? = nil, fetchClauses: [FetchClause]) -> NSFetchedResultsController {
+    
+    // MARK: Internal
+    
+    internal convenience init<T>(dataStack: DataStack, fetchRequest: NSFetchRequest, from: From<T>? = nil, sectionBy: SectionBy? = nil, fetchClauses: [FetchClause]) {
         
-        return CoreStoreFetchedResultsController<T>(
+        self.init(
             context: dataStack.mainContext,
             fetchRequest: fetchRequest,
             from: from,
@@ -45,10 +46,8 @@ public extension NSFetchedResultsController {
         )
     }
     
-    @available(*, deprecated=1.5.2, message="Use NSFetchedResultsController.createForStack(_:fetchRequest:from:sectionBy:fetchClauses:) to create NSFetchedResultsControllers directly")
-    public convenience init<T: NSManagedObject>(dataStack: DataStack, fetchRequest: NSFetchRequest, from: From<T>? = nil, sectionBy: SectionBy? = nil, fetchClauses: [FetchClause]) {
+    internal init<T>(context: NSManagedObjectContext, fetchRequest: NSFetchRequest, from: From<T>? = nil, sectionBy: SectionBy? = nil, fetchClauses: [FetchClause]) {
         
-        let context = dataStack.mainContext
         from?.applyToFetchRequest(fetchRequest, context: context, applyAffectedStores: false)
         for clause in fetchClauses {
             
@@ -57,7 +56,10 @@ public extension NSFetchedResultsController {
         
         if let from = from {
             
-            from.applyAffectedStoresForFetchedRequest(fetchRequest, context: context)
+            self.reapplyAffectedStores = {
+                
+                return from.applyAffectedStoresForFetchedRequest(fetchRequest, context: context)
+            }
         }
         else {
             
@@ -65,10 +67,14 @@ public extension NSFetchedResultsController {
                 
                 fatalError("Attempted to create an \(typeName(NSFetchedResultsController)) without a  From clause or an NSEntityDescription.")
             }
-            from.applyAffectedStoresForFetchedRequest(fetchRequest, context: context)
+            
+            self.reapplyAffectedStores = {
+                
+                return from.applyAffectedStoresForFetchedRequest(fetchRequest, context: context)
+            }
         }
         
-        self.init(
+        super.init(
             fetchRequest: fetchRequest,
             managedObjectContext: context,
             sectionNameKeyPath: sectionBy?.sectionKeyPath,
@@ -76,17 +82,20 @@ public extension NSFetchedResultsController {
         )
     }
     
-    
-    // MARK: Internal
-    
-    internal static func createFromContext<T: NSManagedObject>(context: NSManagedObjectContext, fetchRequest: NSFetchRequest, from: From<T>? = nil, sectionBy: SectionBy? = nil, fetchClauses: [FetchClause]) -> NSFetchedResultsController {
+    internal func performFetchFromSpecifiedStores() throws {
         
-        return CoreStoreFetchedResultsController<T>(
-            context: context,
-            fetchRequest: fetchRequest,
-            from: from,
-            sectionBy: sectionBy,
-            fetchClauses: fetchClauses
-        )
+        if !self.reapplyAffectedStores() {
+            
+            CoreStore.log(
+                .Warning,
+                message: "Attempted to perform a fetch on an \(typeName(NSFetchedResultsController)) but could not find any persistent store for the entity \(typeName(self.fetchRequest.entityName))"
+            )
+        }
+        try self.performFetch()
     }
+    
+    
+    // MARK: Private
+    
+    private let reapplyAffectedStores: () -> Bool
 }

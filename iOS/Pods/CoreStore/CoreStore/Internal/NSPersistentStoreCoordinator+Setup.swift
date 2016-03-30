@@ -1,8 +1,8 @@
 //
-//  CoreStore.swift
+//  NSPersistentStoreCoordinator+Setup.swift
 //  CoreStore
 //
-//  Copyright © 2014 John Rommel Estropia
+//  Copyright © 2016 John Rommel Estropia. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -23,50 +23,58 @@
 //  SOFTWARE.
 //
 
+import Foundation
 import CoreData
+
 #if USE_FRAMEWORKS
     import GCDKit
 #endif
 
 
-// MARK: - CoreStore
+// MARK: - NSPersistentStoreCoordinator
 
-/**
- `CoreStore` is the main entry point for all other APIs.
- */
-public enum CoreStore {
+internal extension NSPersistentStoreCoordinator {
     
-    /**
-     The default `DataStack` instance to be used. If `defaultStack` is not set before the first time accessed, a default-configured `DataStack` will be created.
-     
-     Changing the `defaultStack` is thread safe, but it is recommended to setup `DataStacks` on a common queue (e.g. the main queue).
-     */
-    public static var defaultStack: DataStack {
+    internal func performAsynchronously(closure: () -> Void) {
         
-        get {
-        
-            self.defaultStackBarrierQueue.barrierSync {
-        
-                if self.defaultStackInstance == nil {
-        
-                    self.defaultStackInstance = DataStack()
+        #if USE_FRAMEWORKS
+            
+            self.performBlock(closure)
+        #else
+            
+            if #available(iOS 8.0, *) {
+                
+                self.performBlock(closure)
+            }
+            else {
+                
+                self.lock()
+                GCDQueue.Default.async {
+                    
+                    closure()
+                    self.unlock()
                 }
             }
-            return self.defaultStackInstance!
-        }
-        set {
-            
-            self.defaultStackBarrierQueue.barrierAsync {
-                
-                self.defaultStackInstance = newValue
-            }
-        }
+        #endif
     }
     
-    
-    // MARK: Private
-    
-    private static let defaultStackBarrierQueue = GCDQueue.createConcurrent("com.coreStore.defaultStackBarrierQueue")
-    
-    private static var defaultStackInstance: DataStack?
+    internal func performSynchronously(closure: () -> Void) {
+        
+        #if USE_FRAMEWORKS
+            
+            self.performBlockAndWait(closure)
+        #else
+            
+            if #available(iOS 8.0, *) {
+                
+                self.performBlockAndWait(closure)
+            }
+            else {
+                
+                self.lock()
+                autoreleasepool(closure)
+                self.unlock()
+            }
+        #endif
+    }
 }

@@ -2,7 +2,7 @@
 //  GCDBlock.swift
 //  GCDKit
 //
-//  Copyright (c) 2014 John Rommel Estropia
+//  Copyright © 2014 John Rommel Estropia
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -37,11 +37,30 @@ public struct GCDBlock {
     - parameter closure: The closure to be associated with the block.
     */
     public init(_ closure: () -> Void) {
-
-        self.rawObject = dispatch_block_create(DISPATCH_BLOCK_INHERIT_QOS_CLASS) {
-
-            autoreleasepool(closure)
-        }
+        
+        #if USE_FRAMEWORKS
+            
+            self.rawObject = dispatch_block_create(DISPATCH_BLOCK_INHERIT_QOS_CLASS) {
+                
+                autoreleasepool(closure)
+            }
+        #else
+            
+            if #available(iOS 8.0, *) {
+                
+                self.rawObject = dispatch_block_create(DISPATCH_BLOCK_INHERIT_QOS_CLASS) {
+                    
+                    autoreleasepool(closure)
+                }
+            }
+            else {
+                
+                self.rawObject = {
+                    
+                    autoreleasepool(closure)
+                }
+            }
+        #endif
     }
 
     /**

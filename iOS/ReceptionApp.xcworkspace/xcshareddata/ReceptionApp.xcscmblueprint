@@ -1,30 +1,30 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D678A04124ABCAC9CBF74E3CA27825B44150B053",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7" : 0,
-    "B16A5A80C3B6317485543848ADC32B5E2158C457" : 0
+    "B16A5A80C3B6317485543848ADC32B5E2158C457" : 0,
+    "D678A04124ABCAC9CBF74E3CA27825B44150B053" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "02F5FFDA-A2C1-43C2-9F91-0EB24A440F21",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7" : "ReceptionApp\/",
-    "B16A5A80C3B6317485543848ADC32B5E2158C457" : "ReceptionApp\/Frameworks\/SimpleFurigana\/"
+    "B16A5A80C3B6317485543848ADC32B5E2158C457" : "ReceptionApp\/iOS\/Frameworks\/SimpleFurigana\/",
+    "D678A04124ABCAC9CBF74E3CA27825B44150B053" : "ReceptionApp\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ReceptionApp",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ReceptionApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS\/ReceptionApp.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shinjukunian\/SimpleFurigana.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:shinjukunian\/SimpleFurigana.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B16A5A80C3B6317485543848ADC32B5E2158C457"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:eure\/eureception-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:eure\/ReceptionApp.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2F8A1B5E82B09FCBC64293E07FC79DA334B6DC7"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D678A04124ABCAC9CBF74E3CA27825B44150B053"
     }
   ]
 }

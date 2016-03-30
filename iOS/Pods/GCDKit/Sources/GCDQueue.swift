@@ -2,7 +2,7 @@
 //  GCDQueue.swift
 //  GCDKit
 //
-//  Copyright (c) 2014 John Rommel Estropia
+//  Copyright © 2014 John Rommel Estropia
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -71,10 +71,10 @@ public enum GCDQueue {
     /**
     Creates a custom queue to which blocks can be submitted serially.
     
-    - parameter label: A string label to attach to the queue to uniquely identify it in debugging tools such as Instruments, sample, stackshots, and crash reports.
+    - parameter label: An optional string label to attach to the queue to uniquely identify it in debugging tools such as Instruments, sample, stackshots, and crash reports.
     - returns: A new custom serial queue.
     */
-    public static func createSerial(label: String) -> GCDQueue {
+    public static func createSerial(label: String? = nil) -> GCDQueue {
         
         return self.createCustom(isConcurrent: false, label: label, targetQueue: nil)
     }
@@ -82,11 +82,11 @@ public enum GCDQueue {
     /**
     Creates a custom queue and specifies a target queue to which blocks can be submitted serially.
     
-    - parameter label: A string label to attach to the queue to uniquely identify it in debugging tools such as Instruments, sample, stackshots, and crash reports.
+    - parameter label: An optional string label to attach to the queue to uniquely identify it in debugging tools such as Instruments, sample, stackshots, and crash reports.
     - parameter targetQueue: The new target queue for the custom queue.
     - returns: A new custom serial queue.
     */
-    public static func createSerial(label: String, targetQueue: GCDQueue) -> GCDQueue {
+    public static func createSerial(label: String? = nil, targetQueue: GCDQueue) -> GCDQueue {
         
         return self.createCustom(isConcurrent: false, label: label, targetQueue: targetQueue)
     }
@@ -94,10 +94,10 @@ public enum GCDQueue {
     /**
     Creates a custom queue to which blocks can be submitted concurrently.
     
-    - parameter label: A string label to attach to the queue to uniquely identify it in debugging tools such as Instruments, sample, stackshots, and crash reports.
+    - parameter label: A String label to attach to the queue to uniquely identify it in debugging tools such as Instruments, sample, stackshots, and crash reports.
     - returns: A new custom concurrent queue.
     */
-    public static func createConcurrent(label: String) -> GCDQueue {
+    public static func createConcurrent(label: String? = nil) -> GCDQueue {
         
         return self.createCustom(isConcurrent: true, label: label, targetQueue: nil)
     }
@@ -105,11 +105,11 @@ public enum GCDQueue {
     /**
     Creates a custom queue and specifies a target queue to which blocks can be submitted concurrently.
     
-    - parameter label: A string label to attach to the queue to uniquely identify it in debugging tools such as Instruments, sample, stackshots, and crash reports.
+    - parameter label: An optional string label to attach to the queue to uniquely identify it in debugging tools such as Instruments, sample, stackshots, and crash reports.
     - parameter targetQueue: The new target queue for the custom queue.
     - returns: A new custom concurrent queue.
     */
-    public static func createConcurrent(label: String, targetQueue: GCDQueue) -> GCDQueue {
+    public static func createConcurrent(label: String? = nil, targetQueue: GCDQueue) -> GCDQueue {
         
         return self.createCustom(isConcurrent: true, label: label, targetQueue: targetQueue)
     }
@@ -277,34 +277,102 @@ public enum GCDQueue {
     */
     public func dispatchQueue() -> dispatch_queue_t {
         
-        switch self {
+        #if USE_FRAMEWORKS
             
-        case .Main:
-            return dispatch_get_main_queue()
+            switch self {
+                
+            case .Main:
+                return dispatch_get_main_queue()
+                
+            case .UserInteractive:
+                return dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)
+                
+            case .UserInitiated:
+                return dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)
+                
+            case .Default:
+                return dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
+                
+            case .Utility:
+                return dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)
+                
+            case .Background:
+                return dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
+                
+            case .Custom(let rawObject):
+                return rawObject
+            }
+        #else
             
-        case .UserInteractive:
-            return dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)
-            
-        case .UserInitiated:
-            return dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)
-            
-        case .Default:
-            return dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
-            
-        case .Utility:
-            return dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)
-            
-        case .Background:
-            return dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
-            
-        case .Custom(let rawObject):
-            return rawObject
-        }
+            switch self {
+                
+            case .Main:
+                return dispatch_get_main_queue()
+                
+            case .UserInteractive:
+                if #available(iOS 8.0, *) {
+                    
+                    return dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)
+                }
+                else {
+                    
+                    return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
+                }
+                
+            case .UserInitiated:
+                if #available(iOS 8.0, *) {
+                    
+                    return dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)
+                }
+                else {
+                    
+                    return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
+                }
+                
+            case .Default:
+                if #available(iOS 8.0, *) {
+                    
+                    return dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
+                }
+                else {
+                    
+                    return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+                }
+                
+            case .Utility:
+                if #available(iOS 8.0, *) {
+                    
+                    return dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)
+                }
+                else {
+                    
+                    return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)
+                }
+                
+            case .Background:
+                if #available(iOS 8.0, *) {
+                    
+                    return dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
+                }
+                else {
+                    
+                    return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
+                }
+                
+            case .Custom(let rawObject):
+                return rawObject
+            }
+        #endif
     }
     
-    private static func createCustom(isConcurrent isConcurrent: Bool, label: String, targetQueue: GCDQueue?) -> GCDQueue {
+    private static func createCustom(isConcurrent isConcurrent: Bool, label: String?, targetQueue: GCDQueue?) -> GCDQueue {
         
-        let queue = GCDQueue.Custom(dispatch_queue_create(label, (isConcurrent ? DISPATCH_QUEUE_CONCURRENT : DISPATCH_QUEUE_SERIAL)))
+        let queue = GCDQueue.Custom(
+            dispatch_queue_create(
+                label.flatMap { ($0 as NSString).UTF8String } ?? nil,
+                (isConcurrent ? DISPATCH_QUEUE_CONCURRENT : DISPATCH_QUEUE_SERIAL)
+            )
+        )
         
         if let target = targetQueue {
             
@@ -338,6 +406,19 @@ public func ==(lhs: GCDQueue, rhs: GCDQueue) -> Bool {
         
     case (.Custom(let lhsRawObject), .Custom(let rhsRawObject)):
         return lhsRawObject === rhsRawObject
+
+    case (.UserInitiated, .UserInteractive), (.UserInteractive, .UserInitiated):
+        #if USE_FRAMEWORKS
+            
+            return false
+        #else
+            
+            if #available(iOS 8.0, *) {
+                
+                return false
+            }
+            return true
+        #endif
         
     default:
         return false
