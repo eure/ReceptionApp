@@ -92,7 +92,7 @@ enum Configuration {
     // Token
     struct Token {
         
-        static let baseUrl = ""// "https://reception.eure.jp/api/v1"
+        static let baseUrl = "https://reception.eure.jp/api/v1"
         static let APIKey = "O4mug2zIiuNcfd0WKMYN0Nz4EnrPa5"
     }
     
