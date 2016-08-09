@@ -436,14 +436,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B992FC41B75146B0073473F /* Build configuration list for PBXNativeTarget "ReceptionApp" */;
 			buildPhases = (
-				40C7994C785C28EDFC1BD910 /* 📦 Check Pods Manifest.lock */,
+				40C7994C785C28EDFC1BD910 /* [CP] Check Pods Manifest.lock */,
 				4B696C221B902A690096A169 /* Run Script */,
 				4B992F981B75146B0073473F /* Sources */,
 				4B992F991B75146B0073473F /* Frameworks */,
 				4B992F9A1B75146B0073473F /* Resources */,
 				4BC8EDF61B9182060057C5FB /* Embed Frameworks */,
-				C1363B001C0A8E96C4EB916E /* 📦 Embed Pods Frameworks */,
-				6B2EC9107B128853DF62ADF6 /* 📦 Copy Pods Resources */,
+				C1363B001C0A8E96C4EB916E /* [CP] Embed Pods Frameworks */,
+				6B2EC9107B128853DF62ADF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -537,14 +537,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40C7994C785C28EDFC1BD910 /* 📦 Check Pods Manifest.lock */ = {
+		40C7994C785C28EDFC1BD910 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,14 +566,14 @@
 			shellPath = /bin/sh;
 			shellScript = "echo ${PODS_ROOT} > ~/Desktop/a.txt\ndiff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\ncat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\nexit 1\nfi";
 		};
-		6B2EC9107B128853DF62ADF6 /* 📦 Copy Pods Resources */ = {
+		6B2EC9107B128853DF62ADF6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,14 +581,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceptionApp/Pods-ReceptionApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C1363B001C0A8E96C4EB916E /* 📦 Embed Pods Frameworks */ = {
+		C1363B001C0A8E96C4EB916E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

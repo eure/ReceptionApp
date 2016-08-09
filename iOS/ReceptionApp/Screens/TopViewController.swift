@@ -36,7 +36,6 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     // MARK: Internal
     
     @IBOutlet private(set) dynamic weak var welcomeLabel: UILabel!
-    @IBOutlet private(set) dynamic weak var welcomeBottomLabel: UILabel!
     @IBOutlet private(set) dynamic weak var otherButton: TopButton!
     @IBOutlet private(set) dynamic weak var appointButton: TopButton!
     @IBOutlet private(set) dynamic weak var longButton: UIButton!
@@ -60,14 +59,6 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 2),
                 NSFontAttributeName : Configuration.Font.baseBoldFont(size: 18),
-                NSForegroundColorAttributeName : Configuration.Color.textColor,
-            ]
-        )
-        self.welcomeBottomLabel.attributedText = NSAttributedString(
-            string: "WELCOME!",
-            attributes: [
-                NSKernAttributeName : NSNumber(integer: 6),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 23),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -105,7 +96,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         )
         
         let longPressGesture = UILongPressGestureRecognizer()
-        longPressGesture.addTarget(self, action: "handleLongPressGesture:")
+        longPressGesture.addTarget(self, action: #selector(TopViewController.handleLongPressGesture(_:)))
         longPressGesture.minimumPressDuration = 3
         longPressGesture.delegate = self
         self.view.addGestureRecognizer(longPressGesture)
