@@ -26,6 +26,7 @@
 
 import Foundation
 import UIKit
+import CoreStore
 
 
 // MARK: - TopViewController
@@ -140,12 +141,19 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     @IBAction private dynamic func handleInterviewButton(sender: AnyObject) {
         
         let controller = YourNameViewController.viewControllerFromStoryboard()
+        
+        let recruitmentUser = self.usersListMonitor.objectsInAllSections().filter { $0.id == 128 }.first
+        guard let user = recruitmentUser else { return }
+        let transaction = AppointmentTransaction(user: user)
+        controller.transaction = transaction
+        
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func handleotherButton(sender: AnyObject) {
         
         let controller = OtherPurposeSelectViewController.viewControllerFromStoryboard()
+        
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -196,4 +204,10 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         }
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    private let usersListMonitor = CoreStore.monitorList(
+        From(User),
+        Where("removed == false"),
+        OrderBy(.Ascending("id"))
+    )
 }

@@ -101,7 +101,7 @@
                                     <constraint firstItem="tFm-iq-1gL" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="ln8-da-cDY"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="handleInterviewButton:" destination="Ha9-Ds-Otx" eventType="valueChanged" id="baf-cc-2Xo"/>
+                                    <action selector="handleInterviewButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="XEA-Qx-loF"/>
                                     <outlet property="subtitleLabel" destination="GLc-Dd-4OQ" id="dqV-Bt-NSI"/>
                                     <outlet property="titleLabel" destination="tFm-iq-1gL" id="paG-I6-mIr"/>
                                 </connections>
