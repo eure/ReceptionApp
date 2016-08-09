@@ -37,19 +37,19 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7k-QB-7JQ" customClass="TopButton" customModule="ReceptionApp" customModuleProvider="target">
-                                <rect key="frame" x="40" y="299" width="688" height="200"/>
+                                <rect key="frame" x="40" y="299" width="688" height="210"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPOINTMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyh-Mu-F3f">
-                                        <rect key="frame" x="177" y="68" width="333.5" height="64"/>
+                                        <rect key="frame" x="177" y="63" width="333.5" height="64"/>
                                         <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="50"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="LbX-4B-zf6">
-                                        <rect key="frame" x="595" y="83" width="33" height="33"/>
+                                        <rect key="frame" x="595" y="88" width="33" height="33"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご予約のある方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUA-UW-ep0">
-                                        <rect key="frame" x="261" y="142" width="165" height="15"/>
+                                        <rect key="frame" x="261" y="137" width="165" height="15"/>
                                         <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -57,8 +57,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="nyh-Mu-F3f" firstAttribute="centerY" secondItem="C7k-QB-7JQ" secondAttribute="centerY" id="7VA-tO-YQn"/>
-                                    <constraint firstAttribute="height" constant="200" id="7bZ-pJ-CzI"/>
+                                    <constraint firstItem="nyh-Mu-F3f" firstAttribute="centerY" secondItem="C7k-QB-7JQ" secondAttribute="centerY" constant="-10" id="7VA-tO-YQn"/>
+                                    <constraint firstAttribute="height" constant="210" id="7bZ-pJ-CzI"/>
                                     <constraint firstItem="nyh-Mu-F3f" firstAttribute="centerX" secondItem="C7k-QB-7JQ" secondAttribute="centerX" id="BZT-6y-YMe"/>
                                     <constraint firstItem="LbX-4B-zf6" firstAttribute="centerY" secondItem="C7k-QB-7JQ" secondAttribute="centerY" id="BlZ-O7-NiQ"/>
                                     <constraint firstItem="VUA-UW-ep0" firstAttribute="top" secondItem="nyh-Mu-F3f" secondAttribute="bottom" constant="10" id="c5g-Mz-Tyt"/>
@@ -72,19 +72,19 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-5V-aKW" customClass="TopButton" customModule="ReceptionApp" customModuleProvider="target">
-                                <rect key="frame" x="40" y="519" width="688" height="200"/>
+                                <rect key="frame" x="40" y="529" width="688" height="210"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTERVIEW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
-                                        <rect key="frame" x="217" y="68" width="254.5" height="64"/>
+                                        <rect key="frame" x="217" y="63" width="254.5" height="64"/>
                                         <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="50"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-CN-kAt">
-                                        <rect key="frame" x="595" y="83" width="33" height="33"/>
+                                        <rect key="frame" x="595" y="88" width="33" height="33"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="面接の方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Dd-4OQ">
-                                        <rect key="frame" x="284" y="142" width="120" height="15"/>
+                                        <rect key="frame" x="284" y="137" width="120" height="15"/>
                                         <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -94,9 +94,9 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jyo-CN-kAt" secondAttribute="trailing" constant="60" id="4mo-jY-uFf"/>
                                     <constraint firstItem="GLc-Dd-4OQ" firstAttribute="top" secondItem="tFm-iq-1gL" secondAttribute="bottom" constant="10" id="7cQ-QD-ROk"/>
-                                    <constraint firstItem="tFm-iq-1gL" firstAttribute="centerY" secondItem="TVz-5V-aKW" secondAttribute="centerY" id="Beg-E1-ajM"/>
+                                    <constraint firstItem="tFm-iq-1gL" firstAttribute="centerY" secondItem="TVz-5V-aKW" secondAttribute="centerY" constant="-10" id="Beg-E1-ajM"/>
                                     <constraint firstItem="jyo-CN-kAt" firstAttribute="centerY" secondItem="TVz-5V-aKW" secondAttribute="centerY" id="FbP-il-Usy"/>
-                                    <constraint firstAttribute="height" constant="200" id="aoz-3F-5u7"/>
+                                    <constraint firstAttribute="height" constant="210" id="aoz-3F-5u7"/>
                                     <constraint firstItem="GLc-Dd-4OQ" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="da5-2e-8nz"/>
                                     <constraint firstItem="tFm-iq-1gL" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="ln8-da-cDY"/>
                                 </constraints>
@@ -123,19 +123,19 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFp-yW-hsY" customClass="TopButton" customModule="ReceptionApp" customModuleProvider="target">
-                                <rect key="frame" x="40" y="739" width="688" height="200"/>
+                                <rect key="frame" x="40" y="759" width="688" height="210"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz9-fz-ki6">
-                                        <rect key="frame" x="268" y="68" width="152.5" height="64"/>
+                                        <rect key="frame" x="268" y="63" width="152.5" height="64"/>
                                         <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="50"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="OKZ-yJ-16R">
-                                        <rect key="frame" x="595" y="83" width="33" height="33"/>
+                                        <rect key="frame" x="595" y="88" width="33" height="33"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他ご用件の方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYM-bS-72E">
-                                        <rect key="frame" x="254" y="142" width="180" height="15"/>
+                                        <rect key="frame" x="254" y="137" width="180" height="15"/>
                                         <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -146,10 +146,10 @@
                                     <constraint firstItem="xz9-fz-ki6" firstAttribute="centerX" secondItem="fFp-yW-hsY" secondAttribute="centerX" id="80K-Ec-ZF2"/>
                                     <constraint firstItem="GYM-bS-72E" firstAttribute="centerX" secondItem="fFp-yW-hsY" secondAttribute="centerX" id="Cj2-SG-qay"/>
                                     <constraint firstItem="GYM-bS-72E" firstAttribute="top" secondItem="xz9-fz-ki6" secondAttribute="bottom" constant="10" id="DZ2-2V-vLC"/>
-                                    <constraint firstAttribute="height" constant="200" id="ETd-kT-Vrd"/>
+                                    <constraint firstAttribute="height" constant="210" id="ETd-kT-Vrd"/>
                                     <constraint firstAttribute="trailing" secondItem="OKZ-yJ-16R" secondAttribute="trailing" constant="60" id="KJX-TR-1nA"/>
                                     <constraint firstItem="OKZ-yJ-16R" firstAttribute="centerY" secondItem="fFp-yW-hsY" secondAttribute="centerY" id="at7-gD-tgg"/>
-                                    <constraint firstItem="xz9-fz-ki6" firstAttribute="centerY" secondItem="fFp-yW-hsY" secondAttribute="centerY" id="hWz-zo-abc"/>
+                                    <constraint firstItem="xz9-fz-ki6" firstAttribute="centerY" secondItem="fFp-yW-hsY" secondAttribute="centerY" constant="-10" id="hWz-zo-abc"/>
                                 </constraints>
                                 <connections>
                                     <action selector="handleotherButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="DlS-z0-U5A"/>

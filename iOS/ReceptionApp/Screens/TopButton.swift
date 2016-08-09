@@ -79,7 +79,7 @@ final class TopButton: UIControl {
         
         super.layoutSublayersOfLayer(layer)
         
-        let width = (1.0 / UIScreen.mainScreen().scale) * 3.0
+        let width = (1.0 / UIScreen.mainScreen().scale) * 2.0
         let path = UIBezierPath(
             roundedRect: self.bounds.insetBy(dx: width / 2, dy: width / 2),
             cornerRadius: self.bounds.height / 2
