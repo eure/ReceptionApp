@@ -73,12 +73,14 @@ final class TopToContactTransitionController: NSObject, UIViewControllerAnimated
                 animations: {
                     
                     fromVC.appointButton.layer.transform = transform
+                    fromVC.interviewButton.layer.transform = transform
                     fromVC.otherButton.layer.transform = transform
                     fromVC.welcomeLabel.layer.transform = transform
                 },
                 completion: { _ in
                     
                     fromVC.appointButton.layer.transform = CATransform3DIdentity
+                    fromVC.interviewButton.layer.transform = CATransform3DIdentity
                     fromVC.otherButton.layer.transform = CATransform3DIdentity
                     fromVC.welcomeLabel.layer.transform = CATransform3DIdentity
                     
@@ -110,6 +112,7 @@ final class TopToContactTransitionController: NSObject, UIViewControllerAnimated
             
             let transform = CATransform3DMakeTranslation(-offset, 0, 0)
             toVC.appointButton.layer.transform = transform
+            toVC.interviewButton.layer.transform = transform
             toVC.otherButton.layer.transform = transform
             toVC.welcomeLabel.layer.transform = transform
             
@@ -138,6 +141,7 @@ final class TopToContactTransitionController: NSObject, UIViewControllerAnimated
                 animations: { () -> Void in
                 
                     toVC.appointButton.layer.transform = CATransform3DIdentity
+                    toVC.interviewButton.layer.transform = CATransform3DIdentity
                     toVC.otherButton.layer.transform = CATransform3DIdentity
                     toVC.welcomeLabel.layer.transform = CATransform3DIdentity
                 },

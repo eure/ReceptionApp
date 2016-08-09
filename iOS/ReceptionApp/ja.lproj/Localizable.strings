@@ -48,6 +48,7 @@
 "TopViewController.label.selectBusiness" = "ようこそ%@へ ご用件をお選びください";
 "TopViewController.label.appointment" = "ご予約のある方はこちら";
 "TopViewController.label.other" = "その他ご用件の方はこちら";
+"TopViewController.label.interview" = "面接の方はこちら";
 "TopViewController.alert.selectFloorNumber" = "フロアを選択してください";
 
 // MARK: YourNameViewController

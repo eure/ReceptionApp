@@ -36,8 +36,9 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     // MARK: Internal
     
     @IBOutlet private(set) dynamic weak var welcomeLabel: UILabel!
-    @IBOutlet private(set) dynamic weak var otherButton: TopButton!
     @IBOutlet private(set) dynamic weak var appointButton: TopButton!
+    @IBOutlet private(set) dynamic weak var otherButton: TopButton!
+    @IBOutlet private(set) dynamic weak var interviewButton: TopButton!
     @IBOutlet private(set) dynamic weak var longButton: UIButton!
     
     
@@ -66,7 +67,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: "APPOINTMENT",
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 6),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 23),
+                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 40),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -78,11 +79,27 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
+        self.interviewButton.titleLabel?.attributedText = NSAttributedString(
+            string: "INTERVIEW",
+            attributes: [
+                NSKernAttributeName : NSNumber(integer: 6),
+                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 40),
+                NSForegroundColorAttributeName : Configuration.Color.textColor,
+            ]
+        )
+        self.interviewButton.subtitleLabel?.attributedText = NSAttributedString(
+            string: "TopViewController.label.interview".l10n,
+            attributes: [
+                NSKernAttributeName : NSNumber(integer: 2),
+                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 15),
+                NSForegroundColorAttributeName : Configuration.Color.textColor,
+            ]
+        )
         self.otherButton.titleLabel?.attributedText = NSAttributedString(
             string: "OTHER",
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 6),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 23),
+                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 40),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -117,6 +134,12 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     @IBAction private dynamic func handleApointButton(sender: AnyObject) {
         
         let controller = ContactToViewController.viewControllerFromStoryboard()
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction private dynamic func handleInterviewButton(sender: AnyObject) {
+        
+        let controller = YourNameViewController.viewControllerFromStoryboard()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
