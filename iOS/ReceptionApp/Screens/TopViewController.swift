@@ -141,6 +141,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     @IBAction private dynamic func handleInterviewButton(sender: AnyObject) {
         
         let controller = YourNameViewController.viewControllerFromStoryboard()
+        controller.contactType = .Interview
         
         let recruitmentUser = self.usersListMonitor.objectsInAllSections().filter { $0.id == 128 }.first
         guard let user = recruitmentUser else { return }

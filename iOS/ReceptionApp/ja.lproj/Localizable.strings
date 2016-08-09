@@ -21,6 +21,10 @@
 // MARK: ConfirmAppointmentViewController
 "ConfirmAppointmentViewController.label.confirm" = "以下、内容をご確認ください";
 
+// MARK: ConfirmInterviewViewController
+"ConfirmInterviewViewController.label.confirm" = "以下、内容をご確認ください";
+"ConfirmInterviewViewController.label.purpose" = "面接";
+
 // MARK: ConfirmOtherPresetViewController
 "ConfirmOtherPresetViewController.label.confirm" = "担当者へ連絡します\nよろしいですか？";
 

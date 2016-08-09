@@ -206,6 +206,7 @@ final class ContactToViewController: BaseTransactionViewController, UITableViewD
         
         let user = self.results[indexPath.row]
         let controller = YourNameViewController.viewControllerFromStoryboard()
+        controller.contactType = .Appointment
         
         let transaction = AppointmentTransaction(user: user)
         controller.transaction = transaction

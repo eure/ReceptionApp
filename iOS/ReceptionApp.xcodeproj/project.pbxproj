@@ -95,6 +95,8 @@
 		60705E801C92CE9B005716B3 /* send_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60705E7F1C92CE9B005716B3 /* send_sound.mp3 */; };
 		609538371C7D512800D640DF /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609538361C7D512800D640DF /* String+Util.swift */; };
 		6096E70B1C925EAB00CB01EB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6096E70A1C925EAB00CB01EB /* Configuration.swift */; };
+		60E53D061D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E53D041D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard */; };
+		60E53D071D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E53D051D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift */; };
 		60ECAD691C89A7EA005F2D84 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ECAD681C89A7EA005F2D84 /* NetworkManager.swift */; };
 		DC3ABA7670CFE0CBAD15B4BB /* Pods_ReceptionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B167CE2451BDF0C9BD6923F /* Pods_ReceptionApp.framework */; };
 /* End PBXBuildFile section */
@@ -208,6 +210,8 @@
 		60705E7F1C92CE9B005716B3 /* send_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = send_sound.mp3; sourceTree = "<group>"; };
 		609538361C7D512800D640DF /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
 		6096E70A1C925EAB00CB01EB /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		60E53D041D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmInterviewViewController.storyboard; sourceTree = "<group>"; };
+		60E53D051D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmInterviewViewController.swift; sourceTree = "<group>"; };
 		60ECAD681C89A7EA005F2D84 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E9A4019EE05CBE60E114E875 /* Pods-ReceptionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceptionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceptionApp/Pods-ReceptionApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +239,7 @@
 				4B98703B1B896E2600F72342 /* TopViewController.swift */,
 				4B98703D1B896E3600F72342 /* TopViewController.storyboard */,
 				4B696C121B8F2BD50096A169 /* BaseConfirmViewController.swift */,
+				60E53D031D59EC4D00ED45F6 /* Interview */,
 				4B696C101B8F2B830096A169 /* Appointment */,
 				4B696C111B8F2B9B0096A169 /* Other */,
 				4BB07A431B8C7CEE000065F3 /* CompletionViewController.swift */,
@@ -420,6 +425,15 @@
 			path = SimpleFurigana;
 			sourceTree = "<group>";
 		};
+		60E53D031D59EC4D00ED45F6 /* Interview */ = {
+			isa = PBXGroup;
+			children = (
+				60E53D041D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard */,
+				60E53D051D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift */,
+			);
+			path = Interview;
+			sourceTree = "<group>";
+		};
 		EAEB1D2976DB6C55BC18F230 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +514,7 @@
 				4B1B92B71B75B1B600C28005 /* Localizable.strings in Resources */,
 				4BB07A5C1B8C9A6C000065F3 /* Exo-DemiBold-Italic.otf in Resources */,
 				4BB07A5D1B8C9A6C000065F3 /* Exo-DemiBold.otf in Resources */,
+				60E53D061D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard in Resources */,
 				4B5231B21B8F03AD006DE64A /* KozGoPro-Regular.otf in Resources */,
 				60705E801C92CE9B005716B3 /* send_sound.mp3 in Resources */,
 				4BB07A681B8C9A6C000065F3 /* Exo-Thin-Italic.otf in Resources */,
@@ -644,6 +659,7 @@
 				4B0169E81B8BE6BB00208CA9 /* ConfirmAppointmentViewController.swift in Sources */,
 				4BF528ED1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift in Sources */,
 				4B98703C1B896E2600F72342 /* TopViewController.swift in Sources */,
+				60E53D071D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift in Sources */,
 				4B9DFA8E1C5B023D00B07C75 /* Visitor.swift in Sources */,
 				4BB07A6F1B8CB354000065F3 /* NSAttributedString+Util.swift in Sources */,
 				4B9D42E51B765C5B0047C99D /* BaseNavigationController.swift in Sources */,
