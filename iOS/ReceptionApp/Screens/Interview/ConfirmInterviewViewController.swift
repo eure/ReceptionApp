@@ -46,6 +46,9 @@ final class ConfirmInterviewViewController: BaseConfirmViewController {
         
         super.viewDidLoad()
         
+        self.transaction?.visitor?.companyName = "ConfirmInterviewViewController.label.purpose".l10n
+        self.transaction?.visitor?.numberOfPersons = 1
+        
         self.view.backgroundColor = Configuration.Color.backgroundColor
         self.contactToView.backgroundColor = Configuration.Color.backgroundColor
         self.nameView.backgroundColor = Configuration.Color.backgroundColor

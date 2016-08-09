@@ -105,20 +105,16 @@ final class YourNameViewController: BaseTransactionViewController, InputFieldTra
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         
+        guard let name = self.textField.text where !name.isEmpty else { return }
+        var visitor = self.transaction?.visitor ?? AppointmentVisitor()
+        visitor.name = name
+        
+        self.transaction?.visitor = visitor
+        
         switch self.contactType {
         case .Appointment?:
             let controller = CompanyNameViewController.viewControllerFromStoryboard()
-            
-            guard let name = self.textField.text where !name.isEmpty else {
-                
-                return
-            }
-            
-            var visitor = self.transaction?.visitor ?? AppointmentVisitor()
-            visitor.name = name
-            self.transaction?.visitor = visitor
             controller.appointmentTransaction = self.transaction
-            
             self.navigationController?.pushViewController(controller, animated: true)
             
         case .Interview?:
