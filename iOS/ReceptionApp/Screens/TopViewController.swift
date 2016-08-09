@@ -47,7 +47,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         
         super.viewDidLoad()
 
-        self.logoImageView.image = Configuration.logoImage
+        self.logoImageView.image = Configuration.welcomeImage
         
         self.logoImageView.tintColor = Configuration.Color.imageTintColor
         self.welcomeLabel.textColor = Configuration.Color.textColor

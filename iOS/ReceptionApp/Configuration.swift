@@ -75,8 +75,11 @@ enum Configuration {
     // Company Name
     static let companyName = "eureka"
     
-    // Logo Image
-    static let logoImage = UIImage(named: "image_logo")
+    // Logo Image 147 × 30
+    static let logoImage = UIImage(named: "eureka_logo")
+    
+    // Welcome Image
+    static let welcomeImage = UIImage(named: "image_logo")
 
     // Sent Sound
     static var sentSoundPath: String? = NSBundle.mainBundle().pathForResource("send_sound", ofType: "mp3")

@@ -7,8 +7,10 @@
         <mutableArray key="Exo-DemiBold.otf">
             <string>Exo-DemiBold</string>
             <string>Exo-DemiBold</string>
+            <string>Exo-DemiBold</string>
         </mutableArray>
         <mutableArray key="KozGoPro-Medium.otf">
+            <string>KozGoPro-Medium</string>
             <string>KozGoPro-Medium</string>
             <string>KozGoPro-Medium</string>
             <string>KozGoPro-Medium</string>
@@ -72,8 +74,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-5V-aKW" customClass="TopButton" customModule="ReceptionApp" customModuleProvider="target">
                                 <rect key="frame" x="40" y="529" width="688" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
-                                        <rect key="frame" x="268" y="68" width="152.5" height="64"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTERVIEW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-iq-1gL">
+                                        <rect key="frame" x="217" y="68" width="254.5" height="64"/>
                                         <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="50"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -81,8 +83,8 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-CN-kAt">
                                         <rect key="frame" x="595" y="83" width="33" height="33"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他ご用件の方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Dd-4OQ">
-                                        <rect key="frame" x="254" y="142" width="180" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="面接の方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Dd-4OQ">
+                                        <rect key="frame" x="284" y="142" width="120" height="15"/>
                                         <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -98,11 +100,6 @@
                                     <constraint firstItem="GLc-Dd-4OQ" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="da5-2e-8nz"/>
                                     <constraint firstItem="tFm-iq-1gL" firstAttribute="centerX" secondItem="TVz-5V-aKW" secondAttribute="centerX" id="ln8-da-cDY"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="handleotherButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="3hx-W9-XPY"/>
-                                    <outlet property="subtitleLabel" destination="GLc-Dd-4OQ" id="IF6-OM-Pru"/>
-                                    <outlet property="titleLabel" destination="tFm-iq-1gL" id="jyu-xI-Qdu"/>
-                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ようこそeurekaへ ご用件をお選びください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-Rr-W2I">
                                 <rect key="frame" x="210" y="251" width="348" height="18"/>
@@ -120,6 +117,41 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFp-yW-hsY" customClass="TopButton" customModule="ReceptionApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="759" width="688" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz9-fz-ki6">
+                                        <rect key="frame" x="268" y="68" width="152.5" height="64"/>
+                                        <fontDescription key="fontDescription" name="Exo-DemiBold" family="Exo" pointSize="50"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="OKZ-yJ-16R">
+                                        <rect key="frame" x="595" y="83" width="33" height="33"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他ご用件の方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYM-bS-72E">
+                                        <rect key="frame" x="254" y="142" width="180" height="15"/>
+                                        <fontDescription key="fontDescription" name="KozGoPro-Medium" family="Kozuka Gothic Pro" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xz9-fz-ki6" firstAttribute="centerX" secondItem="fFp-yW-hsY" secondAttribute="centerX" id="80K-Ec-ZF2"/>
+                                    <constraint firstItem="GYM-bS-72E" firstAttribute="centerX" secondItem="fFp-yW-hsY" secondAttribute="centerX" id="Cj2-SG-qay"/>
+                                    <constraint firstItem="GYM-bS-72E" firstAttribute="top" secondItem="xz9-fz-ki6" secondAttribute="bottom" constant="10" id="DZ2-2V-vLC"/>
+                                    <constraint firstAttribute="height" constant="200" id="ETd-kT-Vrd"/>
+                                    <constraint firstAttribute="trailing" secondItem="OKZ-yJ-16R" secondAttribute="trailing" constant="60" id="KJX-TR-1nA"/>
+                                    <constraint firstItem="OKZ-yJ-16R" firstAttribute="centerY" secondItem="fFp-yW-hsY" secondAttribute="centerY" id="at7-gD-tgg"/>
+                                    <constraint firstItem="xz9-fz-ki6" firstAttribute="centerY" secondItem="fFp-yW-hsY" secondAttribute="centerY" id="hWz-zo-abc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="handleotherButton:" destination="Ha9-Ds-Otx" eventType="touchUpInside" id="DlS-z0-U5A"/>
+                                    <outlet property="subtitleLabel" destination="GYM-bS-72E" id="sJc-cJ-KHm"/>
+                                    <outlet property="titleLabel" destination="xz9-fz-ki6" id="585-1v-zRZ"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -129,12 +161,15 @@
                             <constraint firstItem="ZaG-63-gJK" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="6YN-qJ-qYa"/>
                             <constraint firstItem="QQE-Z3-hyo" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="G1K-bK-2F8"/>
                             <constraint firstAttribute="trailing" secondItem="C7k-QB-7JQ" secondAttribute="trailing" constant="40" id="I8B-qc-i79"/>
+                            <constraint firstItem="fFp-yW-hsY" firstAttribute="top" secondItem="TVz-5V-aKW" secondAttribute="bottom" constant="30" id="LzC-Rj-JhE"/>
                             <constraint firstItem="cBh-Rr-W2I" firstAttribute="centerX" secondItem="spf-8Z-saC" secondAttribute="centerX" id="QEN-nO-I9x"/>
                             <constraint firstItem="C7k-QB-7JQ" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="ejb-dJ-nR5"/>
                             <constraint firstItem="C7k-QB-7JQ" firstAttribute="top" secondItem="cBh-Rr-W2I" secondAttribute="bottom" constant="30" id="h9U-bd-Rfc"/>
                             <constraint firstItem="ZaG-63-gJK" firstAttribute="top" secondItem="wxg-N2-rZv" secondAttribute="bottom" constant="60" id="hs4-w3-uX0"/>
                             <constraint firstItem="TVz-5V-aKW" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="i4b-vC-eRq"/>
+                            <constraint firstItem="fFp-yW-hsY" firstAttribute="leading" secondItem="spf-8Z-saC" secondAttribute="leading" constant="40" id="sju-YF-1Sn"/>
                             <constraint firstItem="QQE-Z3-hyo" firstAttribute="top" secondItem="wxg-N2-rZv" secondAttribute="bottom" constant="60" id="tDp-DY-ARN"/>
+                            <constraint firstAttribute="trailing" secondItem="fFp-yW-hsY" secondAttribute="trailing" constant="40" id="y9n-P1-b4i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xuI-aG-lCR"/>
@@ -144,7 +179,7 @@
                         <outlet property="appointButton" destination="C7k-QB-7JQ" id="hQ4-kE-ptm"/>
                         <outlet property="logoImageView" destination="QQE-Z3-hyo" id="Gc1-0O-MRp"/>
                         <outlet property="longButton" destination="ZaG-63-gJK" id="b9u-cy-8nT"/>
-                        <outlet property="otherButton" destination="TVz-5V-aKW" id="cZS-UD-xK0"/>
+                        <outlet property="otherButton" destination="fFp-yW-hsY" id="Lrf-BL-7lg"/>
                         <outlet property="welcomeLabel" destination="cBh-Rr-W2I" id="AfM-L4-tfA"/>
                     </connections>
                 </viewController>
