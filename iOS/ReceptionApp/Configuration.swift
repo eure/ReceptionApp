@@ -71,6 +71,22 @@ enum Configuration {
             )
             return UIFont(descriptor: descriptor, size: size)
         }
+        
+        static func topBoldFont(size size: CGFloat) -> UIFont {
+            
+            let descriptor = UIFontDescriptor(
+                fontAttributes: [
+                    UIFontDescriptorNameAttribute: Configuration.topBoldFont,
+                    UIFontDescriptorCascadeListAttribute : [
+                        UIFontDescriptor(
+                            fontAttributes: [UIFontDescriptorNameAttribute: baseBoldCascadeFont]
+                        ),
+                        UIFont.systemFontOfSize(size).fontDescriptor()
+                    ]
+                ]
+            )
+            return UIFont(descriptor: descriptor, size: size)
+        }
     }
     
     // Company Name
@@ -102,13 +118,14 @@ enum Configuration {
     
     // Color
     private static let baseColor = UIColor(int: 0xc6cb31, alpha: 1)
-    private static let subColor = UIColor(white: 1, alpha: 0.4)//UIColor(int: 0xdfe1a4, alpha: 1)
+    private static let subColor = UIColor(white: 1, alpha: 0.4)
     private static let textBaseColor = UIColor.whiteColor()
     private static let gradientColor = UIColor(int: 0x9ee04d, alpha: 1)
     
     // Font
-    private static let baseBoldFont = "Exo-DemiBold"
+    private static let baseBoldFont = "Exo-Bold"
     private static let baseBoldCascadeFont = "KozGoPro-Medium"
-    private static let baseFont = "Exo-DemiBold"
+    private static let baseFont = "Exo-Bold"
     private static let baseCascadeFont = "KozGoPro-Regular"
+    private static let topBoldFont = "Exo-ExtraBold"
 }
