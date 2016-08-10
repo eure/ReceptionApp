@@ -51,8 +51,8 @@ final class TopButton: UIControl {
         
         super.awakeFromNib()
         
-        self.backgroundColor = Configuration.Color.largeButtonBackgroundColor
-        self.tintColor = Configuration.Color.largeButtonTintColor
+        self.backgroundColor = UIColor.clearColor()
+        self.tintColor = UIColor.clearColor()
         self.layer.addSublayer(self.shape)
         self.clipsToBounds = true
     }

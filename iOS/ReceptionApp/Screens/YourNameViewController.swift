@@ -52,8 +52,7 @@ final class YourNameViewController: BaseTransactionViewController, InputFieldTra
         
         super.viewDidLoad()
         
-        self.view.backgroundColor = Configuration.Color.backgroundColor
-        self.inputFieldView.backgroundColor = Configuration.Color.backgroundColor
+        self.inputFieldView.backgroundColor = UIColor.clearColor()
         
         self.messageLabel.textColor = Configuration.Color.textColor
         self.messageLabel.font = Configuration.Font.baseBoldFont(size: 18)
@@ -80,6 +79,8 @@ final class YourNameViewController: BaseTransactionViewController, InputFieldTra
                 self?.nextButton.enabled = result
             }
             .addDisposableTo(self.disposeBag)
+        
+        self.setGradient()
     }
     
     override func viewWillAppear(animated: Bool) {

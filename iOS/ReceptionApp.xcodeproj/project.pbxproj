@@ -95,6 +95,8 @@
 		60705E801C92CE9B005716B3 /* send_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60705E7F1C92CE9B005716B3 /* send_sound.mp3 */; };
 		609538371C7D512800D640DF /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609538361C7D512800D640DF /* String+Util.swift */; };
 		6096E70B1C925EAB00CB01EB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6096E70A1C925EAB00CB01EB /* Configuration.swift */; };
+		60D9AD221D5ABC81009997B8 /* UIViewController+Utill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D9AD211D5ABC81009997B8 /* UIViewController+Utill.swift */; };
+		60D9AD241D5ACCF2009997B8 /* TopToInterviewTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D9AD231D5ACCF2009997B8 /* TopToInterviewTransitionController.swift */; };
 		60E53D061D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E53D041D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard */; };
 		60E53D071D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E53D051D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift */; };
 		60ECAD691C89A7EA005F2D84 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ECAD681C89A7EA005F2D84 /* NetworkManager.swift */; };
@@ -210,6 +212,8 @@
 		60705E7F1C92CE9B005716B3 /* send_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = send_sound.mp3; sourceTree = "<group>"; };
 		609538361C7D512800D640DF /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
 		6096E70A1C925EAB00CB01EB /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		60D9AD211D5ABC81009997B8 /* UIViewController+Utill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utill.swift"; sourceTree = "<group>"; };
+		60D9AD231D5ACCF2009997B8 /* TopToInterviewTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToInterviewTransitionController.swift; sourceTree = "<group>"; };
 		60E53D041D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmInterviewViewController.storyboard; sourceTree = "<group>"; };
 		60E53D051D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmInterviewViewController.swift; sourceTree = "<group>"; };
 		60ECAD681C89A7EA005F2D84 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 			children = (
 				4BB07A6E1B8CB354000065F3 /* NSAttributedString+Util.swift */,
 				609538361C7D512800D640DF /* String+Util.swift */,
+				60D9AD211D5ABC81009997B8 /* UIViewController+Utill.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */,
+				60D9AD231D5ACCF2009997B8 /* TopToInterviewTransitionController.swift */,
 				4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */,
 				4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */,
 				4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift */,
@@ -628,6 +634,7 @@
 				4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift in Sources */,
 				4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */,
 				4BB07A731B8CBA36000065F3 /* HomeButton.swift in Sources */,
+				60D9AD221D5ABC81009997B8 /* UIViewController+Utill.swift in Sources */,
 				4B9870321B89684500F72342 /* YourNameViewController.swift in Sources */,
 				4B696C131B8F2BD50096A169 /* BaseConfirmViewController.swift in Sources */,
 				4BEB7FB21B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift in Sources */,
@@ -635,6 +642,7 @@
 				4B696C191B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift in Sources */,
 				4B9DFA871C5B023D00B07C75 /* Container.swift in Sources */,
 				4BD0CC2E1B8EEC4E00A37716 /* ConfirmOtherViewController.swift in Sources */,
+				60D9AD241D5ACCF2009997B8 /* TopToInterviewTransitionController.swift in Sources */,
 				4BB07A6D1B8CB197000065F3 /* InputTextField.swift in Sources */,
 				4B9DFA861C5B023D00B07C75 /* ModelResult.swift in Sources */,
 				4BD2BCF61B8348EC0064F51E /* NSString+Japanese.m in Sources */,

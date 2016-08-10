@@ -20,6 +20,7 @@ enum Configuration {
         static let separatorColor = subColor
         static let imageTintColor = textBaseColor
         static let highlightedCellColor = subColor
+        static let backgroundGradientColor = gradientColor
         // Large Button
         static let largeButtonTintColor = textBaseColor
         static let largeButtonBackgroundColor = baseColor
@@ -100,13 +101,14 @@ enum Configuration {
     }
     
     // Color
-    private static let baseColor = UIColor(int: 0xC8CC52, alpha: 1)
-    private static let subColor = UIColor(int: 0xdfe1a4, alpha: 1)
+    private static let baseColor = UIColor(int: 0xc6cb31, alpha: 1)
+    private static let subColor = UIColor(white: 1, alpha: 0.4)//UIColor(int: 0xdfe1a4, alpha: 1)
     private static let textBaseColor = UIColor.whiteColor()
+    private static let gradientColor = UIColor(int: 0x9ee04d, alpha: 1)
     
     // Font
-    private static let baseBoldFont = "DemiBold"
+    private static let baseBoldFont = "Exo-DemiBold"
     private static let baseBoldCascadeFont = "KozGoPro-Medium"
-    private static let baseFont = "DemiBold"
+    private static let baseFont = "Exo-DemiBold"
     private static let baseCascadeFont = "KozGoPro-Regular"
 }

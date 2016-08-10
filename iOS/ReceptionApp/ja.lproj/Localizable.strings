@@ -49,7 +49,7 @@
 "PersonCountViewController.label.peopleNumber" = "%d人";
 
 // MARK: TopViewController
-"TopViewController.label.selectBusiness" = "ようこそ%@へ ご用件をお選びください";
+"TopViewController.label.selectBusiness" = "%@へようこそ! ご用件をお選びください";
 "TopViewController.label.appointment" = "ご予約のある方はこちら";
 "TopViewController.label.other" = "その他ご用件の方はこちら";
 "TopViewController.label.interview" = "面接の方はこちら";
@@ -57,3 +57,4 @@
 
 // MARK: YourNameViewController
 "YourNameViewController.label.name" = "お客様のお名前をご記入ください";
+
