@@ -181,10 +181,13 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="appointButton" destination="C7k-QB-7JQ" id="hQ4-kE-ptm"/>
+                        <outlet property="appointButton" destination="C7k-QB-7JQ" id="ZV3-dx-9Wi"/>
+                        <outlet property="appointmentArrowImage" destination="LbX-4B-zf6" id="bJj-w8-JM3"/>
+                        <outlet property="interviewArrowImage" destination="jyo-CN-kAt" id="RIH-eF-Hoq"/>
                         <outlet property="interviewButton" destination="TVz-5V-aKW" id="7q1-3e-oI4"/>
                         <outlet property="logoImageView" destination="QQE-Z3-hyo" id="Gc1-0O-MRp"/>
                         <outlet property="longButton" destination="ZaG-63-gJK" id="b9u-cy-8nT"/>
+                        <outlet property="otherArrowImage" destination="OKZ-yJ-16R" id="YqN-dI-4vK"/>
                         <outlet property="otherButton" destination="fFp-yW-hsY" id="Lrf-BL-7lg"/>
                         <outlet property="welcomeLabel" destination="cBh-Rr-W2I" id="AfM-L4-tfA"/>
                     </connections>

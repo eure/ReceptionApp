@@ -36,6 +36,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     // MARK: Internal
     
+    @IBOutlet private(set) dynamic weak var logoImageView: UIImageView!
     @IBOutlet private(set) dynamic weak var welcomeLabel: UILabel!
     @IBOutlet private(set) dynamic weak var appointButton: TopButton!
     @IBOutlet private(set) dynamic weak var otherButton: TopButton!
@@ -53,6 +54,9 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         
         self.logoImageView.tintColor = Configuration.Color.imageTintColor
         self.welcomeLabel.textColor = Configuration.Color.textColor
+        self.appointmentArrowImage.tintColor = Configuration.Color.imageTintColor
+        self.interviewArrowImage.tintColor = Configuration.Color.imageTintColor
+        self.otherArrowImage.tintColor = Configuration.Color.imageTintColor
         
         self.view.backgroundColor = Configuration.Color.backgroundColor
         
@@ -131,8 +135,10 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     
     // MARK: Private
-    
-    @IBOutlet private dynamic weak var logoImageView: UIImageView!
+    @IBOutlet private weak var appointmentArrowImage: UIImageView!
+    @IBOutlet private weak var interviewArrowImage: UIImageView!
+    @IBOutlet private weak var otherArrowImage: UIImageView!
+
     
     @IBAction private dynamic func handleApointButton(sender: AnyObject) {
         

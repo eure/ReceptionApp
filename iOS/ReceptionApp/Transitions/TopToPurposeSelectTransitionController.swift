@@ -74,6 +74,7 @@ final class TopToPurposeSelectTransitionController: NSObject, UIViewControllerAn
                     fromVC.interviewButton.layer.transform = transform
                     fromVC.otherButton.layer.transform = transform
                     fromVC.welcomeLabel.layer.transform = transform
+                    fromVC.logoImageView.layer.transform = transform
                 },
                 completion: { _ in
                     
@@ -81,6 +82,7 @@ final class TopToPurposeSelectTransitionController: NSObject, UIViewControllerAn
                     fromVC.interviewButton.layer.transform = CATransform3DIdentity
                     fromVC.otherButton.layer.transform = CATransform3DIdentity
                     fromVC.welcomeLabel.layer.transform = CATransform3DIdentity
+                    fromVC.logoImageView.layer.transform = CATransform3DIdentity
                     
                     containerView.addSubview(toVC.view)
                 }
@@ -112,6 +114,7 @@ final class TopToPurposeSelectTransitionController: NSObject, UIViewControllerAn
             toVC.interviewButton.layer.transform = transform
             toVC.otherButton.layer.transform = transform
             toVC.welcomeLabel.layer.transform = transform
+            toVC.logoImageView.layer.transform = transform
             
             UIView.animateAndChainWithDuration(
                 0.4,
@@ -139,6 +142,7 @@ final class TopToPurposeSelectTransitionController: NSObject, UIViewControllerAn
                     toVC.interviewButton.layer.transform = CATransform3DIdentity
                     toVC.otherButton.layer.transform = CATransform3DIdentity
                     toVC.welcomeLabel.layer.transform = CATransform3DIdentity
+                    toVC.logoImageView.layer.transform = CATransform3DIdentity
                 },
                 completion: { _ in
                     
