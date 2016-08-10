@@ -48,11 +48,13 @@ final class ConfirmAppointmentViewController: BaseConfirmViewController {
         
         super.viewDidLoad()
         
-        self.view.backgroundColor = Configuration.Color.backgroundColor
-        self.contactToView.backgroundColor = Configuration.Color.backgroundColor
-        self.nameView.backgroundColor = Configuration.Color.backgroundColor
-        self.companyNameView.backgroundColor = Configuration.Color.backgroundColor
-        self.countview.backgroundColor = Configuration.Color.backgroundColor
+        self.setGradient()
+        
+        self.view.backgroundColor = UIColor.clearColor()
+        self.contactToView.backgroundColor = UIColor.clearColor()
+        self.nameView.backgroundColor = UIColor.clearColor()
+        self.companyNameView.backgroundColor = UIColor.clearColor()
+        self.countview.backgroundColor = UIColor.clearColor()
         
         self.icons.forEach { $0.tintColor = Configuration.Color.imageTintColor }
         

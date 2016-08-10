@@ -46,9 +46,11 @@ final class CompanyNameViewController : BaseTransactionViewController, InputFiel
         
         super.viewDidLoad()
         
-        self.view.backgroundColor = Configuration.Color.backgroundColor
-        self.inputFieldView.backgroundColor = Configuration.Color.backgroundColor
-        self.textViewContainerView.backgroundColor = Configuration.Color.backgroundColor
+        self.setGradient()
+        
+        self.view.backgroundColor = UIColor.clearColor()
+        self.inputFieldView.backgroundColor = UIColor.clearColor()
+        self.textViewContainerView.backgroundColor = UIColor.clearColor()
         
         self.messageLabel.textColor = Configuration.Color.textColor
         self.messageLabel.font = Configuration.Font.baseBoldFont(size: 18)

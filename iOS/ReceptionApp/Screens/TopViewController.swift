@@ -58,7 +58,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         self.interviewArrowImage.tintColor = Configuration.Color.imageTintColor
         self.otherArrowImage.tintColor = Configuration.Color.imageTintColor
         
-        self.view.backgroundColor = Configuration.Color.backgroundColor
+        self.view.backgroundColor = UIColor.clearColor()
         
         self.welcomeLabel.attributedText = NSAttributedString(
             string: String.localizedStringWithFormat("TopViewController.label.selectBusiness".l10n, Configuration.companyName),

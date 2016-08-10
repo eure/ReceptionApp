@@ -47,14 +47,16 @@ final class ContactToViewController: BaseTransactionViewController, UITableViewD
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.setGradient()
 
-        self.view.backgroundColor = Configuration.Color.backgroundColor
-        self.inputFieldView.backgroundColor = Configuration.Color.backgroundColor
+        self.view.backgroundColor = UIColor.clearColor()
+        self.inputFieldView.backgroundColor = UIColor.clearColor()
         self.iconImageView.tintColor = Configuration.Color.imageTintColor
         
-        self.tableViewContainerView.backgroundColor = Configuration.Color.backgroundColor
+        self.tableViewContainerView.backgroundColor = UIColor.clearColor()
         self.tableView.rowHeight = 116
-        self.tableView.backgroundColor = Configuration.Color.backgroundColor
+        self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.separatorColor = Configuration.Color.separatorColor
         self.tableView.tableFooterView = UIView()
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)

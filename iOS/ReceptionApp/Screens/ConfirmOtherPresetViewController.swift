@@ -30,7 +30,9 @@ final class ConfirmOtherPresetViewController: BaseConfirmViewController {
         
         super.viewDidLoad()
         
-        self.view.backgroundColor = Configuration.Color.backgroundColor
+        self.setGradient()
+        
+        self.view.backgroundColor = UIColor.clearColor()
         self.iconImageView.tintColor = Configuration.Color.imageTintColor
         self.messageEnLabel.attributedText = NSAttributedString(
             string: "Ready to send?",

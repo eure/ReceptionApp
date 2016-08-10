@@ -55,7 +55,7 @@ final class PurposeButton: UIControl {
         
         super.awakeFromNib()
         
-        self.backgroundColor = Configuration.Color.largeButtonBackgroundColor
+        self.backgroundColor = UIColor.clearColor()
         self.tintColor = Configuration.Color.largeButtonTintColor
         self.iconImageView?.tintColor = Configuration.Color.imageTintColor
     }

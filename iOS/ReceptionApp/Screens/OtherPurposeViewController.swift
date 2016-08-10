@@ -47,9 +47,11 @@ final class OtherPurposeViewController: BaseTransactionViewController, InputFiel
         
         super.viewDidLoad()
         
-        self.view.backgroundColor = Configuration.Color.backgroundColor
-        self.inputFieldView.backgroundColor = Configuration.Color.backgroundColor
-        self.textViewContainerView.backgroundColor = Configuration.Color.backgroundColor
+        self.setGradient()
+        
+        self.view.backgroundColor = UIColor.clearColor()
+        self.inputFieldView.backgroundColor = UIColor.clearColor()
+        self.textViewContainerView.backgroundColor = UIColor.clearColor()
         
         self.textView.font = Configuration.Font.baseFont(size: 55)
         self.messageLabel.font = Configuration.Font.baseBoldFont(size: 18)
@@ -95,7 +97,7 @@ final class OtherPurposeViewController: BaseTransactionViewController, InputFiel
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 6),
                 NSFontAttributeName :  Configuration.Font.baseBoldFont(size: 55),
-                NSForegroundColorAttributeName : UIColor(hexString: "#E6E6E6")!,
+                NSForegroundColorAttributeName : Configuration.Color.placeholderColor,
             ]
         )
     }
