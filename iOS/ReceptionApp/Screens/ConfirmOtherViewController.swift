@@ -46,11 +46,9 @@ final class ConfirmOtherViewController: BaseConfirmViewController {
         
         super.viewDidLoad()
         
-        self.setGradient()
-        
-        self.view.backgroundColor = UIColor.clearColor()
-        self.companyNameView.backgroundColor = UIColor.clearColor()
-        self.purposeView.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = Configuration.Color.backgroundColor
+        self.companyNameView.backgroundColor = Configuration.Color.backgroundColor
+        self.purposeView.backgroundColor = Configuration.Color.backgroundColor
         
         self.icons.forEach { $0.tintColor = Configuration.Color.imageTintColor }
         self.messageLabel.textColor = Configuration.Color.textColor

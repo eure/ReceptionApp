@@ -50,8 +50,8 @@ final class ConfirmInterviewViewController: BaseConfirmViewController {
         self.transaction?.visitor?.numberOfPersons = 1
         
         self.view.backgroundColor = Configuration.Color.backgroundColor
-        self.contactToView.backgroundColor = UIColor.clearColor()
-        self.nameView.backgroundColor = UIColor.clearColor()
+        self.contactToView.backgroundColor = Configuration.Color.backgroundColor
+        self.nameView.backgroundColor = Configuration.Color.backgroundColor
         
         self.icons.forEach { $0.tintColor = Configuration.Color.imageTintColor }
         
@@ -74,8 +74,6 @@ final class ConfirmInterviewViewController: BaseConfirmViewController {
         self.messageLabel.font = Configuration.Font.baseBoldFont(size: 18)
         self.messageLabel.text = "ConfirmInterviewViewController.label.confirm".l10n
         self.messageLabel.textColor = Configuration.Color.textColor
-        
-        self.setGradient()
     }
     
     

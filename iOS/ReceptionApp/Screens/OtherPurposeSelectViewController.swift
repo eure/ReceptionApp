@@ -43,10 +43,8 @@ final class OtherPurposeSelectViewController: BaseTransactionViewController {
         
         super.viewDidLoad()
         
-        self.setGradient()
-        
-        self.view.backgroundColor = UIColor.clearColor()
-        self.selectView.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = Configuration.Color.backgroundColor
+        self.selectView.backgroundColor = Configuration.Color.backgroundColor
         
         self.messageLabel.font = Configuration.Font.baseBoldFont(size: 18)
         self.messageLabel.textColor = Configuration.Color.textColor

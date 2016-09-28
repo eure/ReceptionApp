@@ -58,7 +58,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         self.interviewArrowImage.tintColor = Configuration.Color.imageTintColor
         self.otherArrowImage.tintColor = Configuration.Color.imageTintColor
         
-        self.view.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = Configuration.Color.backgroundColor
         
         self.welcomeLabel.attributedText = NSAttributedString(
             string: String.localizedStringWithFormat("TopViewController.label.selectBusiness".l10n, Configuration.companyName),
@@ -122,8 +122,6 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         longPressGesture.minimumPressDuration = 3
         longPressGesture.delegate = self
         self.view.addGestureRecognizer(longPressGesture)
-        
-        self.setGradient()
     }
     
     override func viewWillAppear(animated: Bool) {

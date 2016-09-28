@@ -43,10 +43,8 @@ final class PersonCountViewController: BaseTransactionViewController, InputField
         
         super.viewDidLoad()
         
-        self.setGradient()
-        
-        self.view.backgroundColor = UIColor.clearColor()
-        self.inputFieldView.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = Configuration.Color.backgroundColor
+        self.inputFieldView.backgroundColor = Configuration.Color.backgroundColor
         
         self.messageLabel.textColor = Configuration.Color.textColor
         self.messageLabel.font = Configuration.Font.baseBoldFont(size: 18)

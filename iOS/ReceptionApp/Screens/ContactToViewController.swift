@@ -48,10 +48,8 @@ final class ContactToViewController: BaseTransactionViewController, UITableViewD
         
         super.viewDidLoad()
         
-        self.setGradient()
-
-        self.view.backgroundColor = UIColor.clearColor()
-        self.inputFieldView.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = Configuration.Color.backgroundColor
+        self.inputFieldView.backgroundColor = Configuration.Color.backgroundColor
         self.iconImageView.tintColor = Configuration.Color.imageTintColor
         
         self.tableViewContainerView.backgroundColor = UIColor.clearColor()
