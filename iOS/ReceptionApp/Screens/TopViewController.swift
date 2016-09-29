@@ -80,7 +80,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: "TopViewController.label.appointment".l10n,
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 2),
-                NSFontAttributeName : Configuration.Font.topBoldFont(size: 15),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 16),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -96,7 +96,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: "TopViewController.label.interview".l10n,
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 2),
-                NSFontAttributeName : Configuration.Font.topBoldFont(size: 15),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 16),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -112,7 +112,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: "TopViewController.label.other".l10n,
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 2),
-                NSFontAttributeName : Configuration.Font.topBoldFont(size: 15),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 16),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
