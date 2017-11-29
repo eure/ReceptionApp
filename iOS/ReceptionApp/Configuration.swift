@@ -20,6 +20,7 @@ enum Configuration {
         static let separatorColor = subColor
         static let imageTintColor = textBaseColor
         static let highlightedCellColor = subColor
+        static let backgroundGradientColor = gradientColor
         // Large Button
         static let largeButtonTintColor = textBaseColor
         static let largeButtonBackgroundColor = baseColor
@@ -70,6 +71,22 @@ enum Configuration {
             )
             return UIFont(descriptor: descriptor, size: size)
         }
+        
+        static func topBoldFont(size size: CGFloat) -> UIFont {
+            
+            let descriptor = UIFontDescriptor(
+                fontAttributes: [
+                    UIFontDescriptorNameAttribute: Configuration.topBoldFont,
+                    UIFontDescriptorCascadeListAttribute : [
+                        UIFontDescriptor(
+                            fontAttributes: [UIFontDescriptorNameAttribute: baseBoldCascadeFont]
+                        ),
+                        UIFont.systemFontOfSize(size).fontDescriptor()
+                    ]
+                ]
+            )
+            return UIFont(descriptor: descriptor, size: size)
+        }
     }
     
     // Company Name
@@ -77,6 +94,9 @@ enum Configuration {
     
     // Logo Image 147 × 30
     static let logoImage = UIImage(named: "eureka_logo")
+    
+    // Welcome Image
+    static let welcomeImage = UIImage(named: "image_logo")
 
     // Sent Sound
     static var sentSoundPath: String? = NSBundle.mainBundle().pathForResource("send_sound", ofType: "mp3")
@@ -97,13 +117,15 @@ enum Configuration {
     }
     
     // Color
-    private static let baseColor = UIColor(int: 0xC8CC52, alpha: 1)
-    private static let subColor = UIColor(int: 0xdfe1a4, alpha: 1)
+    private static let baseColor = UIColor(int: 0xc6cb31, alpha: 1)
+    private static let subColor = UIColor(white: 1, alpha: 0.4)
     private static let textBaseColor = UIColor.whiteColor()
+    private static let gradientColor = UIColor(int: 0x9ee04d, alpha: 1)
     
     // Font
-    private static let baseBoldFont = "DemiBold"
+    private static let baseBoldFont = "Exo-Bold"
     private static let baseBoldCascadeFont = "KozGoPro-Medium"
-    private static let baseFont = "DemiBold"
+    private static let baseFont = "Exo-Bold"
     private static let baseCascadeFont = "KozGoPro-Regular"
+    private static let topBoldFont = "Exo-ExtraBold"
 }

@@ -16,6 +16,7 @@ PODS:
   - JEToolkit/JESettings (3.0.3)
   - JEToolkit/JEToolkit (3.0.3)
   - JEToolkit/JEWeakCache (3.0.3)
+  - Reveal-iOS-SDK (1.6.2)
   - RxCocoa (2.2.0):
     - RxSwift (~> 2.2)
   - RxSwift (2.2.0)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - CoreStore
   - EasyAnimation (~> 1.0.0)
   - JEToolkit
+  - Reveal-iOS-SDK
   - RxCocoa (~> 2.2.0)
   - RxSwift (~> 2.2.0)
   - SwiftyJSON (~> 2.3.2)
@@ -36,10 +38,11 @@ SPEC CHECKSUMS:
   EasyAnimation: 32821f37dd39187e7364369a3d8f65d38405cf1d
   GCDKit: 15e3d514cbf5d56699b2716b798031f778fb48c2
   JEToolkit: 0530815afeb2875a26d1447add4bfa50b4e25f8d
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   RxCocoa: 42efb7a7145a8d1d5878e94ce48a580d29e0c796
   RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: a936f8ddc49f36f41e77b81843839321518a586b
+PODFILE CHECKSUM: b2644ee16425a71900e7f1ac40b7c0bb9926356e
 
-COCOAPODS: 1.0.0.beta.6
+COCOAPODS: 1.0.1

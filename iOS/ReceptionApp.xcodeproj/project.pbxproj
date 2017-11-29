@@ -95,6 +95,10 @@
 		60705E801C92CE9B005716B3 /* send_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60705E7F1C92CE9B005716B3 /* send_sound.mp3 */; };
 		609538371C7D512800D640DF /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609538361C7D512800D640DF /* String+Util.swift */; };
 		6096E70B1C925EAB00CB01EB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6096E70A1C925EAB00CB01EB /* Configuration.swift */; };
+		60D9AD221D5ABC81009997B8 /* UIViewController+Utill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D9AD211D5ABC81009997B8 /* UIViewController+Utill.swift */; };
+		60D9AD241D5ACCF2009997B8 /* TopToInterviewTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D9AD231D5ACCF2009997B8 /* TopToInterviewTransitionController.swift */; };
+		60E53D061D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E53D041D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard */; };
+		60E53D071D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E53D051D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift */; };
 		60ECAD691C89A7EA005F2D84 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ECAD681C89A7EA005F2D84 /* NetworkManager.swift */; };
 		DC3ABA7670CFE0CBAD15B4BB /* Pods_ReceptionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B167CE2451BDF0C9BD6923F /* Pods_ReceptionApp.framework */; };
 /* End PBXBuildFile section */
@@ -208,6 +212,10 @@
 		60705E7F1C92CE9B005716B3 /* send_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = send_sound.mp3; sourceTree = "<group>"; };
 		609538361C7D512800D640DF /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
 		6096E70A1C925EAB00CB01EB /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		60D9AD211D5ABC81009997B8 /* UIViewController+Utill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utill.swift"; sourceTree = "<group>"; };
+		60D9AD231D5ACCF2009997B8 /* TopToInterviewTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToInterviewTransitionController.swift; sourceTree = "<group>"; };
+		60E53D041D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmInterviewViewController.storyboard; sourceTree = "<group>"; };
+		60E53D051D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmInterviewViewController.swift; sourceTree = "<group>"; };
 		60ECAD681C89A7EA005F2D84 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E9A4019EE05CBE60E114E875 /* Pods-ReceptionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceptionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceptionApp/Pods-ReceptionApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +243,7 @@
 				4B98703B1B896E2600F72342 /* TopViewController.swift */,
 				4B98703D1B896E3600F72342 /* TopViewController.storyboard */,
 				4B696C121B8F2BD50096A169 /* BaseConfirmViewController.swift */,
+				60E53D031D59EC4D00ED45F6 /* Interview */,
 				4B696C101B8F2B830096A169 /* Appointment */,
 				4B696C111B8F2B9B0096A169 /* Other */,
 				4BB07A431B8C7CEE000065F3 /* CompletionViewController.swift */,
@@ -250,6 +259,7 @@
 			children = (
 				4BB07A6E1B8CB354000065F3 /* NSAttributedString+Util.swift */,
 				609538361C7D512800D640DF /* String+Util.swift */,
+				60D9AD211D5ABC81009997B8 /* UIViewController+Utill.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				4B2F75191B8D66B00087DEBE /* TopToContactTransitionController.swift */,
+				60D9AD231D5ACCF2009997B8 /* TopToInterviewTransitionController.swift */,
 				4BEB7FAF1B9331F0004CC553 /* TopToPurposeSelectTransitionController.swift */,
 				4BEB7FB11B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift */,
 				4BEB7FB31B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift */,
@@ -420,6 +431,15 @@
 			path = SimpleFurigana;
 			sourceTree = "<group>";
 		};
+		60E53D031D59EC4D00ED45F6 /* Interview */ = {
+			isa = PBXGroup;
+			children = (
+				60E53D041D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard */,
+				60E53D051D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift */,
+			);
+			path = Interview;
+			sourceTree = "<group>";
+		};
 		EAEB1D2976DB6C55BC18F230 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,14 +456,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B992FC41B75146B0073473F /* Build configuration list for PBXNativeTarget "ReceptionApp" */;
 			buildPhases = (
-				40C7994C785C28EDFC1BD910 /* 📦 Check Pods Manifest.lock */,
+				40C7994C785C28EDFC1BD910 /* [CP] Check Pods Manifest.lock */,
 				4B696C221B902A690096A169 /* Run Script */,
 				4B992F981B75146B0073473F /* Sources */,
 				4B992F991B75146B0073473F /* Frameworks */,
 				4B992F9A1B75146B0073473F /* Resources */,
 				4BC8EDF61B9182060057C5FB /* Embed Frameworks */,
-				C1363B001C0A8E96C4EB916E /* 📦 Embed Pods Frameworks */,
-				6B2EC9107B128853DF62ADF6 /* 📦 Copy Pods Resources */,
+				C1363B001C0A8E96C4EB916E /* [CP] Embed Pods Frameworks */,
+				6B2EC9107B128853DF62ADF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -500,6 +520,7 @@
 				4B1B92B71B75B1B600C28005 /* Localizable.strings in Resources */,
 				4BB07A5C1B8C9A6C000065F3 /* Exo-DemiBold-Italic.otf in Resources */,
 				4BB07A5D1B8C9A6C000065F3 /* Exo-DemiBold.otf in Resources */,
+				60E53D061D59EC4D00ED45F6 /* ConfirmInterviewViewController.storyboard in Resources */,
 				4B5231B21B8F03AD006DE64A /* KozGoPro-Regular.otf in Resources */,
 				60705E801C92CE9B005716B3 /* send_sound.mp3 in Resources */,
 				4BB07A681B8C9A6C000065F3 /* Exo-Thin-Italic.otf in Resources */,
@@ -537,14 +558,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40C7994C785C28EDFC1BD910 /* 📦 Check Pods Manifest.lock */ = {
+		40C7994C785C28EDFC1BD910 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,14 +587,14 @@
 			shellPath = /bin/sh;
 			shellScript = "echo ${PODS_ROOT} > ~/Desktop/a.txt\ndiff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\ncat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\nexit 1\nfi";
 		};
-		6B2EC9107B128853DF62ADF6 /* 📦 Copy Pods Resources */ = {
+		6B2EC9107B128853DF62ADF6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,14 +602,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceptionApp/Pods-ReceptionApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C1363B001C0A8E96C4EB916E /* 📦 Embed Pods Frameworks */ = {
+		C1363B001C0A8E96C4EB916E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +634,7 @@
 				4BEB7FB41B933613004CC553 /* PurposeSelectToConfirmOtherPresetTransitionController.swift in Sources */,
 				4B696C171B8F36350096A169 /* ConfirmToCompletionTransitionController.swift in Sources */,
 				4BB07A731B8CBA36000065F3 /* HomeButton.swift in Sources */,
+				60D9AD221D5ABC81009997B8 /* UIViewController+Utill.swift in Sources */,
 				4B9870321B89684500F72342 /* YourNameViewController.swift in Sources */,
 				4B696C131B8F2BD50096A169 /* BaseConfirmViewController.swift in Sources */,
 				4BEB7FB21B9335ED004CC553 /* PurposeSelectToInputFieldTransitionController.swift in Sources */,
@@ -620,6 +642,7 @@
 				4B696C191B8F36BF0096A169 /* InputFieldToConfirmOtherTransitionController.swift in Sources */,
 				4B9DFA871C5B023D00B07C75 /* Container.swift in Sources */,
 				4BD0CC2E1B8EEC4E00A37716 /* ConfirmOtherViewController.swift in Sources */,
+				60D9AD241D5ACCF2009997B8 /* TopToInterviewTransitionController.swift in Sources */,
 				4BB07A6D1B8CB197000065F3 /* InputTextField.swift in Sources */,
 				4B9DFA861C5B023D00B07C75 /* ModelResult.swift in Sources */,
 				4BD2BCF61B8348EC0064F51E /* NSString+Japanese.m in Sources */,
@@ -644,6 +667,7 @@
 				4B0169E81B8BE6BB00208CA9 /* ConfirmAppointmentViewController.swift in Sources */,
 				4BF528ED1B96C6EF00A73152 /* ConfirmOtherPresetViewController.swift in Sources */,
 				4B98703C1B896E2600F72342 /* TopViewController.swift in Sources */,
+				60E53D071D59EC4D00ED45F6 /* ConfirmInterviewViewController.swift in Sources */,
 				4B9DFA8E1C5B023D00B07C75 /* Visitor.swift in Sources */,
 				4BB07A6F1B8CB354000065F3 /* NSAttributedString+Util.swift in Sources */,
 				4B9D42E51B765C5B0047C99D /* BaseNavigationController.swift in Sources */,

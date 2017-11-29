@@ -46,8 +46,8 @@ final class SubmitButton: UIControl {
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        self.backgroundColor = Configuration.Color.smallButtonBackgroundColor
-        self.backgroundLayer.fillColor = Configuration.Color.smallButtonBackgroundColor.CGColor
+        self.backgroundColor = UIColor.clearColor()
+        self.backgroundLayer.fillColor = UIColor.clearColor().CGColor
         self.backgroundLayer.strokeColor = Configuration.Color.smallButtonBorderColor.CGColor
         self.iconImageView?.tintColor = Configuration.Color.smallButtonTintColor
     }
@@ -96,11 +96,11 @@ final class SubmitButton: UIControl {
                     if newValue {
                         
                         self.backgroundLayer.fillColor = Configuration.Color.smallButtonTintColor.CGColor
-                        self.iconImageView?.tintColor = Configuration.Color.smallButtonBackgroundColor
+                        self.iconImageView?.tintColor = Configuration.Color.backgroundColor
                     }
                     else {
                         
-                        self.backgroundLayer.fillColor = Configuration.Color.smallButtonBackgroundColor.CGColor
+                        self.backgroundLayer.fillColor = UIColor.clearColor().CGColor
                         self.iconImageView?.tintColor = Configuration.Color.smallButtonTintColor
                     }
                 },

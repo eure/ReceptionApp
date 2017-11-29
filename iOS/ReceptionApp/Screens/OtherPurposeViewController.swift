@@ -95,7 +95,7 @@ final class OtherPurposeViewController: BaseTransactionViewController, InputFiel
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 6),
                 NSFontAttributeName :  Configuration.Font.baseBoldFont(size: 55),
-                NSForegroundColorAttributeName : UIColor(hexString: "#E6E6E6")!,
+                NSForegroundColorAttributeName : Configuration.Color.placeholderColor,
             ]
         )
     }

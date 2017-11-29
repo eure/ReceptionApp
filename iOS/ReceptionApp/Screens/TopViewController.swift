@@ -26,6 +26,7 @@
 
 import Foundation
 import UIKit
+import CoreStore
 
 
 // MARK: - TopViewController
@@ -35,10 +36,11 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     // MARK: Internal
     
+    @IBOutlet private(set) dynamic weak var logoImageView: UIImageView!
     @IBOutlet private(set) dynamic weak var welcomeLabel: UILabel!
-    @IBOutlet private(set) dynamic weak var welcomeBottomLabel: UILabel!
-    @IBOutlet private(set) dynamic weak var otherButton: TopButton!
     @IBOutlet private(set) dynamic weak var appointButton: TopButton!
+    @IBOutlet private(set) dynamic weak var otherButton: TopButton!
+    @IBOutlet private(set) dynamic weak var interviewButton: TopButton!
     @IBOutlet private(set) dynamic weak var longButton: UIButton!
     
     
@@ -48,10 +50,13 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         
         super.viewDidLoad()
 
-        self.logoImageView.image = Configuration.logoImage
+        self.logoImageView.image = Configuration.welcomeImage
         
         self.logoImageView.tintColor = Configuration.Color.imageTintColor
         self.welcomeLabel.textColor = Configuration.Color.textColor
+        self.appointmentArrowImage.tintColor = Configuration.Color.imageTintColor
+        self.interviewArrowImage.tintColor = Configuration.Color.imageTintColor
+        self.otherArrowImage.tintColor = Configuration.Color.imageTintColor
         
         self.view.backgroundColor = Configuration.Color.backgroundColor
         
@@ -59,15 +64,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: String.localizedStringWithFormat("TopViewController.label.selectBusiness".l10n, Configuration.companyName),
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 2),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 18),
-                NSForegroundColorAttributeName : Configuration.Color.textColor,
-            ]
-        )
-        self.welcomeBottomLabel.attributedText = NSAttributedString(
-            string: "WELCOME!",
-            attributes: [
-                NSKernAttributeName : NSNumber(integer: 6),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 23),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 18),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -75,7 +72,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: "APPOINTMENT",
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 6),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 23),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 40),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -83,7 +80,23 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: "TopViewController.label.appointment".l10n,
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 2),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 15),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 16),
+                NSForegroundColorAttributeName : Configuration.Color.textColor,
+            ]
+        )
+        self.interviewButton.titleLabel?.attributedText = NSAttributedString(
+            string: "INTERVIEW",
+            attributes: [
+                NSKernAttributeName : NSNumber(integer: 6),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 40),
+                NSForegroundColorAttributeName : Configuration.Color.textColor,
+            ]
+        )
+        self.interviewButton.subtitleLabel?.attributedText = NSAttributedString(
+            string: "TopViewController.label.interview".l10n,
+            attributes: [
+                NSKernAttributeName : NSNumber(integer: 2),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 16),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -91,7 +104,7 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: "OTHER",
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 6),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 23),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 40),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
@@ -99,13 +112,13 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
             string: "TopViewController.label.other".l10n,
             attributes: [
                 NSKernAttributeName : NSNumber(integer: 2),
-                NSFontAttributeName : Configuration.Font.baseBoldFont(size: 15),
+                NSFontAttributeName : Configuration.Font.topBoldFont(size: 16),
                 NSForegroundColorAttributeName : Configuration.Color.textColor,
             ]
         )
         
         let longPressGesture = UILongPressGestureRecognizer()
-        longPressGesture.addTarget(self, action: "handleLongPressGesture:")
+        longPressGesture.addTarget(self, action: #selector(TopViewController.handleLongPressGesture(_:)))
         longPressGesture.minimumPressDuration = 3
         longPressGesture.delegate = self
         self.view.addGestureRecognizer(longPressGesture)
@@ -120,8 +133,10 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     
     // MARK: Private
-    
-    @IBOutlet private dynamic weak var logoImageView: UIImageView!
+    @IBOutlet private weak var appointmentArrowImage: UIImageView!
+    @IBOutlet private weak var interviewArrowImage: UIImageView!
+    @IBOutlet private weak var otherArrowImage: UIImageView!
+
     
     @IBAction private dynamic func handleApointButton(sender: AnyObject) {
         
@@ -129,9 +144,23 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    @IBAction private dynamic func handleInterviewButton(sender: AnyObject) {
+        
+        let controller = YourNameViewController.viewControllerFromStoryboard()
+        controller.contactType = .Interview
+        
+        let recruitmentUser = self.usersListMonitor.objectsInAllSections().filter { $0.id == 128 }.first
+        guard let user = recruitmentUser else { return }
+        let transaction = AppointmentTransaction(user: user)
+        controller.transaction = transaction
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     @IBAction func handleotherButton(sender: AnyObject) {
         
         let controller = OtherPurposeSelectViewController.viewControllerFromStoryboard()
+        
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -182,4 +211,10 @@ final class TopViewController: BaseViewController, UIGestureRecognizerDelegate {
         }
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    private let usersListMonitor = CoreStore.monitorList(
+        From(User),
+        Where("removed == false"),
+        OrderBy(.Ascending("id"))
+    )
 }

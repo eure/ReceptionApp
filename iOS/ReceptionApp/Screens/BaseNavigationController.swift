@@ -53,6 +53,11 @@ class BaseNavigationController: UINavigationController, UINavigationControllerDe
             return TopToContactTransitionController(operation: operation)
             
         case
+        (is TopViewController, is YourNameViewController),
+        (is YourNameViewController, is TopViewController):
+            return TopToInterviewTransitionController(operation: operation)
+            
+        case
         (is TopViewController, is OtherPurposeSelectViewController),
         (is OtherPurposeSelectViewController, is TopViewController):
             return TopToPurposeSelectTransitionController(operation: operation)

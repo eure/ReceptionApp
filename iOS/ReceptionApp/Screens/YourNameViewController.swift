@@ -37,7 +37,13 @@ final class YourNameViewController: BaseTransactionViewController, InputFieldTra
     
     // MARK: Internal
     
+    enum ContactType {
+        case Appointment
+        case Interview
+    }
+    
     var transaction: AppointmentTransaction?
+    var contactType: ContactType?
     
     
     // MARK: UIViewController
@@ -99,18 +105,26 @@ final class YourNameViewController: BaseTransactionViewController, InputFieldTra
     
     @IBAction private dynamic func handleNextButton(sender: AnyObject) {
         
-        let controller = CompanyNameViewController.viewControllerFromStoryboard()
-        
-        guard let name = self.textField.text where !name.isEmpty else {
-            
-            return
-        }
-        
+        guard let name = self.textField.text where !name.isEmpty else { return }
         var visitor = self.transaction?.visitor ?? AppointmentVisitor()
         visitor.name = name
-        self.transaction?.visitor = visitor
-        controller.appointmentTransaction = self.transaction
         
-        self.navigationController?.pushViewController(controller, animated: true)
+        self.transaction?.visitor = visitor
+        
+        switch self.contactType {
+        case .Appointment?:
+            let controller = CompanyNameViewController.viewControllerFromStoryboard()
+            controller.appointmentTransaction = self.transaction
+            self.navigationController?.pushViewController(controller, animated: true)
+            
+        case .Interview?:
+            let controller = ConfirmInterviewViewController.viewControllerFromStoryboard()
+            controller.transaction = self.transaction
+            self.navigationController?.pushViewController(controller, animated: true)
+            
+        default:
+            assertionFailure("Unexpected pattern")
+            return
+        }
     }
 }

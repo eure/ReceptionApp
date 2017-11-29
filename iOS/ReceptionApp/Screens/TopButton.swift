@@ -51,8 +51,8 @@ final class TopButton: UIControl {
         
         super.awakeFromNib()
         
-        self.backgroundColor = Configuration.Color.largeButtonBackgroundColor
-        self.tintColor = Configuration.Color.largeButtonTintColor
+        self.backgroundColor = UIColor.clearColor()
+        self.tintColor = UIColor.clearColor()
         self.layer.addSublayer(self.shape)
         self.clipsToBounds = true
     }
@@ -79,10 +79,10 @@ final class TopButton: UIControl {
         
         super.layoutSublayersOfLayer(layer)
         
-        let width = (1.0 / UIScreen.mainScreen().scale) * 5.0
+        let width = (1.0 / UIScreen.mainScreen().scale) * 2.0
         let path = UIBezierPath(
             roundedRect: self.bounds.insetBy(dx: width / 2, dy: width / 2),
-            cornerRadius: 8
+            cornerRadius: self.bounds.height / 2
         )
         self.shape.path = path.CGPath
         self.shape.fillColor = UIColor.clearColor().CGColor

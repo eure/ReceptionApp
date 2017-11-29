@@ -46,13 +46,13 @@ final class NextButton: UIControl {
         
         self.layer.insertSublayer(self.backgroundLayer, atIndex: 0)
         self.backgroundLayer.lineWidth = 2
-        self.backgroundColor = Configuration.Color.smallButtonBackgroundColor
+        self.backgroundColor = UIColor.clearColor()
     }
     
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        self.backgroundLayer.fillColor = Configuration.Color.smallButtonBackgroundColor.CGColor
+        self.backgroundLayer.fillColor = UIColor.clearColor().CGColor
         self.backgroundLayer.strokeColor = Configuration.Color.smallButtonBorderColor.CGColor
         self.nextImageView?.tintColor = Configuration.Color.smallButtonTintColor
     }
@@ -102,11 +102,11 @@ final class NextButton: UIControl {
                         
                         self.backgroundLayer.fillColor = Configuration.Color.smallButtonTintColor.CGColor
                         self.backgroundLayer.strokeColor = Configuration.Color.smallButtonBorderColor.CGColor
-                        self.nextImageView?.tintColor = Configuration.Color.smallButtonBackgroundColor
+                        self.nextImageView?.tintColor = Configuration.Color.backgroundColor
                     }
                     else {
                         
-                        self.backgroundLayer.fillColor = Configuration.Color.smallButtonBackgroundColor.CGColor
+                        self.backgroundLayer.fillColor = UIColor.clearColor().CGColor
                         self.backgroundLayer.strokeColor = Configuration.Color.smallButtonBorderColor.CGColor
                         self.nextImageView?.tintColor = Configuration.Color.smallButtonTintColor
                     }

@@ -47,14 +47,14 @@ final class ContactToViewController: BaseTransactionViewController, UITableViewD
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        
         self.view.backgroundColor = Configuration.Color.backgroundColor
         self.inputFieldView.backgroundColor = Configuration.Color.backgroundColor
         self.iconImageView.tintColor = Configuration.Color.imageTintColor
         
-        self.tableViewContainerView.backgroundColor = Configuration.Color.backgroundColor
+        self.tableViewContainerView.backgroundColor = UIColor.clearColor()
         self.tableView.rowHeight = 116
-        self.tableView.backgroundColor = Configuration.Color.backgroundColor
+        self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.separatorColor = Configuration.Color.separatorColor
         self.tableView.tableFooterView = UIView()
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
@@ -206,6 +206,7 @@ final class ContactToViewController: BaseTransactionViewController, UITableViewD
         
         let user = self.results[indexPath.row]
         let controller = YourNameViewController.viewControllerFromStoryboard()
+        controller.contactType = .Appointment
         
         let transaction = AppointmentTransaction(user: user)
         controller.transaction = transaction
